@@ -1,0 +1,17264 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+# File Summary
+
+## Purpose
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+
+## File Format
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  a. A header with the file path (## File: path/to/file)
+  b. The full contents of the file in a code block
+
+## Usage Guidelines
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+
+## Notes
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+
+# Directory Structure
+````
+cutscenes/
+  bridge.webm
+  freeze.webm
+  prologue.webm
+src/
+  animation/
+    assets/
+      AnimationAsset.js
+      AnimationClip.js
+      AnimationCompression.js
+      AnimationMetadata.js
+      AnimationPackage.js
+    baking/
+      AnimationBaker.js
+      FramePacker.js
+      MetadataGenerator.js
+      TextureChecker.js
+      VertexSampler.js
+    events/
+      AnimationEvent.js
+      AnimationEventBus.js
+      EventTrack.js
+    graph/
+      AnimationGraph.js
+      AnimationState.js
+      AnimationTransition.js
+      BlendTree.js
+      GraphNode.js
+    runtime/
+      AnimationController.js
+      AnimationPlayer.js
+      AnimationRuntime.js
+    skeleton/
+      Bone.js
+      Pose.js
+      Skeleton.js
+      SkeletonBuilder.js
+      SkeletonPose.js
+      SkeletonUtils.js
+    vat/
+      VATDecoder.js
+      VATMetadata.js
+      VATPlayer.js
+      VATTexture.js
+  assets/
+    loaders/
+      AudioLoader.js
+      FontLoader.js
+      MaterialLoader.js
+      ModelLoader.js
+      ShaderLoader.js
+      TextureLoader.js
+      VideoLoader.js
+    AssetCache.js
+    AssetDescriptor.js
+    AssetHandle.js
+    AssetLoader.js
+    AssetManager.js
+    AssetRegistry.js
+    AssetService.js
+    AssetState.js
+    AssetType.js
+  components/
+    AudioComponent.js
+    HealthComponent.js
+    MeshComponent.js
+    TransformComponent.js
+    VelocityComponent.js
+  data/
+    CellData.js
+    RegionData.js
+    SectorData.js
+  ecs/
+    Component.js
+    ComponentStore.js
+    ECSManager.js
+    ECSService.js
+    Entity.js
+    EntitySignature.js
+    EntityView.js
+    SparseSet.js
+    System.js
+    SystemScheduler.js
+  framework/
+    core/
+      Bootstrap.js
+      FrameScheduler.js
+      Framework.js
+      ServiceManifest.js
+    diagnostics/
+      PerformanceCounters.js
+    events/
+      Event.js
+      EventBus.js
+    services/
+      SceneService.js
+      Service.js
+  hierarchy/
+    Cell.js
+    Region.js
+    Sector.js
+  managers/
+    EntityManager.js
+    QueryManager.js
+    SpatialManager.js
+    StreamingManager.js
+    WorldGraph.js
+  player/
+    PlayerController.js
+  queries/
+    CellQuery.js
+    NearestQuery.js
+    RadiusQuery.js
+  registries/
+    CellRegistry.js
+    EntityRegistry.js
+    RegionRegistry.js
+    SectorRegistry.js
+  rendering/
+    EnvironmentSetup.js
+    PBRTextureGenerator.js
+  scene/
+    Camera.js
+    CameraManager.js
+    Environment.js
+    Scene.js
+    SceneManager.js
+    SceneState.js
+    SceneTransition.js
+    TransitionState.js
+  spatial/
+    GridPartition.js
+  streaming/
+    SectorLoader.js
+    SectorUnloader.js
+  systems/
+    AnimationSystem.js
+    HealthSystem.js
+    MovementSystem.js
+  time/
+    DependencyGraph.js
+    DiagnosticsCollector.js
+    EventScheduler.js
+    ReadyQueue.js
+    ScheduledEvent.js
+    SchedulerState.js
+    SectorSchedulerState.js
+    TimeEvents.js
+    TimeManager.js
+    TimeSerializer.js
+    WorldClock.js
+  world/
+    CellID.js
+    Entity.js
+    EntityHandle.js
+    EntityID.js
+    RegionID.js
+    SectorID.js
+    Transform.js
+    World.js
+    WorldManager.js
+  main.js
+addative features.txt
+cinematic-baker.js
+index.html
+package.json
+README.md
+repomix-output.xml
+style.css
+````
+
+# Files
+
+## File: src/animation/assets/AnimationAsset.js
+````javascript
+
+````
+
+## File: src/animation/assets/AnimationClip.js
+````javascript
+
+````
+
+## File: src/animation/assets/AnimationCompression.js
+````javascript
+
+````
+
+## File: src/animation/assets/AnimationMetadata.js
+````javascript
+
+````
+
+## File: src/animation/assets/AnimationPackage.js
+````javascript
+
+````
+
+## File: src/animation/baking/AnimationBaker.js
+````javascript
+
+````
+
+## File: src/animation/baking/FramePacker.js
+````javascript
+
+````
+
+## File: src/animation/baking/MetadataGenerator.js
+````javascript
+
+````
+
+## File: src/animation/baking/TextureChecker.js
+````javascript
+
+````
+
+## File: src/animation/baking/VertexSampler.js
+````javascript
+
+````
+
+## File: src/animation/events/AnimationEvent.js
+````javascript
+
+````
+
+## File: src/animation/events/AnimationEventBus.js
+````javascript
+
+````
+
+## File: src/animation/events/EventTrack.js
+````javascript
+
+````
+
+## File: src/animation/graph/AnimationGraph.js
+````javascript
+
+````
+
+## File: src/animation/graph/AnimationState.js
+````javascript
+
+````
+
+## File: src/animation/graph/AnimationTransition.js
+````javascript
+
+````
+
+## File: src/animation/graph/BlendTree.js
+````javascript
+
+````
+
+## File: src/animation/graph/GraphNode.js
+````javascript
+
+````
+
+## File: src/animation/runtime/AnimationController.js
+````javascript
+
+````
+
+## File: src/animation/runtime/AnimationPlayer.js
+````javascript
+
+````
+
+## File: src/animation/runtime/AnimationRuntime.js
+````javascript
+
+````
+
+## File: src/animation/skeleton/Pose.js
+````javascript
+
+````
+
+## File: src/animation/skeleton/SkeletonBuilder.js
+````javascript
+/**
+ * src/animation/skeleton/SkeletonBuilder.js
+ * 
+ * D016 Animation System — SkeletonBuilder
+ * 
+ * Constructs and validates Skeleton instances.
+ * 
+ * Responsibilities:
+ * - Build internal maps (by id, name, index)
+ * - Identify root bones
+ * - Validate hierarchy (no orphans, no cycles, no duplicates)
+ * - Create immutable Skeleton instance
+ * 
+ * This class separates asset construction from asset representation.
+ * The Skeleton class is a pure data container.
+ */
+
+import { Skeleton } from './Skeleton.js';
+import { Bone } from './Bone.js';
+
+export class SkeletonBuilder {
+    /**
+     * Create a new SkeletonBuilder.
+     * 
+     * @param {Bone[]} bones - Array of Bone objects
+     * @throws {TypeError} If any element is not a Bone instance
+     */
+    constructor(bones = []) {
+        if (!Array.isArray(bones)) {
+            throw new TypeError('bones must be an array');
+        }
+
+        for (const bone of bones) {
+            if (!(bone instanceof Bone)) {
+                throw new TypeError('All elements must be instances of Bone');
+            }
+        }
+
+        /** @type {Bone[]} */
+        this._bones = bones;
+    }
+
+    /**
+     * Build and validate the skeleton.
+     * 
+     * @returns {Skeleton} Immutable Skeleton instance
+     * @throws {Error} If validation fails
+     */
+    build() {
+        // --- Build maps ---
+        const bonesById = new Map();
+        const bonesByName = new Map();
+        const bonesByIndex = [];
+        const indexSet = new Set();
+
+        for (const bone of this._bones) {
+            // Validate ID uniqueness
+            const id = bone.getId();
+            if (bonesById.has(id)) {
+                throw new Error(`Duplicate bone id: ${id}`);
+            }
+            bonesById.set(id, bone);
+
+            // Validate Name uniqueness
+            const name = bone.getName();
+            if (bonesByName.has(name)) {
+                throw new Error(`Duplicate bone name: ${name}`);
+            }
+            bonesByName.set(name, bone);
+
+            // Validate Index uniqueness
+            const index = bone.getIndex();
+            if (index < 0) {
+                throw new Error(`Bone "${name}" has invalid index: ${index}`);
+            }
+            if (indexSet.has(index)) {
+                throw new Error(`Duplicate bone index: ${index} (bone: ${name})`);
+            }
+            indexSet.add(index);
+
+            bonesByIndex[index] = bone;
+        }
+
+        // Validate index contiguity
+        const expectedCount = this._bones.length;
+        for (let i = 0; i < expectedCount; i++) {
+            if (!bonesByIndex[i]) {
+                throw new Error(
+                    `Missing bone at index ${i}. Indices must be contiguous from 0 to ${expectedCount - 1}`
+                );
+            }
+        }
+
+        // --- Identify root bones ---
+        const rootBones = [];
+        for (const bone of bonesById.values()) {
+            if (bone.isRoot()) {
+                rootBones.push(bone);
+            }
+        }
+
+        if (rootBones.length === 0 && bonesById.size > 0) {
+            throw new Error('Skeleton has no root bones but contains bones');
+        }
+
+        // --- Validate hierarchy (no orphans, no cycles) ---
+        const visited = new Set();
+        const stack = [...rootBones];
+
+        while (stack.length > 0) {
+            const bone = stack.pop();
+            if (visited.has(bone)) continue;
+            visited.add(bone);
+
+            for (const child of bone.getChildren()) {
+                if (!bonesById.has(child.getId())) {
+                    throw new Error(
+                        `Bone "${child.getName()}" has a parent "${bone.getName()}" ` +
+                        `that is not in the skeleton's bone list`
+                    );
+                }
+                stack.push(child);
+            }
+        }
+
+        // Check for orphans
+        if (visited.size !== bonesById.size) {
+            const missing = [];
+            for (const bone of bonesById.values()) {
+                if (!visited.has(bone)) {
+                    missing.push(`"${bone.getName()}" (${bone.getId()})`);
+                }
+            }
+            throw new Error(
+                `Skeleton contains ${missing.length} orphaned bone(s): ${missing.join(', ')}`
+            );
+        }
+
+        // --- Create immutable Skeleton ---
+        return new Skeleton({
+            bonesById,
+            bonesByName,
+            bonesByIndex,
+            rootBones,
+            boneCount: this._bones.length
+        });
+    }
+}
+
+export default SkeletonBuilder;
+````
+
+## File: src/animation/skeleton/SkeletonPose.js
+````javascript
+
+````
+
+## File: src/animation/skeleton/SkeletonUtils.js
+````javascript
+
+````
+
+## File: src/animation/vat/VATDecoder.js
+````javascript
+
+````
+
+## File: src/animation/vat/VATMetadata.js
+````javascript
+
+````
+
+## File: src/animation/vat/VATPlayer.js
+````javascript
+
+````
+
+## File: src/animation/vat/VATTexture.js
+````javascript
+
+````
+
+## File: src/assets/loaders/AudioLoader.js
+````javascript
+
+````
+
+## File: src/assets/loaders/FontLoader.js
+````javascript
+
+````
+
+## File: src/assets/loaders/MaterialLoader.js
+````javascript
+import { AssetLoader } from '../AssetLoader.js';
+import { AssetType } from '../AssetType.js';
+
+export class MaterialLoader extends AssetLoader {
+  supports(type) {
+    return type === AssetType.MATERIAL;
+  }
+
+  async load(descriptor) {
+    // TODO: load material definition from descriptor.path
+    return { placeholder: true, type: 'Material', path: descriptor.path };
+  }
+
+  async unload(resource) {
+    // TODO: release material data
+  }
+}
+````
+
+## File: src/assets/loaders/ModelLoader.js
+````javascript
+
+````
+
+## File: src/assets/loaders/ShaderLoader.js
+````javascript
+
+````
+
+## File: src/assets/loaders/TextureLoader.js
+````javascript
+
+````
+
+## File: src/assets/loaders/VideoLoader.js
+````javascript
+
+````
+
+## File: src/assets/AssetCache.js
+````javascript
+/**
+ * Owns runtime asset objects.
+ * Maintains reference counts and supports automatic unloading when count reaches zero.
+ * No public method exposes the raw resource directly to gameplay.
+ */
+export class AssetCache {
+  constructor() {
+    /** @type {Map<string, { resource: *, refCount: number }>} */
+    this._cache = new Map();
+  }
+
+  /**
+   * Insert a runtime asset with an initial reference count of 1.
+   * @param {string} id
+   * @param {*} resource
+   * @throws {Error} if id already exists.
+   */
+  insert(id, resource) {
+    if (this._cache.has(id)) {
+      throw new Error(`Asset "${id}" already cached.`);
+    }
+    this._cache.set(id, { resource, refCount: 1 });
+  }
+
+  /**
+   * Remove an asset from the cache, regardless of reference count.
+   * @param {string} id
+   */
+  remove(id) {
+    this._cache.delete(id);
+  }
+
+  /**
+   * Retrieve the runtime resource. This is **internal** – callers outside
+   * of the asset system must not use it.
+   * @param {string} id
+   * @returns {*|undefined}
+   * @private
+   */
+  _getResource(id) {
+    const entry = this._cache.get(id);
+    return entry ? entry.resource : undefined;
+  }
+
+  /**
+   * Check if an asset is cached.
+   * @param {string} id
+   * @returns {boolean}
+   */
+  contains(id) {
+    return this._cache.has(id);
+  }
+
+  /**
+   * Increment reference count.
+   * @param {string} id
+   */
+  retain(id) {
+    const entry = this._cache.get(id);
+    if (entry) entry.refCount++;
+  }
+
+  /**
+   * Decrement reference count. Returns the new count.
+   * @param {string} id
+   * @returns {number}
+   */
+  release(id) {
+    const entry = this._cache.get(id);
+    if (!entry) return 0;
+    entry.refCount = Math.max(0, entry.refCount - 1);
+    return entry.refCount;
+  }
+
+  /**
+   * Returns the current reference count.
+   * @param {string} id
+   * @returns {number}
+   */
+  getRefCount(id) {
+    const entry = this._cache.get(id);
+    return entry ? entry.refCount : 0;
+  }
+
+  clear() {
+    this._cache.clear();
+  }
+}
+````
+
+## File: src/assets/AssetDescriptor.js
+````javascript
+import { AssetState } from './AssetState.js';
+
+/**
+ * Immutable asset metadata.
+ * Holds only descriptive information; no runtime resource.
+ */
+export class AssetDescriptor {
+  /**
+   * @param {string} id
+   * @param {import('./AssetType.js').AssetType} type
+   * @param {string} path
+   * @param {Object} [options]
+   * @param {number} [options.version=1]
+   * @param {string} [options.hash='']
+   * @param {string} [options.state=AssetState.REGISTERED]
+   */
+  constructor(id, type, path, options = {}) {
+    /** @readonly */
+    this._id = id;
+    /** @readonly */
+    this._type = type;
+    /** @readonly */
+    this._path = path;
+    /** @readonly */
+    this._version = options.version ?? 1;
+    /** @readonly */
+    this._hash = options.hash ?? '';
+    /** @readonly */
+    this._state = options.state ?? AssetState.REGISTERED;
+    Object.freeze(this);
+  }
+
+  get id() { return this._id; }
+  get type() { return this._type; }
+  get path() { return this._path; }
+  get version() { return this._version; }
+  get hash() { return this._hash; }
+  get state() { return this._state; }
+
+  /**
+   * Create a new descriptor with a different state.
+   * @param {string} newState
+   * @returns {AssetDescriptor}
+   */
+  withState(newState) {
+    return new AssetDescriptor(this._id, this._type, this._path, {
+      version: this._version,
+      hash: this._hash,
+      state: newState,
+    });
+  }
+}
+````
+
+## File: src/assets/AssetHandle.js
+````javascript
+/**
+ * Lightweight reference to an asset.
+ * Stores only the asset id and a reference to the AssetManager,
+ * fetching the current descriptor on demand.
+ * Never owns the runtime resource.
+ */
+export class AssetHandle {
+  /**
+   * @param {string} assetId
+   * @param {import('./AssetManager.js').AssetManager} manager
+   */
+  constructor(assetId, manager) {
+    /** @private */
+    this._assetId = assetId;
+    /** @private */
+    this._manager = manager;
+  }
+
+  /** @returns {string} */
+  id() { return this._assetId; }
+
+  /**
+   * Returns the current descriptor, or null if the asset no longer exists.
+   * @returns {import('./AssetDescriptor.js').AssetDescriptor|null}
+   */
+  descriptor() {
+    return this._manager.find(this._assetId) || null;
+  }
+
+  /**
+   * Returns true if the asset is still registered and its state is not 'Failed' or 'Unloaded'.
+   * @returns {boolean}
+   */
+  isValid() {
+    const desc = this.descriptor();
+    if (!desc) return false;
+    const state = desc.state;
+    return state !== 'Failed' && state !== 'Unloaded';
+  }
+}
+````
+
+## File: src/assets/AssetLoader.js
+````javascript
+
+````
+
+## File: src/assets/AssetManager.js
+````javascript
+import { AssetRegistry } from './AssetRegistry.js';
+import { AssetCache } from './AssetCache.js';
+import { AssetHandle } from './AssetHandle.js';
+import { AssetType } from './AssetType.js';
+import { TextureLoader } from './loaders/TextureLoader.js';
+import { ModelLoader } from './loaders/ModelLoader.js';
+import { MaterialLoader } from './loaders/MaterialLoader.js';
+import { ShaderLoader } from './loaders/ShaderLoader.js';
+import { AudioLoader } from './loaders/AudioLoader.js';
+import { FontLoader } from './loaders/FontLoader.js';
+import { VideoLoader } from './loaders/VideoLoader.js';
+
+/**
+ * Public API of the Asset System.
+ * Owns registry, cache, and loaders. Coordinates all asset operations.
+ */
+export class AssetManager {
+  constructor() {
+    this._registry = new AssetRegistry();
+    this._cache = new AssetCache();
+    /** @type {Map<string, import('./AssetLoader.js').AssetLoader>} */
+    this._loaders = new Map();
+
+    // Register all built-in loaders
+    this._addLoader(new TextureLoader());
+    this._addLoader(new ModelLoader());
+    this._addLoader(new MaterialLoader());
+    this._addLoader(new ShaderLoader());
+    this._addLoader(new AudioLoader());
+    this._addLoader(new FontLoader());
+    this._addLoader(new VideoLoader());
+  }
+
+  /**
+   * Register an asset descriptor (metadata only).
+   * @param {import('./AssetDescriptor.js').AssetDescriptor} descriptor
+   */
+  register(descriptor) {
+    this._registry.register(descriptor);
+  }
+
+  /**
+   * Unregister an asset. If loaded, the resource is unloaded first.
+   * @param {string} id
+   */
+  async unregister(id) {
+    const descriptor = this._registry.find(id);
+    if (descriptor && this._cache.contains(id)) {
+      await this._unloadInternal(id, descriptor.type);
+    }
+    this._registry.unregister(id);
+  }
+
+  /**
+   * Load an asset by id. Returns a handle.
+   * @param {string} id
+   * @returns {Promise<AssetHandle>}
+   */
+  async load(id) {
+    const descriptor = this._registry.find(id);
+    if (!descriptor) throw new Error(`Asset "${id}" not registered.`);
+
+    if (this._cache.contains(id)) {
+      this._cache.retain(id);
+      return new AssetHandle(id, this);
+    }
+
+    const loader = this._loaders.get(descriptor.type);
+    if (!loader) throw new Error(`No loader for type "${descriptor.type}".`);
+
+    // Update state to Loading (immutable – we will eventually update descriptor via registry)
+    // For now we just load.
+    const resource = await loader.load(descriptor);
+    this._cache.insert(id, resource);
+    return new AssetHandle(id, this);
+  }
+
+  /**
+   * Explicitly unload an asset (ignoring reference count).
+   * @param {string} id
+   */
+  async unload(id) {
+    const descriptor = this._registry.find(id);
+    if (!descriptor || !this._cache.contains(id)) return;
+    await this._unloadInternal(id, descriptor.type);
+  }
+
+  /**
+   * Reload an asset (unload and load again).
+   * @param {string} id
+   * @returns {Promise<AssetHandle>}
+   */
+  async reload(id) {
+    await this.unload(id);
+    return this.load(id);
+  }
+
+  /**
+   * Get a handle for a registered asset (does not affect reference count).
+   * @param {string} id
+   * @returns {AssetHandle|undefined}
+   */
+  get(id) {
+    const descriptor = this._registry.find(id);
+    if (!descriptor) return undefined;
+    return new AssetHandle(id, this);
+  }
+
+  /**
+   * Find the current descriptor for an asset.
+   * @param {string} id
+   * @returns {import('./AssetDescriptor.js').AssetDescriptor|undefined}
+   */
+  find(id) {
+    return this._registry.find(id);
+  }
+
+  /**
+   * Check whether an asset id is registered.
+   * @param {string} id
+   * @returns {boolean}
+   */
+  contains(id) {
+    return this._registry.contains(id);
+  }
+
+  /**
+   * Release a reference to an asset. If the reference count reaches zero,
+   * the asset is automatically unloaded.
+   * @param {string} id
+   */
+  async release(id) {
+    const descriptor = this._registry.find(id);
+    if (!descriptor || !this._cache.contains(id)) return;
+
+    const newCount = this._cache.release(id);
+    if (newCount <= 0) {
+      await this._unloadInternal(id, descriptor.type);
+    }
+  }
+
+  /**
+   * Per-frame update (placeholder for streaming queues).
+   * @param {number} delta
+   */
+  update(delta) {
+    // TODO: process pending async loads, streaming
+  }
+
+  /**
+   * Clear all assets and descriptors.
+   */
+  async clear() {
+    // Unload all cached assets first
+    for (const id of this._cache._cache.keys()) {
+      const descriptor = this._registry.find(id);
+      if (descriptor) {
+        await this._unloadInternal(id, descriptor.type);
+      }
+    }
+    this._cache.clear();
+    this._registry.clear();
+  }
+
+  // ---- private ----
+
+  /**
+   * Register a loader, ensuring no duplicate for the same type.
+   * @param {import('./AssetLoader.js').AssetLoader} loader
+   */
+  _addLoader(loader) {
+    // Determine the type(s) the loader supports. Each loader may support multiple types.
+    // For our built-in loaders, each supports exactly one type.
+    // We'll check by iterating over all AssetType values.
+    const supported = Object.values(AssetType).filter(type => loader.supports(type));
+    if (supported.length === 0) {
+      throw new Error(`Loader does not support any known asset type.`);
+    }
+    for (const type of supported) {
+      if (this._loaders.has(type)) {
+        throw new Error(`Loader for type "${type}" already registered.`);
+      }
+      this._loaders.set(type, loader);
+    }
+  }
+
+  /**
+   * Internal unload – calls the loader's unload and removes from cache.
+   * @param {string} id
+   * @param {string} type
+   */
+  async _unloadInternal(id, type) {
+    const resource = this._cache._getResource(id);
+    if (!resource) return;
+    const loader = this._loaders.get(type);
+    if (loader) {
+      await loader.unload(resource);
+    }
+    this._cache.remove(id);
+  }
+}
+````
+
+## File: src/assets/AssetRegistry.js
+````javascript
+export class AssetRegistry {
+  constructor() {
+    /** @type {Map<string, import('./AssetDescriptor.js').AssetDescriptor>} */
+    this._descriptors = new Map();
+  }
+
+  register(descriptor) {
+    if (this._descriptors.has(descriptor.id)) {
+      throw new Error(`Asset "${descriptor.id}" already registered.`);
+    }
+    this._descriptors.set(descriptor.id, descriptor);
+  }
+
+  unregister(id) {
+    this._descriptors.delete(id);
+  }
+
+  find(id) {
+    return this._descriptors.get(id);
+  }
+
+  contains(id) {
+    return this._descriptors.has(id);
+  }
+
+  clear() {
+    this._descriptors.clear();
+  }
+}
+````
+
+## File: src/assets/AssetService.js
+````javascript
+import { Service } from '../framework/services/Service.js';
+import { AssetManager } from './AssetManager.js';
+
+export class AssetService extends Service {
+  constructor(framework) {
+    super('assets', framework);
+    /** @type {AssetManager|null} @private */
+    this._assetManager = null;
+  }
+
+  async initialize() {
+    this._assetManager = new AssetManager();   // loaders are built inside
+  }
+
+  update(delta) {
+    if (this._assetManager) {
+      this._assetManager.update(delta);
+    }
+  }
+
+  get assetManager() {
+    return this._assetManager;
+  }
+
+  async shutdown() {
+    if (this._assetManager) {
+      await this._assetManager.clear();
+      this._assetManager = null;
+    }
+  }
+}
+````
+
+## File: src/assets/AssetState.js
+````javascript
+
+````
+
+## File: src/assets/AssetType.js
+````javascript
+
+````
+
+## File: src/components/AudioComponent.js
+````javascript
+import { Component } from '../Component.js';
+
+export class AudioComponent extends Component {
+  constructor() {
+    super();
+    /** @type {string|null} */
+    this.soundId = null;
+    this.volume = 1;
+    this.loop = false;
+  }
+}
+````
+
+## File: src/components/HealthComponent.js
+````javascript
+import { Component } from '../Component.js';
+
+export class HealthComponent extends Component {
+  constructor() {
+    super();
+    this.current = 100;
+    this.max = 100;
+  }
+}
+````
+
+## File: src/components/MeshComponent.js
+````javascript
+import { Component } from '../Component.js';
+
+export class MeshComponent extends Component {
+  constructor() {
+    super();
+    /** @type {string|null} */
+    this.meshId = null;   // reference to a loaded mesh asset
+  }
+}
+````
+
+## File: src/components/TransformComponent.js
+````javascript
+import { Component } from '../Component.js';
+
+export class TransformComponent extends Component {
+  constructor() {
+    super();
+    this.position = { x: 0, y: 0, z: 0 };
+    this.rotation = { x: 0, y: 0, z: 0 };
+    this.scale = { x: 1, y: 1, z: 1 };
+  }
+}
+````
+
+## File: src/components/VelocityComponent.js
+````javascript
+import { Component } from '../Component.js';
+
+export class VelocityComponent extends Component {
+  constructor() {
+    super();
+    this.x = 0;
+    this.y = 0;
+    this.z = 0;
+  }
+}
+````
+
+## File: src/data/CellData.js
+````javascript
+/**
+ * Description of a single cell (used inside SectorData).
+ */
+export class CellData {
+  constructor() {
+    this.id = '';
+    this.gridX = 0;
+    this.gridZ = 0;
+  }
+}
+````
+
+## File: src/data/RegionData.js
+````javascript
+/**
+ * Serializable description of a region (used for level data).
+ * Currently placeholder.
+ */
+export class RegionData {
+  constructor() {
+    this.id = '';
+    this.name = '';
+  }
+}
+````
+
+## File: src/data/SectorData.js
+````javascript
+/**
+ * Description of a sector used for streaming.
+ */
+export class SectorData {
+  constructor() {
+    /** @type {import('../SectorID.js').SectorID} */
+    this.id = null;
+    /** @type {{id: string, gridX: number, gridZ: number}[]} */
+    this.cells = [];
+  }
+}
+````
+
+## File: src/ecs/Component.js
+````javascript
+/**
+ * Base class for all components.
+ * Subclasses must set a static `typeId` property (assigned by ECSManager).
+ */
+export class Component {
+  /**
+   * Optional reset method, called when a component is removed or pooled.
+   */
+  reset() {
+    // override in subclass if needed
+  }
+}
+````
+
+## File: src/ecs/ComponentStore.js
+````javascript
+import { SparseSet } from './SparseSet.js';
+
+/**
+ * Typed component store using a SparseSet.
+ * @template T
+ */
+export class ComponentStore {
+  /**
+   * @param {new () => T} componentClass – constructor for the component type
+   */
+  constructor(componentClass) {
+    this.componentClass = componentClass;
+    this.sparseSet = new SparseSet();
+  }
+
+  /**
+   * Add or update component for an entity.
+   * @param {number} entityId
+   * @param {T} [component] – if omitted, a default instance is created
+   * @returns {T} the stored component
+   */
+  add(entityId, component) {
+    if (!component) {
+      component = new this.componentClass();
+    }
+    this.sparseSet.add(entityId, component);
+    return component;
+  }
+
+  /**
+   * Remove component from entity.
+   * @param {number} entityId
+   */
+  remove(entityId) {
+    const comp = this.sparseSet.get(entityId);
+    if (comp && comp.reset) {
+      comp.reset();
+    }
+    this.sparseSet.remove(entityId);
+  }
+
+  /**
+   * Get component for entity.
+   * @param {number} entityId
+   * @returns {T|undefined}
+   */
+  get(entityId) {
+    return this.sparseSet.get(entityId);
+  }
+
+  /**
+   * Check if entity has this component.
+   * @param {number} entityId
+   * @returns {boolean}
+   */
+  has(entityId) {
+    return this.sparseSet.has(entityId);
+  }
+
+  /** Remove all components. */
+  clear() {
+    this.sparseSet.clear();
+  }
+
+  /** @returns {number} */
+  count() {
+    return this.sparseSet.size;
+  }
+
+  /**
+   * Iterate over all (entityId, component) pairs.
+   * @param {(entityId: number, component: T) => void} callback
+   */
+  forEach(callback) {
+    this.sparseSet.forEach(callback);
+  }
+}
+````
+
+## File: src/ecs/ECSManager.js
+````javascript
+import { ComponentStore } from './ComponentStore.js';
+import { EntitySignature } from './EntitySignature.js';
+import { Entity } from './Entity.js';
+
+/**
+ * Core ECS Manager. Manages component type registration, component stores,
+ * and entity signatures. Integrates with the World via events.
+ */
+export class ECSManager {
+  constructor(eventBus) {
+    /** @type {import('../framework/events/EventBus.js').EventBus} */
+    this.eventBus = eventBus;
+
+    /** Map component type name → numeric ID */
+    this._componentTypeIds = new Map();
+    /** Array of component store instances indexed by type ID */
+    this._stores = [];
+    /** Map entity numeric ID → Entity (ECS entity) */
+    this._entities = new Map();
+
+    this._onEntityCreated = this._onEntityCreated.bind(this);
+    this._onEntityDestroyed = this._onEntityDestroyed.bind(this);
+  }
+
+  /**
+   * Register a component type.
+   * @param {string} name – unique name (e.g., 'Transform')
+   * @param {new () => Object} componentClass – constructor
+   * @returns {number} assigned type ID
+   */
+  registerComponent(name, componentClass) {
+    if (this._componentTypeIds.has(name)) {
+      throw new Error(`Component type "${name}" already registered.`);
+    }
+    const id = this._stores.length;
+    this._componentTypeIds.set(name, id);
+    this._stores.push(new ComponentStore(componentClass));
+    return id;
+  }
+
+  /**
+   * Get a component store by type name or ID.
+   * @param {string|number} nameOrId
+   * @returns {ComponentStore}
+   */
+  getStore(nameOrId) {
+    if (typeof nameOrId === 'string') {
+      const id = this._componentTypeIds.get(nameOrId);
+      if (id === undefined) throw new Error(`Unknown component type "${nameOrId}".`);
+      return this._stores[id];
+    }
+    return this._stores[nameOrId];
+  }
+
+  /**
+   * Get component type ID by name.
+   * @param {string} name
+   * @returns {number|undefined}
+   */
+  getTypeId(name) {
+    return this._componentTypeIds.get(name);
+  }
+
+  /**
+   * Add a component to an entity.
+   * @param {number} entityId – numeric ID (World EntityID.id)
+   * @param {string} componentName
+   * @param {Object} [componentInstance] – optional pre-created component
+   * @returns {Object} the component
+   */
+  addComponent(entityId, componentName, componentInstance) {
+    const typeId = this._componentTypeIds.get(componentName);
+    if (typeId === undefined) throw new Error(`Component type "${componentName}" not registered.`);
+    const store = this._stores[typeId];
+    const component = store.add(entityId, componentInstance);
+
+    let entity = this._entities.get(entityId);
+    if (!entity) {
+      entity = new Entity({ id: entityId, generation: 0 }, new EntitySignature());
+      this._entities.set(entityId, entity);
+    }
+    entity.signature.add(typeId);
+
+    return component;
+  }
+
+  /**
+   * Remove a component from an entity.
+   * @param {number} entityId
+   * @param {string} componentName
+   */
+  removeComponent(entityId, componentName) {
+    const typeId = this._componentTypeIds.get(componentName);
+    if (typeId === undefined) return;
+    const store = this._stores[typeId];
+    store.remove(entityId);
+
+    const entity = this._entities.get(entityId);
+    if (entity) {
+      entity.signature.remove(typeId);
+    }
+  }
+
+  /**
+   * Get a component for an entity.
+   * @param {number} entityId
+   * @param {string} componentName
+   * @returns {Object|undefined}
+   */
+  getComponent(entityId, componentName) {
+    const store = this.getStore(componentName);
+    return store.get(entityId);
+  }
+
+  /**
+   * Check if an entity has a component.
+   * @param {number} entityId
+   * @param {string} componentName
+   * @returns {boolean}
+   */
+  hasComponent(entityId, componentName) {
+    const store = this.getStore(componentName);
+    return store.has(entityId);
+  }
+
+  _onEntityCreated(event) {
+    const worldId = event.payload.entityId;
+    const numericId = worldId.id;
+    if (!this._entities.has(numericId)) {
+      this._entities.set(numericId, new Entity(worldId, new EntitySignature()));
+    }
+  }
+
+  _onEntityDestroyed(event) {
+    const worldId = event.payload.entityId;
+    const numericId = worldId.id;
+    const entity = this._entities.get(numericId);
+    if (entity) {
+      for (let typeId = 0; typeId < this._stores.length; typeId++) {
+        if (entity.signature.has(typeId)) {
+          this._stores[typeId].remove(numericId);
+        }
+      }
+      this._entities.delete(numericId);
+    }
+  }
+
+  /**
+   * Subscribe to World entity lifecycle events.
+   * Should be called after the World is available.
+   */
+  setupEventListeners() {
+    this.eventBus.subscribe('entity:created', this._onEntityCreated);
+    this.eventBus.subscribe('entity:destroyed', this._onEntityDestroyed);
+  }
+
+  /**
+   * Clean up event listeners.
+   */
+  dispose() {
+    this.eventBus.unsubscribe('entity:created', this._onEntityCreated);
+    this.eventBus.unsubscribe('entity:destroyed', this._onEntityDestroyed);
+  }
+}
+````
+
+## File: src/ecs/ECSService.js
+````javascript
+import { Service } from '../framework/services/Service.js';
+import { ECSManager } from './ECSManager.js';
+import { SystemScheduler } from './SystemScheduler.js';
+
+import { TransformComponent } from './components/TransformComponent.js';
+import { VelocityComponent } from './components/VelocityComponent.js';
+import { HealthComponent } from './components/HealthComponent.js';
+import { MeshComponent } from './components/MeshComponent.js';
+import { AudioComponent } from './components/AudioComponent.js';
+
+import { MovementSystem } from './systems/MovementSystem.js';
+import { HealthSystem } from './systems/HealthSystem.js';
+import { AnimationSystem } from './systems/AnimationSystem.js';
+
+export class ECSService extends Service {
+  constructor(framework) {
+    super('ecs', framework);
+    this.ecsManager = null;
+    this.scheduler = null;
+  }
+
+  async initialize() {
+    this.ecsManager = new ECSManager(this.framework.eventBus);
+    this.ecsManager.setupEventListeners();
+
+    this.ecsManager.registerComponent('Transform', TransformComponent);
+    this.ecsManager.registerComponent('Velocity', VelocityComponent);
+    this.ecsManager.registerComponent('Health', HealthComponent);
+    this.ecsManager.registerComponent('Mesh', MeshComponent);
+    this.ecsManager.registerComponent('Audio', AudioComponent);
+
+    this.scheduler = new SystemScheduler(this.ecsManager);
+    this.scheduler.registerSystem(new MovementSystem());
+    this.scheduler.registerSystem(new HealthSystem());
+    this.scheduler.registerSystem(new AnimationSystem());
+  }
+
+  update(delta) {
+    if (this.scheduler) {
+      this.scheduler.update(delta);
+    }
+  }
+
+  async shutdown() {
+    if (this.scheduler) {
+      this.scheduler.shutdown();
+    }
+    if (this.ecsManager) {
+      this.ecsManager.dispose();
+    }
+  }
+}
+````
+
+## File: src/ecs/Entity.js
+````javascript
+/**
+ * ECS Entity – pure identity, signature, and flags.
+ * No gameplay data.
+ */
+export class Entity {
+  /**
+   * @param {import('../world/EntityID.js').EntityID} worldId
+   * @param {import('./EntitySignature.js').EntitySignature} signature
+   */
+  constructor(worldId, signature) {
+    /** @readonly */
+    this.worldId = worldId;
+    this.signature = signature;
+    /** @type {{ active: boolean }} */
+    this.flags = { active: true };
+  }
+}
+````
+
+## File: src/ecs/EntitySignature.js
+````javascript
+/**
+ * Bitmask signature supporting up to 128 component types (two 32-bit words).
+ */
+export class EntitySignature {
+  constructor() {
+    /** @type {number[]} two 32-bit integers */
+    this.mask = [0, 0];
+  }
+
+  /**
+   * Add a component type.
+   * @param {number} typeId – component type index (0-127)
+   */
+  add(typeId) {
+    const word = typeId < 32 ? 0 : 1;
+    const bit = typeId % 32;
+    this.mask[word] |= (1 << bit);
+  }
+
+  /**
+   * Remove a component type.
+   * @param {number} typeId
+   */
+  remove(typeId) {
+    const word = typeId < 32 ? 0 : 1;
+    const bit = typeId % 32;
+    this.mask[word] &= ~(1 << bit);
+  }
+
+  /**
+   * Check if a component type is present.
+   * @param {number} typeId
+   * @returns {boolean}
+   */
+  has(typeId) {
+    const word = typeId < 32 ? 0 : 1;
+    const bit = typeId % 32;
+    return (this.mask[word] & (1 << bit)) !== 0;
+  }
+
+  /**
+   * Check if this signature contains all the required components.
+   * @param {EntitySignature} required
+   * @returns {boolean}
+   */
+  matches(required) {
+    return (this.mask[0] & required.mask[0]) === required.mask[0] &&
+           (this.mask[1] & required.mask[1]) === required.mask[1];
+  }
+
+  /** Clear all bits. */
+  clear() {
+    this.mask[0] = 0;
+    this.mask[1] = 0;
+  }
+
+  /**
+   * Clone this signature.
+   * @returns {EntitySignature}
+   */
+  clone() {
+    const sig = new EntitySignature();
+    sig.mask[0] = this.mask[0];
+    sig.mask[1] = this.mask[1];
+    return sig;
+  }
+}
+````
+
+## File: src/ecs/EntityView.js
+````javascript
+export class EntityView {
+  /**
+   * @param {import('./ECSManager.js').ECSManager} ecs
+   * @param {import('./EntitySignature.js').EntitySignature} requiredSignature
+   */
+  constructor(ecs, requiredSignature) {
+    this._ecs = ecs;
+    this._requiredSignature = requiredSignature;
+  }
+
+  [Symbol.iterator]() {
+    return this._ecs._iterateMatching(this._requiredSignature);
+  }
+}
+````
+
+## File: src/ecs/SparseSet.js
+````javascript
+/**
+ * Sparse set: maps entity IDs (numbers) to dense indices, with O(1) operations.
+ */
+export class SparseSet {
+  constructor() {
+    /** @type {Map<number, number>} sparse: entityId -> index in dense */
+    this.sparse = new Map();
+    /** @type {number[]} dense: stores entityIds */
+    this.dense = [];
+    /** @type {any[]} components: parallel array to dense, holds component data */
+    this.components = [];
+  }
+
+  /**
+   * Add an entity with its component data.
+   * @param {number} entityId
+   * @param {*} component
+   */
+  add(entityId, component) {
+    if (this.sparse.has(entityId)) {
+      const idx = this.sparse.get(entityId);
+      this.components[idx] = component;
+      return;
+    }
+    const idx = this.dense.length;
+    this.sparse.set(entityId, idx);
+    this.dense.push(entityId);
+    this.components.push(component);
+  }
+
+  /**
+   * Remove an entity.
+   * @param {number} entityId
+   */
+  remove(entityId) {
+    if (!this.sparse.has(entityId)) return;
+    const idx = this.sparse.get(entityId);
+    const lastIdx = this.dense.length - 1;
+    if (idx !== lastIdx) {
+      const lastEntity = this.dense[lastIdx];
+      this.sparse.set(lastEntity, idx);
+      this.dense[idx] = lastEntity;
+      this.components[idx] = this.components[lastIdx];
+    }
+    this.dense.pop();
+    this.components.pop();
+    this.sparse.delete(entityId);
+  }
+
+  /**
+   * Check if entity exists in this set.
+   * @param {number} entityId
+   * @returns {boolean}
+   */
+  has(entityId) {
+    return this.sparse.has(entityId);
+  }
+
+  /**
+   * Get component for entity.
+   * @param {number} entityId
+   * @returns {*|undefined}
+   */
+  get(entityId) {
+    const idx = this.sparse.get(entityId);
+    return idx !== undefined ? this.components[idx] : undefined;
+  }
+
+  /** Remove all entities. */
+  clear() {
+    this.sparse.clear();
+    this.dense.length = 0;
+    this.components.length = 0;
+  }
+
+  /** @returns {number} */
+  get size() {
+    return this.dense.length;
+  }
+
+  /**
+   * Iterate over all entity-component pairs.
+   * @param {(entityId: number, component: *) => void} callback
+   */
+  forEach(callback) {
+    for (let i = 0; i < this.dense.length; i++) {
+      callback(this.dense[i], this.components[i]);
+    }
+  }
+}
+````
+
+## File: src/ecs/System.js
+````javascript
+/**
+ * Base class for systems. Systems contain behaviour and are driven by the scheduler.
+ */
+export class System {
+  constructor() {
+    this._enabled = true;
+    this.priority = 0;   // lower number executes first
+  }
+
+  /**
+   * Called once when the system is registered.
+   * @param {import('./ECSManager.js').ECSManager} ecs
+   */
+  initialize(ecs) {
+    // override if needed
+  }
+
+  /**
+   * Per-frame update. Receives an array of matching entity IDs.
+   * @param {number} delta
+   * @param {number[]} entityIds – array of entity numeric IDs (from World's EntityID.id)
+   * @param {import('./ECSManager.js').ECSManager} ecs
+   */
+  update(delta, entityIds, ecs) {
+    throw new Error('System.update must be overridden.');
+  }
+
+  /**
+   * Called when the system is removed or the ECS shuts down.
+   */
+  shutdown() {
+    // override if needed
+  }
+
+  enable() {
+    this._enabled = true;
+  }
+
+  disable() {
+    this._enabled = false;
+  }
+
+  isEnabled() {
+    return this._enabled;
+  }
+
+  /**
+   * Returns the required component signature for entities processed by this system.
+   * @returns {import('./EntitySignature.js').EntitySignature}
+   */
+  requiredSignature() {
+    throw new Error('System.requiredSignature must be overridden.');
+  }
+}
+````
+
+## File: src/ecs/SystemScheduler.js
+````javascript
+/**
+ * Scheduler that owns the ordered list of systems and runs them each frame.
+ */
+export class SystemScheduler {
+  constructor(ecsManager) {
+    /** @type {import('./ECSManager.js').ECSManager} */
+    this.ecs = ecsManager;
+    /** @type {import('./System.js').System[]} */
+    this.systems = [];
+  }
+
+  /**
+   * Register a system.
+   * @param {import('./System.js').System} system
+   */
+  registerSystem(system) {
+    this.systems.push(system);
+    this.systems.sort((a, b) => a.priority - b.priority);
+    system.initialize(this.ecs);
+  }
+
+  /**
+   * Execute all systems in order.
+   * @param {number} delta
+   */
+  update(delta) {
+    for (const system of this.systems) {
+      if (!system.isEnabled()) continue;
+      const requiredSig = system.requiredSignature();
+      const matches = [];
+      this.ecs._entities.forEach((entity, numericId) => {
+        if (entity.flags.active && entity.signature.matches(requiredSig)) {
+          matches.push(numericId);
+        }
+      });
+      system.update(delta, matches, this.ecs);
+    }
+  }
+
+  /**
+   * Remove a system.
+   * @param {import('./System.js').System} system
+   */
+  removeSystem(system) {
+    const idx = this.systems.indexOf(system);
+    if (idx !== -1) {
+      this.systems.splice(idx, 1);
+      system.shutdown();
+    }
+  }
+
+  /** Shutdown all systems. */
+  shutdown() {
+    for (const system of this.systems) {
+      system.shutdown();
+    }
+    this.systems.length = 0;
+  }
+}
+````
+
+## File: src/framework/core/Bootstrap.js
+````javascript
+import { Framework } from './Framework.js';
+import { ServiceManifest } from './ServiceManifest.js';
+
+export class Bootstrap {
+  static async start() {
+    const framework = new Framework();
+    framework.registerServices(ServiceManifest);
+
+    const scheduler = framework.frameScheduler;
+
+    // Phase order
+    scheduler.addPhase('events');
+    scheduler.addPhase('input');
+    scheduler.addPhase('streaming');
+    scheduler.addPhase('world');
+    scheduler.addPhase('ecs');
+    scheduler.addPhase('ai');
+    scheduler.addPhase('gameplay');
+    scheduler.addPhase('animation');
+    scheduler.addPhase('audio');
+    scheduler.addPhase('rendering');
+    scheduler.addPhase('ui');
+    scheduler.addPhase('diagnostics');
+
+    // Assign services to phases
+    scheduler.addServiceToPhase('input', framework.serviceRegistry.get('input'));
+    scheduler.addServiceToPhase('world', framework.serviceRegistry.get('world'));
+    scheduler.addServiceToPhase('ecs', framework.serviceRegistry.get('ecs'));
+    scheduler.addServiceToPhase('gameplay', framework.serviceRegistry.get('player'));
+    scheduler.addServiceToPhase('audio', framework.serviceRegistry.get('audio'));
+    scheduler.addServiceToPhase('rendering', framework.serviceRegistry.get('render'));
+    scheduler.addServiceToPhase('ui', framework.serviceRegistry.get('ui'));
+
+    await framework.serviceRegistry.initializeAll();
+    await framework.serviceRegistry.startAll();
+
+    framework.stateMachine.changeState('Playing');
+    framework.startMainLoop();
+  }
+}
+````
+
+## File: src/framework/core/FrameScheduler.js
+````javascript
+/**
+ * Represents a single update phase (e.g., 'input', 'rendering').
+ * Holds an ordered list of services that participate in this phase.
+ */
+class FramePhase {
+  constructor(name) {
+    this.name = name;
+    this.services = [];
+  }
+
+  addService(service) {
+    this.services.push(service);
+  }
+
+  execute(delta) {
+    for (const service of this.services) {
+      service.update(delta);
+    }
+  }
+}
+
+/**
+ * Manages a sequence of FramePhases, executed in order each frame.
+ */
+export class FrameScheduler {
+  constructor() {
+    /** @type {Map<string, FramePhase>} */
+    this.phases = new Map();
+    this.phaseOrder = [];   // insertion order
+  }
+
+  /**
+   * Create a new phase (if not already existing) and return it.
+   * @param {string} name
+   * @returns {FramePhase}
+   */
+  addPhase(name) {
+    if (this.phases.has(name)) {
+      return this.phases.get(name);
+    }
+    const phase = new FramePhase(name);
+    this.phases.set(name, phase);
+    this.phaseOrder.push(name);
+    return phase;
+  }
+
+  /**
+   * Assign a service to a specific phase.
+   * @param {string} phaseName
+   * @param {import('../services/Service.js').Service} service
+   */
+  addServiceToPhase(phaseName, service) {
+    const phase = this.addPhase(phaseName);
+    phase.addService(service);
+  }
+
+  /**
+   * Execute all phases in order.
+   * @param {number} deltaTime
+   */
+  run(deltaTime) {
+    for (const name of this.phaseOrder) {
+      this.phases.get(name).execute(deltaTime);
+    }
+  }
+}
+````
+
+## File: src/framework/core/Framework.js
+````javascript
+import { GameClock } from './GameClock.js';
+import { ServiceRegistry } from './ServiceRegistry.js';
+import { FrameScheduler } from './FrameScheduler.js';
+import { EventBus } from '../events/EventBus.js';
+import { GameStateMachine } from '../state/GameStateMachine.js';
+import { DiagnosticsService } from '../diagnostics/DiagnosticsService.js';
+
+export class Framework {
+  constructor() {
+    this.clock = new GameClock();
+    this.serviceRegistry = new ServiceRegistry();
+    this.frameScheduler = new FrameScheduler();
+    this.eventBus = new EventBus();
+    this.stateMachine = new GameStateMachine(this);
+    this.diagnostics = new DiagnosticsService(this.clock);
+    this.diagnostics.setEventBus(this.eventBus);
+  }
+
+  /**
+   * Register services from an array of service constructors.
+   * Each constructor is called with (this) and registered by its class name.
+   * @param {Array<typeof import('../services/Service.js').Service>} serviceClasses
+   */
+  registerServices(serviceClasses) {
+    for (const ServiceClass of serviceClasses) {
+      const service = new ServiceClass(this);
+      this.serviceRegistry.register(service.name, service);
+    }
+  }
+
+  startMainLoop() {
+    const loop = (timestamp) => {
+      this.clock.tick(timestamp);
+      const delta = this.clock.deltaTime;
+
+      this.diagnostics.update(delta);
+      this.eventBus.dispatch();
+      this.frameScheduler.run(delta);
+
+      requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
+  }
+}
+````
+
+## File: src/framework/core/ServiceManifest.js
+````javascript
+import { RenderService } from '../services/RenderService.js';
+import { InputService } from '../services/InputService.js';
+import { PlayerService } from '../services/PlayerService.js';
+import { AudioService } from '../services/AudioService.js';
+import { UIService } from '../services/UIService.js';
+import { WorldManager } from '../../world/WorldManager.js';
+import { ECSService } from '../../ecs/ECSService.js';
+
+export const ServiceManifest = [
+  RenderService,
+  InputService,
+  PlayerService,
+  AudioService,
+  UIService,
+  WorldManager,
+  ECSService
+];
+````
+
+## File: src/framework/diagnostics/PerformanceCounters.js
+````javascript
+<<<<<<< HEAD
+export class PerformanceCounters {
+  constructor() {
+    this.fps = 0;
+    this.frameTime = 0;           // ms
+    this.frameCount = 0;
+    this.averageFrameTime = 0;    // rolling average
+    this.eventQueueSize = 0;
+
+    // O(1) rolling average using a circular buffer
+    this._maxSamples = 120;
+    this._buffer = new Float64Array(this._maxSamples);
+    this._index = 0;
+    this._count = 0;
+    this._runningTotal = 0;
+  }
+
+  update(deltaTime, eventQueueSize) {
+    this.frameTime = deltaTime * 1000;
+    this.frameCount++;
+    this.eventQueueSize = eventQueueSize;
+
+    // Remove oldest value if buffer full
+    if (this._count === this._maxSamples) {
+      this._runningTotal -= this._buffer[this._index];
+    } else {
+      this._count++;
+    }
+
+    // Add new value
+    this._buffer[this._index] = this.frameTime;
+    this._runningTotal += this.frameTime;
+    this._index = (this._index + 1) % this._maxSamples;
+
+    this.averageFrameTime = this._runningTotal / this._count;
+    this.fps = Math.round(1000 / this.averageFrameTime);
+  }
+=======
+export class PerformanceCounters {
+  constructor() {
+    this.fps = 0;
+    this.frameTime = 0;           // ms
+    this.frameCount = 0;
+    this.averageFrameTime = 0;    // rolling average
+    this.eventQueueSize = 0;
+
+    // O(1) rolling average using a circular buffer
+    this._maxSamples = 120;
+    this._buffer = new Float64Array(this._maxSamples);
+    this._index = 0;
+    this._count = 0;
+    this._runningTotal = 0;
+  }
+
+  update(deltaTime, eventQueueSize) {
+    this.frameTime = deltaTime * 1000;
+    this.frameCount++;
+    this.eventQueueSize = eventQueueSize;
+
+    // Remove oldest value if buffer full
+    if (this._count === this._maxSamples) {
+      this._runningTotal -= this._buffer[this._index];
+    } else {
+      this._count++;
+    }
+
+    // Add new value
+    this._buffer[this._index] = this.frameTime;
+    this._runningTotal += this.frameTime;
+    this._index = (this._index + 1) % this._maxSamples;
+
+    this.averageFrameTime = this._runningTotal / this._count;
+    this.fps = Math.round(1000 / this.averageFrameTime);
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/framework/events/Event.js
+````javascript
+/**
+ * Immutable event payload.
+ */
+export class Event {
+  constructor(type, sender, payload = null) {
+    this.type = type;
+    this.sender = sender;
+    this.payload = payload;
+    this.timestamp = performance.now();
+
+    Object.freeze(this);
+  }
+}
+````
+
+## File: src/framework/events/EventBus.js
+````javascript
+import { Event } from './Event.js';
+
+export class EventBus {
+  constructor() {
+    this._listeners = new Map();
+    this._queue = [];
+    this._head = 0;
+  }
+
+  subscribe(type, callback) {
+    if (!this._listeners.has(type)) {
+      this._listeners.set(type, new Set());
+    }
+
+    this._listeners.get(type).add(callback);
+
+    // Return unsubscribe function
+    return () => this.unsubscribe(type, callback);
+  }
+
+  unsubscribe(type, callback) {
+    const set = this._listeners.get(type);
+
+    if (set) {
+      set.delete(callback);
+
+      if (set.size === 0) {
+        this._listeners.delete(type);
+      }
+    }
+  }
+
+  publish(type, sender, payload = null) {
+    this._queue.push(new Event(type, sender, payload));
+  }
+
+  dispatch() {
+    while (this._head < this._queue.length) {
+      const event = this._queue[this._head];
+      this._head++;
+
+      const listeners = this._listeners.get(event.type);
+
+      if (listeners) {
+        listeners.forEach(callback => {
+          try {
+            callback(event);
+          } catch (err) {
+            console.error(
+              `EventBus listener error for type "${event.type}":`,
+              err
+            );
+          }
+        });
+      }
+    }
+
+    // Reset queue after dispatch
+    if (this._head > 0) {
+      this._queue.length = 0;
+      this._head = 0;
+    }
+  }
+
+  getQueueLength() {
+    return this._queue.length - this._head;
+  }
+
+  clear() {
+    this._queue.length = 0;
+    this._head = 0;
+  }
+}
+````
+
+## File: src/framework/services/SceneService.js
+````javascript
+// src/framework/services/SceneService.js
+import { Service } from './Service.js';
+import { SceneManager } from '../../scene/SceneManager.js';
+
+export class SceneService extends Service {
+  /**
+   * @param {import('../core/Framework.js').Framework} framework
+   */
+  constructor(framework) {
+    super('scene', framework);
+    /** @type {SceneManager|null} @private */
+    this._sceneManager = null;
+  }
+
+  /** @override */
+  async initialize() {
+    this._sceneManager = new SceneManager();
+  }
+
+  /** @override */
+  async start() {}
+
+  /**
+   * Forward per‑frame update to the scene manager.
+   * @param {number} delta
+   */
+  update(delta) {
+    if (this._sceneManager) {
+      this._sceneManager.update(delta);
+    }
+  }
+
+  /**
+   * Read‑only access to the scene manager.
+   * @returns {SceneManager|null}
+   */
+  get sceneManager() {
+    return this._sceneManager;
+  }
+
+  /** @override */
+  async shutdown() {
+    if (this._sceneManager) {
+      const current = this._sceneManager.current();
+      if (current) {
+        current.stop();
+        current.unload();
+        current.destroy();
+      }
+      this._sceneManager = null;
+    }
+  }
+}
+````
+
+## File: src/framework/services/Service.js
+````javascript
+
+````
+
+## File: src/hierarchy/Cell.js
+````javascript
+import { CellID } from '../CellID.js';
+
+export class Cell {
+  /**
+   * @param {CellID} id
+   */
+  constructor(id) {
+    /** @readonly */
+    this.id = id;
+    /**
+     * Entity numeric IDs (not full EntityID objects) for lightweight storage.
+     * @type {number[]}
+     */
+    this.entityIDs = [];
+  }
+
+  /**
+   * @param {number} entityIdNum
+   */
+  addEntity(entityIdNum) {
+    if (!this.entityIDs.includes(entityIdNum)) {
+      this.entityIDs.push(entityIdNum);
+    }
+  }
+
+  /**
+   * @param {number} entityIdNum
+   */
+  removeEntity(entityIdNum) {
+    this.entityIDs = this.entityIDs.filter(id => id !== entityIdNum);
+  }
+}
+````
+
+## File: src/hierarchy/Region.js
+````javascript
+import { RegionID } from '../RegionID.js';
+
+export class Region {
+  /**
+   * @param {RegionID} id
+   */
+  constructor(id) {
+    /** @readonly */
+    this.id = id;
+    /** @type {import('../SectorID.js').SectorID[]} */
+    this.sectorIDs = [];
+  }
+}
+````
+
+## File: src/hierarchy/Sector.js
+````javascript
+import { SectorID } from '../SectorID.js';
+
+export class Sector {
+  /**
+   * @param {SectorID} id
+   */
+  constructor(id) {
+    /** @readonly */
+    this.id = id;
+    /** @type {import('../CellID.js').CellID[]} */
+    this.cellIDs = [];
+    /** @type {'loaded'|'unloaded'|'loading'|'unloading'} */
+    this.state = 'unloaded';
+  }
+}
+````
+
+## File: src/managers/EntityManager.js
+````javascript
+import { EntityID } from '../EntityID.js';
+import { Entity } from '../Entity.js';
+import { EntityHandle } from '../EntityHandle.js';
+
+/**
+ * Manages entity lifecycle: creation, destruction, state changes.
+ */
+export class EntityManager {
+  /**
+   * @param {import('../registries/EntityRegistry.js').EntityRegistry} entityReg
+   */
+  constructor(entityReg) {
+    this.entityRegistry = entityReg;
+    this._nextId = 1;
+  }
+
+  /**
+   * Create a new entity with a persistent handle.
+   * @param {import('../CellID.js').CellID|null} [cellId] – optional initial cell
+   * @returns {EntityHandle}
+   */
+  create(cellId = null) {
+    const idNum = this._nextId++;
+    const generation = 0;
+    const entityId = new EntityID(idNum, generation);
+    const cellIdValue = cellId ? cellId.value : null;
+    const entity = new Entity(entityId, cellIdValue);
+
+    // Create a persistent handle that will stay valid as long as the entity exists.
+    const handle = new EntityHandle(entityId, (eid) => this.entityRegistry.get(eid));
+    entity.handle = handle;
+
+    this.entityRegistry.register(entity);
+    return handle;
+  }
+
+  /**
+   * Destroy an entity, invalidating its handle.
+   * @param {EntityID} entityId
+   */
+  destroy(entityId) {
+    // EntityRegistry.unregister increments generation, so any handle becomes invalid.
+    this.entityRegistry.unregister(entityId);
+  }
+
+  /**
+   * Move entity to a different cell.
+   * @param {EntityID} entityId
+   * @param {import('../CellID.js').CellID|null} newCellId
+   */
+  move(entityId, newCellId) {
+    const entity = this.entityRegistry.get(entityId);
+    if (entity) {
+      entity.cellId = newCellId ? newCellId.value : null;
+    }
+  }
+
+  /**
+   * Change entity state.
+   * @param {EntityID} entityId
+   * @param {'created'|'active'|'sleeping'|'hidden'|'destroyed'} state
+   */
+  setState(entityId, state) {
+    const entity = this.entityRegistry.get(entityId);
+    if (entity) entity.setState(state);
+  }
+
+  /**
+   * Return the persistent handle for an entity (if it exists).
+   * @param {EntityID} entityId
+   * @returns {EntityHandle|null}
+   */
+  getHandle(entityId) {
+    const entity = this.entityRegistry.get(entityId);
+    return entity ? entity.handle : null;
+  }
+}
+````
+
+## File: src/managers/QueryManager.js
+````javascript
+import { RadiusQuery } from '../queries/RadiusQuery.js';
+import { NearestQuery } from '../queries/NearestQuery.js';
+import { CellQuery } from '../queries/CellQuery.js';
+import { CellID } from '../CellID.js';
+
+/**
+ * Central query interface. Delegates to specialised query implementations.
+ */
+export class QueryManager {
+  /**
+   * @param {import('../World.js').World} world
+   * @param {import('./SpatialManager.js').SpatialManager} spatialManager
+   */
+  constructor(world, spatialManager) {
+    this.world = world;
+    this.spatialManager = spatialManager;
+  }
+
+  /**
+   * Find all entities within a radius of a point.
+   * @param {{x:number,y:number,z:number}} center
+   * @param {number} radius
+   * @param {import('../EntityHandle.js').EntityHandle[]} [out] reusable array
+   * @returns {import('../EntityHandle.js').EntityHandle[]}
+   */
+  queryRadius(center, radius, out = []) {
+    return RadiusQuery.query(this.world, center, radius, out, this.spatialManager);
+  }
+
+  /**
+   * Find the nearest entity to a point.
+   * @param {{x:number,y:number,z:number}} center
+   * @returns {import('../EntityHandle.js').EntityHandle|null}
+   */
+  queryNearest(center) {
+    return NearestQuery.query(this.world, center);
+  }
+
+  /**
+   * Get all entities in a specific cell.
+   * @param {CellID} cellId
+   * @param {import('../EntityHandle.js').EntityHandle[]} [out]
+   * @returns {import('../EntityHandle.js').EntityHandle[]}
+   */
+  queryCell(cellId, out = []) {
+    return CellQuery.query(this.world, cellId, out);
+  }
+}
+````
+
+## File: src/managers/SpatialManager.js
+````javascript
+import { CellID } from '../CellID.js';
+import { GridPartition } from '../spatial/GridPartition.js';
+
+export class SpatialManager {
+  /**
+   * @param {number} cellSize - world units per cell
+   */
+  constructor(cellSize = 50) {
+    this.gridPartition = new GridPartition(cellSize);
+  }
+
+  /**
+   * Register a cell in the spatial index.
+   * @param {CellID} cellId
+   * @param {number} gridX
+   * @param {number} gridZ
+   */
+  addCell(cellId, gridX, gridZ) {
+    this.gridPartition.addCell(gridX, gridZ, cellId.value);
+  }
+
+  /**
+   * Remove a cell from the spatial index.
+   * @param {CellID} cellId
+   */
+  removeCell(cellId) {
+    this.gridPartition.removeCell(cellId.value);
+  }
+
+  /**
+   * Find the CellID containing a world position.
+   * @param {{x: number, y: number, z: number}} position
+   * @returns {CellID|null}
+   */
+  getCellAt(position) {
+    const raw = this.gridPartition.getCellId(position);
+    return raw ? new CellID(raw) : null;
+  }
+
+  /**
+   * Get all cell IDs that overlap an AABB (infinite Y).
+   * @param {number} minX
+   * @param {number} minZ
+   * @param {number} maxX
+   * @param {number} maxZ
+   * @returns {CellID[]}
+   */
+  getCellsInBounds(minX, minZ, maxX, maxZ) {
+    const rawIds = this.gridPartition.getCellsInBounds(minX, minZ, maxX, maxZ);
+    return rawIds.map(id => new CellID(id));
+  }
+}
+````
+
+## File: src/managers/StreamingManager.js
+````javascript
+import { StreamingJob } from '../streaming/StreamingJob.js';
+import { SectorLoader } from '../streaming/SectorLoader.js';
+import { SectorUnloader } from '../streaming/SectorUnloader.js';
+
+/**
+ * Coordinates sector streaming using job objects.
+ */
+export class StreamingManager {
+  /**
+   * @param {import('../World.js').World} world
+   */
+  constructor(world) {
+    this.world = world;
+    /** @type {StreamingJob[]} */
+    this.pendingJobs = [];
+  }
+
+  /**
+   * Schedule a load job for a sector.
+   * @param {import('../data/SectorData.js').SectorData} sectorData
+   */
+  loadSector(sectorData) {
+    const job = new SectorLoader(sectorData);
+    this.pendingJobs.push(job);
+  }
+
+  /**
+   * Schedule an unload job for a sector.
+   * @param {import('../SectorID.js').SectorID} sectorId
+   */
+  unloadSector(sectorId) {
+    const job = new SectorUnloader(sectorId);
+    this.pendingJobs.push(job);
+  }
+
+  /**
+   * Process all pending jobs synchronously each frame.
+   * In future, this will become async/incremental.
+   * @param {number} delta
+   */
+  update(delta) {
+    while (this.pendingJobs.length > 0) {
+      const job = this.pendingJobs.shift();
+      job.execute(this.world);
+    }
+  }
+}
+````
+
+## File: src/managers/WorldGraph.js
+````javascript
+import { RegionID } from '../RegionID.js';
+import { SectorID } from '../SectorID.js';
+import { CellID } from '../CellID.js';
+import { Region } from '../hierarchy/Region.js';
+import { Sector } from '../hierarchy/Sector.js';
+import { Cell } from '../hierarchy/Cell.js';
+
+/**
+ * Manages the world hierarchy: creation and relationships between regions,
+ * sectors, and cells. Uses the registries for storage.
+ */
+export class WorldGraph {
+  /**
+   * @param {import('../registries/RegionRegistry.js').RegionRegistry} regionReg
+   * @param {import('../registries/SectorRegistry.js').SectorRegistry} sectorReg
+   * @param {import('../registries/CellRegistry.js').CellRegistry} cellReg
+   */
+  constructor(regionReg, sectorReg, cellReg) {
+    this.regionRegistry = regionReg;
+    this.sectorRegistry = sectorReg;
+    this.cellRegistry = cellReg;
+  }
+
+  /**
+   * Create a new region and register it.
+   * @param {string} idValue
+   * @returns {Region}
+   */
+  createRegion(idValue) {
+    const id = new RegionID(idValue);
+    const region = new Region(id);
+    this.regionRegistry.register(id, region);
+    return region;
+  }
+
+  /**
+   * Create a new sector and register it.
+   * @param {string} idValue
+   * @returns {Sector}
+   */
+  createSector(idValue) {
+    const id = new SectorID(idValue);
+    const sector = new Sector(id);
+    this.sectorRegistry.register(id, sector);
+    return sector;
+  }
+
+  /**
+   * Create a new cell and register it.
+   * @param {string} idValue
+   * @returns {Cell}
+   */
+  createCell(idValue) {
+    const id = new CellID(idValue);
+    const cell = new Cell(id);
+    this.cellRegistry.register(id, cell);
+    return cell;
+  }
+
+  /**
+   * Attach a sector to a region.
+   * @param {RegionID} regionId
+   * @param {SectorID} sectorId
+   */
+  addSectorToRegion(regionId, sectorId) {
+    const region = this.regionRegistry.get(regionId);
+    if (!region) throw new Error(`Region ${regionId} does not exist.`);
+    if (!region.sectorIDs.some(sid => sid.equals(sectorId))) {
+      region.sectorIDs.push(sectorId);
+    }
+  }
+
+  /**
+   * Attach a cell to a sector.
+   * @param {SectorID} sectorId
+   * @param {CellID} cellId
+   */
+  addCellToSector(sectorId, cellId) {
+    const sector = this.sectorRegistry.get(sectorId);
+    if (!sector) throw new Error(`Sector ${sectorId} does not exist.`);
+    if (!sector.cellIDs.some(cid => cid.equals(cellId))) {
+      sector.cellIDs.push(cellId);
+    }
+  }
+}
+````
+
+## File: src/player/PlayerController.js
+````javascript
+// src/core/PlayerController.js
+import * as THREE from 'three';
+
+export class PlayerController {
+  /**
+   * @param {THREE.PerspectiveCamera} camera
+   * @param {HTMLElement} domElement - Element used for pointer lock (e.g., document.body).
+   * @param {THREE.Scene} scene
+   */
+  constructor(camera, domElement, scene) {
+    // ── Yaw / Pitch hierarchy (no gimbal lock) ──────────
+    this.yawObject = new THREE.Object3D();
+    this.pitchObject = new THREE.Object3D();
+    this.yawObject.add(this.pitchObject);
+    this.pitchObject.add(camera);
+
+    // Eye height offset (camera relative to pitchObject)
+    camera.position.set(0, 1.7, 0);
+
+    scene.add(this.yawObject);
+
+    // ── References ────────────────────────────────────────
+    this.camera = camera;
+    this.domElement = domElement;
+    this.scene = scene;
+
+    // ── Mouse look settings ───────────────────────────────
+    this.mouseSensitivity = 0.002;
+    this.isLocked = false;
+
+    // ── Movement physics ──────────────────────────────────
+    this.velocity = new THREE.Vector3();
+    this.moveSpeed = 10;        // max speed (units/s)
+    this.acceleration = 50;     // acceleration (units/s²)
+    this.friction = 8;          // damping coefficient
+    this.keys = {};
+
+    // ── Bind event handlers ───────────────────────────────
+    this._onMouseMove = this._onMouseMove.bind(this);
+    this._onPointerLockChange = this._onPointerLockChange.bind(this);
+    this._onKeyDown = this._onKeyDown.bind(this);
+    this._onKeyUp = this._onKeyUp.bind(this);
+
+    // ── Attach listeners ──────────────────────────────────
+    document.addEventListener('pointerlockchange', this._onPointerLockChange);
+    domElement.addEventListener('click', () => domElement.requestPointerLock());
+    window.addEventListener('keydown', this._onKeyDown);
+    window.addEventListener('keyup', this._onKeyUp);
+  }
+
+  /* -------- Pointer Lock & Mouse Look ---------- */
+  _onPointerLockChange() {
+    this.isLocked = (document.pointerLockElement === this.domElement);
+    if (this.isLocked) {
+      document.addEventListener('mousemove', this._onMouseMove);
+    } else {
+      document.removeEventListener('mousemove', this._onMouseMove);
+    }
+  }
+
+  _onMouseMove(event) {
+    if (!this.isLocked) return;
+
+    const movementX = event.movementX || 0;
+    const movementY = event.movementY || 0;
+
+    this.yawObject.rotation.y -= movementX * this.mouseSensitivity;
+    this.pitchObject.rotation.x -= movementY * this.mouseSensitivity;
+
+    // Clamp vertical rotation to avoid flipping
+    this.pitchObject.rotation.x = Math.max(
+      -Math.PI / 2,
+      Math.min(Math.PI / 2, this.pitchObject.rotation.x)
+    );
+  }
+
+  /* -------- Movement Input ---------- */
+  _onKeyDown(event) {
+    this.keys[event.code] = true;
+  }
+
+  _onKeyUp(event) {
+    this.keys[event.code] = false;
+  }
+
+  /**
+   * Called every frame with the elapsed time in seconds.
+   * @param {number} delta - Time since last frame (seconds).
+   */
+  update(delta) {
+    const dt = Math.min(delta, 0.1);   // prevent physics explosions
+
+    // --- Build normalized input direction (WASD) ---
+    const input = new THREE.Vector3();
+    if (this.keys['KeyW']) input.z -= 1;
+    if (this.keys['KeyS']) input.z += 1;
+    if (this.keys['KeyA']) input.x -= 1;
+    if (this.keys['KeyD']) input.x += 1;
+
+    if (input.lengthSq() > 0) {
+      input.normalize();
+
+      // World‑space forward and right (ignore pitch for movement direction)
+      const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(this.yawObject.quaternion);
+      const right = new THREE.Vector3(1, 0, 0).applyQuaternion(this.yawObject.quaternion);
+
+      const accelForce = this.acceleration * dt;
+      this.velocity.addScaledVector(forward, -input.z * accelForce);
+      this.velocity.addScaledVector(right, input.x * accelForce);
+    }
+
+    // --- Friction / damping (frame‑rate independent) ---
+    const damping = Math.exp(-this.friction * dt);
+    this.velocity.multiplyScalar(damping);
+
+    // --- Hard speed cap ---
+    if (this.velocity.length() > this.moveSpeed) {
+      this.velocity.normalize().multiplyScalar(this.moveSpeed);
+    }
+
+    // --- Apply movement to the yaw object ---
+    this.yawObject.position.addScaledVector(this.velocity, dt);
+  }
+
+  /** Convenience getter for the player's world position. */
+  get position() {
+    return this.yawObject.position;
+  }
+}
+````
+
+## File: src/queries/CellQuery.js
+````javascript
+export class CellQuery {
+  /**
+   * @param {import('../World.js').World} world
+   * @param {import('../CellID.js').CellID} cellId
+   * @param {import('../EntityHandle.js').EntityHandle[]} out
+   * @returns {import('../EntityHandle.js').EntityHandle[]}
+   */
+  static query(world, cellId, out = []) {
+    out.length = 0;
+    const cell = world.getCell(cellId);
+    if (!cell) return out;
+    for (const entityIdNum of cell.entityIDs) {
+      const entity = world.entityManager.entityRegistry._entities.get(entityIdNum);
+      if (entity) {
+        out.push(entity.handle);
+      }
+    }
+    return out;
+  }
+}
+````
+
+## File: src/queries/NearestQuery.js
+````javascript
+export class NearestQuery {
+  /**
+   * @param {import('../World.js').World} world
+   * @param {{x:number,y:number,z:number}} center
+   * @returns {import('../EntityHandle.js').EntityHandle|null}
+   */
+  static query(world, center) {
+    let bestDistSq = Infinity;
+    let bestHandle = null;
+    world.entityRegistry.forEach(entity => {
+      const dx = entity.transform.position.x - center.x;
+      const dy = entity.transform.position.y - center.y;
+      const dz = entity.transform.position.z - center.z;
+      const distSq = dx*dx + dy*dy + dz*dz;
+      if (distSq < bestDistSq) {
+        bestDistSq = distSq;
+        bestHandle = entity.handle;
+      }
+    });
+    return bestHandle;
+  }
+}
+````
+
+## File: src/queries/RadiusQuery.js
+````javascript
+<<<<<<< HEAD
+import { CellID } from '../CellID.js';
+
+export class RadiusQuery {
+  /**
+   * @param {import('../World.js').World} world
+   * @param {{x:number,y:number,z:number}} center
+   * @param {number} radius
+   * @param {import('../EntityHandle.js').EntityHandle[]} out
+   * @param {import('../managers/SpatialManager.js').SpatialManager} spatialManager
+   * @returns {import('../EntityHandle.js').EntityHandle[]}
+   */
+  static query(world, center, radius, out, spatialManager) {
+    out.length = 0;
+    const radiusSq = radius * radius;
+    const minX = center.x - radius;
+    const minZ = center.z - radius;
+    const maxX = center.x + radius;
+    const maxZ = center.z + radius;
+
+    const cellIds = spatialManager.getCellsInBounds(minX, minZ, maxX, maxZ);
+
+    for (const cellId of cellIds) {
+      const cell = world.getCell(cellId);
+      if (!cell) continue;
+      for (const entityIdNum of cell.entityIDs) {
+        // Retrieve entity via numeric ID – we use the internal _entities Map
+        const entity = world.entityManager.entityRegistry._entities.get(entityIdNum);
+        if (!entity) continue;
+        const dx = entity.transform.position.x - center.x;
+        const dy = entity.transform.position.y - center.y;
+        const dz = entity.transform.position.z - center.z;
+        if (dx*dx + dy*dy + dz*dz <= radiusSq) {
+          out.push(entity.handle);
+        }
+      }
+    }
+    return out;
+  }
+=======
+import { CellID } from '../CellID.js';
+
+export class RadiusQuery {
+  /**
+   * @param {import('../World.js').World} world
+   * @param {{x:number,y:number,z:number}} center
+   * @param {number} radius
+   * @param {import('../EntityHandle.js').EntityHandle[]} out
+   * @param {import('../managers/SpatialManager.js').SpatialManager} spatialManager
+   * @returns {import('../EntityHandle.js').EntityHandle[]}
+   */
+  static query(world, center, radius, out, spatialManager) {
+    out.length = 0;
+    const radiusSq = radius * radius;
+    const minX = center.x - radius;
+    const minZ = center.z - radius;
+    const maxX = center.x + radius;
+    const maxZ = center.z + radius;
+
+    const cellIds = spatialManager.getCellsInBounds(minX, minZ, maxX, maxZ);
+
+    for (const cellId of cellIds) {
+      const cell = world.getCell(cellId);
+      if (!cell) continue;
+      for (const entityIdNum of cell.entityIDs) {
+        // Retrieve entity via numeric ID – we use the internal _entities Map
+        const entity = world.entityManager.entityRegistry._entities.get(entityIdNum);
+        if (!entity) continue;
+        const dx = entity.transform.position.x - center.x;
+        const dy = entity.transform.position.y - center.y;
+        const dz = entity.transform.position.z - center.z;
+        if (dx*dx + dy*dy + dz*dz <= radiusSq) {
+          out.push(entity.handle);
+        }
+      }
+    }
+    return out;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/registries/CellRegistry.js
+````javascript
+<<<<<<< HEAD
+import { CellID } from '../CellID.js';
+
+export class CellRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Cell.js').Cell>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {CellID} id
+   * @param {import('../hierarchy/Cell.js').Cell} cell
+   */
+  register(id, cell) {
+    this._map.set(id.value, cell);
+  }
+
+  /** @param {CellID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {CellID} id @returns {import('../hierarchy/Cell.js').Cell|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {CellID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  forEach(callback) {
+    this._map.forEach((cell, key) => callback(cell, new CellID(key)));
+  }
+
+  count() {
+    return this._map.size;
+  }
+=======
+import { CellID } from '../CellID.js';
+
+export class CellRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Cell.js').Cell>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {CellID} id
+   * @param {import('../hierarchy/Cell.js').Cell} cell
+   */
+  register(id, cell) {
+    this._map.set(id.value, cell);
+  }
+
+  /** @param {CellID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {CellID} id @returns {import('../hierarchy/Cell.js').Cell|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {CellID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  forEach(callback) {
+    this._map.forEach((cell, key) => callback(cell, new CellID(key)));
+  }
+
+  count() {
+    return this._map.size;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/registries/EntityRegistry.js
+````javascript
+<<<<<<< HEAD
+import { EntityID } from '../EntityID.js';
+
+/**
+ * Registry for entities. Stores them, tracks generations.
+ * Does NOT construct entities.
+ */
+export class EntityRegistry {
+  constructor() {
+    /** @type {Map<number, import('../Entity.js').Entity>} */
+    this._entities = new Map();
+    /** @type {Map<number, number>} */
+    this._generations = new Map();
+  }
+
+  /**
+   * Register an entity. It must already have an EntityID.
+   * @param {import('../Entity.js').Entity} entity
+   */
+  register(entity) {
+    const id = entity.id.id;
+    this._entities.set(id, entity);
+    this._generations.set(id, entity.generation);
+  }
+
+  /**
+   * Look up entity by EntityID. Returns null if generation mismatch.
+   * @param {EntityID} entityId
+   * @returns {import('../Entity.js').Entity|null}
+   */
+  get(entityId) {
+    const entity = this._entities.get(entityId.id);
+    if (!entity || entity.generation !== entityId.generation) return null;
+    return entity;
+  }
+
+  /**
+   * Remove entity from registry and increment its generation so handles become invalid.
+   * @param {EntityID} entityId
+   */
+  unregister(entityId) {
+    if (!this._entities.has(entityId.id)) return;
+    this._entities.delete(entityId.id);
+    const currentGen = this._generations.get(entityId.id) || 0;
+    this._generations.set(entityId.id, currentGen + 1);
+  }
+
+  /** @param {EntityID} entityId @returns {boolean} */
+  exists(entityId) {
+    return this.get(entityId) !== null;
+  }
+
+  /**
+   * Iterate over all currently valid entities.
+   * @param {(entity: import('../Entity.js').Entity) => void} callback
+   */
+  forEach(callback) {
+    this._entities.forEach(callback);
+  }
+
+  /** @returns {number} */
+  count() {
+    return this._entities.size;
+  }
+=======
+import { EntityID } from '../EntityID.js';
+
+/**
+ * Registry for entities. Stores them, tracks generations.
+ * Does NOT construct entities.
+ */
+export class EntityRegistry {
+  constructor() {
+    /** @type {Map<number, import('../Entity.js').Entity>} */
+    this._entities = new Map();
+    /** @type {Map<number, number>} */
+    this._generations = new Map();
+  }
+
+  /**
+   * Register an entity. It must already have an EntityID.
+   * @param {import('../Entity.js').Entity} entity
+   */
+  register(entity) {
+    const id = entity.id.id;
+    this._entities.set(id, entity);
+    this._generations.set(id, entity.generation);
+  }
+
+  /**
+   * Look up entity by EntityID. Returns null if generation mismatch.
+   * @param {EntityID} entityId
+   * @returns {import('../Entity.js').Entity|null}
+   */
+  get(entityId) {
+    const entity = this._entities.get(entityId.id);
+    if (!entity || entity.generation !== entityId.generation) return null;
+    return entity;
+  }
+
+  /**
+   * Remove entity from registry and increment its generation so handles become invalid.
+   * @param {EntityID} entityId
+   */
+  unregister(entityId) {
+    if (!this._entities.has(entityId.id)) return;
+    this._entities.delete(entityId.id);
+    const currentGen = this._generations.get(entityId.id) || 0;
+    this._generations.set(entityId.id, currentGen + 1);
+  }
+
+  /** @param {EntityID} entityId @returns {boolean} */
+  exists(entityId) {
+    return this.get(entityId) !== null;
+  }
+
+  /**
+   * Iterate over all currently valid entities.
+   * @param {(entity: import('../Entity.js').Entity) => void} callback
+   */
+  forEach(callback) {
+    this._entities.forEach(callback);
+  }
+
+  /** @returns {number} */
+  count() {
+    return this._entities.size;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/registries/RegionRegistry.js
+````javascript
+<<<<<<< HEAD
+import { RegionID } from '../RegionID.js';
+
+export class RegionRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Region.js').Region>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {RegionID} id
+   * @param {import('../hierarchy/Region.js').Region} region
+   */
+  register(id, region) {
+    this._map.set(id.value, region);
+  }
+
+  /** @param {RegionID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {RegionID} id @returns {import('../hierarchy/Region.js').Region|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {RegionID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  /**
+   * @param {(region: import('../hierarchy/Region.js').Region, id: RegionID) => void} callback
+   */
+  forEach(callback) {
+    this._map.forEach((region, key) => callback(region, new RegionID(key)));
+  }
+
+  /** @returns {number} */
+  count() {
+    return this._map.size;
+  }
+=======
+import { RegionID } from '../RegionID.js';
+
+export class RegionRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Region.js').Region>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {RegionID} id
+   * @param {import('../hierarchy/Region.js').Region} region
+   */
+  register(id, region) {
+    this._map.set(id.value, region);
+  }
+
+  /** @param {RegionID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {RegionID} id @returns {import('../hierarchy/Region.js').Region|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {RegionID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  /**
+   * @param {(region: import('../hierarchy/Region.js').Region, id: RegionID) => void} callback
+   */
+  forEach(callback) {
+    this._map.forEach((region, key) => callback(region, new RegionID(key)));
+  }
+
+  /** @returns {number} */
+  count() {
+    return this._map.size;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/registries/SectorRegistry.js
+````javascript
+<<<<<<< HEAD
+import { SectorID } from '../SectorID.js';
+
+export class SectorRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Sector.js').Sector>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {SectorID} id
+   * @param {import('../hierarchy/Sector.js').Sector} sector
+   */
+  register(id, sector) {
+    this._map.set(id.value, sector);
+  }
+
+  /** @param {SectorID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {SectorID} id @returns {import('../hierarchy/Sector.js').Sector|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {SectorID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  forEach(callback) {
+    this._map.forEach((sector, key) => callback(sector, new SectorID(key)));
+  }
+
+  count() {
+    return this._map.size;
+  }
+=======
+import { SectorID } from '../SectorID.js';
+
+export class SectorRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Sector.js').Sector>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {SectorID} id
+   * @param {import('../hierarchy/Sector.js').Sector} sector
+   */
+  register(id, sector) {
+    this._map.set(id.value, sector);
+  }
+
+  /** @param {SectorID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {SectorID} id @returns {import('../hierarchy/Sector.js').Sector|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {SectorID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  forEach(callback) {
+    this._map.forEach((sector, key) => callback(sector, new SectorID(key)));
+  }
+
+  count() {
+    return this._map.size;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/rendering/EnvironmentSetup.js
+````javascript
+<<<<<<< HEAD
+// EnvironmentSetup.js
+import * as THREE from 'three';
+import { PBRTextureGenerator } from './PBRTextureGenerator.js';
+
+/**
+ * Configures the WebGL renderer, lighting, fog, and enforces PBR-only materials.
+ */
+export function createPBRRenderer(domElement, width, height) {
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // Shadows
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;   // soft, realistic penumbra
+
+  // HDR‑ish tone mapping (ACES, as used in modern Battlefield engines)
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.2;   // adjust to taste, keep highlights crisp
+
+  domElement.appendChild(renderer.domElement);
+  return renderer;
+}
+
+/**
+ * Creates the primary key light (directional) and fill light.
+ */
+export function createLighting(scene) {
+  // Main sun / overhead searchlight
+  const sun = new THREE.DirectionalLight(0xffeedd, 1.5);
+  sun.position.set(15, 20, 5);
+  sun.castShadow = true;
+  sun.shadow.mapSize.width = 2048;
+  sun.shadow.mapSize.height = 2048;
+  sun.shadow.camera.near = 0.5;
+  sun.shadow.camera.far = 50;
+  sun.shadow.camera.left = -15;
+  sun.shadow.camera.right = 15;
+  sun.shadow.camera.top = 15;
+  sun.shadow.camera.bottom = -15;
+  sun.shadow.bias = -0.0005;
+  scene.add(sun);
+
+  // Soft fill from below (simulating bounced light)
+  const fill = new THREE.DirectionalLight(0x445566, 0.6);
+  fill.position.set(-5, 0, 10);
+  scene.add(fill);
+
+  // Ambient to prevent totally black shadows
+  scene.add(new THREE.AmbientLight(0x1a1a2e, 0.4));
+}
+
+/**
+ * Applies exponential fog – thick, moody atmospheric depth.
+ */
+export function applyAtmosphere(scene) {
+  scene.fog = new THREE.FogExp2(0x0a0a14, 0.015);
+  scene.background = new THREE.Color(0x0a0a14);   // matches fog colour
+}
+
+/**
+ * Factory that creates a `MeshStandardMaterial` with the generated PBR textures.
+ * All meshes in the environment **must** use this factory – no flat colours, no unlit shaders.
+ */
+export class PBRMaterialFactory {
+  constructor() {
+    this.generator = new PBRTextureGenerator(1024);
+    this.cache = new Map();
+  }
+
+  /**
+   * Returns a full `MeshStandardMaterial` (or `MeshPhysicalMaterial` if `clearcoat` is set).
+   * @param {string} type - 'concrete', 'corridorMetal', ...
+   * @param {object} overrides - optional roughness/metalness/clearcoat overrides
+   */
+  getMaterial(type, overrides = {}) {
+    const key = `${type}_${JSON.stringify(overrides)}`;
+    if (this.cache.has(key)) return this.cache.get(key);
+
+    const textures = this.generator.getTextureSet(type);
+
+    // Apply repeating and filtering
+    Object.values(textures).forEach(tex => {
+      tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+      tex.repeat.set(2, 2);   // scale to world units
+      tex.minFilter = THREE.LinearMipmapLinearFilter;
+      tex.magFilter = THREE.LinearFilter;
+    });
+
+    const materialParams = {
+      map: textures.map,
+      roughnessMap: textures.roughnessMap,
+      metalnessMap: textures.metalnessMap,
+      normalMap: textures.normalMap,
+      roughness: overrides.roughness ?? 1.0,
+      metalness: overrides.metalness ?? 0.0,
+      normalScale: new THREE.Vector2(1.5, 1.5),
+      color: new THREE.Color(1, 1, 1)   // multiply with map
+    };
+
+    // For wet surfaces or polished metal, use physical material with clearcoat
+    let material;
+    if (overrides.clearcoat) {
+      material = new THREE.MeshPhysicalMaterial(materialParams);
+      material.clearcoat = overrides.clearcoat;
+      material.clearcoatRoughness = overrides.clearcoatRoughness ?? 0.1;
+    } else {
+      material = new THREE.MeshStandardMaterial(materialParams);
+    }
+
+    this.cache.set(key, material);
+    return material;
+  }
+=======
+// EnvironmentSetup.js
+import * as THREE from 'three';
+import { PBRTextureGenerator } from './PBRTextureGenerator.js';
+
+/**
+ * Configures the WebGL renderer, lighting, fog, and enforces PBR-only materials.
+ */
+export function createPBRRenderer(domElement, width, height) {
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // Shadows
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;   // soft, realistic penumbra
+
+  // HDR‑ish tone mapping (ACES, as used in modern Battlefield engines)
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.2;   // adjust to taste, keep highlights crisp
+
+  domElement.appendChild(renderer.domElement);
+  return renderer;
+}
+
+/**
+ * Creates the primary key light (directional) and fill light.
+ */
+export function createLighting(scene) {
+  // Main sun / overhead searchlight
+  const sun = new THREE.DirectionalLight(0xffeedd, 1.5);
+  sun.position.set(15, 20, 5);
+  sun.castShadow = true;
+  sun.shadow.mapSize.width = 2048;
+  sun.shadow.mapSize.height = 2048;
+  sun.shadow.camera.near = 0.5;
+  sun.shadow.camera.far = 50;
+  sun.shadow.camera.left = -15;
+  sun.shadow.camera.right = 15;
+  sun.shadow.camera.top = 15;
+  sun.shadow.camera.bottom = -15;
+  sun.shadow.bias = -0.0005;
+  scene.add(sun);
+
+  // Soft fill from below (simulating bounced light)
+  const fill = new THREE.DirectionalLight(0x445566, 0.6);
+  fill.position.set(-5, 0, 10);
+  scene.add(fill);
+
+  // Ambient to prevent totally black shadows
+  scene.add(new THREE.AmbientLight(0x1a1a2e, 0.4));
+}
+
+/**
+ * Applies exponential fog – thick, moody atmospheric depth.
+ */
+export function applyAtmosphere(scene) {
+  scene.fog = new THREE.FogExp2(0x0a0a14, 0.015);
+  scene.background = new THREE.Color(0x0a0a14);   // matches fog colour
+}
+
+/**
+ * Factory that creates a `MeshStandardMaterial` with the generated PBR textures.
+ * All meshes in the environment **must** use this factory – no flat colours, no unlit shaders.
+ */
+export class PBRMaterialFactory {
+  constructor() {
+    this.generator = new PBRTextureGenerator(1024);
+    this.cache = new Map();
+  }
+
+  /**
+   * Returns a full `MeshStandardMaterial` (or `MeshPhysicalMaterial` if `clearcoat` is set).
+   * @param {string} type - 'concrete', 'corridorMetal', ...
+   * @param {object} overrides - optional roughness/metalness/clearcoat overrides
+   */
+  getMaterial(type, overrides = {}) {
+    const key = `${type}_${JSON.stringify(overrides)}`;
+    if (this.cache.has(key)) return this.cache.get(key);
+
+    const textures = this.generator.getTextureSet(type);
+
+    // Apply repeating and filtering
+    Object.values(textures).forEach(tex => {
+      tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+      tex.repeat.set(2, 2);   // scale to world units
+      tex.minFilter = THREE.LinearMipmapLinearFilter;
+      tex.magFilter = THREE.LinearFilter;
+    });
+
+    const materialParams = {
+      map: textures.map,
+      roughnessMap: textures.roughnessMap,
+      metalnessMap: textures.metalnessMap,
+      normalMap: textures.normalMap,
+      roughness: overrides.roughness ?? 1.0,
+      metalness: overrides.metalness ?? 0.0,
+      normalScale: new THREE.Vector2(1.5, 1.5),
+      color: new THREE.Color(1, 1, 1)   // multiply with map
+    };
+
+    // For wet surfaces or polished metal, use physical material with clearcoat
+    let material;
+    if (overrides.clearcoat) {
+      material = new THREE.MeshPhysicalMaterial(materialParams);
+      material.clearcoat = overrides.clearcoat;
+      material.clearcoatRoughness = overrides.clearcoatRoughness ?? 0.1;
+    } else {
+      material = new THREE.MeshStandardMaterial(materialParams);
+    }
+
+    this.cache.set(key, material);
+    return material;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/rendering/PBRTextureGenerator.js
+````javascript
+<<<<<<< HEAD
+// PBRTextureGenerator.js
+import * as THREE from 'three';
+
+/**
+ * Generates high‑frequency canvas‑based PBR texture maps.
+ * Every material type yields an albedo, roughness, metalness, and normal map.
+ */
+export class PBRTextureGenerator {
+  constructor(resolution = 1024) {
+    this.res = resolution;
+  }
+
+  /**
+   * Core noise generator – creates a grainy canvas for surface variation.
+   */
+  _noiseCanvas(intensity = 1, colorBase = [128, 128, 128]) {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    const imgData = ctx.createImageData(this.res, this.res);
+
+    for (let i = 0; i < imgData.data.length; i += 4) {
+      const r = Math.random() * 255 * intensity;
+      const g = Math.random() * 255 * intensity;
+      const b = Math.random() * 255 * intensity;
+      imgData.data[i]     = colorBase[0] - 128 + r;
+      imgData.data[i + 1] = colorBase[1] - 128 + g;
+      imgData.data[i + 2] = colorBase[2] - 128 + b;
+      imgData.data[i + 3] = 255;
+    }
+    ctx.putImageData(imgData, 0, 0);
+    return canvas;
+  }
+
+  /**
+   * Creates a concrete albedo map – gritty, dusty gray with dark stains.
+   */
+  createConcreteAlbedo() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Base dirty gray
+    ctx.fillStyle = '#7a7a7a';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Noise overlay for grain
+    const noise = this._noiseCanvas(0.5, [128, 128, 128]);
+    ctx.globalAlpha = 0.6;
+    ctx.drawImage(noise, 0, 0);
+
+    // Dark stains (paint splatters)
+    ctx.globalAlpha = 0.3;
+    ctx.fillStyle = '#3b3b3b';
+    for (let i = 0; i < 50; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.arc(x, y, Math.random() * this.res * 0.05 + 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Cracks
+    ctx.globalAlpha = 0.8;
+    ctx.strokeStyle = '#1a1a1a';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    for (let i = 0; i < 30; i++) {
+      ctx.moveTo(Math.random() * this.res, Math.random() * this.res);
+      ctx.lineTo(
+        Math.random() * this.res,
+        Math.random() * this.res
+      );
+    }
+    ctx.stroke();
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Creates a roughness map for concrete – matte with occasional wet patches.
+   */
+  createConcreteRoughness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Overall matte (high roughness)
+    ctx.fillStyle = '#c0c0c0';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Darker (smoother) wet spots
+    ctx.fillStyle = '#505050';
+    for (let i = 0; i < 80; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.arc(x, y, Math.random() * this.res * 0.02 + 1, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Concrete has almost no metal – black map.
+   */
+  createConcreteMetalness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, this.res, this.res);
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Normal map from a synthetic height map – simulates panel gaps, chips.
+   * We reuse an internal height map + Sobel filter.
+   */
+  createConcreteNormal() {
+    return this._createNormalFromHeight(this._concreteHeightMap());
+  }
+
+  _concreteHeightMap() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    // Mid gray base
+    ctx.fillStyle = '#808080';
+    ctx.fillRect(0, 0, this.res, this.res);
+    // Panel gaps (dark lines = lower)
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = 3;
+    for (let i = 0; i < 15; i++) {
+      const x = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x + (Math.random() - 0.5) * 40, this.res);
+      ctx.stroke();
+    }
+    // Chips (brighter spots)
+    ctx.fillStyle = '#ffffff';
+    for (let i = 0; i < 100; i++) {
+      ctx.fillRect(
+        Math.random() * this.res,
+        Math.random() * this.res,
+        2, 2
+      );
+    }
+    return canvas;
+  }
+
+  /**
+   * Corridor metal – painted steel with worn edges revealing raw metal.
+   */
+  createCorridorMetalAlbedo() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Painted olive‑drab base
+    ctx.fillStyle = '#5a5e4b';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Worn metal patches (brighter, metallic grey)
+    ctx.globalAlpha = 0.7;
+    ctx.fillStyle = '#a0a0a0';
+    for (let i = 0; i < 200; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.fillRect(x, y, Math.random() * 8 + 2, Math.random() * 8 + 2);
+    }
+
+    // Rivets
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#3a3a3a';
+    for (let y = 100; y < this.res; y += 200) {
+      for (let x = 100; x < this.res; x += 200) {
+        ctx.beginPath();
+        ctx.arc(x, y, 8, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalRoughness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Mostly polished (low roughness) but with grime
+    ctx.fillStyle = '#202020';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Dirt streaks (higher roughness)
+    ctx.fillStyle = '#b0b0b0';
+    for (let i = 0; i < 40; i++) {
+      const x = Math.random() * this.res;
+      ctx.fillRect(x, 0, 2 + Math.random() * 4, this.res);
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalMetalness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    // Painted areas are non‑metal (black), raw metal is white
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, this.res, this.res);
+    ctx.fillStyle = '#ffffff';
+    // Exposed metal where albedo has patches
+    for (let i = 0; i < 200; i++) {
+      ctx.fillRect(
+        Math.random() * this.res,
+        Math.random() * this.res,
+        Math.random() * 8 + 2,
+        Math.random() * 8 + 2
+      );
+    }
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalNormal() {
+    return this._createNormalFromHeight(this._corridorHeightMap());
+  }
+
+  _corridorHeightMap() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#808080';
+    ctx.fillRect(0, 0, this.res, this.res);
+    // Weld seams
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = 4;
+    for (let y = 200; y < this.res; y += 300) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(this.res, y + (Math.random() - 0.5) * 10);
+      ctx.stroke();
+    }
+    return canvas;
+  }
+
+  /**
+   * Convert a height canvas to a tangent‑space normal map.
+   */
+  _createNormalFromHeight(heightCanvas) {
+    const res = this.res;
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = res;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(heightCanvas, 0, 0);
+    const imgData = ctx.getImageData(0, 0, res, res);
+    const height = new Float32Array(res * res);
+
+    for (let i = 0; i < res * res; i++) {
+      height[i] = imgData.data[i * 4] / 255;   // use red channel
+    }
+
+    const normalCtx = canvas.getContext('2d');
+    const normalImg = normalCtx.createImageData(res, res);
+
+    for (let y = 0; y < res; y++) {
+      for (let x = 0; x < res; x++) {
+        const idx = y * res + x;
+        const left   = height[y * res + Math.max(x - 1, 0)];
+        const right  = height[y * res + Math.min(x + 1, res - 1)];
+        const up     = height[Math.max(y - 1, 0) * res + x];
+        const down   = height[Math.min(y + 1, res - 1) * res + x];
+
+        const dx = (right - left) * 2;
+        const dy = (down - up) * 2;
+
+        const nx = -dx;
+        const ny = -dy;
+        const nz = 1.0;
+        const len = Math.sqrt(nx * nx + ny * ny + nz * nz);
+
+        const r = ((nx / len) * 0.5 + 0.5) * 255;
+        const g = ((ny / len) * 0.5 + 0.5) * 255;
+        const b = ((nz / len) * 0.5 + 0.5) * 255;
+
+        const pi = idx * 4;
+        normalImg.data[pi]     = r;
+        normalImg.data[pi + 1] = g;
+        normalImg.data[pi + 2] = b;
+        normalImg.data[pi + 3] = 255;
+      }
+    }
+
+    normalCtx.putImageData(normalImg, 0, 0);
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+    return texture;
+  }
+
+  /**
+   * Master method: returns a complete PBR texture set for a named material type.
+   */
+  getTextureSet(type) {
+    switch (type) {
+      case 'concrete':
+        return {
+          map: this.createConcreteAlbedo(),
+          roughnessMap: this.createConcreteRoughness(),
+          metalnessMap: this.createConcreteMetalness(),
+          normalMap: this.createConcreteNormal()
+        };
+      case 'corridorMetal':
+        return {
+          map: this.createCorridorMetalAlbedo(),
+          roughnessMap: this.createCorridorMetalRoughness(),
+          metalnessMap: this.createCorridorMetalMetalness(),
+          normalMap: this.createCorridorMetalNormal()
+        };
+      // Additional types can be added in the same manner
+      default:
+        throw new Error(`Unknown material type: ${type}`);
+    }
+  }
+=======
+// PBRTextureGenerator.js
+import * as THREE from 'three';
+
+/**
+ * Generates high‑frequency canvas‑based PBR texture maps.
+ * Every material type yields an albedo, roughness, metalness, and normal map.
+ */
+export class PBRTextureGenerator {
+  constructor(resolution = 1024) {
+    this.res = resolution;
+  }
+
+  /**
+   * Core noise generator – creates a grainy canvas for surface variation.
+   */
+  _noiseCanvas(intensity = 1, colorBase = [128, 128, 128]) {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    const imgData = ctx.createImageData(this.res, this.res);
+
+    for (let i = 0; i < imgData.data.length; i += 4) {
+      const r = Math.random() * 255 * intensity;
+      const g = Math.random() * 255 * intensity;
+      const b = Math.random() * 255 * intensity;
+      imgData.data[i]     = colorBase[0] - 128 + r;
+      imgData.data[i + 1] = colorBase[1] - 128 + g;
+      imgData.data[i + 2] = colorBase[2] - 128 + b;
+      imgData.data[i + 3] = 255;
+    }
+    ctx.putImageData(imgData, 0, 0);
+    return canvas;
+  }
+
+  /**
+   * Creates a concrete albedo map – gritty, dusty gray with dark stains.
+   */
+  createConcreteAlbedo() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Base dirty gray
+    ctx.fillStyle = '#7a7a7a';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Noise overlay for grain
+    const noise = this._noiseCanvas(0.5, [128, 128, 128]);
+    ctx.globalAlpha = 0.6;
+    ctx.drawImage(noise, 0, 0);
+
+    // Dark stains (paint splatters)
+    ctx.globalAlpha = 0.3;
+    ctx.fillStyle = '#3b3b3b';
+    for (let i = 0; i < 50; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.arc(x, y, Math.random() * this.res * 0.05 + 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Cracks
+    ctx.globalAlpha = 0.8;
+    ctx.strokeStyle = '#1a1a1a';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    for (let i = 0; i < 30; i++) {
+      ctx.moveTo(Math.random() * this.res, Math.random() * this.res);
+      ctx.lineTo(
+        Math.random() * this.res,
+        Math.random() * this.res
+      );
+    }
+    ctx.stroke();
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Creates a roughness map for concrete – matte with occasional wet patches.
+   */
+  createConcreteRoughness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Overall matte (high roughness)
+    ctx.fillStyle = '#c0c0c0';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Darker (smoother) wet spots
+    ctx.fillStyle = '#505050';
+    for (let i = 0; i < 80; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.arc(x, y, Math.random() * this.res * 0.02 + 1, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Concrete has almost no metal – black map.
+   */
+  createConcreteMetalness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, this.res, this.res);
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Normal map from a synthetic height map – simulates panel gaps, chips.
+   * We reuse an internal height map + Sobel filter.
+   */
+  createConcreteNormal() {
+    return this._createNormalFromHeight(this._concreteHeightMap());
+  }
+
+  _concreteHeightMap() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    // Mid gray base
+    ctx.fillStyle = '#808080';
+    ctx.fillRect(0, 0, this.res, this.res);
+    // Panel gaps (dark lines = lower)
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = 3;
+    for (let i = 0; i < 15; i++) {
+      const x = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x + (Math.random() - 0.5) * 40, this.res);
+      ctx.stroke();
+    }
+    // Chips (brighter spots)
+    ctx.fillStyle = '#ffffff';
+    for (let i = 0; i < 100; i++) {
+      ctx.fillRect(
+        Math.random() * this.res,
+        Math.random() * this.res,
+        2, 2
+      );
+    }
+    return canvas;
+  }
+
+  /**
+   * Corridor metal – painted steel with worn edges revealing raw metal.
+   */
+  createCorridorMetalAlbedo() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Painted olive‑drab base
+    ctx.fillStyle = '#5a5e4b';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Worn metal patches (brighter, metallic grey)
+    ctx.globalAlpha = 0.7;
+    ctx.fillStyle = '#a0a0a0';
+    for (let i = 0; i < 200; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.fillRect(x, y, Math.random() * 8 + 2, Math.random() * 8 + 2);
+    }
+
+    // Rivets
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#3a3a3a';
+    for (let y = 100; y < this.res; y += 200) {
+      for (let x = 100; x < this.res; x += 200) {
+        ctx.beginPath();
+        ctx.arc(x, y, 8, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalRoughness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Mostly polished (low roughness) but with grime
+    ctx.fillStyle = '#202020';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Dirt streaks (higher roughness)
+    ctx.fillStyle = '#b0b0b0';
+    for (let i = 0; i < 40; i++) {
+      const x = Math.random() * this.res;
+      ctx.fillRect(x, 0, 2 + Math.random() * 4, this.res);
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalMetalness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    // Painted areas are non‑metal (black), raw metal is white
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, this.res, this.res);
+    ctx.fillStyle = '#ffffff';
+    // Exposed metal where albedo has patches
+    for (let i = 0; i < 200; i++) {
+      ctx.fillRect(
+        Math.random() * this.res,
+        Math.random() * this.res,
+        Math.random() * 8 + 2,
+        Math.random() * 8 + 2
+      );
+    }
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalNormal() {
+    return this._createNormalFromHeight(this._corridorHeightMap());
+  }
+
+  _corridorHeightMap() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#808080';
+    ctx.fillRect(0, 0, this.res, this.res);
+    // Weld seams
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = 4;
+    for (let y = 200; y < this.res; y += 300) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(this.res, y + (Math.random() - 0.5) * 10);
+      ctx.stroke();
+    }
+    return canvas;
+  }
+
+  /**
+   * Convert a height canvas to a tangent‑space normal map.
+   */
+  _createNormalFromHeight(heightCanvas) {
+    const res = this.res;
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = res;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(heightCanvas, 0, 0);
+    const imgData = ctx.getImageData(0, 0, res, res);
+    const height = new Float32Array(res * res);
+
+    for (let i = 0; i < res * res; i++) {
+      height[i] = imgData.data[i * 4] / 255;   // use red channel
+    }
+
+    const normalCtx = canvas.getContext('2d');
+    const normalImg = normalCtx.createImageData(res, res);
+
+    for (let y = 0; y < res; y++) {
+      for (let x = 0; x < res; x++) {
+        const idx = y * res + x;
+        const left   = height[y * res + Math.max(x - 1, 0)];
+        const right  = height[y * res + Math.min(x + 1, res - 1)];
+        const up     = height[Math.max(y - 1, 0) * res + x];
+        const down   = height[Math.min(y + 1, res - 1) * res + x];
+
+        const dx = (right - left) * 2;
+        const dy = (down - up) * 2;
+
+        const nx = -dx;
+        const ny = -dy;
+        const nz = 1.0;
+        const len = Math.sqrt(nx * nx + ny * ny + nz * nz);
+
+        const r = ((nx / len) * 0.5 + 0.5) * 255;
+        const g = ((ny / len) * 0.5 + 0.5) * 255;
+        const b = ((nz / len) * 0.5 + 0.5) * 255;
+
+        const pi = idx * 4;
+        normalImg.data[pi]     = r;
+        normalImg.data[pi + 1] = g;
+        normalImg.data[pi + 2] = b;
+        normalImg.data[pi + 3] = 255;
+      }
+    }
+
+    normalCtx.putImageData(normalImg, 0, 0);
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+    return texture;
+  }
+
+  /**
+   * Master method: returns a complete PBR texture set for a named material type.
+   */
+  getTextureSet(type) {
+    switch (type) {
+      case 'concrete':
+        return {
+          map: this.createConcreteAlbedo(),
+          roughnessMap: this.createConcreteRoughness(),
+          metalnessMap: this.createConcreteMetalness(),
+          normalMap: this.createConcreteNormal()
+        };
+      case 'corridorMetal':
+        return {
+          map: this.createCorridorMetalAlbedo(),
+          roughnessMap: this.createCorridorMetalRoughness(),
+          metalnessMap: this.createCorridorMetalMetalness(),
+          normalMap: this.createCorridorMetalNormal()
+        };
+      // Additional types can be added in the same manner
+      default:
+        throw new Error(`Unknown material type: ${type}`);
+    }
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/scene/Camera.js
+````javascript
+
+````
+
+## File: src/scene/CameraManager.js
+````javascript
+
+````
+
+## File: src/scene/Environment.js
+````javascript
+
+````
+
+## File: src/scene/Scene.js
+````javascript
+import { SceneState } from './SceneState.js';
+import { CameraManager } from './CameraManager.js';
+import { Environment } from './Environment.js';
+
+/**
+ * High-level scene container. Owns world, camera manager, environment,
+ * and metadata. Does NOT own rendering, physics, or ECS.
+ */
+export class Scene {
+    /**
+     * @param {string} id
+     * @param {string} name
+     */
+    constructor(id, name) {
+        this._id = id;
+        this._name = name;
+        this._world = null; // will be assigned later (World subsystem)
+        this._cameraManager = new CameraManager();
+        this._environment = new Environment();
+        this._state = SceneState.CREATED;
+        this._metadata = new Map();
+    }
+
+    get id() { return this._id; }
+    get name() { return this._name; }
+    get world() { return this._world; }
+    set world(w) { this._world = w; }
+    get cameraManager() { return this._cameraManager; }
+    get environment() { return this._environment; }
+    get state() { return this._state; }
+    get metadata() { return this._metadata; }
+
+    /** One state transition: CREATED/UNLOADING → LOADING */
+    load() {
+        if (this._state !== SceneState.CREATED && this._state !== SceneState.UNLOADING) {
+            throw new Error(`Cannot load from state ${this._state}`);
+        }
+        this._state = SceneState.LOADING;
+    }
+
+    /** One state transition: LOADING → INITIALIZING → RUNNING */
+    initialize() {
+        if (this._state !== SceneState.LOADING) {
+            throw new Error(`Cannot initialize from state ${this._state}`);
+        }
+        this._state = SceneState.INITIALIZING;
+        // (future init logic)
+        this._state = SceneState.RUNNING;
+    }
+
+    /** Update only when RUNNING */
+    update(delta) {
+        if (this._state === SceneState.RUNNING) {
+            // (future update logic)
+        }
+    }
+
+    /** One state transition: RUNNING → PAUSED */
+    pause() {
+        if (this._state === SceneState.RUNNING) {
+            this._state = SceneState.PAUSED;
+        }
+    }
+
+    /** One state transition: PAUSED → RUNNING */
+    resume() {
+        if (this._state === SceneState.PAUSED) {
+            this._state = SceneState.RUNNING;
+        }
+    }
+
+    /** One state transition: RUNNING/PAUSED → STOPPING */
+    stop() {
+        if (this._state === SceneState.RUNNING || this._state === SceneState.PAUSED) {
+            this._state = SceneState.STOPPING;
+        }
+    }
+
+    /** One state transition: STOPPING → UNLOADING */
+    unload() {
+        if (this._state !== SceneState.STOPPING && this._state !== SceneState.DESTROYED) {
+            throw new Error(`Cannot unload from state ${this._state}`);
+        }
+        this._state = SceneState.UNLOADING;
+    }
+
+    /** One state transition: UNLOADING → DESTROYED */
+    destroy() {
+        if (this._state !== SceneState.UNLOADING) {
+            throw new Error(`Cannot destroy from state ${this._state}`);
+        }
+        this._state = SceneState.DESTROYED;
+        this._world = null;
+        this._cameraManager.clear();
+        this._environment = null;           // ✅ Fixed
+        this._metadata.clear();
+    }
+}
+````
+
+## File: src/scene/SceneManager.js
+````javascript
+import { SceneState } from './SceneState.js';
+import { TransitionState } from './TransitionState.js';
+import { SceneTransition } from './SceneTransition.js';
+
+/**
+ * Orchestrates scene registration, switching, stacking, and updates.
+ * Does not own rendering, physics, or ECS.
+ */
+export class SceneManager {
+    constructor() {
+        /** @type {Map<string, Scene>} */
+        this._registry = new Map();
+        /** @type {Scene|null} */
+        this._current = null;
+        /** @type {Scene[]} */
+        this._stack = [];
+        /** @type {SceneTransition|null} */
+        this._transition = null;
+    }
+
+    current() { return this._current; }
+    get stack() { return this._stack; }
+    get transition() { return this._transition; }
+
+    /**
+     * @param {Scene} scene
+     */
+    register(scene) {
+        if (this._registry.has(scene.id)) {
+            throw new Error(`Scene "${scene.id}" already registered`);
+        }
+        this._registry.set(scene.id, scene);
+    }
+
+    /**
+     * @param {string} id
+     */
+    unregister(id) {
+        const scene = this._registry.get(id);
+        if (!scene) return;
+        if (scene === this._current) {
+            throw new Error(`Cannot unregister active scene "${id}"`);
+        }
+        this._shutdownScene(scene);
+        this._registry.delete(id);
+    }
+
+    /**
+     * @param {string} id
+     */
+    load(id) {
+        const scene = this._registry.get(id);
+        if (!scene) throw new Error(`Scene "${id}" not registered`);
+        scene.load();
+    }
+
+    /**
+     * @param {string} id
+     */
+    unload(id) {
+        const scene = this._registry.get(id);
+        if (!scene) throw new Error(`Scene "${id}" not registered`);
+        if (scene === this._current) {
+            throw new Error(`Cannot unload active scene "${id}"`);
+        }
+        this._shutdownScene(scene);
+    }
+
+    /**
+     * Replace current scene with another.
+     * @param {string} id
+     */
+    switch(id) {
+        const toScene = this._registry.get(id);
+        if (!toScene) throw new Error(`Scene "${id}" not registered`);
+
+        const fromScene = this._current;
+        this._transition = new SceneTransition(fromScene, toScene);
+        this._transition.status = TransitionState.ACTIVE;
+
+        if (fromScene) {
+            this._shutdownScene(fromScene);
+        }
+
+        toScene.load();
+        toScene.initialize();
+
+        this._current = toScene;
+        this._transition.status = TransitionState.COMPLETED;
+        this._transition.progress = 1.0;
+        this._stack = [];
+    }
+
+    /**
+     * Push a scene onto the stack (pauses current).
+     * @param {string} id
+     */
+    push(id) {
+        const scene = this._registry.get(id);
+        if (!scene) throw new Error(`Scene "${id}" not registered`);
+
+        if (this._current) {
+            this._stack.push(this._current);
+            this._current.pause();
+        }
+
+        scene.load();
+        scene.initialize();
+        this._current = scene;
+    }
+
+    /**
+     * Pop the top scene (restores previous).
+     */
+    pop() {
+        if (this._stack.length === 0) {
+            throw new Error('Scene stack is empty');
+        }
+
+        if (this._current) {
+            this._shutdownScene(this._current);
+        }
+
+        this._current = this._stack.pop();
+        this._current.resume();
+    }
+
+    /**
+     * @param {number} delta
+     */
+    update(delta) {
+        // TODO: Replace with proper transition system (not time‑based)
+        if (this._transition && this._transition.status !== TransitionState.COMPLETED) {
+            this._transition.progress = Math.min(1, this._transition.progress + delta);
+            if (this._transition.progress >= 1) {
+                this._transition.status = TransitionState.COMPLETED;
+            }
+        }
+        if (this._current) {
+            this._current.update(delta);
+        }
+    }
+
+    /** @param {string} id */
+    getScene(id) { return this._registry.get(id); }
+
+    /** @param {string} id */
+    isRegistered(id) { return this._registry.has(id); }
+
+    /** @returns {string[]} */
+    getRegisteredSceneIds() { return Array.from(this._registry.keys()); }
+
+    /**
+     * Private helper to fully shut down a scene.
+     * @param {Scene} scene
+     * @private
+     */
+    _shutdownScene(scene) {
+        if (scene.state === SceneState.DESTROYED) return;
+        scene.stop();
+        scene.unload();
+        scene.destroy();
+    }
+}
+````
+
+## File: src/scene/SceneState.js
+````javascript
+
+````
+
+## File: src/scene/SceneTransition.js
+````javascript
+
+````
+
+## File: src/scene/TransitionState.js
+````javascript
+
+````
+
+## File: src/spatial/GridPartition.js
+````javascript
+<<<<<<< HEAD
+/**
+ * Maps world positions to cell IDs using a uniform grid.
+ */
+export class GridPartition {
+  /**
+   * @param {number} cellSize - edge length of a cell in world units
+   */
+  constructor(cellSize) {
+    this.cellSize = cellSize;
+    /** @type {Map<string, string>} key "i,j" → CellID value */
+    this._gridToCellId = new Map();
+    /** @type {Map<string, string>} CellID value → key */
+    this._cellIdToKey = new Map();
+  }
+
+  /**
+   * Register a cell at a specific grid coordinate.
+   * @param {number} gridX - integer column index
+   * @param {number} gridZ - integer row index
+   * @param {string} cellIdValue - the string value of a CellID
+   */
+  addCell(gridX, gridZ, cellIdValue) {
+    const key = `${gridX},${gridZ}`;
+    this._gridToCellId.set(key, cellIdValue);
+    this._cellIdToKey.set(cellIdValue, key);
+  }
+
+  /**
+   * Remove a cell by its string ID.
+   * @param {string} cellIdValue
+   */
+  removeCell(cellIdValue) {
+    const key = this._cellIdToKey.get(cellIdValue);
+    if (key) {
+      this._gridToCellId.delete(key);
+      this._cellIdToKey.delete(cellIdValue);
+    }
+  }
+
+  /**
+   * Get the cell ID at a world position, or null if no cell loaded.
+   * @param {{x: number, y: number, z: number}} position
+   * @returns {string|null}
+   */
+  getCellId(position) {
+    const i = Math.floor(position.x / this.cellSize);
+    const j = Math.floor(position.z / this.cellSize);
+    return this._gridToCellId.get(`${i},${j}`) || null;
+  }
+
+  /**
+   * Get all cell IDs that intersect an axis-aligned bounding box (XZ plane).
+   * @param {number} minX
+   * @param {number} minZ
+   * @param {number} maxX
+   * @param {number} maxZ
+   * @returns {string[]}
+   */
+  getCellsInBounds(minX, minZ, maxX, maxZ) {
+    const startI = Math.floor(minX / this.cellSize);
+    const startJ = Math.floor(minZ / this.cellSize);
+    const endI = Math.floor(maxX / this.cellSize);
+    const endJ = Math.floor(maxZ / this.cellSize);
+    const ids = [];
+    for (let i = startI; i <= endI; i++) {
+      for (let j = startJ; j <= endJ; j++) {
+        const id = this._gridToCellId.get(`${i},${j}`);
+        if (id) ids.push(id);
+      }
+    }
+    return ids;
+  }
+=======
+/**
+ * Maps world positions to cell IDs using a uniform grid.
+ */
+export class GridPartition {
+  /**
+   * @param {number} cellSize - edge length of a cell in world units
+   */
+  constructor(cellSize) {
+    this.cellSize = cellSize;
+    /** @type {Map<string, string>} key "i,j" → CellID value */
+    this._gridToCellId = new Map();
+    /** @type {Map<string, string>} CellID value → key */
+    this._cellIdToKey = new Map();
+  }
+
+  /**
+   * Register a cell at a specific grid coordinate.
+   * @param {number} gridX - integer column index
+   * @param {number} gridZ - integer row index
+   * @param {string} cellIdValue - the string value of a CellID
+   */
+  addCell(gridX, gridZ, cellIdValue) {
+    const key = `${gridX},${gridZ}`;
+    this._gridToCellId.set(key, cellIdValue);
+    this._cellIdToKey.set(cellIdValue, key);
+  }
+
+  /**
+   * Remove a cell by its string ID.
+   * @param {string} cellIdValue
+   */
+  removeCell(cellIdValue) {
+    const key = this._cellIdToKey.get(cellIdValue);
+    if (key) {
+      this._gridToCellId.delete(key);
+      this._cellIdToKey.delete(cellIdValue);
+    }
+  }
+
+  /**
+   * Get the cell ID at a world position, or null if no cell loaded.
+   * @param {{x: number, y: number, z: number}} position
+   * @returns {string|null}
+   */
+  getCellId(position) {
+    const i = Math.floor(position.x / this.cellSize);
+    const j = Math.floor(position.z / this.cellSize);
+    return this._gridToCellId.get(`${i},${j}`) || null;
+  }
+
+  /**
+   * Get all cell IDs that intersect an axis-aligned bounding box (XZ plane).
+   * @param {number} minX
+   * @param {number} minZ
+   * @param {number} maxX
+   * @param {number} maxZ
+   * @returns {string[]}
+   */
+  getCellsInBounds(minX, minZ, maxX, maxZ) {
+    const startI = Math.floor(minX / this.cellSize);
+    const startJ = Math.floor(minZ / this.cellSize);
+    const endI = Math.floor(maxX / this.cellSize);
+    const endJ = Math.floor(maxZ / this.cellSize);
+    const ids = [];
+    for (let i = startI; i <= endI; i++) {
+      for (let j = startJ; j <= endJ; j++) {
+        const id = this._gridToCellId.get(`${i},${j}`);
+        if (id) ids.push(id);
+      }
+    }
+    return ids;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/streaming/SectorLoader.js
+````javascript
+<<<<<<< HEAD
+import { StreamingJob } from './StreamingJob.js';
+import { CellID } from '../CellID.js';
+
+/**
+ * Loads a sector from its data definition into the world.
+ */
+export class SectorLoader extends StreamingJob {
+  /**
+   * @param {import('../data/SectorData.js').SectorData} sectorData
+   */
+  constructor(sectorData) {
+    super();
+    this.sectorData = sectorData;
+  }
+
+  /**
+   * @param {import('../World.js').World} world
+   */
+  execute(world) {
+    const data = this.sectorData;
+    const sectorId = data.id;
+
+    // Ensure sector exists
+    let sector = world.getSector(sectorId);
+    if (!sector) {
+      sector = world.hierarchy.createSector(sectorId.value);
+    }
+    sector.state = 'loading';
+
+    // Create cells
+    for (const cellDef of data.cells) {
+      const cellId = new CellID(cellDef.id);
+      let cell = world.getCell(cellId);
+      if (!cell) {
+        cell = world.hierarchy.createCell(cellId.value);
+      }
+      // Register in spatial index
+      world.spatialManager.addCell(cellId, cellDef.gridX, cellDef.gridZ);
+      // Link cell to sector
+      if (!sector.cellIDs.some(cid => cid.equals(cellId))) {
+        sector.cellIDs.push(cellId);
+      }
+    }
+
+    sector.state = 'loaded';
+  }
+=======
+import { StreamingJob } from './StreamingJob.js';
+import { CellID } from '../CellID.js';
+
+/**
+ * Loads a sector from its data definition into the world.
+ */
+export class SectorLoader extends StreamingJob {
+  /**
+   * @param {import('../data/SectorData.js').SectorData} sectorData
+   */
+  constructor(sectorData) {
+    super();
+    this.sectorData = sectorData;
+  }
+
+  /**
+   * @param {import('../World.js').World} world
+   */
+  execute(world) {
+    const data = this.sectorData;
+    const sectorId = data.id;
+
+    // Ensure sector exists
+    let sector = world.getSector(sectorId);
+    if (!sector) {
+      sector = world.hierarchy.createSector(sectorId.value);
+    }
+    sector.state = 'loading';
+
+    // Create cells
+    for (const cellDef of data.cells) {
+      const cellId = new CellID(cellDef.id);
+      let cell = world.getCell(cellId);
+      if (!cell) {
+        cell = world.hierarchy.createCell(cellId.value);
+      }
+      // Register in spatial index
+      world.spatialManager.addCell(cellId, cellDef.gridX, cellDef.gridZ);
+      // Link cell to sector
+      if (!sector.cellIDs.some(cid => cid.equals(cellId))) {
+        sector.cellIDs.push(cellId);
+      }
+    }
+
+    sector.state = 'loaded';
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/streaming/SectorUnloader.js
+````javascript
+<<<<<<< HEAD
+import { StreamingJob } from './StreamingJob.js';
+import { CellID } from '../CellID.js';
+
+/**
+ * Unloads a sector and removes its cells and entities.
+ */
+export class SectorUnloader extends StreamingJob {
+  /**
+   * @param {import('../SectorID.js').SectorID} sectorId
+   */
+  constructor(sectorId) {
+    super();
+    this.sectorId = sectorId;
+  }
+
+  /**
+   * @param {import('../World.js').World} world
+   */
+  execute(world) {
+    const sector = world.getSector(this.sectorId);
+    if (!sector || sector.state === 'unloaded') return;
+
+    sector.state = 'unloading';
+
+    // Remove all cells of this sector
+    for (const cellId of sector.cellIDs) {
+      const cell = world.getCell(cellId);
+      if (cell) {
+        // Destroy all entities in the cell
+        for (const entityIdNum of cell.entityIDs) {
+          // We need the EntityID object; we can retrieve the entity and get its ID
+          const entity = world.entityManager.entityRegistry._entities.get(entityIdNum);
+          if (entity) {
+            world.destroyEntity(entity.id);
+          }
+        }
+        // Remove from spatial index
+        world.spatialManager.removeCell(cellId);
+        // Unregister cell
+        world.cellRegistry.unregister(cellId);
+      }
+    }
+
+    sector.cellIDs.length = 0;
+    sector.state = 'unloaded';
+    world.sectorRegistry.unregister(this.sectorId);
+  }
+=======
+import { StreamingJob } from './StreamingJob.js';
+import { CellID } from '../CellID.js';
+
+/**
+ * Unloads a sector and removes its cells and entities.
+ */
+export class SectorUnloader extends StreamingJob {
+  /**
+   * @param {import('../SectorID.js').SectorID} sectorId
+   */
+  constructor(sectorId) {
+    super();
+    this.sectorId = sectorId;
+  }
+
+  /**
+   * @param {import('../World.js').World} world
+   */
+  execute(world) {
+    const sector = world.getSector(this.sectorId);
+    if (!sector || sector.state === 'unloaded') return;
+
+    sector.state = 'unloading';
+
+    // Remove all cells of this sector
+    for (const cellId of sector.cellIDs) {
+      const cell = world.getCell(cellId);
+      if (cell) {
+        // Destroy all entities in the cell
+        for (const entityIdNum of cell.entityIDs) {
+          // We need the EntityID object; we can retrieve the entity and get its ID
+          const entity = world.entityManager.entityRegistry._entities.get(entityIdNum);
+          if (entity) {
+            world.destroyEntity(entity.id);
+          }
+        }
+        // Remove from spatial index
+        world.spatialManager.removeCell(cellId);
+        // Unregister cell
+        world.cellRegistry.unregister(cellId);
+      }
+    }
+
+    sector.cellIDs.length = 0;
+    sector.state = 'unloaded';
+    world.sectorRegistry.unregister(this.sectorId);
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/systems/AnimationSystem.js
+````javascript
+import { System } from '../System.js';
+import { EntitySignature } from '../EntitySignature.js';
+
+export class AnimationSystem extends System {
+  constructor() {
+    super();
+    this.priority = 300;
+    this._requiredSig = new EntitySignature();
+    this._meshId = -1;
+  }
+
+  initialize(ecs) {
+    this._meshId = ecs.getTypeId('Mesh');
+    this._requiredSig.add(this._meshId);
+  }
+
+  requiredSignature() {
+    return this._requiredSig;
+  }
+
+  update(delta, entityIds, ecs) {
+    const meshStore = ecs.getStore('Mesh');
+    for (const eid of entityIds) {
+      const mesh = meshStore.get(eid);
+      if (mesh) {
+        // TODO: Update animation state based on movement, combat, etc.
+      }
+    }
+  }
+}
+````
+
+## File: src/systems/HealthSystem.js
+````javascript
+import { System } from '../System.js';
+import { EntitySignature } from '../EntitySignature.js';
+
+export class HealthSystem extends System {
+  constructor() {
+    super();
+    this.priority = 200;
+    this._requiredSig = new EntitySignature();
+    this._healthId = -1;
+  }
+
+  initialize(ecs) {
+    this._healthId = ecs.getTypeId('Health');
+    this._requiredSig.add(this._healthId);
+  }
+
+  requiredSignature() {
+    return this._requiredSig;
+  }
+
+  update(delta, entityIds, ecs) {
+    const healthStore = ecs.getStore('Health');
+    for (const eid of entityIds) {
+      const health = healthStore.get(eid);
+      if (health && health.current <= 0) {
+        // TODO: trigger death sequence
+      }
+    }
+  }
+}
+````
+
+## File: src/systems/MovementSystem.js
+````javascript
+import { System } from '../System.js';
+import { EntitySignature } from '../EntitySignature.js';
+
+export class MovementSystem extends System {
+  constructor() {
+    super();
+    this.priority = 100;
+    this._requiredSig = new EntitySignature();
+    /** @private */
+    this._transformId = -1;
+    this._velocityId = -1;
+  }
+
+  /**
+   * @param {import('../ECSManager.js').ECSManager} ecs
+   */
+  initialize(ecs) {
+    this._transformId = ecs.getTypeId('Transform');
+    this._velocityId = ecs.getTypeId('Velocity');
+    this._requiredSig.add(this._transformId);
+    this._requiredSig.add(this._velocityId);
+  }
+
+  requiredSignature() {
+    return this._requiredSig;
+  }
+
+  /**
+   * @param {number} delta
+   * @param {number[]} entityIds
+   * @param {import('../ECSManager.js').ECSManager} ecs
+   */
+  update(delta, entityIds, ecs) {
+    const transformStore = ecs.getStore('Transform');
+    const velocityStore = ecs.getStore('Velocity');
+    for (const eid of entityIds) {
+      const transform = transformStore.get(eid);
+      const velocity = velocityStore.get(eid);
+      if (transform && velocity) {
+        transform.position.x += velocity.x * delta;
+        transform.position.y += velocity.y * delta;
+        transform.position.z += velocity.z * delta;
+      }
+    }
+  }
+}
+````
+
+## File: src/time/DependencyGraph.js
+````javascript
+<<<<<<< HEAD
+// src/time/DependencyGraph.js
+
+/**
+ * Tracks dependency relationships between scheduled events.
+ * Does not perform scheduling or execution.
+ */
+export class DependencyGraph {
+  constructor() {
+    /** @type {Map<number, Set<number>>} waiting event id → set of unmet dependency ids */
+    this._waiting = new Map();
+    /** @type {Map<number, Set<number>>} dependency id → set of dependent event ids */
+    this._dependents = new Map();
+    /** @type {Set<number>} all event IDs known to the graph */
+    this._knownIds = new Set();
+    /** @type {Set<number>} event IDs that have been marked completed */
+    this._completed = new Set();
+  }
+
+  /**
+   * Register an event and its dependencies.
+   * @param {import('./ScheduledEvent.js').ScheduledEvent} event
+   */
+  addEvent(event) {
+    const eventId = event.id;
+    if (this._knownIds.has(eventId)) {
+      throw new Error(`Event ${eventId} already registered in DependencyGraph.`);
+    }
+    if (event.dependencies.includes(eventId)) {
+      throw new Error(`Event ${eventId} cannot depend on itself.`);
+    }
+    for (const depId of event.dependencies) {
+      if (!this._knownIds.has(depId)) {
+        throw new Error(`Unknown dependency ${depId} referenced by event ${eventId}.`);
+      }
+    }
+
+    this._knownIds.add(eventId);
+
+    const unmet = new Set();
+    for (const depId of event.dependencies) {
+      if (!this._completed.has(depId)) {
+        unmet.add(depId);
+      }
+      if (!this._dependents.has(depId)) {
+        this._dependents.set(depId, new Set());
+      }
+      this._dependents.get(depId).add(eventId);
+    }
+
+    if (unmet.size > 0) {
+      this._waiting.set(eventId, unmet);
+    }
+  }
+
+  /**
+   * Remove an event entirely (cancelled).
+   * @param {number} eventId
+   */
+  removeEvent(eventId) {
+    this._waiting.delete(eventId);
+
+    for (const [, dependents] of this._dependents) {
+      dependents.delete(eventId);
+      // We do not delete the whole entry here for simplicity; markCompleted will clean up later.
+    }
+
+    this._completed.delete(eventId);
+    this._knownIds.delete(eventId);
+  }
+
+  /**
+   * Mark an event as completed. Returns IDs of newly unblocked events.
+   * @param {number} eventId
+   * @returns {number[]}
+   */
+  markCompleted(eventId) {
+    this._completed.add(eventId);
+
+    const newlyReady = [];
+    const dependents = this._dependents.get(eventId);
+    if (dependents) {
+      for (const waitingId of dependents) {
+        const unmet = this._waiting.get(waitingId);
+        if (unmet) {
+          unmet.delete(eventId);
+          if (unmet.size === 0) {
+            this._waiting.delete(waitingId);
+            newlyReady.push(waitingId);
+          }
+        }
+      }
+      this._dependents.delete(eventId);
+    }
+
+    return newlyReady;
+  }
+
+  /**
+   * Check if an event has unresolved dependencies.
+   * @param {number} eventId
+   * @returns {boolean}
+   */
+  hasUnresolvedDependencies(eventId) {
+    return this._waiting.has(eventId);
+  }
+
+  /**
+   * Get IDs of events that depend on the given event.
+   * @param {number} eventId
+   * @returns {number[]}
+   */
+  getDependents(eventId) {
+    const set = this._dependents.get(eventId);
+    return set ? Array.from(set) : [];
+  }
+
+  clear() {
+    this._waiting.clear();
+    this._dependents.clear();
+    this._knownIds.clear();
+    this._completed.clear();
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize the entire graph state into a plain object.
+   * @returns {object}
+   */
+  serialize() {
+    const waiting = {};
+    for (const [id, unmet] of this._waiting) {
+      waiting[id] = Array.from(unmet);
+    }
+    const dependents = {};
+    for (const [depId, deps] of this._dependents) {
+      dependents[depId] = Array.from(deps);
+    }
+    return {
+      waiting,
+      dependents,
+      completed: Array.from(this._completed),
+      knownIds: Array.from(this._knownIds)
+    };
+  }
+
+  /**
+   * Restore graph state from a plain object.
+   * @param {object} data
+   */
+  deserialize(data) {
+    this.clear();
+    this._knownIds = new Set(data.knownIds);
+    this._completed = new Set(data.completed);
+
+    for (const [idStr, unmetArr] of Object.entries(data.waiting)) {
+      this._waiting.set(Number(idStr), new Set(unmetArr));
+    }
+    for (const [depIdStr, depArr] of Object.entries(data.dependents)) {
+      this._dependents.set(Number(depIdStr), new Set(depArr));
+    }
+  }
+=======
+// src/time/DependencyGraph.js
+
+/**
+ * Tracks dependency relationships between scheduled events.
+ * Does not perform scheduling or execution.
+ */
+export class DependencyGraph {
+  constructor() {
+    /** @type {Map<number, Set<number>>} waiting event id → set of unmet dependency ids */
+    this._waiting = new Map();
+    /** @type {Map<number, Set<number>>} dependency id → set of dependent event ids */
+    this._dependents = new Map();
+    /** @type {Set<number>} all event IDs known to the graph */
+    this._knownIds = new Set();
+    /** @type {Set<number>} event IDs that have been marked completed */
+    this._completed = new Set();
+  }
+
+  /**
+   * Register an event and its dependencies.
+   * @param {import('./ScheduledEvent.js').ScheduledEvent} event
+   */
+  addEvent(event) {
+    const eventId = event.id;
+    if (this._knownIds.has(eventId)) {
+      throw new Error(`Event ${eventId} already registered in DependencyGraph.`);
+    }
+    if (event.dependencies.includes(eventId)) {
+      throw new Error(`Event ${eventId} cannot depend on itself.`);
+    }
+    for (const depId of event.dependencies) {
+      if (!this._knownIds.has(depId)) {
+        throw new Error(`Unknown dependency ${depId} referenced by event ${eventId}.`);
+      }
+    }
+
+    this._knownIds.add(eventId);
+
+    const unmet = new Set();
+    for (const depId of event.dependencies) {
+      if (!this._completed.has(depId)) {
+        unmet.add(depId);
+      }
+      if (!this._dependents.has(depId)) {
+        this._dependents.set(depId, new Set());
+      }
+      this._dependents.get(depId).add(eventId);
+    }
+
+    if (unmet.size > 0) {
+      this._waiting.set(eventId, unmet);
+    }
+  }
+
+  /**
+   * Remove an event entirely (cancelled).
+   * @param {number} eventId
+   */
+  removeEvent(eventId) {
+    this._waiting.delete(eventId);
+
+    for (const [, dependents] of this._dependents) {
+      dependents.delete(eventId);
+      // We do not delete the whole entry here for simplicity; markCompleted will clean up later.
+    }
+
+    this._completed.delete(eventId);
+    this._knownIds.delete(eventId);
+  }
+
+  /**
+   * Mark an event as completed. Returns IDs of newly unblocked events.
+   * @param {number} eventId
+   * @returns {number[]}
+   */
+  markCompleted(eventId) {
+    this._completed.add(eventId);
+
+    const newlyReady = [];
+    const dependents = this._dependents.get(eventId);
+    if (dependents) {
+      for (const waitingId of dependents) {
+        const unmet = this._waiting.get(waitingId);
+        if (unmet) {
+          unmet.delete(eventId);
+          if (unmet.size === 0) {
+            this._waiting.delete(waitingId);
+            newlyReady.push(waitingId);
+          }
+        }
+      }
+      this._dependents.delete(eventId);
+    }
+
+    return newlyReady;
+  }
+
+  /**
+   * Check if an event has unresolved dependencies.
+   * @param {number} eventId
+   * @returns {boolean}
+   */
+  hasUnresolvedDependencies(eventId) {
+    return this._waiting.has(eventId);
+  }
+
+  /**
+   * Get IDs of events that depend on the given event.
+   * @param {number} eventId
+   * @returns {number[]}
+   */
+  getDependents(eventId) {
+    const set = this._dependents.get(eventId);
+    return set ? Array.from(set) : [];
+  }
+
+  clear() {
+    this._waiting.clear();
+    this._dependents.clear();
+    this._knownIds.clear();
+    this._completed.clear();
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize the entire graph state into a plain object.
+   * @returns {object}
+   */
+  serialize() {
+    const waiting = {};
+    for (const [id, unmet] of this._waiting) {
+      waiting[id] = Array.from(unmet);
+    }
+    const dependents = {};
+    for (const [depId, deps] of this._dependents) {
+      dependents[depId] = Array.from(deps);
+    }
+    return {
+      waiting,
+      dependents,
+      completed: Array.from(this._completed),
+      knownIds: Array.from(this._knownIds)
+    };
+  }
+
+  /**
+   * Restore graph state from a plain object.
+   * @param {object} data
+   */
+  deserialize(data) {
+    this.clear();
+    this._knownIds = new Set(data.knownIds);
+    this._completed = new Set(data.completed);
+
+    for (const [idStr, unmetArr] of Object.entries(data.waiting)) {
+      this._waiting.set(Number(idStr), new Set(unmetArr));
+    }
+    for (const [depIdStr, depArr] of Object.entries(data.dependents)) {
+      this._dependents.set(Number(depIdStr), new Set(depArr));
+    }
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/time/DiagnosticsCollector.js
+````javascript
+<<<<<<< HEAD
+// src/time/DiagnosticsCollector.js
+
+/**
+ * Passive collector of runtime statistics for the Time System.
+ *
+ * Tracks counts of scheduled, executed, completed, cancelled, and
+ * validation‑failed events, as well as current queue sizes and
+ * simulation time.  Provides a snapshot for debug overlays.
+ *
+ * Does NOT modify any scheduler state and does NOT contain scheduling logic.
+ */
+export class DiagnosticsCollector {
+  constructor() {
+    this._registered = 0;
+    this._executed = 0;
+    this._completed = 0;
+    this._cancelled = 0;
+    this._validationFailures = 0;
+    this._queueSize = 0;
+    this._dependencyCount = 0;
+    this._simulationTime = 0;
+  }
+
+  /** Increment the registered event counter. */
+  recordRegistered() {
+    this._registered++;
+  }
+
+  /** Increment the executed event counter. */
+  recordExecuted() {
+    this._executed++;
+  }
+
+  /** Increment the completed event counter. */
+  recordCompleted() {
+    this._completed++;
+  }
+
+  /** Increment the cancelled event counter. */
+  recordCancelled() {
+    this._cancelled++;
+  }
+
+  /** Increment the validation failure counter. */
+  recordValidationFailed() {
+    this._validationFailures++;
+  }
+
+  /**
+   * Set the current number of events in the ready queue.
+   * @param {number} size
+   */
+  setQueueSize(size) {
+    this._queueSize = size;
+  }
+
+  /**
+   * Set the current number of waiting dependencies.
+   * @param {number} count
+   */
+  setDependencyCount(count) {
+    this._dependencyCount = count;
+  }
+
+  /**
+   * Set the current simulation time (seconds).
+   * @param {number} time
+   */
+  setSimulationTime(time) {
+    this._simulationTime = time;
+  }
+
+  /**
+   * Return a snapshot of all collected statistics.
+   * @returns {{
+   *   registered: number,
+   *   executed: number,
+   *   completed: number,
+   *   cancelled: number,
+   *   validationFailures: number,
+   *   queueSize: number,
+   *   dependencyCount: number,
+   *   simulationTime: number
+   * }}
+   */
+  getSnapshot() {
+    return {
+      registered: this._registered,
+      executed: this._executed,
+      completed: this._completed,
+      cancelled: this._cancelled,
+      validationFailures: this._validationFailures,
+      queueSize: this._queueSize,
+      dependencyCount: this._dependencyCount,
+      simulationTime: this._simulationTime
+    };
+  }
+
+  /** Reset all counters to zero. */
+  reset() {
+    this._registered = 0;
+    this._executed = 0;
+    this._completed = 0;
+    this._cancelled = 0;
+    this._validationFailures = 0;
+    this._queueSize = 0;
+    this._dependencyCount = 0;
+    this._simulationTime = 0;
+  }
+=======
+// src/time/DiagnosticsCollector.js
+
+/**
+ * Passive collector of runtime statistics for the Time System.
+ *
+ * Tracks counts of scheduled, executed, completed, cancelled, and
+ * validation‑failed events, as well as current queue sizes and
+ * simulation time.  Provides a snapshot for debug overlays.
+ *
+ * Does NOT modify any scheduler state and does NOT contain scheduling logic.
+ */
+export class DiagnosticsCollector {
+  constructor() {
+    this._registered = 0;
+    this._executed = 0;
+    this._completed = 0;
+    this._cancelled = 0;
+    this._validationFailures = 0;
+    this._queueSize = 0;
+    this._dependencyCount = 0;
+    this._simulationTime = 0;
+  }
+
+  /** Increment the registered event counter. */
+  recordRegistered() {
+    this._registered++;
+  }
+
+  /** Increment the executed event counter. */
+  recordExecuted() {
+    this._executed++;
+  }
+
+  /** Increment the completed event counter. */
+  recordCompleted() {
+    this._completed++;
+  }
+
+  /** Increment the cancelled event counter. */
+  recordCancelled() {
+    this._cancelled++;
+  }
+
+  /** Increment the validation failure counter. */
+  recordValidationFailed() {
+    this._validationFailures++;
+  }
+
+  /**
+   * Set the current number of events in the ready queue.
+   * @param {number} size
+   */
+  setQueueSize(size) {
+    this._queueSize = size;
+  }
+
+  /**
+   * Set the current number of waiting dependencies.
+   * @param {number} count
+   */
+  setDependencyCount(count) {
+    this._dependencyCount = count;
+  }
+
+  /**
+   * Set the current simulation time (seconds).
+   * @param {number} time
+   */
+  setSimulationTime(time) {
+    this._simulationTime = time;
+  }
+
+  /**
+   * Return a snapshot of all collected statistics.
+   * @returns {{
+   *   registered: number,
+   *   executed: number,
+   *   completed: number,
+   *   cancelled: number,
+   *   validationFailures: number,
+   *   queueSize: number,
+   *   dependencyCount: number,
+   *   simulationTime: number
+   * }}
+   */
+  getSnapshot() {
+    return {
+      registered: this._registered,
+      executed: this._executed,
+      completed: this._completed,
+      cancelled: this._cancelled,
+      validationFailures: this._validationFailures,
+      queueSize: this._queueSize,
+      dependencyCount: this._dependencyCount,
+      simulationTime: this._simulationTime
+    };
+  }
+
+  /** Reset all counters to zero. */
+  reset() {
+    this._registered = 0;
+    this._executed = 0;
+    this._completed = 0;
+    this._cancelled = 0;
+    this._validationFailures = 0;
+    this._queueSize = 0;
+    this._dependencyCount = 0;
+    this._simulationTime = 0;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/time/EventScheduler.js
+````javascript
+<<<<<<< HEAD
+// src/time/EventScheduler.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Runtime execution engine for scheduled events.
+ *
+ * Owns references to the WorldClock, SchedulerState, a validator function,
+ * and a dispatcher callback.  Its single responsibility is to process
+ * events that are due each frame.
+ *
+ * Lifecycle transitions performed:
+ *   Queued → Validated (event.validate())
+ *   Validated → Executed (event.execute())
+ *   Executed → Completed (event.complete())
+ *
+ * After successful completion, `SchedulerState.markCompleted()` is called
+ * to resolve dependencies and unblock waiting events.
+ *
+ * Validation failures result in the event being cancelled and removed
+ * from the SchedulerState.
+ */
+export class EventScheduler {
+  /**
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   * @param {function(import('./ScheduledEvent.js').ScheduledEvent): boolean} validator
+   * @param {function(import('./ScheduledEvent.js').ScheduledEvent): void} dispatcher
+   */
+  constructor(clock, state, validator, dispatcher) {
+    this._clock = clock;
+    this._state = state;
+    this._validator = validator;
+    this._dispatcher = dispatcher;
+  }
+
+  /**
+   * Process all events in the ready queue whose fire time is ≤ current time.
+   * Should be called once per simulation frame.
+   */
+  update() {
+    const currentTime = this._clock.getCurrentTime();
+    const readyQueue = this._state.getReadyQueue();
+
+    while (true) {
+      const event = readyQueue.peek();
+      if (!event || event.fireTime > currentTime) {
+        break;
+      }
+
+      readyQueue.dequeue();
+
+      // Validate the event.
+      event.validate();
+      if (!this._validator(event)) {
+        event.validationFailed();
+        this._state.removeEvent(event.id);
+        continue;
+      }
+
+      // Execute.
+      event.execute();
+      this._dispatcher(event);
+
+      // Complete and resolve dependencies.
+      event.complete();
+      this._state.markCompleted(event.id);
+    }
+  }
+=======
+// src/time/EventScheduler.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Runtime execution engine for scheduled events.
+ *
+ * Owns references to the WorldClock, SchedulerState, a validator function,
+ * and a dispatcher callback.  Its single responsibility is to process
+ * events that are due each frame.
+ *
+ * Lifecycle transitions performed:
+ *   Queued → Validated (event.validate())
+ *   Validated → Executed (event.execute())
+ *   Executed → Completed (event.complete())
+ *
+ * After successful completion, `SchedulerState.markCompleted()` is called
+ * to resolve dependencies and unblock waiting events.
+ *
+ * Validation failures result in the event being cancelled and removed
+ * from the SchedulerState.
+ */
+export class EventScheduler {
+  /**
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   * @param {function(import('./ScheduledEvent.js').ScheduledEvent): boolean} validator
+   * @param {function(import('./ScheduledEvent.js').ScheduledEvent): void} dispatcher
+   */
+  constructor(clock, state, validator, dispatcher) {
+    this._clock = clock;
+    this._state = state;
+    this._validator = validator;
+    this._dispatcher = dispatcher;
+  }
+
+  /**
+   * Process all events in the ready queue whose fire time is ≤ current time.
+   * Should be called once per simulation frame.
+   */
+  update() {
+    const currentTime = this._clock.getCurrentTime();
+    const readyQueue = this._state.getReadyQueue();
+
+    while (true) {
+      const event = readyQueue.peek();
+      if (!event || event.fireTime > currentTime) {
+        break;
+      }
+
+      readyQueue.dequeue();
+
+      // Validate the event.
+      event.validate();
+      if (!this._validator(event)) {
+        event.validationFailed();
+        this._state.removeEvent(event.id);
+        continue;
+      }
+
+      // Execute.
+      event.execute();
+      this._dispatcher(event);
+
+      // Complete and resolve dependencies.
+      event.complete();
+      this._state.markCompleted(event.id);
+    }
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/time/ReadyQueue.js
+````javascript
+<<<<<<< HEAD
+// src/time/ReadyQueue.js
+
+/**
+ * Deterministic, ordered container for ready-to-execute ScheduledEvent objects.
+ *
+ * Maintains events sorted by fireTime, priority, and sequenceNumber.
+ * This is a pure data structure – no scheduling or lifecycle logic.
+ */
+export class ReadyQueue {
+  constructor() {
+    /** @type {import('./ScheduledEvent.js').ScheduledEvent[]} */
+    this._events = [];
+    /** @type {Map<number, import('./ScheduledEvent.js').ScheduledEvent>} */
+    this._idMap = new Map();
+  }
+
+  /**
+   * Insert an event while preserving sort order.
+   * @param {import('./ScheduledEvent.js').ScheduledEvent} event
+   */
+  enqueue(event) {
+    if (this._idMap.has(event.id)) {
+      throw new Error(`Duplicate event id ${event.id} in ReadyQueue.`);
+    }
+    const index = this._binarySearchIndex(event);
+    this._events.splice(index, 0, event);
+    this._idMap.set(event.id, event);
+  }
+
+  /** Remove and return the next event. */
+  dequeue() {
+    if (this._events.length === 0) return null;
+    const event = this._events.shift();
+    this._idMap.delete(event.id);
+    return event;
+  }
+
+  /** Peek at the next event without removing. */
+  peek() {
+    return this._events.length > 0 ? this._events[0] : null;
+  }
+
+  /** Remove a specific event by its id. */
+  remove(eventId) {
+    const index = this._events.findIndex(e => e.id === eventId);
+    if (index !== -1) {
+      this._events.splice(index, 1);
+      this._idMap.delete(eventId);
+    }
+  }
+
+  clear() {
+    this._events.length = 0;
+    this._idMap.clear();
+  }
+
+  size() {
+    return this._events.length;
+  }
+
+  isEmpty() {
+    return this._events.length === 0;
+  }
+
+  // ---- internal helpers ----
+
+  _binarySearchIndex(event) {
+    let low = 0;
+    let high = this._events.length;
+    while (low < high) {
+      const mid = (low + high) >>> 1;
+      if (this._compare(event, this._events[mid]) < 0) {
+        high = mid;
+      } else {
+        low = mid + 1;
+      }
+    }
+    return low;
+  }
+
+  _compare(a, b) {
+    if (a.fireTime !== b.fireTime) return a.fireTime - b.fireTime;
+    if (a.priority !== b.priority) return a.priority - b.priority;
+    return a.sequenceNumber - b.sequenceNumber;
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize queue state: an array of event IDs in queue order.
+   * @returns {number[]}
+   */
+  serialize() {
+    return this._events.map(e => e.id);
+  }
+
+  /**
+   * Restore queue from an ordered array of event IDs and a map of id→event.
+   * @param {number[]} ids
+   * @param {Map<number, import('./ScheduledEvent.js').ScheduledEvent>} eventsById
+   */
+  deserialize(ids, eventsById) {
+    this.clear();
+    for (const id of ids) {
+      const event = eventsById.get(id);
+      if (event) {
+        this._events.push(event);
+        this._idMap.set(id, event);
+      }
+    }
+  }
+=======
+// src/time/ReadyQueue.js
+
+/**
+ * Deterministic, ordered container for ready-to-execute ScheduledEvent objects.
+ *
+ * Maintains events sorted by fireTime, priority, and sequenceNumber.
+ * This is a pure data structure – no scheduling or lifecycle logic.
+ */
+export class ReadyQueue {
+  constructor() {
+    /** @type {import('./ScheduledEvent.js').ScheduledEvent[]} */
+    this._events = [];
+    /** @type {Map<number, import('./ScheduledEvent.js').ScheduledEvent>} */
+    this._idMap = new Map();
+  }
+
+  /**
+   * Insert an event while preserving sort order.
+   * @param {import('./ScheduledEvent.js').ScheduledEvent} event
+   */
+  enqueue(event) {
+    if (this._idMap.has(event.id)) {
+      throw new Error(`Duplicate event id ${event.id} in ReadyQueue.`);
+    }
+    const index = this._binarySearchIndex(event);
+    this._events.splice(index, 0, event);
+    this._idMap.set(event.id, event);
+  }
+
+  /** Remove and return the next event. */
+  dequeue() {
+    if (this._events.length === 0) return null;
+    const event = this._events.shift();
+    this._idMap.delete(event.id);
+    return event;
+  }
+
+  /** Peek at the next event without removing. */
+  peek() {
+    return this._events.length > 0 ? this._events[0] : null;
+  }
+
+  /** Remove a specific event by its id. */
+  remove(eventId) {
+    const index = this._events.findIndex(e => e.id === eventId);
+    if (index !== -1) {
+      this._events.splice(index, 1);
+      this._idMap.delete(eventId);
+    }
+  }
+
+  clear() {
+    this._events.length = 0;
+    this._idMap.clear();
+  }
+
+  size() {
+    return this._events.length;
+  }
+
+  isEmpty() {
+    return this._events.length === 0;
+  }
+
+  // ---- internal helpers ----
+
+  _binarySearchIndex(event) {
+    let low = 0;
+    let high = this._events.length;
+    while (low < high) {
+      const mid = (low + high) >>> 1;
+      if (this._compare(event, this._events[mid]) < 0) {
+        high = mid;
+      } else {
+        low = mid + 1;
+      }
+    }
+    return low;
+  }
+
+  _compare(a, b) {
+    if (a.fireTime !== b.fireTime) return a.fireTime - b.fireTime;
+    if (a.priority !== b.priority) return a.priority - b.priority;
+    return a.sequenceNumber - b.sequenceNumber;
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize queue state: an array of event IDs in queue order.
+   * @returns {number[]}
+   */
+  serialize() {
+    return this._events.map(e => e.id);
+  }
+
+  /**
+   * Restore queue from an ordered array of event IDs and a map of id→event.
+   * @param {number[]} ids
+   * @param {Map<number, import('./ScheduledEvent.js').ScheduledEvent>} eventsById
+   */
+  deserialize(ids, eventsById) {
+    this.clear();
+    for (const id of ids) {
+      const event = eventsById.get(id);
+      if (event) {
+        this._events.push(event);
+        this._idMap.set(id, event);
+      }
+    }
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/time/ScheduledEvent.js
+````javascript
+<<<<<<< HEAD
+// src/time/ScheduledEvent.js
+
+/**
+ * Immutable scheduled event data. Lifecycle state is the only mutable property.
+ * id and sequenceNumber are assigned by SchedulerState upon registration.
+ */
+export const EventState = Object.freeze({
+  CREATED: 'Created',
+  QUEUED: 'Queued',
+  VALIDATED: 'Validated',
+  EXECUTED: 'Executed',
+  COMPLETED: 'Completed',
+  VALIDATION_FAILED: 'ValidationFailed',
+  CANCELLED: 'Cancelled'
+});
+
+export class ScheduledEvent {
+  /**
+   * @param {number} fireTime
+   * @param {number} priority
+   * @param {string} eventType
+   * @param {*} payload
+   * @param {Object} [options]
+   * @param {string} [options.source='unknown']
+   * @param {string|null} [options.sectorId=null]
+   * @param {number[]} [options.dependencies=[]]
+   * @param {string[]} [options.validatorIds=[]]
+   */
+  constructor(fireTime, priority, eventType, payload, options = {}) {
+    if (!Number.isFinite(fireTime)) {
+      throw new TypeError(`fireTime must be a finite number, got ${fireTime}`);
+    }
+    if (!Number.isInteger(priority)) {
+      throw new TypeError(`priority must be an integer, got ${priority}`);
+    }
+    if (typeof eventType !== 'string' || eventType.length === 0) {
+      throw new TypeError(`eventType must be a non‑empty string, got "${eventType}"`);
+    }
+    this.fireTime = fireTime;
+    this.priority = priority;
+    this.eventType = eventType;
+    this.payload = payload;
+    /** Assigned by SchedulerState later. */
+    this.id = -1;
+    /** Assigned by SchedulerState later. */
+    this.sequenceNumber = -1;
+    this.source = options.source || 'unknown';
+    this.sectorId = options.sectorId || null;
+    this.dependencies = Object.freeze([...(options.dependencies ?? [])]);
+    this.validatorIds = Object.freeze([...(options.validatorIds ?? [])]);
+    this.state = EventState.CREATED;
+  }
+
+  queue() { this._transitionTo(EventState.QUEUED); }
+  validate() { this._transitionTo(EventState.VALIDATED); }
+  execute() { this._transitionTo(EventState.EXECUTED); }
+  complete() { this._transitionTo(EventState.COMPLETED); }
+  cancel() { this._transitionTo(EventState.CANCELLED); }
+  validationFailed() { this._transitionTo(EventState.VALIDATION_FAILED); }
+
+  _transitionTo(nextState) {
+    const allowed = VALID_STATE_TRANSITIONS[this.state];
+    if (!allowed || !allowed.has(nextState)) {
+      throw new Error(
+        `Invalid state transition for event ${this.id}: ${this.state} → ${nextState}`
+      );
+    }
+    this.state = nextState;
+  }
+
+  /**
+   * Serialize event metadata into a plain object.
+   * @returns {object}
+   */
+  serialize() {
+    return {
+      id: this.id,
+      sequenceNumber: this.sequenceNumber,
+      fireTime: this.fireTime,
+      priority: this.priority,
+      eventType: this.eventType,
+      payload: this.payload,
+      source: this.source,
+      sectorId: this.sectorId,
+      dependencies: [...this.dependencies],
+      validatorIds: [...this.validatorIds],
+      state: this.state
+    };
+  }
+
+  /**
+   * Create a new event from serialized data. ID, sequenceNumber, and state are restored.
+   * @param {object} data
+   * @returns {ScheduledEvent}
+   */
+  static deserialize(data) {
+    const event = new ScheduledEvent(data.fireTime, data.priority, data.eventType, data.payload, {
+      source: data.source,
+      sectorId: data.sectorId,
+      dependencies: data.dependencies,
+      validatorIds: data.validatorIds
+    });
+    event.id = data.id;
+    event.sequenceNumber = data.sequenceNumber;
+    event.state = data.state; // direct set (bypass transition validation because it's a restore)
+    return event;
+  }
+}
+
+const VALID_STATE_TRANSITIONS = Object.freeze({
+  [EventState.CREATED]: new Set([EventState.QUEUED, EventState.CANCELLED]),
+  [EventState.QUEUED]: new Set([EventState.VALIDATED, EventState.CANCELLED]),
+  [EventState.VALIDATED]: new Set([EventState.EXECUTED, EventState.VALIDATION_FAILED, EventState.CANCELLED]),
+  [EventState.EXECUTED]: new Set([EventState.COMPLETED, EventState.CANCELLED]),
+  [EventState.COMPLETED]: new Set([]),
+  [EventState.VALIDATION_FAILED]: new Set([]),
+  [EventState.CANCELLED]: new Set([])
+=======
+// src/time/ScheduledEvent.js
+
+/**
+ * Immutable scheduled event data. Lifecycle state is the only mutable property.
+ * id and sequenceNumber are assigned by SchedulerState upon registration.
+ */
+export const EventState = Object.freeze({
+  CREATED: 'Created',
+  QUEUED: 'Queued',
+  VALIDATED: 'Validated',
+  EXECUTED: 'Executed',
+  COMPLETED: 'Completed',
+  VALIDATION_FAILED: 'ValidationFailed',
+  CANCELLED: 'Cancelled'
+});
+
+export class ScheduledEvent {
+  /**
+   * @param {number} fireTime
+   * @param {number} priority
+   * @param {string} eventType
+   * @param {*} payload
+   * @param {Object} [options]
+   * @param {string} [options.source='unknown']
+   * @param {string|null} [options.sectorId=null]
+   * @param {number[]} [options.dependencies=[]]
+   * @param {string[]} [options.validatorIds=[]]
+   */
+  constructor(fireTime, priority, eventType, payload, options = {}) {
+    if (!Number.isFinite(fireTime)) {
+      throw new TypeError(`fireTime must be a finite number, got ${fireTime}`);
+    }
+    if (!Number.isInteger(priority)) {
+      throw new TypeError(`priority must be an integer, got ${priority}`);
+    }
+    if (typeof eventType !== 'string' || eventType.length === 0) {
+      throw new TypeError(`eventType must be a non‑empty string, got "${eventType}"`);
+    }
+    this.fireTime = fireTime;
+    this.priority = priority;
+    this.eventType = eventType;
+    this.payload = payload;
+    /** Assigned by SchedulerState later. */
+    this.id = -1;
+    /** Assigned by SchedulerState later. */
+    this.sequenceNumber = -1;
+    this.source = options.source || 'unknown';
+    this.sectorId = options.sectorId || null;
+    this.dependencies = Object.freeze([...(options.dependencies ?? [])]);
+    this.validatorIds = Object.freeze([...(options.validatorIds ?? [])]);
+    this.state = EventState.CREATED;
+  }
+
+  queue() { this._transitionTo(EventState.QUEUED); }
+  validate() { this._transitionTo(EventState.VALIDATED); }
+  execute() { this._transitionTo(EventState.EXECUTED); }
+  complete() { this._transitionTo(EventState.COMPLETED); }
+  cancel() { this._transitionTo(EventState.CANCELLED); }
+  validationFailed() { this._transitionTo(EventState.VALIDATION_FAILED); }
+
+  _transitionTo(nextState) {
+    const allowed = VALID_STATE_TRANSITIONS[this.state];
+    if (!allowed || !allowed.has(nextState)) {
+      throw new Error(
+        `Invalid state transition for event ${this.id}: ${this.state} → ${nextState}`
+      );
+    }
+    this.state = nextState;
+  }
+
+  /**
+   * Serialize event metadata into a plain object.
+   * @returns {object}
+   */
+  serialize() {
+    return {
+      id: this.id,
+      sequenceNumber: this.sequenceNumber,
+      fireTime: this.fireTime,
+      priority: this.priority,
+      eventType: this.eventType,
+      payload: this.payload,
+      source: this.source,
+      sectorId: this.sectorId,
+      dependencies: [...this.dependencies],
+      validatorIds: [...this.validatorIds],
+      state: this.state
+    };
+  }
+
+  /**
+   * Create a new event from serialized data. ID, sequenceNumber, and state are restored.
+   * @param {object} data
+   * @returns {ScheduledEvent}
+   */
+  static deserialize(data) {
+    const event = new ScheduledEvent(data.fireTime, data.priority, data.eventType, data.payload, {
+      source: data.source,
+      sectorId: data.sectorId,
+      dependencies: data.dependencies,
+      validatorIds: data.validatorIds
+    });
+    event.id = data.id;
+    event.sequenceNumber = data.sequenceNumber;
+    event.state = data.state; // direct set (bypass transition validation because it's a restore)
+    return event;
+  }
+}
+
+const VALID_STATE_TRANSITIONS = Object.freeze({
+  [EventState.CREATED]: new Set([EventState.QUEUED, EventState.CANCELLED]),
+  [EventState.QUEUED]: new Set([EventState.VALIDATED, EventState.CANCELLED]),
+  [EventState.VALIDATED]: new Set([EventState.EXECUTED, EventState.VALIDATION_FAILED, EventState.CANCELLED]),
+  [EventState.EXECUTED]: new Set([EventState.COMPLETED, EventState.CANCELLED]),
+  [EventState.COMPLETED]: new Set([]),
+  [EventState.VALIDATION_FAILED]: new Set([]),
+  [EventState.CANCELLED]: new Set([])
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+});
+````
+
+## File: src/time/SchedulerState.js
+````javascript
+<<<<<<< HEAD
+// src/time/SchedulerState.js
+
+import { ReadyQueue } from './ReadyQueue.js';
+import { DependencyGraph } from './DependencyGraph.js';
+import { ScheduledEvent } from './ScheduledEvent.js';
+
+export class SchedulerState {
+  constructor() {
+    this._readyQueue = new ReadyQueue();
+    this._dependencyGraph = new DependencyGraph();
+    this._events = new Map();
+    this._nextEventId = 1;
+    this._nextSequenceNumber = 1;
+  }
+
+  registerEvent(event) {
+    const id = this._nextEventId++;
+    event.id = id;
+    event.sequenceNumber = this._nextSequenceNumber++;
+    this._events.set(id, event);
+    this._dependencyGraph.addEvent(event);
+    event.queue();
+    if (!this._dependencyGraph.hasUnresolvedDependencies(id)) {
+      this._readyQueue.enqueue(event);
+    }
+    return id;
+  }
+
+  removeEvent(eventId) {
+    const event = this._events.get(eventId);
+    if (!event) return;
+    this._readyQueue.remove(eventId);
+    this._dependencyGraph.removeEvent(eventId);
+    this._events.delete(eventId);
+  }
+
+  markCompleted(eventId) {
+    const event = this._events.get(eventId);
+    if (!event) return [];
+    const readyIds = this._dependencyGraph.markCompleted(eventId);
+    for (const id of readyIds) {
+      const readyEvent = this._events.get(id);
+      if (readyEvent) {
+        this._readyQueue.enqueue(readyEvent);
+      }
+    }
+    return readyIds;
+  }
+
+  getEvent(eventId) {
+    return this._events.get(eventId);
+  }
+
+  contains(eventId) {
+    return this._events.has(eventId);
+  }
+
+  getReadyQueue() {
+    return this._readyQueue;
+  }
+
+  getDependencyGraph() {
+    return this._dependencyGraph;
+  }
+
+  clear() {
+    this._readyQueue.clear();
+    this._dependencyGraph.clear();
+    this._events.clear();
+    this._nextEventId = 1;
+    this._nextSequenceNumber = 1;
+  }
+
+  eventCount() {
+    return this._events.size;
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize complete state using subcomponent serialization.
+   * @returns {object}
+   */
+  serialize() {
+    const eventsData = [];
+    for (const [, event] of this._events) {
+      eventsData.push(event.serialize());
+    }
+    return {
+      nextEventId: this._nextEventId,
+      nextSequenceNumber: this._nextSequenceNumber,
+      events: eventsData,
+      readyQueue: this._readyQueue.serialize(),
+      dependencyGraph: this._dependencyGraph.serialize()
+    };
+  }
+
+  /**
+   * Deserialize and restore state from a plain object.
+   * @param {object} data
+   */
+  deserialize(data) {
+    this.clear();
+    this._nextEventId = data.nextEventId;
+    this._nextSequenceNumber = data.nextSequenceNumber;
+
+    // Reconstruct events
+    const eventsById = new Map();
+    for (const raw of data.events) {
+      const event = ScheduledEvent.deserialize(raw);
+      eventsById.set(event.id, event);
+    }
+    this._events = eventsById;
+
+    // Restore ready queue
+    this._readyQueue.deserialize(data.readyQueue, eventsById);
+
+    // Restore dependency graph
+    this._dependencyGraph.deserialize(data.dependencyGraph);
+  }
+=======
+// src/time/SchedulerState.js
+
+import { ReadyQueue } from './ReadyQueue.js';
+import { DependencyGraph } from './DependencyGraph.js';
+import { ScheduledEvent } from './ScheduledEvent.js';
+
+export class SchedulerState {
+  constructor() {
+    this._readyQueue = new ReadyQueue();
+    this._dependencyGraph = new DependencyGraph();
+    this._events = new Map();
+    this._nextEventId = 1;
+    this._nextSequenceNumber = 1;
+  }
+
+  registerEvent(event) {
+    const id = this._nextEventId++;
+    event.id = id;
+    event.sequenceNumber = this._nextSequenceNumber++;
+    this._events.set(id, event);
+    this._dependencyGraph.addEvent(event);
+    event.queue();
+    if (!this._dependencyGraph.hasUnresolvedDependencies(id)) {
+      this._readyQueue.enqueue(event);
+    }
+    return id;
+  }
+
+  removeEvent(eventId) {
+    const event = this._events.get(eventId);
+    if (!event) return;
+    this._readyQueue.remove(eventId);
+    this._dependencyGraph.removeEvent(eventId);
+    this._events.delete(eventId);
+  }
+
+  markCompleted(eventId) {
+    const event = this._events.get(eventId);
+    if (!event) return [];
+    const readyIds = this._dependencyGraph.markCompleted(eventId);
+    for (const id of readyIds) {
+      const readyEvent = this._events.get(id);
+      if (readyEvent) {
+        this._readyQueue.enqueue(readyEvent);
+      }
+    }
+    return readyIds;
+  }
+
+  getEvent(eventId) {
+    return this._events.get(eventId);
+  }
+
+  contains(eventId) {
+    return this._events.has(eventId);
+  }
+
+  getReadyQueue() {
+    return this._readyQueue;
+  }
+
+  getDependencyGraph() {
+    return this._dependencyGraph;
+  }
+
+  clear() {
+    this._readyQueue.clear();
+    this._dependencyGraph.clear();
+    this._events.clear();
+    this._nextEventId = 1;
+    this._nextSequenceNumber = 1;
+  }
+
+  eventCount() {
+    return this._events.size;
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize complete state using subcomponent serialization.
+   * @returns {object}
+   */
+  serialize() {
+    const eventsData = [];
+    for (const [, event] of this._events) {
+      eventsData.push(event.serialize());
+    }
+    return {
+      nextEventId: this._nextEventId,
+      nextSequenceNumber: this._nextSequenceNumber,
+      events: eventsData,
+      readyQueue: this._readyQueue.serialize(),
+      dependencyGraph: this._dependencyGraph.serialize()
+    };
+  }
+
+  /**
+   * Deserialize and restore state from a plain object.
+   * @param {object} data
+   */
+  deserialize(data) {
+    this.clear();
+    this._nextEventId = data.nextEventId;
+    this._nextSequenceNumber = data.nextSequenceNumber;
+
+    // Reconstruct events
+    const eventsById = new Map();
+    for (const raw of data.events) {
+      const event = ScheduledEvent.deserialize(raw);
+      eventsById.set(event.id, event);
+    }
+    this._events = eventsById;
+
+    // Restore ready queue
+    this._readyQueue.deserialize(data.readyQueue, eventsById);
+
+    // Restore dependency graph
+    this._dependencyGraph.deserialize(data.dependencyGraph);
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/time/SectorSchedulerState.js
+````javascript
+<<<<<<< HEAD
+// src/time/SectorSchedulerState.js
+
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Lightweight wrapper that owns a SchedulerState for a single streamed
+ * world sector.
+ */
+export class SectorSchedulerState {
+  /**
+   * @param {string} sectorId
+   */
+  constructor(sectorId) {
+    /** @readonly */
+    this.sectorId = sectorId;
+    /** @type {SchedulerState} */
+    this.schedulerState = new SchedulerState();
+  }
+
+  /**
+   * Returns the underlying SchedulerState.
+   * @returns {SchedulerState}
+   */
+  getState() {
+    return this.schedulerState;
+  }
+
+  /**
+   * Clear all events and reset.
+   */
+  clear() {
+    this.schedulerState.clear();
+  }
+=======
+// src/time/SectorSchedulerState.js
+
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Lightweight wrapper that owns a SchedulerState for a single streamed
+ * world sector.
+ */
+export class SectorSchedulerState {
+  /**
+   * @param {string} sectorId
+   */
+  constructor(sectorId) {
+    /** @readonly */
+    this.sectorId = sectorId;
+    /** @type {SchedulerState} */
+    this.schedulerState = new SchedulerState();
+  }
+
+  /**
+   * Returns the underlying SchedulerState.
+   * @returns {SchedulerState}
+   */
+  getState() {
+    return this.schedulerState;
+  }
+
+  /**
+   * Clear all events and reset.
+   */
+  clear() {
+    this.schedulerState.clear();
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/time/TimeEvents.js
+````javascript
+<<<<<<< HEAD
+// src/time/TimeEvents.js
+
+/**
+ * Centralized event name constants for the Time System.
+ * All public events that the Time System publishes or subscribes to
+ * are defined here to avoid magic strings.
+ *
+ * This module is stateless and has no runtime logic.
+ */
+export const TimeEvents = Object.freeze({
+  /** A scheduled event has been successfully dispatched. */
+  SCHEDULED_FIRE: 'scheduled:fire',
+
+  /** A scheduled event has been cancelled. */
+  SCHEDULED_CANCELLED: 'scheduled:cancelled',
+
+  /** A scheduled event failed validation and was discarded. */
+  SCHEDULED_VALIDATION_FAILED: 'scheduled:validation_failed',
+
+  /** The world clock has been paused. */
+  TIME_PAUSED: 'time:paused',
+
+  /** The world clock has been resumed. */
+  TIME_RESUMED: 'time:resumed',
+
+  /** The world clock's time scale has changed. */
+  TIME_SCALE_CHANGED: 'time:scale_changed',
+
+  /** A time jump (sleep/fast‑forward) has started. */
+  TIME_JUMP_STARTED: 'time:jump_started',
+
+  /** A time jump has completed. */
+  TIME_JUMP_COMPLETED: 'time:jump_completed',
+
+  /** The current world time has been updated (fired every frame). */
+  WORLD_TIME_UPDATED: 'time:world_time_updated'
+=======
+// src/time/TimeEvents.js
+
+/**
+ * Centralized event name constants for the Time System.
+ * All public events that the Time System publishes or subscribes to
+ * are defined here to avoid magic strings.
+ *
+ * This module is stateless and has no runtime logic.
+ */
+export const TimeEvents = Object.freeze({
+  /** A scheduled event has been successfully dispatched. */
+  SCHEDULED_FIRE: 'scheduled:fire',
+
+  /** A scheduled event has been cancelled. */
+  SCHEDULED_CANCELLED: 'scheduled:cancelled',
+
+  /** A scheduled event failed validation and was discarded. */
+  SCHEDULED_VALIDATION_FAILED: 'scheduled:validation_failed',
+
+  /** The world clock has been paused. */
+  TIME_PAUSED: 'time:paused',
+
+  /** The world clock has been resumed. */
+  TIME_RESUMED: 'time:resumed',
+
+  /** The world clock's time scale has changed. */
+  TIME_SCALE_CHANGED: 'time:scale_changed',
+
+  /** A time jump (sleep/fast‑forward) has started. */
+  TIME_JUMP_STARTED: 'time:jump_started',
+
+  /** A time jump has completed. */
+  TIME_JUMP_COMPLETED: 'time:jump_completed',
+
+  /** The current world time has been updated (fired every frame). */
+  WORLD_TIME_UPDATED: 'time:world_time_updated'
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+});
+````
+
+## File: src/time/TimeManager.js
+````javascript
+<<<<<<< HEAD
+// src/time/TimeManager.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+import { EventScheduler } from './EventScheduler.js';
+import { ScheduledEvent } from './ScheduledEvent.js';
+
+/**
+ * Public façade for the entire Time System.
+ *
+ * Owns and wires together the WorldClock, SchedulerState, and EventScheduler.
+ * External systems interact with the Time System exclusively through this class.
+ */
+export class TimeManager {
+  /**
+   * @param {function(ScheduledEvent): boolean} validator – validates an event before execution
+   * @param {function(ScheduledEvent): void} dispatcher – executes the event (e.g. publishes to EventBus)
+   */
+  constructor(validator, dispatcher) {
+    this._clock = new WorldClock();
+    this._state = new SchedulerState();
+    this._scheduler = new EventScheduler(this._clock, this._state, validator, dispatcher);
+  }
+
+  /**
+   * Advance simulation time and process due events.
+   *
+   * @param {number} deltaTime – real‑time delta in seconds.
+   */
+  update(deltaTime) {
+    this._clock.advance(deltaTime);
+    this._scheduler.update();
+  }
+
+  /**
+   * Register a new scheduled event.
+   *
+   * The event must already be populated with its dependencies, validators,
+   * fire time, priority, payload, etc.  The manager assigns identity and
+   * queues it if ready.
+   *
+   * @param {ScheduledEvent} event
+   * @returns {number} The assigned event ID.
+   */
+  scheduleEvent(event) {
+    return this._state.registerEvent(event);
+  }
+
+  /**
+   * Cancel a previously scheduled event.
+   *
+   * @param {number} eventId
+   */
+  cancelEvent(eventId) {
+    const event = this._state.getEvent(eventId);
+    if (event) {
+      // Advance lifecycle to Cancelled (only if not already terminal).
+      if (event.state !== 'Cancelled' && event.state !== 'Completed') {
+        event.cancel();
+      }
+      this._state.removeEvent(eventId);
+    }
+  }
+
+  /** Pause the simulation clock. */
+  pause() {
+    this._clock.pause();
+  }
+
+  /** Resume the simulation clock. */
+  resume() {
+    this._clock.resume();
+  }
+
+  /** Reset the entire Time System to initial state. */
+  reset() {
+    this._clock.reset();
+    this._state.clear();
+  }
+
+  /**
+   * @returns {number} Current simulation time in seconds.
+   */
+  getCurrentTime() {
+    return this._clock.getCurrentTime();
+  }
+
+  /**
+   * Expose the underlying clock (read‑only).
+   * @returns {WorldClock}
+   */
+  getClock() {
+    return this._clock;
+  }
+
+  /**
+   * Expose the underlying scheduler state (read‑only).
+   * @returns {SchedulerState}
+   */
+  getSchedulerState() {
+    return this._state;
+  }
+=======
+// src/time/TimeManager.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+import { EventScheduler } from './EventScheduler.js';
+import { ScheduledEvent } from './ScheduledEvent.js';
+
+/**
+ * Public façade for the entire Time System.
+ *
+ * Owns and wires together the WorldClock, SchedulerState, and EventScheduler.
+ * External systems interact with the Time System exclusively through this class.
+ */
+export class TimeManager {
+  /**
+   * @param {function(ScheduledEvent): boolean} validator – validates an event before execution
+   * @param {function(ScheduledEvent): void} dispatcher – executes the event (e.g. publishes to EventBus)
+   */
+  constructor(validator, dispatcher) {
+    this._clock = new WorldClock();
+    this._state = new SchedulerState();
+    this._scheduler = new EventScheduler(this._clock, this._state, validator, dispatcher);
+  }
+
+  /**
+   * Advance simulation time and process due events.
+   *
+   * @param {number} deltaTime – real‑time delta in seconds.
+   */
+  update(deltaTime) {
+    this._clock.advance(deltaTime);
+    this._scheduler.update();
+  }
+
+  /**
+   * Register a new scheduled event.
+   *
+   * The event must already be populated with its dependencies, validators,
+   * fire time, priority, payload, etc.  The manager assigns identity and
+   * queues it if ready.
+   *
+   * @param {ScheduledEvent} event
+   * @returns {number} The assigned event ID.
+   */
+  scheduleEvent(event) {
+    return this._state.registerEvent(event);
+  }
+
+  /**
+   * Cancel a previously scheduled event.
+   *
+   * @param {number} eventId
+   */
+  cancelEvent(eventId) {
+    const event = this._state.getEvent(eventId);
+    if (event) {
+      // Advance lifecycle to Cancelled (only if not already terminal).
+      if (event.state !== 'Cancelled' && event.state !== 'Completed') {
+        event.cancel();
+      }
+      this._state.removeEvent(eventId);
+    }
+  }
+
+  /** Pause the simulation clock. */
+  pause() {
+    this._clock.pause();
+  }
+
+  /** Resume the simulation clock. */
+  resume() {
+    this._clock.resume();
+  }
+
+  /** Reset the entire Time System to initial state. */
+  reset() {
+    this._clock.reset();
+    this._state.clear();
+  }
+
+  /**
+   * @returns {number} Current simulation time in seconds.
+   */
+  getCurrentTime() {
+    return this._clock.getCurrentTime();
+  }
+
+  /**
+   * Expose the underlying clock (read‑only).
+   * @returns {WorldClock}
+   */
+  getClock() {
+    return this._clock;
+  }
+
+  /**
+   * Expose the underlying scheduler state (read‑only).
+   * @returns {SchedulerState}
+   */
+  getSchedulerState() {
+    return this._state;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/time/TimeSerializer.js
+````javascript
+<<<<<<< HEAD
+// src/time/TimeSerializer.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Handles persistence of the Time System by orchestrating the serialization
+ * of the WorldClock and SchedulerState.  No knowledge of internal structures
+ * is required.
+ */
+export class TimeSerializer {
+  /**
+   * Serialize the entire Time System state.
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   * @returns {object}
+   */
+  static serialize(clock, state) {
+    return {
+      clock: clock.serialize(),
+      scheduler: state.serialize()
+    };
+  }
+
+  /**
+   * Deserialize and apply the data to the given clock and state.
+   * @param {object} data
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   */
+  static deserialize(data, clock, state) {
+    clock.deserialize(data.clock);
+    state.deserialize(data.scheduler);
+  }
+=======
+// src/time/TimeSerializer.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Handles persistence of the Time System by orchestrating the serialization
+ * of the WorldClock and SchedulerState.  No knowledge of internal structures
+ * is required.
+ */
+export class TimeSerializer {
+  /**
+   * Serialize the entire Time System state.
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   * @returns {object}
+   */
+  static serialize(clock, state) {
+    return {
+      clock: clock.serialize(),
+      scheduler: state.serialize()
+    };
+  }
+
+  /**
+   * Deserialize and apply the data to the given clock and state.
+   * @param {object} data
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   */
+  static deserialize(data, clock, state) {
+    clock.deserialize(data.clock);
+    state.deserialize(data.scheduler);
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/time/WorldClock.js
+````javascript
+<<<<<<< HEAD
+// src/time/WorldClock.js
+
+/**
+ * Owns the simulation clock for the Time System.
+ *
+ * Provides deterministic advancement of simulation time, pause/resume,
+ * and direct time setting (e.g. for loading saves).
+ * The clock does **not** know about events, queues, or scheduling.
+ */
+export class WorldClock {
+  constructor(initialTime = 0) {
+    /** Current simulation time (seconds). */
+    this._currentTime = initialTime;
+    /** Whether the clock is currently paused. */
+    this._paused = false;
+  }
+
+  /**
+   * Advance the simulation time by a delta, if not paused.
+   *
+   * @param {number} deltaTime – real‑time delta in seconds (must be ≥ 0).
+   */
+  advance(deltaTime) {
+    if (!this._paused && deltaTime > 0) {
+      this._currentTime += deltaTime;
+    }
+  }
+
+  /**
+   * Return the current simulation time.
+   *
+   * @returns {number}
+   */
+  getCurrentTime() {
+    return this._currentTime;
+  }
+
+  /**
+   * Set the simulation time to a specific value (e.g. for loading a save).
+   *
+   * @param {number} time
+   */
+  setCurrentTime(time) {
+    this._currentTime = time;
+  }
+
+  /**
+   * Pause the clock – subsequent calls to `advance` will have no effect.
+   */
+  pause() {
+    this._paused = true;
+  }
+
+  /**
+   * Resume the clock.
+   */
+  resume() {
+    this._paused = false;
+  }
+
+  /**
+   * Check whether the clock is currently paused.
+   *
+   * @returns {boolean}
+   */
+  isPaused() {
+    return this._paused;
+  }
+
+  /**
+   * Reset the clock to time zero and unpause.
+   */
+  reset() {
+    this._currentTime = 0;
+    this._paused = false;
+  }
+=======
+// src/time/WorldClock.js
+
+/**
+ * Owns the simulation clock for the Time System.
+ *
+ * Provides deterministic advancement of simulation time, pause/resume,
+ * and direct time setting (e.g. for loading saves).
+ * The clock does **not** know about events, queues, or scheduling.
+ */
+export class WorldClock {
+  constructor(initialTime = 0) {
+    /** Current simulation time (seconds). */
+    this._currentTime = initialTime;
+    /** Whether the clock is currently paused. */
+    this._paused = false;
+  }
+
+  /**
+   * Advance the simulation time by a delta, if not paused.
+   *
+   * @param {number} deltaTime – real‑time delta in seconds (must be ≥ 0).
+   */
+  advance(deltaTime) {
+    if (!this._paused && deltaTime > 0) {
+      this._currentTime += deltaTime;
+    }
+  }
+
+  /**
+   * Return the current simulation time.
+   *
+   * @returns {number}
+   */
+  getCurrentTime() {
+    return this._currentTime;
+  }
+
+  /**
+   * Set the simulation time to a specific value (e.g. for loading a save).
+   *
+   * @param {number} time
+   */
+  setCurrentTime(time) {
+    this._currentTime = time;
+  }
+
+  /**
+   * Pause the clock – subsequent calls to `advance` will have no effect.
+   */
+  pause() {
+    this._paused = true;
+  }
+
+  /**
+   * Resume the clock.
+   */
+  resume() {
+    this._paused = false;
+  }
+
+  /**
+   * Check whether the clock is currently paused.
+   *
+   * @returns {boolean}
+   */
+  isPaused() {
+    return this._paused;
+  }
+
+  /**
+   * Reset the clock to time zero and unpause.
+   */
+  reset() {
+    this._currentTime = 0;
+    this._paused = false;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/world/CellID.js
+````javascript
+<<<<<<< HEAD
+export class CellID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof CellID && this.value === other.value;
+  }
+
+  toString() {
+    return `CellID(${this.value})`;
+  }
+=======
+export class CellID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof CellID && this.value === other.value;
+  }
+
+  toString() {
+    return `CellID(${this.value})`;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/world/Entity.js
+````javascript
+import { EntityID } from './EntityID.js';
+import { Transform } from './Transform.js';
+
+/**
+ * Lightweight simulation entity. No gameplay logic.
+ */
+export class Entity {
+  /**
+   * @param {EntityID} id
+   * @param {string|null} [cellId] – value of the CellID
+   */
+  constructor(id, cellId = null) {
+    /** @readonly */
+    this.id = id;
+    this.generation = id.generation;
+    this.transform = new Transform();
+    this.cellId = cellId;
+    /** @type {'created'|'active'|'sleeping'|'hidden'|'destroyed'} */
+    this.state = 'created';
+    /** Persistent handle set by EntityManager after creation. */
+    this.handle = null;
+  }
+
+  setState(state) {
+    this.state = state;
+  }
+}
+````
+
+## File: src/world/EntityHandle.js
+````javascript
+/**
+ * Safe reference to an entity that checks generation on each access.
+ * Created once and stored on the entity.
+ */
+export class EntityHandle {
+  /**
+   * @param {import('./EntityID.js').EntityID} entityId
+   * @param {function(import('./EntityID.js').EntityID): import('./Entity.js').Entity|null} getEntityFn
+   */
+  constructor(entityId, getEntityFn) {
+    this._entityId = entityId;
+    this._getEntity = getEntityFn;
+  }
+
+  /** @returns {import('./EntityID.js').EntityID} */
+  get id() {
+    return this._entityId;
+  }
+
+  /**
+   * @returns {boolean} true if the entity still exists with the same generation.
+   */
+  isValid() {
+    const entity = this._getEntity(this._entityId);
+    return entity !== null && entity.generation === this._entityId.generation;
+  }
+
+  /**
+   * @returns {import('./Entity.js').Entity|null} the entity or null if invalid.
+   */
+  get() {
+    const entity = this._getEntity(this._entityId);
+    return (entity && entity.generation === this._entityId.generation) ? entity : null;
+  }
+}
+````
+
+## File: src/world/EntityID.js
+````javascript
+/**
+ * Unique numeric identifier with generation tracking.
+ * Immutable once created.
+ */
+export class EntityID {
+  /**
+   * @param {number} id
+   * @param {number} generation
+   */
+  constructor(id, generation = 0) {
+    this.id = id;
+    this.generation = generation;
+    Object.freeze(this);
+  }
+
+  /**
+   * Two IDs are equal if both id and generation match.
+   * @param {EntityID} other
+   * @returns {boolean}
+   */
+  equals(other) {
+    return other instanceof EntityID && this.id === other.id && this.generation === other.generation;
+  }
+
+  toString() {
+    return `EntityID(${this.id}:${this.generation})`;
+  }
+}
+````
+
+## File: src/world/RegionID.js
+````javascript
+<<<<<<< HEAD
+export class RegionID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof RegionID && this.value === other.value;
+  }
+
+  toString() {
+    return `RegionID(${this.value})`;
+  }
+=======
+export class RegionID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof RegionID && this.value === other.value;
+  }
+
+  toString() {
+    return `RegionID(${this.value})`;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/world/SectorID.js
+````javascript
+<<<<<<< HEAD
+export class SectorID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof SectorID && this.value === other.value;
+  }
+
+  toString() {
+    return `SectorID(${this.value})`;
+  }
+=======
+export class SectorID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof SectorID && this.value === other.value;
+  }
+
+  toString() {
+    return `SectorID(${this.value})`;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/world/Transform.js
+````javascript
+<<<<<<< HEAD
+/**
+ * Pure‑math transform with no Three.js dependency.
+ * Position, rotation, and scale stored as plain objects.
+ */
+export class Transform {
+  constructor() {
+    /** @type {{x: number, y: number, z: number}} */
+    this.position = { x: 0, y: 0, z: 0 };
+    /** Euler rotation in radians @type {{x: number, y: number, z: number}} */
+    this.rotation = { x: 0, y: 0, z: 0 };
+    /** @type {{x: number, y: number, z: number}} */
+    this.scale = { x: 1, y: 1, z: 1 };
+  }
+
+  copy(other) {
+    this.position.x = other.position.x;
+    this.position.y = other.position.y;
+    this.position.z = other.position.z;
+    this.rotation.x = other.rotation.x;
+    this.rotation.y = other.rotation.y;
+    this.rotation.z = other.rotation.z;
+    this.scale.x = other.scale.x;
+    this.scale.y = other.scale.y;
+    this.scale.z = other.scale.z;
+  }
+
+  setPosition(x, y, z) {
+    this.position.x = x;
+    this.position.y = y;
+    this.position.z = z;
+  }
+
+  setRotation(x, y, z) {
+    this.rotation.x = x;
+    this.rotation.y = y;
+    this.rotation.z = z;
+  }
+
+  setScale(x, y, z) {
+    this.scale.x = x;
+    this.scale.y = y;
+    this.scale.z = z;
+  }
+=======
+/**
+ * Pure‑math transform with no Three.js dependency.
+ * Position, rotation, and scale stored as plain objects.
+ */
+export class Transform {
+  constructor() {
+    /** @type {{x: number, y: number, z: number}} */
+    this.position = { x: 0, y: 0, z: 0 };
+    /** Euler rotation in radians @type {{x: number, y: number, z: number}} */
+    this.rotation = { x: 0, y: 0, z: 0 };
+    /** @type {{x: number, y: number, z: number}} */
+    this.scale = { x: 1, y: 1, z: 1 };
+  }
+
+  copy(other) {
+    this.position.x = other.position.x;
+    this.position.y = other.position.y;
+    this.position.z = other.position.z;
+    this.rotation.x = other.rotation.x;
+    this.rotation.y = other.rotation.y;
+    this.rotation.z = other.rotation.z;
+    this.scale.x = other.scale.x;
+    this.scale.y = other.scale.y;
+    this.scale.z = other.scale.z;
+  }
+
+  setPosition(x, y, z) {
+    this.position.x = x;
+    this.position.y = y;
+    this.position.z = z;
+  }
+
+  setRotation(x, y, z) {
+    this.rotation.x = x;
+    this.rotation.y = y;
+    this.rotation.z = z;
+  }
+
+  setScale(x, y, z) {
+    this.scale.x = x;
+    this.scale.y = y;
+    this.scale.z = z;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/world/World.js
+````javascript
+import { RegionRegistry } from './registries/RegionRegistry.js';
+import { SectorRegistry } from './registries/SectorRegistry.js';
+import { CellRegistry } from './registries/CellRegistry.js';
+import { EntityRegistry } from './registries/EntityRegistry.js';
+import { WorldGraph } from './managers/WorldGraph.js';
+import { EntityManager } from './managers/EntityManager.js';
+import { SpatialManager } from './managers/SpatialManager.js';
+import { QueryManager } from './managers/QueryManager.js';
+import { StreamingManager } from './managers/StreamingManager.js';
+import { CellID } from './CellID.js';
+
+export class World {
+  /**
+   * @param {import('../framework/core/GameClock.js').GameClock} clock
+   * @param {import('../framework/events/EventBus.js').EventBus} eventBus
+   */
+  constructor(clock, eventBus) {
+    this.clock = clock;
+    this.eventBus = eventBus;
+
+    this.regionRegistry = new RegionRegistry();
+    this.sectorRegistry = new SectorRegistry();
+    this.cellRegistry = new CellRegistry();
+    this.entityRegistry = new EntityRegistry();
+
+    this.hierarchy = new WorldGraph(this.regionRegistry, this.sectorRegistry, this.cellRegistry);
+    this.spatialManager = new SpatialManager(50);
+    this.entityManager = new EntityManager(this.entityRegistry);
+    this.queryManager = new QueryManager(this, this.spatialManager);
+    this.streamingManager = new StreamingManager(this);
+  }
+
+  createEntity(cellId) {
+    const handle = this.entityManager.create(cellId);
+    const entity = handle.get();
+    if (entity && this.eventBus) {
+      this.eventBus.publish('entity:created', this, { entityId: entity.id });
+    }
+    return handle;
+  }
+
+  destroyEntity(entityId) {
+    const entity = this.entityRegistry.get(entityId);
+    if (entity && entity.cellId) {
+      const cell = this.cellRegistry.get(new CellID(entity.cellId));
+      if (cell) cell.removeEntity(entityId.id);
+    }
+    this.entityManager.destroy(entityId);
+    if (this.eventBus) {
+      this.eventBus.publish('entity:destroyed', this, { entityId });
+    }
+  }
+
+  getEntityHandle(entityId) {
+    return this.entityManager.getHandle(entityId);
+  }
+
+  getRegion(id) {
+    return this.regionRegistry.get(id);
+  }
+
+  getSector(id) {
+    return this.sectorRegistry.get(id);
+  }
+
+  getCell(id) {
+    return this.cellRegistry.get(id);
+  }
+
+  queryRadius(center, radius, out) {
+    return this.queryManager.queryRadius(center, radius, out);
+  }
+
+  queryNearest(center) {
+    return this.queryManager.queryNearest(center);
+  }
+
+  queryCell(cellId, out) {
+    return this.queryManager.queryCell(cellId, out);
+  }
+
+  update(delta) {
+    this.streamingManager.update(delta);
+  }
+}
+````
+
+## File: src/world/WorldManager.js
+````javascript
+import { Service } from '../framework/services/Service.js';
+import { World } from './World.js';
+
+export class WorldManager extends Service {
+  constructor(framework) {
+    super('world', framework);
+    this.world = null;
+  }
+
+  async initialize() {
+    this.world = new World(this.framework.clock, this.framework.eventBus);
+  }
+
+  update(delta) {
+    if (this.world) {
+      this.world.update(delta);
+    }
+  }
+
+  async shutdown() {
+    this.world = null;
+  }
+}
+````
+
+## File: src/main.js
+````javascript
+// src/main.js
+import * as THREE from 'three';
+import {
+  createPBRRenderer,
+  createLighting,
+  applyAtmosphere,
+  PBRMaterialFactory
+} from './EnvironmentSetup.js';
+
+// ── Renderer, Scene, Camera ────────────────────────────
+const renderer = createPBRRenderer(document.body, window.innerWidth, window.innerHeight);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  100
+);
+camera.position.set(0, 2, 5);
+
+// ── Atmospheric depth (fog) ────────────────────────────
+applyAtmosphere(scene);
+
+// ── Lighting (shadow‑cast enabled) ─────────────────────
+createLighting(scene);
+
+// ── PBR Material Factory ───────────────────────────────
+const materialFactory = new PBRMaterialFactory();
+
+// ── Procedural concrete floor (receives shadows) ──────
+const floorGeometry = new THREE.PlaneGeometry(20, 20);
+const floorMaterial = materialFactory.getMaterial('concrete', {
+  roughness: 0.85,
+  metalness: 0
+});
+const floor = new THREE.Mesh(floorGeometry, floorMaterial);
+floor.rotation.x = -Math.PI / 2;
+floor.receiveShadow = true;
+scene.add(floor);
+
+// ── Procedural corridor metal wall (casts shadows) ────
+const wallGeometry = new THREE.BoxGeometry(10, 4, 0.3);
+const wallMaterial = materialFactory.getMaterial('corridorMetal', {
+  roughness: 0.4,
+  metalness: 0.9,
+  clearcoat: 0.15
+});
+const wall = new THREE.Mesh(wallGeometry, wallMaterial);
+wall.position.set(0, 2, -3);
+wall.castShadow = true;
+wall.receiveShadow = true;
+scene.add(wall);
+
+// ── Game loop (delta time + resize) ────────────────────
+const clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  const delta = clock.getDelta();   // seconds since last frame
+  // (Game logic would go here in the future)
+
+  renderer.render(scene, camera);
+}
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+animate();
+````
+
+## File: addative features.txt
+````
+# Echo Engine Design Document (EDD)
+
+## Volume XIX – Professional Mode & Spatial Awareness System
+
+---
+
+> *"The difference between a game and a professional engine is what happens when things go wrong. Players play. Engineers debug. The engine must serve both."*
+
+---
+
+## Chapter 26 – Professional Mode: Diagnostics & Developer Tooling
+
+### 1. Introduction
+
+Every professional game engine requires a suite of development tools that remain invisible to players. Echo Engine is no exception. The Professional Mode system provides developers with comprehensive runtime diagnostics, asset inspection, spatial visualisation, and performance analysis tools—all of which are completely hidden in shipping builds.
+
+The philosophy is simple:
+
+> **Players experience the game. Engineers understand the engine.**
+
+Professional Mode exists to bridge the gap between "it works" and "I know exactly why it works."
+
+---
+
+### 2. Engine Modes
+
+Echo Engine supports two distinct runtime modes:
+
+| Mode | Purpose | Diagnostics | Asset Names | Overlays |
+|------|---------|-------------|-------------|----------|
+| **Runtime Mode** | Player-facing gameplay | OFF | Hidden | None |
+| **Professional Mode** | Development & debugging | ON | Internal IDs | Full suite |
+
+#### 2.1 Runtime Mode (Player)
+
+```text
+Diagnostics        : OFF
+Asset IDs          : Hidden
+Spatial Matrix     : Hidden
+Streaming Cells    : Hidden
+LOD Viewer         : Hidden
+BVH Debug          : Hidden
+Memory Usage       : Hidden
+FPS Graph          : Hidden
+AI States          : Hidden
+Physics Debug      : Hidden
+Event Tracing      : Hidden
+```
+
+The player sees absolutely nothing. Zero overhead. Zero visual clutter.
+
+#### 2.2 Professional Mode (Developer)
+
+Activated via:
+
+```text
+Developer Console      →  `professionalMode(true)`
+Launch Flag            →  `--professional`
+Engine Config          →  `ProfessionalMode = TRUE`
+Keyboard Shortcut      →  `F12` (toggle)
+```
+
+All debugging systems become available. The engine still runs the same simulation—only the visualisation and diagnostics layers are enabled.
+
+---
+
+### 3. Professional Overlay System
+
+The Professional Overlay is a composable HUD that displays runtime information without affecting gameplay.
+
+#### 3.1 Core Overlay Components
+
+| Component | Purpose | Data Displayed |
+|-----------|---------|----------------|
+| **Performance HUD** | Frame timing | FPS, CPU ms, GPU ms, frame time graph |
+| **Player HUD** | Player state | Position, sector, cell, velocity, rotation |
+| **Streaming HUD** | World streaming | Loaded sectors, pending loads, memory budget |
+| **Entity HUD** | Entity counts | Total entities, visible entities, active AI |
+| **Asset HUD** | Asset management | Loaded assets, cache hits, memory usage |
+| **Spatial HUD** | Spatial queries | Current cell, neighbours, query results |
+| **AI HUD** | AI debugging | Active AI, states, perception, decisions |
+| **Physics HUD** | Physics debug | Bodies, collisions, contacts, constraints |
+| **Audio HUD** | Audio debug | Active voices, sources, occlusion |
+| **Network HUD** | Networking | Latency, bandwidth, replication stats |
+
+#### 3.2 Toggle System
+
+Each overlay component can be toggled independently:
+
+```text
+F1  →  Performance HUD
+F2  →  Player HUD
+F3  →  Streaming HUD
+F4  →  Entity HUD
+F5  →  Asset HUD
+F6  →  Spatial HUD
+F7  →  AI HUD
+F8  →  Physics HUD
+F9  →  Audio HUD
+F10 →  Network HUD
+F11 →  All Overlays
+F12 →  Professional Mode (toggle)
+```
+
+---
+
+### 4. Asset Naming System
+
+One of the most distinctive features of Professional Mode is its approach to asset identification.
+
+Instead of exposing descriptive filenames at runtime:
+
+```text
+IndianTempleWall_Diffuse_4K.png
+CyberTree03.glb
+Footstep_Concrete_01.wav
+Walk_Animation_01.fbx
+```
+
+The engine stores and displays compact internal identifiers:
+
+| Asset Type | Prefix | Example |
+|------------|--------|---------|
+| Texture | TX | `TX001` |
+| Model | MD | `MD034` |
+| Material | MT | `MT091` |
+| Shader | SH | `SH022` |
+| Animation | AN | `AN044` |
+| Audio | AU | `AU017` |
+| Level | LV | `LV005` |
+| Scene | SC | `SC011` |
+| Prefab | PR | `PR003` |
+| Font | FT | `FT008` |
+| Video | VD | `VD002` |
+| Particle | PT | `PT019` |
+
+#### 4.1 Asset Registry
+
+The Asset Registry maintains the mapping between internal IDs and source filenames:
+
+```text
+TX001
+   ↓
+Asset Registry
+   ↓
+Type        : Texture
+Real Path   : assets/textures/india/wall_diffuse_4k.webp
+Loaded      : TRUE
+Reference   : 3
+Compression : WEBP_90
+```
+
+Gameplay systems never know the original filename. They work exclusively with internal IDs.
+
+#### 4.2 Build Pipeline Integration
+
+The asset ID system is fully automated during the build process:
+
+```text
+Development
+│
+├── Source Asset (Artist)
+│   └── Old_Indian_Brick_Wall_Albedo_4K.webp
+│
+↓ Build Pipeline
+│
+├── Asset Importer
+│   ├── Validate
+│   ├── Process
+│   └── Optimise
+│
+↓
+│
+├── Generate Internal ID → TX041
+│
+↓
+│
+├── Register in Registry
+│   └── TX041 → Old_Indian_Brick_Wall_Albedo_4K.webp
+│
+↓
+│
+├── Compress
+│
+↓
+│
+├── Package
+│
+↓
+Shipping Build
+│
+└── TX041 (no source filename)
+```
+
+Artists continue using descriptive filenames during development. The engine generates and uses compact internal IDs during packaging. No manual renaming is required.
+
+#### 4.3 Professional Mode Asset Inspection
+
+When hovering over any object in Professional Mode:
+
+```text
+┌─────────────────────────────────┐
+│  Asset Inspection               │
+├─────────────────────────────────┤
+│  Model    : MD034               │
+│  Material : MT120               │
+│  Texture  : TX007               │
+│  Shader   : SH011               │
+│  LOD      : LOD0                │
+│  Resident : YES                 │
+│  Priority : Medium              │
+│  Distance : 12.7m               │
+│  Triangles: 2048                │
+│  Draw Calls: 1                  │
+└─────────────────────────────────┘
+```
+
+---
+
+### 5. Professional Mode Architecture
+
+#### 5.1 High-Level Architecture
+
+```text
+Professional Mode
+│
+├── Diagnostics Service
+│   ├── Logging
+│   ├── Metrics
+│   ├── Telemetry
+│   └── Tracing
+│
+├── Overlay System
+│   ├── Performance HUD
+│   ├── Player HUD
+│   ├── Streaming HUD
+│   ├── Entity HUD
+│   └── Asset HUD
+│
+├── Visualisation System
+│   ├── Spatial Visualiser
+│   ├── Streaming Visualiser
+│   ├── Physics Visualiser
+│   ├── AI Visualiser
+│   └── BVH Visualiser
+│
+├── Asset Inspector
+│   ├── Registry Lookup
+│   ├── Reference Tracker
+│   └── Cache Visualiser
+│
+└── Console
+    ├── Command Parser
+    ├── Command Registry
+    └── Output Renderer
+```
+
+#### 5.2 Core Components
+
+| Component | Purpose | Dependencies |
+|-----------|---------|--------------|
+| `DiagnosticsService` | Central diagnostics coordination | Framework, EventBus |
+| `OverlayManager` | Manages HUD overlays | RenderService, UIService |
+| `VisualisationManager` | Manages debug visualisations | RenderService, WorldSystem |
+| `AssetInspector` | Asset inspection and registry | AssetService |
+| `DeveloperConsole` | Command execution | EventBus, DiagnosticsService |
+| `SpatialVisualiser` | Visualises spatial data | WorldSystem, RenderService |
+| `StreamingVisualiser` | Visualises streaming | StreamingManager, RenderService |
+| `PhysicsVisualiser` | Visualises physics | PhysicsService, RenderService |
+| `AIVisualiser` | Visualises AI | AIService, RenderService |
+
+#### 5.3 Integration with Existing Systems
+
+Professional Mode is designed to be a **consumer** of engine state, not a modifier:
+
+```text
+Engine Systems (ECS, World, Physics, AI, etc.)
+    │
+    ▼
+Professional Mode (Reads state)
+    │
+    ▼
+Render Service (Visualises diagnostics)
+```
+
+No subsystem knows about Professional Mode. Professional Mode observes subsystems. This preserves the decoupled architecture established throughout Echo Engine.
+
+---
+
+### 6. Spatial Visualiser
+
+One of the most powerful Professional Mode tools is the Spatial Visualiser. It provides real-time visualisation of the engine's spatial hierarchy and queries.
+
+#### 6.1 Features
+
+| Feature | Description |
+|---------|-------------|
+| **Sector Grid** | Visual overlay of all sectors with colour-coded status (loaded/unloaded/loading) |
+| **Cell Highlight** | Current cell highlighted with streaming radius overlay |
+| **Spatial Queries** | Visualise radius, nearest, and cell queries |
+| **Transform Debug** | Display local, cell, sector, and world transforms |
+| **Ray Visualisation** | Visualise view rays and collision points |
+| **Bounding Volumes** | Display AABBs for entities and spatial nodes |
+
+#### 6.2 Spatial HUD
+
+```text
+┌─────────────────────────────────────────┐
+│  Spatial Matrix                        │
+├─────────────────────────────────────────┤
+│  Player                                 │
+│    Position  : (120, 42, -17)          │
+│    Sector    : S12                     │
+│    Cell      : C03                     │
+│    Local     : (+2.3, 0.0, -1.2)      │
+│                                         │
+│  View Ray                               │
+│    Direction : (0.92, -0.12, 0.38)    │
+│    Distance  : 200.0m                  │
+│    Hit       : Wall                    │
+│    Hit Pos   : (137.3, 41.8, -33.1)   │
+│    Hit Dist  : 17.32m                  │
+│                                         │
+│  Streaming                              │
+│    Loaded    : 12 sectors              │
+│    Pending   : 2 sectors               │
+│    Budget    : 85%                     │
+└─────────────────────────────────────────┘
+```
+
+#### 6.3 Cell Highlighting
+
+The player's current cell and neighbours are visually highlighted:
+
+```text
+┌──────┬──────┬──────┐
+│      │      │      │
+│ C02  │ C03  │ C04  │
+│      │      │      │
+├──────┼──────┼──────┤
+│      │██████│      │
+│ C12  │██████│ C14  │  ← Current Cell (highlighted)
+│      │██████│      │
+├──────┼──────┼──────┤
+│      │      │      │
+│ C22  │ C23  │ C24  │
+│      │      │      │
+└──────┴──────┴──────┘
+```
+
+---
+
+### 7. Developer Console
+
+The Developer Console provides direct control over Professional Mode features and runtime inspection.
+
+#### 7.1 Console Commands
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `professionalMode(on/off)` | Toggle Professional Mode | `professionalMode true` |
+| `showOverlay(name)` | Show specific overlay | `showOverlay fps` |
+| `hideOverlay(name)` | Hide specific overlay | `hideOverlay streaming` |
+| `inspectAsset(id)` | Inspect asset details | `inspectAsset TX041` |
+| `inspectEntity(id)` | Inspect entity details | `inspectEntity 1234` |
+| `inspectSector(id)` | Inspect sector details | `inspectSector S12` |
+| `inspectCell(id)` | Inspect cell details | `inspectCell C03` |
+| `showSpatial()` | Show spatial visualiser | `showSpatial` |
+| `hideSpatial()` | Hide spatial visualiser | `hideSpatial` |
+| `showPhysics()` | Show physics debug | `showPhysics` |
+| `showAI()` | Show AI debug | `showAI` |
+| `showStreaming()` | Show streaming debug | `showStreaming` |
+| `freezeTime()` | Pause simulation | `freezeTime` |
+| `resumeTime()` | Resume simulation | `resumeTime` |
+| `setTimeScale(scale)` | Set time scale | `setTimeScale 0.5` |
+| `teleport(x,y,z)` | Teleport player | `teleport 100 10 50` |
+| `spawnEntity(type)` | Spawn entity | `spawnEntity NPC_Guard` |
+| `destroyEntity(id)` | Destroy entity | `destroyEntity 1234` |
+| `listEntities()` | List all entities | `listEntities` |
+| `listAssets()` | List all assets | `listAssets` |
+| `listSectors()` | List all sectors | `listSectors` |
+| `help()` | List all commands | `help` |
+
+#### 7.2 Console Output
+
+```text
+> professionalMode true
+Professional Mode enabled.
+
+> showSpatial
+Spatial visualiser enabled.
+
+> inspectAsset TX041
+┌─────────────────────────────────────┐
+│ Asset: TX041                       │
+├─────────────────────────────────────┤
+│ Type        : Texture              │
+│ Real Path   : wall_diffuse_4k.webp │
+│ Loaded      : TRUE                 │
+│ Reference   : 3                    │
+│ Compression : WEBP_90              │
+│ Resolution  : 4096x4096           │
+│ Format      : sRGB                │
+│ Mipmaps     : 12                   │
+└─────────────────────────────────────┘
+
+> inspectSector S12
+┌─────────────────────────────────────┐
+│ Sector: S12                        │
+├─────────────────────────────────────┤
+│ State        : LOADED              │
+│ Cells        : 16                  │
+│ Entities     : 147                 │
+│ Load Time    : 124ms               │
+│ Memory       : 34.2MB             │
+│ Priority     : HIGH                │
+└─────────────────────────────────────┘
+```
+
+---
+
+### 8. Performance Considerations
+
+Professional Mode is designed to have **negligible** performance impact when enabled.
+
+#### 8.1 Optimisation Strategies
+
+| Strategy | Description | Impact |
+|----------|-------------|--------|
+| **Lazy Updates** | Only update when data changes | Reduces CPU usage by ~90% |
+| **Sampling** | Update at lower frequency | 1-5% CPU usage |
+| **Selective Visualisation** | Only visualise when visible | Zero rendering overhead |
+| **Cache** | Cache query results | Eliminates redundant calculations |
+| **Toggle** | Disable unused overlays | User-controlled overhead |
+
+#### 8.2 Performance Budgets
+
+Professional Mode is designed to use less than 5% of the engine's CPU budget. This ensures that debugging does not mask performance issues in the underlying game.
+
+```text
+Professional Mode Budget
+├── Overlay Rendering   : ≤ 1%
+├── Spatial Queries     : ≤ 1%
+├── Asset Inspection    : ≤ 0.5%
+├── Visualisation       : ≤ 1%
+├── Console             : ≤ 0.5%
+└── Total               : ≤ 5%
+```
+
+---
+
+### 9. Integration Roadmap
+
+#### Phase 1: Foundation (Current)
+- ✅ DiagnositcsService foundation
+- ✅ PerformanceCounters
+- ✅ EventBus tracing
+
+#### Phase 2: Overlay System (Next)
+- ⬜ OverlayManager
+- ⬜ Performance HUD
+- ⬜ Player HUD
+- ⬜ Streaming HUD
+- ⬜ Entity HUD
+
+#### Phase 3: Visualisation (Future)
+- ⬜ Spatial Visualiser
+- ⬜ Streaming Visualiser
+- ⬜ Physics Visualiser
+- ⬜ AI Visualiser
+
+#### Phase 4: Asset Inspection (Future)
+- ⬜ Asset Inspector
+- ⬜ Registry Viewer
+- ⬜ Cache Visualiser
+
+#### Phase 5: Console (Future)
+- ⬜ Developer Console
+- ⬜ Command Registry
+- ⬜ Command Execution
+
+---
+
+### 10. Chapter Summary
+
+Professional Mode provides a comprehensive development and debugging environment for Echo Engine, completely hidden from players in shipping builds.
+
+Key principles:
+
+- **Zero Player Impact:** Professional Mode never affects gameplay.
+- **Read-Only Observation:** Professional Mode observes engine state without modifying it.
+- **Negligible Overhead:** Professional Mode uses less than 5% of CPU budget.
+- **Modular Architecture:** Each tool is a separate, togglable component.
+- **Asset ID System:** Internal IDs keep asset names hidden while enabling fast lookups.
+- **Build Integration:** Asset IDs are generated automatically during packaging.
+
+By providing engineers with a powerful diagnostics suite while maintaining the modular, decoupled architecture of Echo Engine, Professional Mode embodies the engine's philosophy of serving both players and developers.
+
+---
+
+## Chapter 27 – Player Spatial Matrix (PSM)
+
+### 1. Introduction
+
+The Player Spatial Matrix (PSM) is a **spatial awareness cache** that provides every subsystem with fast, low-cost access to player-centric spatial information.
+
+Instead of each subsystem performing its own distance checks, raycasts, and visibility tests:
+
+- AI queries: "Can I see the player?"
+- Audio queries: "How far is the sound source?"
+- Interaction queries: "What's under the crosshair?"
+- LOD queries: "How far is this mesh?"
+- Streaming queries: "Should this sector stay loaded?"
+- UI queries: "Is the objective visible?"
+
+Each subsystem reads from the same cached spatial data—reducing redundant calculations and improving overall performance.
+
+---
+
+### 2. Philosophy
+
+The PSM exists to answer one question efficiently:
+
+> **"What does the player know about the world?"**
+
+It does not calculate coordinates. It provides a **snapshot of player-relative spatial awareness**.
+
+> **Every subsystem can ask a single question without recomputing anything.**
+
+---
+
+### 3. High-Level Architecture
+
+```text
+Player Movement
+       │
+       ▼
+Update Trigger
+       │
+       ▼
+Player Spatial Matrix (PSM)
+       │
+       ├── Raycast Results
+       ├── Distance Cache
+       ├── Visibility Cache
+       ├── Sector/Cell Cache
+       ├── Occlusion Cache
+       └── Priority Cache
+       │
+       ▼
+Subsystems (AI, Audio, Rendering, Streaming, etc.)
+```
+
+---
+
+### 4. Core Components
+
+```text
+spatial/
+├── PlayerSpatialMatrix.js    │  Main cache & coordinator
+├── SpatialRaycaster.js       │  Ray casting (multi-resolution)
+├── VisibilityCache.js        │  Visibility results
+├── OcclusionFilter.js        │  Occlusion types
+├── MatrixCache.js            │  Distance, angle, sector, cell
+├── QueryBudget.js            │  Update frequency & budget
+└── MatrixDebugger.js         │  Professional Mode visualisation
+```
+
+---
+
+### 5. Update Triggers
+
+The PSM does not update every frame. It updates only when necessary.
+
+#### 5.1 Threshold-Based Updates
+
+```text
+Player Movement Threshold
+
+Move > 10 cm
+
+OR
+
+Rotate > 2°
+
+↓
+
+Update Matrix
+
+Else
+
+Skip
+```
+
+#### 5.2 Update Frequency Modes
+
+| Mode | Frequency | Use Case |
+|------|-----------|----------|
+| **OFF** | Never | No spatial queries needed |
+| **STATIC** | Every 1 second | Low-end hardware |
+| **LOW** | 10 Hz | Background processing |
+| **NORMAL** | 30 Hz | Mid-range hardware |
+| **HIGH** | 60 Hz | High-end hardware |
+| **MAX** | Every frame | Debugging / Professional Mode |
+
+#### 5.3 Distance Tiers
+
+Nearby objects (0-50m):    Update every frame
+Mid-distance (50-150m):    Update every 2nd frame
+Far distance (150-500m):   Update every 5th frame
+Background (>500m):        Update every 30th frame
+
+---
+
+### 6. Ray System
+
+Instead of expensive cone tracing, PSM uses a multi-resolution ray system.
+
+#### 6.1 Multi-Resolution Rays
+
+```text
+           upper ray   ──────────►
+           center ray  ═══════════►
+           lower ray   ──────────►
+```
+
+Only 3 rays. Not 500. Not cone traces. Three rays already give excellent precision.
+
+#### 6.2 Ray Behaviour with Occlusion Types
+
+Each object has an occlusion type flag:
+
+| Type | Behaviour |
+|------|-----------|
+| **SOLID** | Stop ray |
+| **TRANSPARENT** | Continue ray |
+| **NOCLIP** | Continue ray |
+| **IGNORE** | Continue ray |
+
+Glass, fog volumes, triggers, etc. won't block the matrix.
+
+#### 6.3 BVH Integration
+
+Rays test geometry using the existing spatial partition:
+
+```text
+Player
+    │
+    ▼
+Ray
+    │
+    ▼
+BVH / Spatial Grid
+    │
+    ▼
+Current Cell + Neighbours
+    │
+    ▼
+Test Candidates
+    │
+    ▼
+Hit Result
+```
+
+No testing against the whole world.
+
+---
+
+### 7. Matrix Data Structure
+
+For each nearby object, the PSM caches:
+
+```text
+Object: Chair
+├── World Position   : (120, 8, -22)
+├── Relative Vector  : (+2, 0, -2)
+├── Distance         : 2.82m
+├── Angle            : 12.4° (from forward)
+├── Horizontal Angle : 8.2°
+├── Vertical Angle   : -4.1°
+├── Visibility       : YES
+├── Occluded         : NO
+├── Sector           : S12
+├── Cell             : C04
+├── Ray Hit          : YES
+├── Priority         : HIGH
+└── LOD              : LOD0
+```
+
+---
+
+### 8. Integration with Echo Engine
+
+#### 8.1 Directory Structure
+
+```text
+src/
+├── world/
+│   ├── Transform.js
+│   ├── CellID.js
+│   ├── SectorID.js
+│   └── ...
+│
+└── spatial/
+    ├── PlayerSpatialMatrix.js
+    ├── SpatialRaycaster.js
+    ├── VisibilityCache.js
+    ├── OcclusionFilter.js
+    ├── MatrixCache.js
+    ├── QueryBudget.js
+    └── MatrixDebugger.js
+```
+
+#### 8.2 Dependencies
+
+| Component | Depends On |
+|-----------|------------|
+| PlayerSpatialMatrix | Transform, CellID, SectorID, WorldManager |
+| SpatialRaycaster | WorldManager, PhysicsService, BVH |
+| VisibilityCache | PlayerSpatialMatrix |
+| OcclusionFilter | PhysicsService, MaterialSystem |
+| MatrixCache | PlayerSpatialMatrix |
+| QueryBudget | Framework, DiagnosticsService |
+| MatrixDebugger | PlayerSpatialMatrix, RenderService |
+
+#### 8.3 Service Integration
+
+```javascript
+// Example: AI queries the PSM
+class AISystem {
+  update(delta, entityIds, ecs) {
+    const playerPos = this.framework.playerService.getPosition();
+    const matrix = this.framework.spatialService.getPlayerMatrix();
+    
+    for (const eid of entityIds) {
+      const entity = ecs.getEntity(eid);
+      const entry = matrix.getEntry(entity.id);
+      
+      if (entry && entry.visibility) {
+        // Entity can see player
+        // Update AI state
+      }
+    }
+  }
+}
+```
+
+---
+
+### 9. Performance Optimisations
+
+| Technique | Description | Impact |
+|-----------|-------------|--------|
+| **Threshold Updates** | Only update after meaningful player movement or rotation | 80% reduction |
+| **Cell-Limited Processing** | Query only current and adjacent cells | 90% reduction |
+| **Distance Tiers** | Nearby objects update every cycle; distant objects less often | 50% reduction |
+| **Cached Results** | Reuse previous calculations until something changes | 70% reduction |
+| **Incremental Updates** | Only rebuild changed entries | 60% reduction |
+| **Web Workers** | Offload matrix updates to a background thread | Significant (future) |
+| **GPU Acceleration** | Compute visibility via compute shaders | Significant (future) |
+
+---
+
+### 10. Professional Mode Integration
+
+PSM is fully integrated with Professional Mode:
+
+```text
+F6 → Spatial HUD
+
+┌─────────────────────────────────────────┐
+│  Spatial Matrix                        │
+├─────────────────────────────────────────┤
+│  Player                                 │
+│    Position  : (120, 42, -17)          │
+│    Sector    : S12                     │
+│    Cell      : C03                     │
+│    Local     : (+2.3, 0.0, -1.2)      │
+│                                         │
+│  View Ray                               │
+│    Direction : (0.92, -0.12, 0.38)    │
+│    Distance  : 200.0m                  │
+│    Hit       : Wall                    │
+│    Hit Pos   : (137.3, 41.8, -33.1)   │
+│    Hit Dist  : 17.32m                  │
+│                                         │
+│  Nearby Objects                         │
+│    Total     : 47                      │
+│    Visible   : 12                      │
+│    Occluded  : 35                      │
+│                                         │
+│  Matrix Cache                           │
+│    Entries   : 147                     │
+│    Updated   : 12.4ms ago             │
+│    Size      : 4.2KB                  │
+└─────────────────────────────────────────┘
+```
+
+---
+
+### 11. Implementation Phases
+
+#### Phase 1: Core Matrix (Current)
+- ⬜ PlayerSpatialMatrix class
+- ⬜ Distance and angle calculations
+- ⬜ Sector/cell caching
+- ⬜ Basic raycasting
+
+#### Phase 2: Visibility (Next)
+- ⬜ VisibilityCache
+- ⬜ OcclusionFilter
+- ⬜ BVH integration
+- ⬜ Multi-resolution rays
+
+#### Phase 3: Optimisation (Future)
+- ⬜ Threshold updates
+- ⬜ Distance tiers
+- ⬜ Incremental updates
+- ⬜ Query budgets
+
+#### Phase 4: Integration (Future)
+- ⬜ AI integration
+- ⬜ Audio integration
+- ⬜ Rendering integration
+- ⬜ Streaming integration
+
+#### Phase 5: Professional Mode (Future)
+- ⬜ Spatial visualiser
+- ⬜ Matrix debugger
+- ⬜ Performance monitoring
+
+---
+
+### 12. Chapter Summary
+
+The Player Spatial Matrix provides a **spatial awareness cache** that eliminates redundant calculations across all subsystems.
+
+Key principles:
+
+- **Single Source of Truth:** Every subsystem reads from the same cached data.
+- **Threshold Updates:** Only update when meaningful movement occurs.
+- **Distance Tiers:** Update frequency scales with distance.
+- **Multi-Resolution Rays:** Three rays instead of cone tracing.
+- **Cell-Limited Processing:** Only query current and adjacent cells.
+- **Negligible Overhead:** Designed for minimal CPU usage.
+- **Professional Mode Integration:** Full visualisation and debugging support.
+
+By providing a shared spatial cache, PSM improves performance across AI, audio, rendering, streaming, interaction, and UI while maintaining Echo Engine's commitment to modular, decoupled architecture.
+
+---
+
+## End of Chapter 27
+
+### Next: Chapter 28 – Professional Mode & PSM Integration Plan
+
+This chapter will define the complete integration roadmap, dependency graph, and implementation timeline for Professional Mode and the Player Spatial Matrix within Echo Engine.
+
+---
+
+## Appendix: Professional Mode & PSM Implementation Status
+
+| System | Status | Priority |
+|--------|--------|----------|
+| DiagnosticsService | ✅ Complete | Done |
+| PerformanceCounters | ✅ Complete | Done |
+| EventBus Tracing | ✅ Complete | Done |
+| OverlayManager | ⬜ Not Started | High |
+| Performance HUD | ⬜ Not Started | High |
+| Player HUD | ⬜ Not Started | High |
+| Streaming HUD | ⬜ Not Started | Medium |
+| Entity HUD | ⬜ Not Started | Medium |
+| Asset HUD | ⬜ Not Started | Medium |
+| Spatial HUD | ⬜ Not Started | Medium |
+| AI HUD | ⬜ Not Started | Low |
+| Physics HUD | ⬜ Not Started | Low |
+| Audio HUD | ⬜ Not Started | Low |
+| Network HUD | ⬜ Not Started | Low |
+| Asset Inspector | ⬜ Not Started | Medium |
+| Developer Console | ⬜ Not Started | High |
+| Spatial Visualiser | ⬜ Not Started | Medium |
+| Streaming Visualiser | ⬜ Not Started | Medium |
+| Physics Visualiser | ⬜ Not Started | Low |
+| AI Visualiser | ⬜ Not Started | Low |
+| PlayerSpatialMatrix | ⬜ Not Started | High |
+| SpatialRaycaster | ⬜ Not Started | High |
+| VisibilityCache | ⬜ Not Started | High |
+| OcclusionFilter | ⬜ Not Started | Medium |
+| MatrixCache | ⬜ Not Started | High |
+| QueryBudget | ⬜ Not Started | Medium |
+| MatrixDebugger | ⬜ Not Started | Medium |
+
+---
+
+*Professional Mode and the Player Spatial Matrix represent the final layer of Echo Engine's architecture—the bridge between a working game and a professional development environment. Both systems are designed to be implemented incrementally, starting with the core infrastructure and expanding to full functionality as the engine matures.*
+````
+
+## File: cinematic-baker.js
+````javascript
+<<<<<<< HEAD
+class CinematicBaker {
+    constructor(canvas, fps = 60, videoBitrate = 8000000) {
+        this.canvas = canvas;
+        this.fps = fps;
+        this.mediaRecorder = null;
+        this.recordedChunks = [];
+        this.options = { 
+            mimeType: 'video/webm; codecs=vp9', 
+            videoBitsPerSecond: videoBitrate 
+        };
+    }
+
+    startRecording() {
+        this.recordedChunks = [];
+        const stream = this.canvas.captureStream(this.fps);
+        
+        try {
+            this.mediaRecorder = new MediaRecorder(stream, this.options);
+        } catch (e) {
+            console.error("MediaRecorder error:", e);
+            return;
+        }
+
+        this.mediaRecorder.ondataavailable = (event) => {
+            if (event.data.size > 0) this.recordedChunks.push(event.data);
+        };
+
+        this.mediaRecorder.onstop = () => this.downloadBakedCinematic();
+        this.mediaRecorder.start();
+        console.log("🎥 Cinematic Baking Started...");
+    }
+
+    stopRecording() {
+        if (this.mediaRecorder && this.mediaRecorder.state !== "inactive") {
+            this.mediaRecorder.stop();
+            console.log("🎥 Cinematic Baking Stopped. Processing file...");
+        }
+    }
+
+    downloadBakedCinematic() {
+        const blob = new Blob(this.recordedChunks, { type: 'video/webm' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        document.body.appendChild(a);
+        a.style.display = 'none';
+        a.href = url;
+        a.download = `cutscene_baked_${Date.now()}.webm`; 
+        a.click();
+        window.URL.revokeObjectURL(url);
+        console.log("✅ Cinematic successfully baked and saved locally.");
+    }
+=======
+class CinematicBaker {
+    constructor(canvas, fps = 60, videoBitrate = 8000000) {
+        this.canvas = canvas;
+        this.fps = fps;
+        this.mediaRecorder = null;
+        this.recordedChunks = [];
+        this.options = { 
+            mimeType: 'video/webm; codecs=vp9', 
+            videoBitsPerSecond: videoBitrate 
+        };
+    }
+
+    startRecording() {
+        this.recordedChunks = [];
+        const stream = this.canvas.captureStream(this.fps);
+        
+        try {
+            this.mediaRecorder = new MediaRecorder(stream, this.options);
+        } catch (e) {
+            console.error("MediaRecorder error:", e);
+            return;
+        }
+
+        this.mediaRecorder.ondataavailable = (event) => {
+            if (event.data.size > 0) this.recordedChunks.push(event.data);
+        };
+
+        this.mediaRecorder.onstop = () => this.downloadBakedCinematic();
+        this.mediaRecorder.start();
+        console.log("🎥 Cinematic Baking Started...");
+    }
+
+    stopRecording() {
+        if (this.mediaRecorder && this.mediaRecorder.state !== "inactive") {
+            this.mediaRecorder.stop();
+            console.log("🎥 Cinematic Baking Stopped. Processing file...");
+        }
+    }
+
+    downloadBakedCinematic() {
+        const blob = new Blob(this.recordedChunks, { type: 'video/webm' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        document.body.appendChild(a);
+        a.style.display = 'none';
+        a.href = url;
+        a.download = `cutscene_baked_${Date.now()}.webm`; 
+        a.click();
+        window.URL.revokeObjectURL(url);
+        console.log("✅ Cinematic successfully baked and saved locally.");
+    }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: index.html
+````html
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echoes of Tomorrow</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Courier New', Courier, monospace; user-select: none; }
+        #gameCanvas { width: 100vw; height: 100vh; display: block; }
+        
+        /* Cutscene Player */
+        #cutscenePlayer { 
+            position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; 
+            display: none; object-fit: cover; z-index: 10; background: black;
+        }
+
+        /* Cinematic UI Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+            to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+        }
+
+        #uiLayer {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: white; z-index: 20; text-align: center; width: 100%;
+        }
+
+        h1 {
+            font-size: 4rem; letter-spacing: 15px; font-weight: normal; margin-bottom: 5px;
+            opacity: 0; animation: fadeIn 4s ease-out forwards; animation-delay: 1s;
+        }
+        
+        h2 {
+            font-size: 1rem; letter-spacing: 5px; color: #888; font-weight: normal;
+            opacity: 0; animation: fadeIn 3s ease-out forwards; animation-delay: 3s;
+        }
+
+        .button-container {
+            margin-top: 50px; opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 5s;
+        }
+
+        button { 
+            padding: 15px 40px; font-size: 16px; cursor: pointer; letter-spacing: 2px;
+            background: transparent; color: #fff; border: 1px solid #555; 
+            transition: all 0.3s; font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+        }
+        
+        button:hover { background: #fff; color: #000; box-shadow: 0 0 15px rgba(255,255,255,0.5); border-color: #fff; }
+
+        /* Crosshair for Gameplay */
+        #crosshair {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 4px; height: 4px; background: rgba(255,255,255,0.8); border-radius: 50%;
+            display: none; z-index: 5; pointer-events: none; mix-blend-mode: difference;
+        }
+    </style>
+</head>
+<body>
+    <video id="cutscenePlayer" controls="false"></video>
+    <div id="crosshair"></div>
+    
+    <div id="uiLayer">
+        <h1>ECHOES OF TOMORROW</h1>
+        <h2>A Memory Fragment</h2>
+        <div class="button-container">
+            <!-- Step 1: Authorize folder -->
+            <button id="loadFolderBtn">Initialize Data Link (Select Cutscenes Folder)</button>
+            <!-- Step 2: Start Game (Hidden initially) -->
+            <button id="startGameBtn" style="display:none;">START GAME</button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Load Three.js Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Load Our Custom Scripts -->
+    <script src="cinematic-baker.js"></script>
+    <script src="engine.js"></script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echoes of Tomorrow</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Courier New', Courier, monospace; user-select: none; }
+        #gameCanvas { width: 100vw; height: 100vh; display: block; }
+        
+        /* Cutscene Player */
+        #cutscenePlayer { 
+            position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; 
+            display: none; object-fit: cover; z-index: 10; background: black;
+        }
+
+        /* Cinematic UI Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+            to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+        }
+
+        #uiLayer {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: white; z-index: 20; text-align: center; width: 100%;
+        }
+
+        h1 {
+            font-size: 4rem; letter-spacing: 15px; font-weight: normal; margin-bottom: 5px;
+            opacity: 0; animation: fadeIn 4s ease-out forwards; animation-delay: 1s;
+        }
+        
+        h2 {
+            font-size: 1rem; letter-spacing: 5px; color: #888; font-weight: normal;
+            opacity: 0; animation: fadeIn 3s ease-out forwards; animation-delay: 3s;
+        }
+
+        .button-container {
+            margin-top: 50px; opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 5s;
+        }
+
+        button { 
+            padding: 15px 40px; font-size: 16px; cursor: pointer; letter-spacing: 2px;
+            background: transparent; color: #fff; border: 1px solid #555; 
+            transition: all 0.3s; font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+        }
+        
+        button:hover { background: #fff; color: #000; box-shadow: 0 0 15px rgba(255,255,255,0.5); border-color: #fff; }
+
+        /* Crosshair for Gameplay */
+        #crosshair {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 4px; height: 4px; background: rgba(255,255,255,0.8); border-radius: 50%;
+            display: none; z-index: 5; pointer-events: none; mix-blend-mode: difference;
+        }
+    </style>
+</head>
+<body>
+    <video id="cutscenePlayer" controls="false"></video>
+    <div id="crosshair"></div>
+    
+    <div id="uiLayer">
+        <h1>ECHOES OF TOMORROW</h1>
+        <h2>A Memory Fragment</h2>
+        <div class="button-container">
+            <!-- Step 1: Authorize folder -->
+            <button id="loadFolderBtn">Initialize Data Link (Select Cutscenes Folder)</button>
+            <!-- Step 2: Start Game (Hidden initially) -->
+            <button id="startGameBtn" style="display:none;">START GAME</button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Load Three.js Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Load Our Custom Scripts -->
+    <script src="cinematic-baker.js"></script>
+    <script src="engine.js"></script>
+</body>
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+</html>
+````
+
+## File: package.json
+````json
+{
+  "name": "echoesoftomorrow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
+````
+
+## File: repomix-output.xml
+````xml
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+cutscenes/
+  bridge.webm
+  freeze.webm
+  prologue.webm
+src/
+  assets/
+    loaders/
+      AudioLoader.js
+      FontLoader.js
+      MaterialLoader.js
+      ModelLoader.js
+      ShaderLoader.js
+      TextureLoader.js
+      VideoLoader.js
+    AssetCache.js
+    AssetDescriptor.js
+    AssetHandle.js
+    AssetLoader.js
+    AssetManager.js
+    AssetRegistry.js
+    AssetService.js
+    AssetState.js
+    AssetType.js
+  components/
+    AudioComponent.js
+    HealthComponent.js
+    MeshComponent.js
+    TransformComponent.js
+    VelocityComponent.js
+  data/
+    CellData.js
+    RegionData.js
+    SectorData.js
+  ecs/
+    Component.js
+    ComponentStore.js
+    ECSManager.js
+    ECSService.js
+    Entity.js
+    EntitySignature.js
+    EntityView.js
+    SparseSet.js
+    System.js
+    SystemScheduler.js
+  framework/
+    core/
+      Bootstrap.js
+      FrameScheduler.js
+      Framework.js
+      ServiceManifest.js
+    diagnostics/
+      PerformanceCounters.js
+    events/
+      Event.js
+      EventBus.js
+    services/
+      SceneService.js
+      Service.js
+  hierarchy/
+    Cell.js
+    Region.js
+    Sector.js
+  managers/
+    EntityManager.js
+    QueryManager.js
+    SpatialManager.js
+    StreamingManager.js
+    WorldGraph.js
+  player/
+    PlayerController.js
+  queries/
+    CellQuery.js
+    NearestQuery.js
+    RadiusQuery.js
+  registries/
+    CellRegistry.js
+    EntityRegistry.js
+    RegionRegistry.js
+    SectorRegistry.js
+  rendering/
+    EnvironmentSetup.js
+    PBRTextureGenerator.js
+  scene/
+    Camera.js
+    CameraManager.js
+    Environment.js
+    Scene.js
+    SceneManager.js
+    SceneState.js
+    SceneTransition.js
+    TransitionState.js
+  spatial/
+    GridPartition.js
+  streaming/
+    SectorLoader.js
+    SectorUnloader.js
+  systems/
+    AnimationSystem.js
+    HealthSystem.js
+    MovementSystem.js
+  time/
+    DependencyGraph.js
+    DiagnosticsCollector.js
+    EventScheduler.js
+    ReadyQueue.js
+    ScheduledEvent.js
+    SchedulerState.js
+    SectorSchedulerState.js
+    TimeEvents.js
+    TimeManager.js
+    TimeSerializer.js
+    WorldClock.js
+  world/
+    CellID.js
+    Entity.js
+    EntityHandle.js
+    EntityID.js
+    RegionID.js
+    SectorID.js
+    Transform.js
+    World.js
+    WorldManager.js
+  main.js
+cinematic-baker.js
+index.html
+package.json
+README.md
+style.css
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="src/assets/loaders/AudioLoader.js">
+
+</file>
+
+<file path="src/assets/loaders/FontLoader.js">
+
+</file>
+
+<file path="src/assets/loaders/MaterialLoader.js">
+import { AssetLoader } from '../AssetLoader.js';
+import { AssetType } from '../AssetType.js';
+
+export class MaterialLoader extends AssetLoader {
+  supports(type) {
+    return type === AssetType.MATERIAL;
+  }
+
+  async load(descriptor) {
+    // TODO: load material definition from descriptor.path
+    return { placeholder: true, type: 'Material', path: descriptor.path };
+  }
+
+  async unload(resource) {
+    // TODO: release material data
+  }
+}
+</file>
+
+<file path="src/assets/loaders/ModelLoader.js">
+
+</file>
+
+<file path="src/assets/loaders/ShaderLoader.js">
+
+</file>
+
+<file path="src/assets/loaders/TextureLoader.js">
+
+</file>
+
+<file path="src/assets/loaders/VideoLoader.js">
+
+</file>
+
+<file path="src/assets/AssetCache.js">
+/**
+ * Owns runtime asset objects.
+ * Maintains reference counts and supports automatic unloading when count reaches zero.
+ * No public method exposes the raw resource directly to gameplay.
+ */
+export class AssetCache {
+  constructor() {
+    /** @type {Map<string, { resource: *, refCount: number }>} */
+    this._cache = new Map();
+  }
+
+  /**
+   * Insert a runtime asset with an initial reference count of 1.
+   * @param {string} id
+   * @param {*} resource
+   * @throws {Error} if id already exists.
+   */
+  insert(id, resource) {
+    if (this._cache.has(id)) {
+      throw new Error(`Asset "${id}" already cached.`);
+    }
+    this._cache.set(id, { resource, refCount: 1 });
+  }
+
+  /**
+   * Remove an asset from the cache, regardless of reference count.
+   * @param {string} id
+   */
+  remove(id) {
+    this._cache.delete(id);
+  }
+
+  /**
+   * Retrieve the runtime resource. This is **internal** – callers outside
+   * of the asset system must not use it.
+   * @param {string} id
+   * @returns {*|undefined}
+   * @private
+   */
+  _getResource(id) {
+    const entry = this._cache.get(id);
+    return entry ? entry.resource : undefined;
+  }
+
+  /**
+   * Check if an asset is cached.
+   * @param {string} id
+   * @returns {boolean}
+   */
+  contains(id) {
+    return this._cache.has(id);
+  }
+
+  /**
+   * Increment reference count.
+   * @param {string} id
+   */
+  retain(id) {
+    const entry = this._cache.get(id);
+    if (entry) entry.refCount++;
+  }
+
+  /**
+   * Decrement reference count. Returns the new count.
+   * @param {string} id
+   * @returns {number}
+   */
+  release(id) {
+    const entry = this._cache.get(id);
+    if (!entry) return 0;
+    entry.refCount = Math.max(0, entry.refCount - 1);
+    return entry.refCount;
+  }
+
+  /**
+   * Returns the current reference count.
+   * @param {string} id
+   * @returns {number}
+   */
+  getRefCount(id) {
+    const entry = this._cache.get(id);
+    return entry ? entry.refCount : 0;
+  }
+
+  clear() {
+    this._cache.clear();
+  }
+}
+</file>
+
+<file path="src/assets/AssetDescriptor.js">
+import { AssetState } from './AssetState.js';
+
+/**
+ * Immutable asset metadata.
+ * Holds only descriptive information; no runtime resource.
+ */
+export class AssetDescriptor {
+  /**
+   * @param {string} id
+   * @param {import('./AssetType.js').AssetType} type
+   * @param {string} path
+   * @param {Object} [options]
+   * @param {number} [options.version=1]
+   * @param {string} [options.hash='']
+   * @param {string} [options.state=AssetState.REGISTERED]
+   */
+  constructor(id, type, path, options = {}) {
+    /** @readonly */
+    this._id = id;
+    /** @readonly */
+    this._type = type;
+    /** @readonly */
+    this._path = path;
+    /** @readonly */
+    this._version = options.version ?? 1;
+    /** @readonly */
+    this._hash = options.hash ?? '';
+    /** @readonly */
+    this._state = options.state ?? AssetState.REGISTERED;
+    Object.freeze(this);
+  }
+
+  get id() { return this._id; }
+  get type() { return this._type; }
+  get path() { return this._path; }
+  get version() { return this._version; }
+  get hash() { return this._hash; }
+  get state() { return this._state; }
+
+  /**
+   * Create a new descriptor with a different state.
+   * @param {string} newState
+   * @returns {AssetDescriptor}
+   */
+  withState(newState) {
+    return new AssetDescriptor(this._id, this._type, this._path, {
+      version: this._version,
+      hash: this._hash,
+      state: newState,
+    });
+  }
+}
+</file>
+
+<file path="src/assets/AssetHandle.js">
+/**
+ * Lightweight reference to an asset.
+ * Stores only the asset id and a reference to the AssetManager,
+ * fetching the current descriptor on demand.
+ * Never owns the runtime resource.
+ */
+export class AssetHandle {
+  /**
+   * @param {string} assetId
+   * @param {import('./AssetManager.js').AssetManager} manager
+   */
+  constructor(assetId, manager) {
+    /** @private */
+    this._assetId = assetId;
+    /** @private */
+    this._manager = manager;
+  }
+
+  /** @returns {string} */
+  id() { return this._assetId; }
+
+  /**
+   * Returns the current descriptor, or null if the asset no longer exists.
+   * @returns {import('./AssetDescriptor.js').AssetDescriptor|null}
+   */
+  descriptor() {
+    return this._manager.find(this._assetId) || null;
+  }
+
+  /**
+   * Returns true if the asset is still registered and its state is not 'Failed' or 'Unloaded'.
+   * @returns {boolean}
+   */
+  isValid() {
+    const desc = this.descriptor();
+    if (!desc) return false;
+    const state = desc.state;
+    return state !== 'Failed' && state !== 'Unloaded';
+  }
+}
+</file>
+
+<file path="src/assets/AssetLoader.js">
+
+</file>
+
+<file path="src/assets/AssetManager.js">
+import { AssetRegistry } from './AssetRegistry.js';
+import { AssetCache } from './AssetCache.js';
+import { AssetHandle } from './AssetHandle.js';
+import { AssetType } from './AssetType.js';
+import { TextureLoader } from './loaders/TextureLoader.js';
+import { ModelLoader } from './loaders/ModelLoader.js';
+import { MaterialLoader } from './loaders/MaterialLoader.js';
+import { ShaderLoader } from './loaders/ShaderLoader.js';
+import { AudioLoader } from './loaders/AudioLoader.js';
+import { FontLoader } from './loaders/FontLoader.js';
+import { VideoLoader } from './loaders/VideoLoader.js';
+
+/**
+ * Public API of the Asset System.
+ * Owns registry, cache, and loaders. Coordinates all asset operations.
+ */
+export class AssetManager {
+  constructor() {
+    this._registry = new AssetRegistry();
+    this._cache = new AssetCache();
+    /** @type {Map<string, import('./AssetLoader.js').AssetLoader>} */
+    this._loaders = new Map();
+
+    // Register all built-in loaders
+    this._addLoader(new TextureLoader());
+    this._addLoader(new ModelLoader());
+    this._addLoader(new MaterialLoader());
+    this._addLoader(new ShaderLoader());
+    this._addLoader(new AudioLoader());
+    this._addLoader(new FontLoader());
+    this._addLoader(new VideoLoader());
+  }
+
+  /**
+   * Register an asset descriptor (metadata only).
+   * @param {import('./AssetDescriptor.js').AssetDescriptor} descriptor
+   */
+  register(descriptor) {
+    this._registry.register(descriptor);
+  }
+
+  /**
+   * Unregister an asset. If loaded, the resource is unloaded first.
+   * @param {string} id
+   */
+  async unregister(id) {
+    const descriptor = this._registry.find(id);
+    if (descriptor && this._cache.contains(id)) {
+      await this._unloadInternal(id, descriptor.type);
+    }
+    this._registry.unregister(id);
+  }
+
+  /**
+   * Load an asset by id. Returns a handle.
+   * @param {string} id
+   * @returns {Promise<AssetHandle>}
+   */
+  async load(id) {
+    const descriptor = this._registry.find(id);
+    if (!descriptor) throw new Error(`Asset "${id}" not registered.`);
+
+    if (this._cache.contains(id)) {
+      this._cache.retain(id);
+      return new AssetHandle(id, this);
+    }
+
+    const loader = this._loaders.get(descriptor.type);
+    if (!loader) throw new Error(`No loader for type "${descriptor.type}".`);
+
+    // Update state to Loading (immutable – we will eventually update descriptor via registry)
+    // For now we just load.
+    const resource = await loader.load(descriptor);
+    this._cache.insert(id, resource);
+    return new AssetHandle(id, this);
+  }
+
+  /**
+   * Explicitly unload an asset (ignoring reference count).
+   * @param {string} id
+   */
+  async unload(id) {
+    const descriptor = this._registry.find(id);
+    if (!descriptor || !this._cache.contains(id)) return;
+    await this._unloadInternal(id, descriptor.type);
+  }
+
+  /**
+   * Reload an asset (unload and load again).
+   * @param {string} id
+   * @returns {Promise<AssetHandle>}
+   */
+  async reload(id) {
+    await this.unload(id);
+    return this.load(id);
+  }
+
+  /**
+   * Get a handle for a registered asset (does not affect reference count).
+   * @param {string} id
+   * @returns {AssetHandle|undefined}
+   */
+  get(id) {
+    const descriptor = this._registry.find(id);
+    if (!descriptor) return undefined;
+    return new AssetHandle(id, this);
+  }
+
+  /**
+   * Find the current descriptor for an asset.
+   * @param {string} id
+   * @returns {import('./AssetDescriptor.js').AssetDescriptor|undefined}
+   */
+  find(id) {
+    return this._registry.find(id);
+  }
+
+  /**
+   * Check whether an asset id is registered.
+   * @param {string} id
+   * @returns {boolean}
+   */
+  contains(id) {
+    return this._registry.contains(id);
+  }
+
+  /**
+   * Release a reference to an asset. If the reference count reaches zero,
+   * the asset is automatically unloaded.
+   * @param {string} id
+   */
+  async release(id) {
+    const descriptor = this._registry.find(id);
+    if (!descriptor || !this._cache.contains(id)) return;
+
+    const newCount = this._cache.release(id);
+    if (newCount <= 0) {
+      await this._unloadInternal(id, descriptor.type);
+    }
+  }
+
+  /**
+   * Per-frame update (placeholder for streaming queues).
+   * @param {number} delta
+   */
+  update(delta) {
+    // TODO: process pending async loads, streaming
+  }
+
+  /**
+   * Clear all assets and descriptors.
+   */
+  async clear() {
+    // Unload all cached assets first
+    for (const id of this._cache._cache.keys()) {
+      const descriptor = this._registry.find(id);
+      if (descriptor) {
+        await this._unloadInternal(id, descriptor.type);
+      }
+    }
+    this._cache.clear();
+    this._registry.clear();
+  }
+
+  // ---- private ----
+
+  /**
+   * Register a loader, ensuring no duplicate for the same type.
+   * @param {import('./AssetLoader.js').AssetLoader} loader
+   */
+  _addLoader(loader) {
+    // Determine the type(s) the loader supports. Each loader may support multiple types.
+    // For our built-in loaders, each supports exactly one type.
+    // We'll check by iterating over all AssetType values.
+    const supported = Object.values(AssetType).filter(type => loader.supports(type));
+    if (supported.length === 0) {
+      throw new Error(`Loader does not support any known asset type.`);
+    }
+    for (const type of supported) {
+      if (this._loaders.has(type)) {
+        throw new Error(`Loader for type "${type}" already registered.`);
+      }
+      this._loaders.set(type, loader);
+    }
+  }
+
+  /**
+   * Internal unload – calls the loader's unload and removes from cache.
+   * @param {string} id
+   * @param {string} type
+   */
+  async _unloadInternal(id, type) {
+    const resource = this._cache._getResource(id);
+    if (!resource) return;
+    const loader = this._loaders.get(type);
+    if (loader) {
+      await loader.unload(resource);
+    }
+    this._cache.remove(id);
+  }
+}
+</file>
+
+<file path="src/assets/AssetRegistry.js">
+export class AssetRegistry {
+  constructor() {
+    /** @type {Map<string, import('./AssetDescriptor.js').AssetDescriptor>} */
+    this._descriptors = new Map();
+  }
+
+  register(descriptor) {
+    if (this._descriptors.has(descriptor.id)) {
+      throw new Error(`Asset "${descriptor.id}" already registered.`);
+    }
+    this._descriptors.set(descriptor.id, descriptor);
+  }
+
+  unregister(id) {
+    this._descriptors.delete(id);
+  }
+
+  find(id) {
+    return this._descriptors.get(id);
+  }
+
+  contains(id) {
+    return this._descriptors.has(id);
+  }
+
+  clear() {
+    this._descriptors.clear();
+  }
+}
+</file>
+
+<file path="src/assets/AssetService.js">
+import { Service } from '../framework/services/Service.js';
+import { AssetManager } from './AssetManager.js';
+
+export class AssetService extends Service {
+  constructor(framework) {
+    super('assets', framework);
+    /** @type {AssetManager|null} @private */
+    this._assetManager = null;
+  }
+
+  async initialize() {
+    this._assetManager = new AssetManager();   // loaders are built inside
+  }
+
+  update(delta) {
+    if (this._assetManager) {
+      this._assetManager.update(delta);
+    }
+  }
+
+  get assetManager() {
+    return this._assetManager;
+  }
+
+  async shutdown() {
+    if (this._assetManager) {
+      await this._assetManager.clear();
+      this._assetManager = null;
+    }
+  }
+}
+</file>
+
+<file path="src/assets/AssetState.js">
+
+</file>
+
+<file path="src/assets/AssetType.js">
+
+</file>
+
+<file path="src/components/AudioComponent.js">
+import { Component } from '../Component.js';
+
+export class AudioComponent extends Component {
+  constructor() {
+    super();
+    /** @type {string|null} */
+    this.soundId = null;
+    this.volume = 1;
+    this.loop = false;
+  }
+}
+</file>
+
+<file path="src/components/HealthComponent.js">
+import { Component } from '../Component.js';
+
+export class HealthComponent extends Component {
+  constructor() {
+    super();
+    this.current = 100;
+    this.max = 100;
+  }
+}
+</file>
+
+<file path="src/components/MeshComponent.js">
+import { Component } from '../Component.js';
+
+export class MeshComponent extends Component {
+  constructor() {
+    super();
+    /** @type {string|null} */
+    this.meshId = null;   // reference to a loaded mesh asset
+  }
+}
+</file>
+
+<file path="src/components/TransformComponent.js">
+import { Component } from '../Component.js';
+
+export class TransformComponent extends Component {
+  constructor() {
+    super();
+    this.position = { x: 0, y: 0, z: 0 };
+    this.rotation = { x: 0, y: 0, z: 0 };
+    this.scale = { x: 1, y: 1, z: 1 };
+  }
+}
+</file>
+
+<file path="src/components/VelocityComponent.js">
+import { Component } from '../Component.js';
+
+export class VelocityComponent extends Component {
+  constructor() {
+    super();
+    this.x = 0;
+    this.y = 0;
+    this.z = 0;
+  }
+}
+</file>
+
+<file path="src/data/CellData.js">
+/**
+ * Description of a single cell (used inside SectorData).
+ */
+export class CellData {
+  constructor() {
+    this.id = '';
+    this.gridX = 0;
+    this.gridZ = 0;
+  }
+}
+</file>
+
+<file path="src/data/RegionData.js">
+/**
+ * Serializable description of a region (used for level data).
+ * Currently placeholder.
+ */
+export class RegionData {
+  constructor() {
+    this.id = '';
+    this.name = '';
+  }
+}
+</file>
+
+<file path="src/data/SectorData.js">
+/**
+ * Description of a sector used for streaming.
+ */
+export class SectorData {
+  constructor() {
+    /** @type {import('../SectorID.js').SectorID} */
+    this.id = null;
+    /** @type {{id: string, gridX: number, gridZ: number}[]} */
+    this.cells = [];
+  }
+}
+</file>
+
+<file path="src/ecs/Component.js">
+/**
+ * Base class for all components.
+ * Subclasses must set a static `typeId` property (assigned by ECSManager).
+ */
+export class Component {
+  /**
+   * Optional reset method, called when a component is removed or pooled.
+   */
+  reset() {
+    // override in subclass if needed
+  }
+}
+</file>
+
+<file path="src/ecs/ComponentStore.js">
+import { SparseSet } from './SparseSet.js';
+
+/**
+ * Typed component store using a SparseSet.
+ * @template T
+ */
+export class ComponentStore {
+  /**
+   * @param {new () => T} componentClass – constructor for the component type
+   */
+  constructor(componentClass) {
+    this.componentClass = componentClass;
+    this.sparseSet = new SparseSet();
+  }
+
+  /**
+   * Add or update component for an entity.
+   * @param {number} entityId
+   * @param {T} [component] – if omitted, a default instance is created
+   * @returns {T} the stored component
+   */
+  add(entityId, component) {
+    if (!component) {
+      component = new this.componentClass();
+    }
+    this.sparseSet.add(entityId, component);
+    return component;
+  }
+
+  /**
+   * Remove component from entity.
+   * @param {number} entityId
+   */
+  remove(entityId) {
+    const comp = this.sparseSet.get(entityId);
+    if (comp && comp.reset) {
+      comp.reset();
+    }
+    this.sparseSet.remove(entityId);
+  }
+
+  /**
+   * Get component for entity.
+   * @param {number} entityId
+   * @returns {T|undefined}
+   */
+  get(entityId) {
+    return this.sparseSet.get(entityId);
+  }
+
+  /**
+   * Check if entity has this component.
+   * @param {number} entityId
+   * @returns {boolean}
+   */
+  has(entityId) {
+    return this.sparseSet.has(entityId);
+  }
+
+  /** Remove all components. */
+  clear() {
+    this.sparseSet.clear();
+  }
+
+  /** @returns {number} */
+  count() {
+    return this.sparseSet.size;
+  }
+
+  /**
+   * Iterate over all (entityId, component) pairs.
+   * @param {(entityId: number, component: T) => void} callback
+   */
+  forEach(callback) {
+    this.sparseSet.forEach(callback);
+  }
+}
+</file>
+
+<file path="src/ecs/ECSManager.js">
+import { ComponentStore } from './ComponentStore.js';
+import { EntitySignature } from './EntitySignature.js';
+import { Entity } from './Entity.js';
+
+/**
+ * Core ECS Manager. Manages component type registration, component stores,
+ * and entity signatures. Integrates with the World via events.
+ */
+export class ECSManager {
+  constructor(eventBus) {
+    /** @type {import('../framework/events/EventBus.js').EventBus} */
+    this.eventBus = eventBus;
+
+    /** Map component type name → numeric ID */
+    this._componentTypeIds = new Map();
+    /** Array of component store instances indexed by type ID */
+    this._stores = [];
+    /** Map entity numeric ID → Entity (ECS entity) */
+    this._entities = new Map();
+
+    this._onEntityCreated = this._onEntityCreated.bind(this);
+    this._onEntityDestroyed = this._onEntityDestroyed.bind(this);
+  }
+
+  /**
+   * Register a component type.
+   * @param {string} name – unique name (e.g., 'Transform')
+   * @param {new () => Object} componentClass – constructor
+   * @returns {number} assigned type ID
+   */
+  registerComponent(name, componentClass) {
+    if (this._componentTypeIds.has(name)) {
+      throw new Error(`Component type "${name}" already registered.`);
+    }
+    const id = this._stores.length;
+    this._componentTypeIds.set(name, id);
+    this._stores.push(new ComponentStore(componentClass));
+    return id;
+  }
+
+  /**
+   * Get a component store by type name or ID.
+   * @param {string|number} nameOrId
+   * @returns {ComponentStore}
+   */
+  getStore(nameOrId) {
+    if (typeof nameOrId === 'string') {
+      const id = this._componentTypeIds.get(nameOrId);
+      if (id === undefined) throw new Error(`Unknown component type "${nameOrId}".`);
+      return this._stores[id];
+    }
+    return this._stores[nameOrId];
+  }
+
+  /**
+   * Get component type ID by name.
+   * @param {string} name
+   * @returns {number|undefined}
+   */
+  getTypeId(name) {
+    return this._componentTypeIds.get(name);
+  }
+
+  /**
+   * Add a component to an entity.
+   * @param {number} entityId – numeric ID (World EntityID.id)
+   * @param {string} componentName
+   * @param {Object} [componentInstance] – optional pre-created component
+   * @returns {Object} the component
+   */
+  addComponent(entityId, componentName, componentInstance) {
+    const typeId = this._componentTypeIds.get(componentName);
+    if (typeId === undefined) throw new Error(`Component type "${componentName}" not registered.`);
+    const store = this._stores[typeId];
+    const component = store.add(entityId, componentInstance);
+
+    let entity = this._entities.get(entityId);
+    if (!entity) {
+      entity = new Entity({ id: entityId, generation: 0 }, new EntitySignature());
+      this._entities.set(entityId, entity);
+    }
+    entity.signature.add(typeId);
+
+    return component;
+  }
+
+  /**
+   * Remove a component from an entity.
+   * @param {number} entityId
+   * @param {string} componentName
+   */
+  removeComponent(entityId, componentName) {
+    const typeId = this._componentTypeIds.get(componentName);
+    if (typeId === undefined) return;
+    const store = this._stores[typeId];
+    store.remove(entityId);
+
+    const entity = this._entities.get(entityId);
+    if (entity) {
+      entity.signature.remove(typeId);
+    }
+  }
+
+  /**
+   * Get a component for an entity.
+   * @param {number} entityId
+   * @param {string} componentName
+   * @returns {Object|undefined}
+   */
+  getComponent(entityId, componentName) {
+    const store = this.getStore(componentName);
+    return store.get(entityId);
+  }
+
+  /**
+   * Check if an entity has a component.
+   * @param {number} entityId
+   * @param {string} componentName
+   * @returns {boolean}
+   */
+  hasComponent(entityId, componentName) {
+    const store = this.getStore(componentName);
+    return store.has(entityId);
+  }
+
+  _onEntityCreated(event) {
+    const worldId = event.payload.entityId;
+    const numericId = worldId.id;
+    if (!this._entities.has(numericId)) {
+      this._entities.set(numericId, new Entity(worldId, new EntitySignature()));
+    }
+  }
+
+  _onEntityDestroyed(event) {
+    const worldId = event.payload.entityId;
+    const numericId = worldId.id;
+    const entity = this._entities.get(numericId);
+    if (entity) {
+      for (let typeId = 0; typeId < this._stores.length; typeId++) {
+        if (entity.signature.has(typeId)) {
+          this._stores[typeId].remove(numericId);
+        }
+      }
+      this._entities.delete(numericId);
+    }
+  }
+
+  /**
+   * Subscribe to World entity lifecycle events.
+   * Should be called after the World is available.
+   */
+  setupEventListeners() {
+    this.eventBus.subscribe('entity:created', this._onEntityCreated);
+    this.eventBus.subscribe('entity:destroyed', this._onEntityDestroyed);
+  }
+
+  /**
+   * Clean up event listeners.
+   */
+  dispose() {
+    this.eventBus.unsubscribe('entity:created', this._onEntityCreated);
+    this.eventBus.unsubscribe('entity:destroyed', this._onEntityDestroyed);
+  }
+}
+</file>
+
+<file path="src/ecs/ECSService.js">
+import { Service } from '../framework/services/Service.js';
+import { ECSManager } from './ECSManager.js';
+import { SystemScheduler } from './SystemScheduler.js';
+
+import { TransformComponent } from './components/TransformComponent.js';
+import { VelocityComponent } from './components/VelocityComponent.js';
+import { HealthComponent } from './components/HealthComponent.js';
+import { MeshComponent } from './components/MeshComponent.js';
+import { AudioComponent } from './components/AudioComponent.js';
+
+import { MovementSystem } from './systems/MovementSystem.js';
+import { HealthSystem } from './systems/HealthSystem.js';
+import { AnimationSystem } from './systems/AnimationSystem.js';
+
+export class ECSService extends Service {
+  constructor(framework) {
+    super('ecs', framework);
+    this.ecsManager = null;
+    this.scheduler = null;
+  }
+
+  async initialize() {
+    this.ecsManager = new ECSManager(this.framework.eventBus);
+    this.ecsManager.setupEventListeners();
+
+    this.ecsManager.registerComponent('Transform', TransformComponent);
+    this.ecsManager.registerComponent('Velocity', VelocityComponent);
+    this.ecsManager.registerComponent('Health', HealthComponent);
+    this.ecsManager.registerComponent('Mesh', MeshComponent);
+    this.ecsManager.registerComponent('Audio', AudioComponent);
+
+    this.scheduler = new SystemScheduler(this.ecsManager);
+    this.scheduler.registerSystem(new MovementSystem());
+    this.scheduler.registerSystem(new HealthSystem());
+    this.scheduler.registerSystem(new AnimationSystem());
+  }
+
+  update(delta) {
+    if (this.scheduler) {
+      this.scheduler.update(delta);
+    }
+  }
+
+  async shutdown() {
+    if (this.scheduler) {
+      this.scheduler.shutdown();
+    }
+    if (this.ecsManager) {
+      this.ecsManager.dispose();
+    }
+  }
+}
+</file>
+
+<file path="src/ecs/Entity.js">
+/**
+ * ECS Entity – pure identity, signature, and flags.
+ * No gameplay data.
+ */
+export class Entity {
+  /**
+   * @param {import('../world/EntityID.js').EntityID} worldId
+   * @param {import('./EntitySignature.js').EntitySignature} signature
+   */
+  constructor(worldId, signature) {
+    /** @readonly */
+    this.worldId = worldId;
+    this.signature = signature;
+    /** @type {{ active: boolean }} */
+    this.flags = { active: true };
+  }
+}
+</file>
+
+<file path="src/ecs/EntitySignature.js">
+/**
+ * Bitmask signature supporting up to 128 component types (two 32-bit words).
+ */
+export class EntitySignature {
+  constructor() {
+    /** @type {number[]} two 32-bit integers */
+    this.mask = [0, 0];
+  }
+
+  /**
+   * Add a component type.
+   * @param {number} typeId – component type index (0-127)
+   */
+  add(typeId) {
+    const word = typeId < 32 ? 0 : 1;
+    const bit = typeId % 32;
+    this.mask[word] |= (1 << bit);
+  }
+
+  /**
+   * Remove a component type.
+   * @param {number} typeId
+   */
+  remove(typeId) {
+    const word = typeId < 32 ? 0 : 1;
+    const bit = typeId % 32;
+    this.mask[word] &= ~(1 << bit);
+  }
+
+  /**
+   * Check if a component type is present.
+   * @param {number} typeId
+   * @returns {boolean}
+   */
+  has(typeId) {
+    const word = typeId < 32 ? 0 : 1;
+    const bit = typeId % 32;
+    return (this.mask[word] & (1 << bit)) !== 0;
+  }
+
+  /**
+   * Check if this signature contains all the required components.
+   * @param {EntitySignature} required
+   * @returns {boolean}
+   */
+  matches(required) {
+    return (this.mask[0] & required.mask[0]) === required.mask[0] &&
+           (this.mask[1] & required.mask[1]) === required.mask[1];
+  }
+
+  /** Clear all bits. */
+  clear() {
+    this.mask[0] = 0;
+    this.mask[1] = 0;
+  }
+
+  /**
+   * Clone this signature.
+   * @returns {EntitySignature}
+   */
+  clone() {
+    const sig = new EntitySignature();
+    sig.mask[0] = this.mask[0];
+    sig.mask[1] = this.mask[1];
+    return sig;
+  }
+}
+</file>
+
+<file path="src/ecs/EntityView.js">
+export class EntityView {
+  /**
+   * @param {import('./ECSManager.js').ECSManager} ecs
+   * @param {import('./EntitySignature.js').EntitySignature} requiredSignature
+   */
+  constructor(ecs, requiredSignature) {
+    this._ecs = ecs;
+    this._requiredSignature = requiredSignature;
+  }
+
+  [Symbol.iterator]() {
+    return this._ecs._iterateMatching(this._requiredSignature);
+  }
+}
+</file>
+
+<file path="src/ecs/SparseSet.js">
+/**
+ * Sparse set: maps entity IDs (numbers) to dense indices, with O(1) operations.
+ */
+export class SparseSet {
+  constructor() {
+    /** @type {Map<number, number>} sparse: entityId -> index in dense */
+    this.sparse = new Map();
+    /** @type {number[]} dense: stores entityIds */
+    this.dense = [];
+    /** @type {any[]} components: parallel array to dense, holds component data */
+    this.components = [];
+  }
+
+  /**
+   * Add an entity with its component data.
+   * @param {number} entityId
+   * @param {*} component
+   */
+  add(entityId, component) {
+    if (this.sparse.has(entityId)) {
+      const idx = this.sparse.get(entityId);
+      this.components[idx] = component;
+      return;
+    }
+    const idx = this.dense.length;
+    this.sparse.set(entityId, idx);
+    this.dense.push(entityId);
+    this.components.push(component);
+  }
+
+  /**
+   * Remove an entity.
+   * @param {number} entityId
+   */
+  remove(entityId) {
+    if (!this.sparse.has(entityId)) return;
+    const idx = this.sparse.get(entityId);
+    const lastIdx = this.dense.length - 1;
+    if (idx !== lastIdx) {
+      const lastEntity = this.dense[lastIdx];
+      this.sparse.set(lastEntity, idx);
+      this.dense[idx] = lastEntity;
+      this.components[idx] = this.components[lastIdx];
+    }
+    this.dense.pop();
+    this.components.pop();
+    this.sparse.delete(entityId);
+  }
+
+  /**
+   * Check if entity exists in this set.
+   * @param {number} entityId
+   * @returns {boolean}
+   */
+  has(entityId) {
+    return this.sparse.has(entityId);
+  }
+
+  /**
+   * Get component for entity.
+   * @param {number} entityId
+   * @returns {*|undefined}
+   */
+  get(entityId) {
+    const idx = this.sparse.get(entityId);
+    return idx !== undefined ? this.components[idx] : undefined;
+  }
+
+  /** Remove all entities. */
+  clear() {
+    this.sparse.clear();
+    this.dense.length = 0;
+    this.components.length = 0;
+  }
+
+  /** @returns {number} */
+  get size() {
+    return this.dense.length;
+  }
+
+  /**
+   * Iterate over all entity-component pairs.
+   * @param {(entityId: number, component: *) => void} callback
+   */
+  forEach(callback) {
+    for (let i = 0; i < this.dense.length; i++) {
+      callback(this.dense[i], this.components[i]);
+    }
+  }
+}
+</file>
+
+<file path="src/ecs/System.js">
+/**
+ * Base class for systems. Systems contain behaviour and are driven by the scheduler.
+ */
+export class System {
+  constructor() {
+    this._enabled = true;
+    this.priority = 0;   // lower number executes first
+  }
+
+  /**
+   * Called once when the system is registered.
+   * @param {import('./ECSManager.js').ECSManager} ecs
+   */
+  initialize(ecs) {
+    // override if needed
+  }
+
+  /**
+   * Per-frame update. Receives an array of matching entity IDs.
+   * @param {number} delta
+   * @param {number[]} entityIds – array of entity numeric IDs (from World's EntityID.id)
+   * @param {import('./ECSManager.js').ECSManager} ecs
+   */
+  update(delta, entityIds, ecs) {
+    throw new Error('System.update must be overridden.');
+  }
+
+  /**
+   * Called when the system is removed or the ECS shuts down.
+   */
+  shutdown() {
+    // override if needed
+  }
+
+  enable() {
+    this._enabled = true;
+  }
+
+  disable() {
+    this._enabled = false;
+  }
+
+  isEnabled() {
+    return this._enabled;
+  }
+
+  /**
+   * Returns the required component signature for entities processed by this system.
+   * @returns {import('./EntitySignature.js').EntitySignature}
+   */
+  requiredSignature() {
+    throw new Error('System.requiredSignature must be overridden.');
+  }
+}
+</file>
+
+<file path="src/ecs/SystemScheduler.js">
+/**
+ * Scheduler that owns the ordered list of systems and runs them each frame.
+ */
+export class SystemScheduler {
+  constructor(ecsManager) {
+    /** @type {import('./ECSManager.js').ECSManager} */
+    this.ecs = ecsManager;
+    /** @type {import('./System.js').System[]} */
+    this.systems = [];
+  }
+
+  /**
+   * Register a system.
+   * @param {import('./System.js').System} system
+   */
+  registerSystem(system) {
+    this.systems.push(system);
+    this.systems.sort((a, b) => a.priority - b.priority);
+    system.initialize(this.ecs);
+  }
+
+  /**
+   * Execute all systems in order.
+   * @param {number} delta
+   */
+  update(delta) {
+    for (const system of this.systems) {
+      if (!system.isEnabled()) continue;
+      const requiredSig = system.requiredSignature();
+      const matches = [];
+      this.ecs._entities.forEach((entity, numericId) => {
+        if (entity.flags.active && entity.signature.matches(requiredSig)) {
+          matches.push(numericId);
+        }
+      });
+      system.update(delta, matches, this.ecs);
+    }
+  }
+
+  /**
+   * Remove a system.
+   * @param {import('./System.js').System} system
+   */
+  removeSystem(system) {
+    const idx = this.systems.indexOf(system);
+    if (idx !== -1) {
+      this.systems.splice(idx, 1);
+      system.shutdown();
+    }
+  }
+
+  /** Shutdown all systems. */
+  shutdown() {
+    for (const system of this.systems) {
+      system.shutdown();
+    }
+    this.systems.length = 0;
+  }
+}
+</file>
+
+<file path="src/framework/core/Bootstrap.js">
+import { Framework } from './Framework.js';
+import { ServiceManifest } from './ServiceManifest.js';
+
+export class Bootstrap {
+  static async start() {
+    const framework = new Framework();
+    framework.registerServices(ServiceManifest);
+
+    const scheduler = framework.frameScheduler;
+
+    // Phase order
+    scheduler.addPhase('events');
+    scheduler.addPhase('input');
+    scheduler.addPhase('streaming');
+    scheduler.addPhase('world');
+    scheduler.addPhase('ecs');
+    scheduler.addPhase('ai');
+    scheduler.addPhase('gameplay');
+    scheduler.addPhase('animation');
+    scheduler.addPhase('audio');
+    scheduler.addPhase('rendering');
+    scheduler.addPhase('ui');
+    scheduler.addPhase('diagnostics');
+
+    // Assign services to phases
+    scheduler.addServiceToPhase('input', framework.serviceRegistry.get('input'));
+    scheduler.addServiceToPhase('world', framework.serviceRegistry.get('world'));
+    scheduler.addServiceToPhase('ecs', framework.serviceRegistry.get('ecs'));
+    scheduler.addServiceToPhase('gameplay', framework.serviceRegistry.get('player'));
+    scheduler.addServiceToPhase('audio', framework.serviceRegistry.get('audio'));
+    scheduler.addServiceToPhase('rendering', framework.serviceRegistry.get('render'));
+    scheduler.addServiceToPhase('ui', framework.serviceRegistry.get('ui'));
+
+    await framework.serviceRegistry.initializeAll();
+    await framework.serviceRegistry.startAll();
+
+    framework.stateMachine.changeState('Playing');
+    framework.startMainLoop();
+  }
+}
+</file>
+
+<file path="src/framework/core/FrameScheduler.js">
+/**
+ * Represents a single update phase (e.g., 'input', 'rendering').
+ * Holds an ordered list of services that participate in this phase.
+ */
+class FramePhase {
+  constructor(name) {
+    this.name = name;
+    this.services = [];
+  }
+
+  addService(service) {
+    this.services.push(service);
+  }
+
+  execute(delta) {
+    for (const service of this.services) {
+      service.update(delta);
+    }
+  }
+}
+
+/**
+ * Manages a sequence of FramePhases, executed in order each frame.
+ */
+export class FrameScheduler {
+  constructor() {
+    /** @type {Map<string, FramePhase>} */
+    this.phases = new Map();
+    this.phaseOrder = [];   // insertion order
+  }
+
+  /**
+   * Create a new phase (if not already existing) and return it.
+   * @param {string} name
+   * @returns {FramePhase}
+   */
+  addPhase(name) {
+    if (this.phases.has(name)) {
+      return this.phases.get(name);
+    }
+    const phase = new FramePhase(name);
+    this.phases.set(name, phase);
+    this.phaseOrder.push(name);
+    return phase;
+  }
+
+  /**
+   * Assign a service to a specific phase.
+   * @param {string} phaseName
+   * @param {import('../services/Service.js').Service} service
+   */
+  addServiceToPhase(phaseName, service) {
+    const phase = this.addPhase(phaseName);
+    phase.addService(service);
+  }
+
+  /**
+   * Execute all phases in order.
+   * @param {number} deltaTime
+   */
+  run(deltaTime) {
+    for (const name of this.phaseOrder) {
+      this.phases.get(name).execute(deltaTime);
+    }
+  }
+}
+</file>
+
+<file path="src/framework/core/Framework.js">
+import { GameClock } from './GameClock.js';
+import { ServiceRegistry } from './ServiceRegistry.js';
+import { FrameScheduler } from './FrameScheduler.js';
+import { EventBus } from '../events/EventBus.js';
+import { GameStateMachine } from '../state/GameStateMachine.js';
+import { DiagnosticsService } from '../diagnostics/DiagnosticsService.js';
+
+export class Framework {
+  constructor() {
+    this.clock = new GameClock();
+    this.serviceRegistry = new ServiceRegistry();
+    this.frameScheduler = new FrameScheduler();
+    this.eventBus = new EventBus();
+    this.stateMachine = new GameStateMachine(this);
+    this.diagnostics = new DiagnosticsService(this.clock);
+    this.diagnostics.setEventBus(this.eventBus);
+  }
+
+  /**
+   * Register services from an array of service constructors.
+   * Each constructor is called with (this) and registered by its class name.
+   * @param {Array<typeof import('../services/Service.js').Service>} serviceClasses
+   */
+  registerServices(serviceClasses) {
+    for (const ServiceClass of serviceClasses) {
+      const service = new ServiceClass(this);
+      this.serviceRegistry.register(service.name, service);
+    }
+  }
+
+  startMainLoop() {
+    const loop = (timestamp) => {
+      this.clock.tick(timestamp);
+      const delta = this.clock.deltaTime;
+
+      this.diagnostics.update(delta);
+      this.eventBus.dispatch();
+      this.frameScheduler.run(delta);
+
+      requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
+  }
+}
+</file>
+
+<file path="src/framework/core/ServiceManifest.js">
+import { RenderService } from '../services/RenderService.js';
+import { InputService } from '../services/InputService.js';
+import { PlayerService } from '../services/PlayerService.js';
+import { AudioService } from '../services/AudioService.js';
+import { UIService } from '../services/UIService.js';
+import { WorldManager } from '../../world/WorldManager.js';
+import { ECSService } from '../../ecs/ECSService.js';
+
+export const ServiceManifest = [
+  RenderService,
+  InputService,
+  PlayerService,
+  AudioService,
+  UIService,
+  WorldManager,
+  ECSService
+];
+</file>
+
+<file path="src/framework/diagnostics/PerformanceCounters.js">
+<<<<<<< HEAD
+export class PerformanceCounters {
+  constructor() {
+    this.fps = 0;
+    this.frameTime = 0;           // ms
+    this.frameCount = 0;
+    this.averageFrameTime = 0;    // rolling average
+    this.eventQueueSize = 0;
+
+    // O(1) rolling average using a circular buffer
+    this._maxSamples = 120;
+    this._buffer = new Float64Array(this._maxSamples);
+    this._index = 0;
+    this._count = 0;
+    this._runningTotal = 0;
+  }
+
+  update(deltaTime, eventQueueSize) {
+    this.frameTime = deltaTime * 1000;
+    this.frameCount++;
+    this.eventQueueSize = eventQueueSize;
+
+    // Remove oldest value if buffer full
+    if (this._count === this._maxSamples) {
+      this._runningTotal -= this._buffer[this._index];
+    } else {
+      this._count++;
+    }
+
+    // Add new value
+    this._buffer[this._index] = this.frameTime;
+    this._runningTotal += this.frameTime;
+    this._index = (this._index + 1) % this._maxSamples;
+
+    this.averageFrameTime = this._runningTotal / this._count;
+    this.fps = Math.round(1000 / this.averageFrameTime);
+  }
+=======
+export class PerformanceCounters {
+  constructor() {
+    this.fps = 0;
+    this.frameTime = 0;           // ms
+    this.frameCount = 0;
+    this.averageFrameTime = 0;    // rolling average
+    this.eventQueueSize = 0;
+
+    // O(1) rolling average using a circular buffer
+    this._maxSamples = 120;
+    this._buffer = new Float64Array(this._maxSamples);
+    this._index = 0;
+    this._count = 0;
+    this._runningTotal = 0;
+  }
+
+  update(deltaTime, eventQueueSize) {
+    this.frameTime = deltaTime * 1000;
+    this.frameCount++;
+    this.eventQueueSize = eventQueueSize;
+
+    // Remove oldest value if buffer full
+    if (this._count === this._maxSamples) {
+      this._runningTotal -= this._buffer[this._index];
+    } else {
+      this._count++;
+    }
+
+    // Add new value
+    this._buffer[this._index] = this.frameTime;
+    this._runningTotal += this.frameTime;
+    this._index = (this._index + 1) % this._maxSamples;
+
+    this.averageFrameTime = this._runningTotal / this._count;
+    this.fps = Math.round(1000 / this.averageFrameTime);
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/framework/events/Event.js">
+/**
+ * Immutable event payload.
+ */
+export class Event {
+  constructor(type, sender, payload = null) {
+    this.type = type;
+    this.sender = sender;
+    this.payload = payload;
+    this.timestamp = performance.now();
+
+    Object.freeze(this);
+  }
+}
+</file>
+
+<file path="src/framework/events/EventBus.js">
+import { Event } from './Event.js';
+
+export class EventBus {
+  constructor() {
+    this._listeners = new Map();
+    this._queue = [];
+    this._head = 0;
+  }
+
+  subscribe(type, callback) {
+    if (!this._listeners.has(type)) {
+      this._listeners.set(type, new Set());
+    }
+
+    this._listeners.get(type).add(callback);
+
+    // Return unsubscribe function
+    return () => this.unsubscribe(type, callback);
+  }
+
+  unsubscribe(type, callback) {
+    const set = this._listeners.get(type);
+
+    if (set) {
+      set.delete(callback);
+
+      if (set.size === 0) {
+        this._listeners.delete(type);
+      }
+    }
+  }
+
+  publish(type, sender, payload = null) {
+    this._queue.push(new Event(type, sender, payload));
+  }
+
+  dispatch() {
+    while (this._head < this._queue.length) {
+      const event = this._queue[this._head];
+      this._head++;
+
+      const listeners = this._listeners.get(event.type);
+
+      if (listeners) {
+        listeners.forEach(callback => {
+          try {
+            callback(event);
+          } catch (err) {
+            console.error(
+              `EventBus listener error for type "${event.type}":`,
+              err
+            );
+          }
+        });
+      }
+    }
+
+    // Reset queue after dispatch
+    if (this._head > 0) {
+      this._queue.length = 0;
+      this._head = 0;
+    }
+  }
+
+  getQueueLength() {
+    return this._queue.length - this._head;
+  }
+
+  clear() {
+    this._queue.length = 0;
+    this._head = 0;
+  }
+}
+</file>
+
+<file path="src/framework/services/SceneService.js">
+// src/framework/services/SceneService.js
+import { Service } from './Service.js';
+import { SceneManager } from '../../scene/SceneManager.js';
+
+export class SceneService extends Service {
+  /**
+   * @param {import('../core/Framework.js').Framework} framework
+   */
+  constructor(framework) {
+    super('scene', framework);
+    /** @type {SceneManager|null} @private */
+    this._sceneManager = null;
+  }
+
+  /** @override */
+  async initialize() {
+    this._sceneManager = new SceneManager();
+  }
+
+  /** @override */
+  async start() {}
+
+  /**
+   * Forward per‑frame update to the scene manager.
+   * @param {number} delta
+   */
+  update(delta) {
+    if (this._sceneManager) {
+      this._sceneManager.update(delta);
+    }
+  }
+
+  /**
+   * Read‑only access to the scene manager.
+   * @returns {SceneManager|null}
+   */
+  get sceneManager() {
+    return this._sceneManager;
+  }
+
+  /** @override */
+  async shutdown() {
+    if (this._sceneManager) {
+      const current = this._sceneManager.current();
+      if (current) {
+        current.stop();
+        current.unload();
+        current.destroy();
+      }
+      this._sceneManager = null;
+    }
+  }
+}
+</file>
+
+<file path="src/framework/services/Service.js">
+
+</file>
+
+<file path="src/hierarchy/Cell.js">
+import { CellID } from '../CellID.js';
+
+export class Cell {
+  /**
+   * @param {CellID} id
+   */
+  constructor(id) {
+    /** @readonly */
+    this.id = id;
+    /**
+     * Entity numeric IDs (not full EntityID objects) for lightweight storage.
+     * @type {number[]}
+     */
+    this.entityIDs = [];
+  }
+
+  /**
+   * @param {number} entityIdNum
+   */
+  addEntity(entityIdNum) {
+    if (!this.entityIDs.includes(entityIdNum)) {
+      this.entityIDs.push(entityIdNum);
+    }
+  }
+
+  /**
+   * @param {number} entityIdNum
+   */
+  removeEntity(entityIdNum) {
+    this.entityIDs = this.entityIDs.filter(id => id !== entityIdNum);
+  }
+}
+</file>
+
+<file path="src/hierarchy/Region.js">
+import { RegionID } from '../RegionID.js';
+
+export class Region {
+  /**
+   * @param {RegionID} id
+   */
+  constructor(id) {
+    /** @readonly */
+    this.id = id;
+    /** @type {import('../SectorID.js').SectorID[]} */
+    this.sectorIDs = [];
+  }
+}
+</file>
+
+<file path="src/hierarchy/Sector.js">
+import { SectorID } from '../SectorID.js';
+
+export class Sector {
+  /**
+   * @param {SectorID} id
+   */
+  constructor(id) {
+    /** @readonly */
+    this.id = id;
+    /** @type {import('../CellID.js').CellID[]} */
+    this.cellIDs = [];
+    /** @type {'loaded'|'unloaded'|'loading'|'unloading'} */
+    this.state = 'unloaded';
+  }
+}
+</file>
+
+<file path="src/managers/EntityManager.js">
+import { EntityID } from '../EntityID.js';
+import { Entity } from '../Entity.js';
+import { EntityHandle } from '../EntityHandle.js';
+
+/**
+ * Manages entity lifecycle: creation, destruction, state changes.
+ */
+export class EntityManager {
+  /**
+   * @param {import('../registries/EntityRegistry.js').EntityRegistry} entityReg
+   */
+  constructor(entityReg) {
+    this.entityRegistry = entityReg;
+    this._nextId = 1;
+  }
+
+  /**
+   * Create a new entity with a persistent handle.
+   * @param {import('../CellID.js').CellID|null} [cellId] – optional initial cell
+   * @returns {EntityHandle}
+   */
+  create(cellId = null) {
+    const idNum = this._nextId++;
+    const generation = 0;
+    const entityId = new EntityID(idNum, generation);
+    const cellIdValue = cellId ? cellId.value : null;
+    const entity = new Entity(entityId, cellIdValue);
+
+    // Create a persistent handle that will stay valid as long as the entity exists.
+    const handle = new EntityHandle(entityId, (eid) => this.entityRegistry.get(eid));
+    entity.handle = handle;
+
+    this.entityRegistry.register(entity);
+    return handle;
+  }
+
+  /**
+   * Destroy an entity, invalidating its handle.
+   * @param {EntityID} entityId
+   */
+  destroy(entityId) {
+    // EntityRegistry.unregister increments generation, so any handle becomes invalid.
+    this.entityRegistry.unregister(entityId);
+  }
+
+  /**
+   * Move entity to a different cell.
+   * @param {EntityID} entityId
+   * @param {import('../CellID.js').CellID|null} newCellId
+   */
+  move(entityId, newCellId) {
+    const entity = this.entityRegistry.get(entityId);
+    if (entity) {
+      entity.cellId = newCellId ? newCellId.value : null;
+    }
+  }
+
+  /**
+   * Change entity state.
+   * @param {EntityID} entityId
+   * @param {'created'|'active'|'sleeping'|'hidden'|'destroyed'} state
+   */
+  setState(entityId, state) {
+    const entity = this.entityRegistry.get(entityId);
+    if (entity) entity.setState(state);
+  }
+
+  /**
+   * Return the persistent handle for an entity (if it exists).
+   * @param {EntityID} entityId
+   * @returns {EntityHandle|null}
+   */
+  getHandle(entityId) {
+    const entity = this.entityRegistry.get(entityId);
+    return entity ? entity.handle : null;
+  }
+}
+</file>
+
+<file path="src/managers/QueryManager.js">
+import { RadiusQuery } from '../queries/RadiusQuery.js';
+import { NearestQuery } from '../queries/NearestQuery.js';
+import { CellQuery } from '../queries/CellQuery.js';
+import { CellID } from '../CellID.js';
+
+/**
+ * Central query interface. Delegates to specialised query implementations.
+ */
+export class QueryManager {
+  /**
+   * @param {import('../World.js').World} world
+   * @param {import('./SpatialManager.js').SpatialManager} spatialManager
+   */
+  constructor(world, spatialManager) {
+    this.world = world;
+    this.spatialManager = spatialManager;
+  }
+
+  /**
+   * Find all entities within a radius of a point.
+   * @param {{x:number,y:number,z:number}} center
+   * @param {number} radius
+   * @param {import('../EntityHandle.js').EntityHandle[]} [out] reusable array
+   * @returns {import('../EntityHandle.js').EntityHandle[]}
+   */
+  queryRadius(center, radius, out = []) {
+    return RadiusQuery.query(this.world, center, radius, out, this.spatialManager);
+  }
+
+  /**
+   * Find the nearest entity to a point.
+   * @param {{x:number,y:number,z:number}} center
+   * @returns {import('../EntityHandle.js').EntityHandle|null}
+   */
+  queryNearest(center) {
+    return NearestQuery.query(this.world, center);
+  }
+
+  /**
+   * Get all entities in a specific cell.
+   * @param {CellID} cellId
+   * @param {import('../EntityHandle.js').EntityHandle[]} [out]
+   * @returns {import('../EntityHandle.js').EntityHandle[]}
+   */
+  queryCell(cellId, out = []) {
+    return CellQuery.query(this.world, cellId, out);
+  }
+}
+</file>
+
+<file path="src/managers/SpatialManager.js">
+import { CellID } from '../CellID.js';
+import { GridPartition } from '../spatial/GridPartition.js';
+
+export class SpatialManager {
+  /**
+   * @param {number} cellSize - world units per cell
+   */
+  constructor(cellSize = 50) {
+    this.gridPartition = new GridPartition(cellSize);
+  }
+
+  /**
+   * Register a cell in the spatial index.
+   * @param {CellID} cellId
+   * @param {number} gridX
+   * @param {number} gridZ
+   */
+  addCell(cellId, gridX, gridZ) {
+    this.gridPartition.addCell(gridX, gridZ, cellId.value);
+  }
+
+  /**
+   * Remove a cell from the spatial index.
+   * @param {CellID} cellId
+   */
+  removeCell(cellId) {
+    this.gridPartition.removeCell(cellId.value);
+  }
+
+  /**
+   * Find the CellID containing a world position.
+   * @param {{x: number, y: number, z: number}} position
+   * @returns {CellID|null}
+   */
+  getCellAt(position) {
+    const raw = this.gridPartition.getCellId(position);
+    return raw ? new CellID(raw) : null;
+  }
+
+  /**
+   * Get all cell IDs that overlap an AABB (infinite Y).
+   * @param {number} minX
+   * @param {number} minZ
+   * @param {number} maxX
+   * @param {number} maxZ
+   * @returns {CellID[]}
+   */
+  getCellsInBounds(minX, minZ, maxX, maxZ) {
+    const rawIds = this.gridPartition.getCellsInBounds(minX, minZ, maxX, maxZ);
+    return rawIds.map(id => new CellID(id));
+  }
+}
+</file>
+
+<file path="src/managers/StreamingManager.js">
+import { StreamingJob } from '../streaming/StreamingJob.js';
+import { SectorLoader } from '../streaming/SectorLoader.js';
+import { SectorUnloader } from '../streaming/SectorUnloader.js';
+
+/**
+ * Coordinates sector streaming using job objects.
+ */
+export class StreamingManager {
+  /**
+   * @param {import('../World.js').World} world
+   */
+  constructor(world) {
+    this.world = world;
+    /** @type {StreamingJob[]} */
+    this.pendingJobs = [];
+  }
+
+  /**
+   * Schedule a load job for a sector.
+   * @param {import('../data/SectorData.js').SectorData} sectorData
+   */
+  loadSector(sectorData) {
+    const job = new SectorLoader(sectorData);
+    this.pendingJobs.push(job);
+  }
+
+  /**
+   * Schedule an unload job for a sector.
+   * @param {import('../SectorID.js').SectorID} sectorId
+   */
+  unloadSector(sectorId) {
+    const job = new SectorUnloader(sectorId);
+    this.pendingJobs.push(job);
+  }
+
+  /**
+   * Process all pending jobs synchronously each frame.
+   * In future, this will become async/incremental.
+   * @param {number} delta
+   */
+  update(delta) {
+    while (this.pendingJobs.length > 0) {
+      const job = this.pendingJobs.shift();
+      job.execute(this.world);
+    }
+  }
+}
+</file>
+
+<file path="src/managers/WorldGraph.js">
+import { RegionID } from '../RegionID.js';
+import { SectorID } from '../SectorID.js';
+import { CellID } from '../CellID.js';
+import { Region } from '../hierarchy/Region.js';
+import { Sector } from '../hierarchy/Sector.js';
+import { Cell } from '../hierarchy/Cell.js';
+
+/**
+ * Manages the world hierarchy: creation and relationships between regions,
+ * sectors, and cells. Uses the registries for storage.
+ */
+export class WorldGraph {
+  /**
+   * @param {import('../registries/RegionRegistry.js').RegionRegistry} regionReg
+   * @param {import('../registries/SectorRegistry.js').SectorRegistry} sectorReg
+   * @param {import('../registries/CellRegistry.js').CellRegistry} cellReg
+   */
+  constructor(regionReg, sectorReg, cellReg) {
+    this.regionRegistry = regionReg;
+    this.sectorRegistry = sectorReg;
+    this.cellRegistry = cellReg;
+  }
+
+  /**
+   * Create a new region and register it.
+   * @param {string} idValue
+   * @returns {Region}
+   */
+  createRegion(idValue) {
+    const id = new RegionID(idValue);
+    const region = new Region(id);
+    this.regionRegistry.register(id, region);
+    return region;
+  }
+
+  /**
+   * Create a new sector and register it.
+   * @param {string} idValue
+   * @returns {Sector}
+   */
+  createSector(idValue) {
+    const id = new SectorID(idValue);
+    const sector = new Sector(id);
+    this.sectorRegistry.register(id, sector);
+    return sector;
+  }
+
+  /**
+   * Create a new cell and register it.
+   * @param {string} idValue
+   * @returns {Cell}
+   */
+  createCell(idValue) {
+    const id = new CellID(idValue);
+    const cell = new Cell(id);
+    this.cellRegistry.register(id, cell);
+    return cell;
+  }
+
+  /**
+   * Attach a sector to a region.
+   * @param {RegionID} regionId
+   * @param {SectorID} sectorId
+   */
+  addSectorToRegion(regionId, sectorId) {
+    const region = this.regionRegistry.get(regionId);
+    if (!region) throw new Error(`Region ${regionId} does not exist.`);
+    if (!region.sectorIDs.some(sid => sid.equals(sectorId))) {
+      region.sectorIDs.push(sectorId);
+    }
+  }
+
+  /**
+   * Attach a cell to a sector.
+   * @param {SectorID} sectorId
+   * @param {CellID} cellId
+   */
+  addCellToSector(sectorId, cellId) {
+    const sector = this.sectorRegistry.get(sectorId);
+    if (!sector) throw new Error(`Sector ${sectorId} does not exist.`);
+    if (!sector.cellIDs.some(cid => cid.equals(cellId))) {
+      sector.cellIDs.push(cellId);
+    }
+  }
+}
+</file>
+
+<file path="src/player/PlayerController.js">
+// src/core/PlayerController.js
+import * as THREE from 'three';
+
+export class PlayerController {
+  /**
+   * @param {THREE.PerspectiveCamera} camera
+   * @param {HTMLElement} domElement - Element used for pointer lock (e.g., document.body).
+   * @param {THREE.Scene} scene
+   */
+  constructor(camera, domElement, scene) {
+    // ── Yaw / Pitch hierarchy (no gimbal lock) ──────────
+    this.yawObject = new THREE.Object3D();
+    this.pitchObject = new THREE.Object3D();
+    this.yawObject.add(this.pitchObject);
+    this.pitchObject.add(camera);
+
+    // Eye height offset (camera relative to pitchObject)
+    camera.position.set(0, 1.7, 0);
+
+    scene.add(this.yawObject);
+
+    // ── References ────────────────────────────────────────
+    this.camera = camera;
+    this.domElement = domElement;
+    this.scene = scene;
+
+    // ── Mouse look settings ───────────────────────────────
+    this.mouseSensitivity = 0.002;
+    this.isLocked = false;
+
+    // ── Movement physics ──────────────────────────────────
+    this.velocity = new THREE.Vector3();
+    this.moveSpeed = 10;        // max speed (units/s)
+    this.acceleration = 50;     // acceleration (units/s²)
+    this.friction = 8;          // damping coefficient
+    this.keys = {};
+
+    // ── Bind event handlers ───────────────────────────────
+    this._onMouseMove = this._onMouseMove.bind(this);
+    this._onPointerLockChange = this._onPointerLockChange.bind(this);
+    this._onKeyDown = this._onKeyDown.bind(this);
+    this._onKeyUp = this._onKeyUp.bind(this);
+
+    // ── Attach listeners ──────────────────────────────────
+    document.addEventListener('pointerlockchange', this._onPointerLockChange);
+    domElement.addEventListener('click', () => domElement.requestPointerLock());
+    window.addEventListener('keydown', this._onKeyDown);
+    window.addEventListener('keyup', this._onKeyUp);
+  }
+
+  /* -------- Pointer Lock & Mouse Look ---------- */
+  _onPointerLockChange() {
+    this.isLocked = (document.pointerLockElement === this.domElement);
+    if (this.isLocked) {
+      document.addEventListener('mousemove', this._onMouseMove);
+    } else {
+      document.removeEventListener('mousemove', this._onMouseMove);
+    }
+  }
+
+  _onMouseMove(event) {
+    if (!this.isLocked) return;
+
+    const movementX = event.movementX || 0;
+    const movementY = event.movementY || 0;
+
+    this.yawObject.rotation.y -= movementX * this.mouseSensitivity;
+    this.pitchObject.rotation.x -= movementY * this.mouseSensitivity;
+
+    // Clamp vertical rotation to avoid flipping
+    this.pitchObject.rotation.x = Math.max(
+      -Math.PI / 2,
+      Math.min(Math.PI / 2, this.pitchObject.rotation.x)
+    );
+  }
+
+  /* -------- Movement Input ---------- */
+  _onKeyDown(event) {
+    this.keys[event.code] = true;
+  }
+
+  _onKeyUp(event) {
+    this.keys[event.code] = false;
+  }
+
+  /**
+   * Called every frame with the elapsed time in seconds.
+   * @param {number} delta - Time since last frame (seconds).
+   */
+  update(delta) {
+    const dt = Math.min(delta, 0.1);   // prevent physics explosions
+
+    // --- Build normalized input direction (WASD) ---
+    const input = new THREE.Vector3();
+    if (this.keys['KeyW']) input.z -= 1;
+    if (this.keys['KeyS']) input.z += 1;
+    if (this.keys['KeyA']) input.x -= 1;
+    if (this.keys['KeyD']) input.x += 1;
+
+    if (input.lengthSq() > 0) {
+      input.normalize();
+
+      // World‑space forward and right (ignore pitch for movement direction)
+      const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(this.yawObject.quaternion);
+      const right = new THREE.Vector3(1, 0, 0).applyQuaternion(this.yawObject.quaternion);
+
+      const accelForce = this.acceleration * dt;
+      this.velocity.addScaledVector(forward, -input.z * accelForce);
+      this.velocity.addScaledVector(right, input.x * accelForce);
+    }
+
+    // --- Friction / damping (frame‑rate independent) ---
+    const damping = Math.exp(-this.friction * dt);
+    this.velocity.multiplyScalar(damping);
+
+    // --- Hard speed cap ---
+    if (this.velocity.length() > this.moveSpeed) {
+      this.velocity.normalize().multiplyScalar(this.moveSpeed);
+    }
+
+    // --- Apply movement to the yaw object ---
+    this.yawObject.position.addScaledVector(this.velocity, dt);
+  }
+
+  /** Convenience getter for the player's world position. */
+  get position() {
+    return this.yawObject.position;
+  }
+}
+</file>
+
+<file path="src/queries/CellQuery.js">
+export class CellQuery {
+  /**
+   * @param {import('../World.js').World} world
+   * @param {import('../CellID.js').CellID} cellId
+   * @param {import('../EntityHandle.js').EntityHandle[]} out
+   * @returns {import('../EntityHandle.js').EntityHandle[]}
+   */
+  static query(world, cellId, out = []) {
+    out.length = 0;
+    const cell = world.getCell(cellId);
+    if (!cell) return out;
+    for (const entityIdNum of cell.entityIDs) {
+      const entity = world.entityManager.entityRegistry._entities.get(entityIdNum);
+      if (entity) {
+        out.push(entity.handle);
+      }
+    }
+    return out;
+  }
+}
+</file>
+
+<file path="src/queries/NearestQuery.js">
+export class NearestQuery {
+  /**
+   * @param {import('../World.js').World} world
+   * @param {{x:number,y:number,z:number}} center
+   * @returns {import('../EntityHandle.js').EntityHandle|null}
+   */
+  static query(world, center) {
+    let bestDistSq = Infinity;
+    let bestHandle = null;
+    world.entityRegistry.forEach(entity => {
+      const dx = entity.transform.position.x - center.x;
+      const dy = entity.transform.position.y - center.y;
+      const dz = entity.transform.position.z - center.z;
+      const distSq = dx*dx + dy*dy + dz*dz;
+      if (distSq < bestDistSq) {
+        bestDistSq = distSq;
+        bestHandle = entity.handle;
+      }
+    });
+    return bestHandle;
+  }
+}
+</file>
+
+<file path="src/queries/RadiusQuery.js">
+<<<<<<< HEAD
+import { CellID } from '../CellID.js';
+
+export class RadiusQuery {
+  /**
+   * @param {import('../World.js').World} world
+   * @param {{x:number,y:number,z:number}} center
+   * @param {number} radius
+   * @param {import('../EntityHandle.js').EntityHandle[]} out
+   * @param {import('../managers/SpatialManager.js').SpatialManager} spatialManager
+   * @returns {import('../EntityHandle.js').EntityHandle[]}
+   */
+  static query(world, center, radius, out, spatialManager) {
+    out.length = 0;
+    const radiusSq = radius * radius;
+    const minX = center.x - radius;
+    const minZ = center.z - radius;
+    const maxX = center.x + radius;
+    const maxZ = center.z + radius;
+
+    const cellIds = spatialManager.getCellsInBounds(minX, minZ, maxX, maxZ);
+
+    for (const cellId of cellIds) {
+      const cell = world.getCell(cellId);
+      if (!cell) continue;
+      for (const entityIdNum of cell.entityIDs) {
+        // Retrieve entity via numeric ID – we use the internal _entities Map
+        const entity = world.entityManager.entityRegistry._entities.get(entityIdNum);
+        if (!entity) continue;
+        const dx = entity.transform.position.x - center.x;
+        const dy = entity.transform.position.y - center.y;
+        const dz = entity.transform.position.z - center.z;
+        if (dx*dx + dy*dy + dz*dz <= radiusSq) {
+          out.push(entity.handle);
+        }
+      }
+    }
+    return out;
+  }
+=======
+import { CellID } from '../CellID.js';
+
+export class RadiusQuery {
+  /**
+   * @param {import('../World.js').World} world
+   * @param {{x:number,y:number,z:number}} center
+   * @param {number} radius
+   * @param {import('../EntityHandle.js').EntityHandle[]} out
+   * @param {import('../managers/SpatialManager.js').SpatialManager} spatialManager
+   * @returns {import('../EntityHandle.js').EntityHandle[]}
+   */
+  static query(world, center, radius, out, spatialManager) {
+    out.length = 0;
+    const radiusSq = radius * radius;
+    const minX = center.x - radius;
+    const minZ = center.z - radius;
+    const maxX = center.x + radius;
+    const maxZ = center.z + radius;
+
+    const cellIds = spatialManager.getCellsInBounds(minX, minZ, maxX, maxZ);
+
+    for (const cellId of cellIds) {
+      const cell = world.getCell(cellId);
+      if (!cell) continue;
+      for (const entityIdNum of cell.entityIDs) {
+        // Retrieve entity via numeric ID – we use the internal _entities Map
+        const entity = world.entityManager.entityRegistry._entities.get(entityIdNum);
+        if (!entity) continue;
+        const dx = entity.transform.position.x - center.x;
+        const dy = entity.transform.position.y - center.y;
+        const dz = entity.transform.position.z - center.z;
+        if (dx*dx + dy*dy + dz*dz <= radiusSq) {
+          out.push(entity.handle);
+        }
+      }
+    }
+    return out;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/registries/CellRegistry.js">
+<<<<<<< HEAD
+import { CellID } from '../CellID.js';
+
+export class CellRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Cell.js').Cell>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {CellID} id
+   * @param {import('../hierarchy/Cell.js').Cell} cell
+   */
+  register(id, cell) {
+    this._map.set(id.value, cell);
+  }
+
+  /** @param {CellID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {CellID} id @returns {import('../hierarchy/Cell.js').Cell|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {CellID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  forEach(callback) {
+    this._map.forEach((cell, key) => callback(cell, new CellID(key)));
+  }
+
+  count() {
+    return this._map.size;
+  }
+=======
+import { CellID } from '../CellID.js';
+
+export class CellRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Cell.js').Cell>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {CellID} id
+   * @param {import('../hierarchy/Cell.js').Cell} cell
+   */
+  register(id, cell) {
+    this._map.set(id.value, cell);
+  }
+
+  /** @param {CellID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {CellID} id @returns {import('../hierarchy/Cell.js').Cell|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {CellID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  forEach(callback) {
+    this._map.forEach((cell, key) => callback(cell, new CellID(key)));
+  }
+
+  count() {
+    return this._map.size;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/registries/EntityRegistry.js">
+<<<<<<< HEAD
+import { EntityID } from '../EntityID.js';
+
+/**
+ * Registry for entities. Stores them, tracks generations.
+ * Does NOT construct entities.
+ */
+export class EntityRegistry {
+  constructor() {
+    /** @type {Map<number, import('../Entity.js').Entity>} */
+    this._entities = new Map();
+    /** @type {Map<number, number>} */
+    this._generations = new Map();
+  }
+
+  /**
+   * Register an entity. It must already have an EntityID.
+   * @param {import('../Entity.js').Entity} entity
+   */
+  register(entity) {
+    const id = entity.id.id;
+    this._entities.set(id, entity);
+    this._generations.set(id, entity.generation);
+  }
+
+  /**
+   * Look up entity by EntityID. Returns null if generation mismatch.
+   * @param {EntityID} entityId
+   * @returns {import('../Entity.js').Entity|null}
+   */
+  get(entityId) {
+    const entity = this._entities.get(entityId.id);
+    if (!entity || entity.generation !== entityId.generation) return null;
+    return entity;
+  }
+
+  /**
+   * Remove entity from registry and increment its generation so handles become invalid.
+   * @param {EntityID} entityId
+   */
+  unregister(entityId) {
+    if (!this._entities.has(entityId.id)) return;
+    this._entities.delete(entityId.id);
+    const currentGen = this._generations.get(entityId.id) || 0;
+    this._generations.set(entityId.id, currentGen + 1);
+  }
+
+  /** @param {EntityID} entityId @returns {boolean} */
+  exists(entityId) {
+    return this.get(entityId) !== null;
+  }
+
+  /**
+   * Iterate over all currently valid entities.
+   * @param {(entity: import('../Entity.js').Entity) => void} callback
+   */
+  forEach(callback) {
+    this._entities.forEach(callback);
+  }
+
+  /** @returns {number} */
+  count() {
+    return this._entities.size;
+  }
+=======
+import { EntityID } from '../EntityID.js';
+
+/**
+ * Registry for entities. Stores them, tracks generations.
+ * Does NOT construct entities.
+ */
+export class EntityRegistry {
+  constructor() {
+    /** @type {Map<number, import('../Entity.js').Entity>} */
+    this._entities = new Map();
+    /** @type {Map<number, number>} */
+    this._generations = new Map();
+  }
+
+  /**
+   * Register an entity. It must already have an EntityID.
+   * @param {import('../Entity.js').Entity} entity
+   */
+  register(entity) {
+    const id = entity.id.id;
+    this._entities.set(id, entity);
+    this._generations.set(id, entity.generation);
+  }
+
+  /**
+   * Look up entity by EntityID. Returns null if generation mismatch.
+   * @param {EntityID} entityId
+   * @returns {import('../Entity.js').Entity|null}
+   */
+  get(entityId) {
+    const entity = this._entities.get(entityId.id);
+    if (!entity || entity.generation !== entityId.generation) return null;
+    return entity;
+  }
+
+  /**
+   * Remove entity from registry and increment its generation so handles become invalid.
+   * @param {EntityID} entityId
+   */
+  unregister(entityId) {
+    if (!this._entities.has(entityId.id)) return;
+    this._entities.delete(entityId.id);
+    const currentGen = this._generations.get(entityId.id) || 0;
+    this._generations.set(entityId.id, currentGen + 1);
+  }
+
+  /** @param {EntityID} entityId @returns {boolean} */
+  exists(entityId) {
+    return this.get(entityId) !== null;
+  }
+
+  /**
+   * Iterate over all currently valid entities.
+   * @param {(entity: import('../Entity.js').Entity) => void} callback
+   */
+  forEach(callback) {
+    this._entities.forEach(callback);
+  }
+
+  /** @returns {number} */
+  count() {
+    return this._entities.size;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/registries/RegionRegistry.js">
+<<<<<<< HEAD
+import { RegionID } from '../RegionID.js';
+
+export class RegionRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Region.js').Region>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {RegionID} id
+   * @param {import('../hierarchy/Region.js').Region} region
+   */
+  register(id, region) {
+    this._map.set(id.value, region);
+  }
+
+  /** @param {RegionID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {RegionID} id @returns {import('../hierarchy/Region.js').Region|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {RegionID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  /**
+   * @param {(region: import('../hierarchy/Region.js').Region, id: RegionID) => void} callback
+   */
+  forEach(callback) {
+    this._map.forEach((region, key) => callback(region, new RegionID(key)));
+  }
+
+  /** @returns {number} */
+  count() {
+    return this._map.size;
+  }
+=======
+import { RegionID } from '../RegionID.js';
+
+export class RegionRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Region.js').Region>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {RegionID} id
+   * @param {import('../hierarchy/Region.js').Region} region
+   */
+  register(id, region) {
+    this._map.set(id.value, region);
+  }
+
+  /** @param {RegionID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {RegionID} id @returns {import('../hierarchy/Region.js').Region|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {RegionID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  /**
+   * @param {(region: import('../hierarchy/Region.js').Region, id: RegionID) => void} callback
+   */
+  forEach(callback) {
+    this._map.forEach((region, key) => callback(region, new RegionID(key)));
+  }
+
+  /** @returns {number} */
+  count() {
+    return this._map.size;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/registries/SectorRegistry.js">
+<<<<<<< HEAD
+import { SectorID } from '../SectorID.js';
+
+export class SectorRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Sector.js').Sector>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {SectorID} id
+   * @param {import('../hierarchy/Sector.js').Sector} sector
+   */
+  register(id, sector) {
+    this._map.set(id.value, sector);
+  }
+
+  /** @param {SectorID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {SectorID} id @returns {import('../hierarchy/Sector.js').Sector|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {SectorID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  forEach(callback) {
+    this._map.forEach((sector, key) => callback(sector, new SectorID(key)));
+  }
+
+  count() {
+    return this._map.size;
+  }
+=======
+import { SectorID } from '../SectorID.js';
+
+export class SectorRegistry {
+  constructor() {
+    /** @type {Map<string, import('../hierarchy/Sector.js').Sector>} */
+    this._map = new Map();
+  }
+
+  /**
+   * @param {SectorID} id
+   * @param {import('../hierarchy/Sector.js').Sector} sector
+   */
+  register(id, sector) {
+    this._map.set(id.value, sector);
+  }
+
+  /** @param {SectorID} id */
+  unregister(id) {
+    this._map.delete(id.value);
+  }
+
+  /** @param {SectorID} id @returns {import('../hierarchy/Sector.js').Sector|undefined} */
+  get(id) {
+    return this._map.get(id.value);
+  }
+
+  /** @param {SectorID} id @returns {boolean} */
+  exists(id) {
+    return this._map.has(id.value);
+  }
+
+  forEach(callback) {
+    this._map.forEach((sector, key) => callback(sector, new SectorID(key)));
+  }
+
+  count() {
+    return this._map.size;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/rendering/EnvironmentSetup.js">
+<<<<<<< HEAD
+// EnvironmentSetup.js
+import * as THREE from 'three';
+import { PBRTextureGenerator } from './PBRTextureGenerator.js';
+
+/**
+ * Configures the WebGL renderer, lighting, fog, and enforces PBR-only materials.
+ */
+export function createPBRRenderer(domElement, width, height) {
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // Shadows
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;   // soft, realistic penumbra
+
+  // HDR‑ish tone mapping (ACES, as used in modern Battlefield engines)
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.2;   // adjust to taste, keep highlights crisp
+
+  domElement.appendChild(renderer.domElement);
+  return renderer;
+}
+
+/**
+ * Creates the primary key light (directional) and fill light.
+ */
+export function createLighting(scene) {
+  // Main sun / overhead searchlight
+  const sun = new THREE.DirectionalLight(0xffeedd, 1.5);
+  sun.position.set(15, 20, 5);
+  sun.castShadow = true;
+  sun.shadow.mapSize.width = 2048;
+  sun.shadow.mapSize.height = 2048;
+  sun.shadow.camera.near = 0.5;
+  sun.shadow.camera.far = 50;
+  sun.shadow.camera.left = -15;
+  sun.shadow.camera.right = 15;
+  sun.shadow.camera.top = 15;
+  sun.shadow.camera.bottom = -15;
+  sun.shadow.bias = -0.0005;
+  scene.add(sun);
+
+  // Soft fill from below (simulating bounced light)
+  const fill = new THREE.DirectionalLight(0x445566, 0.6);
+  fill.position.set(-5, 0, 10);
+  scene.add(fill);
+
+  // Ambient to prevent totally black shadows
+  scene.add(new THREE.AmbientLight(0x1a1a2e, 0.4));
+}
+
+/**
+ * Applies exponential fog – thick, moody atmospheric depth.
+ */
+export function applyAtmosphere(scene) {
+  scene.fog = new THREE.FogExp2(0x0a0a14, 0.015);
+  scene.background = new THREE.Color(0x0a0a14);   // matches fog colour
+}
+
+/**
+ * Factory that creates a `MeshStandardMaterial` with the generated PBR textures.
+ * All meshes in the environment **must** use this factory – no flat colours, no unlit shaders.
+ */
+export class PBRMaterialFactory {
+  constructor() {
+    this.generator = new PBRTextureGenerator(1024);
+    this.cache = new Map();
+  }
+
+  /**
+   * Returns a full `MeshStandardMaterial` (or `MeshPhysicalMaterial` if `clearcoat` is set).
+   * @param {string} type - 'concrete', 'corridorMetal', ...
+   * @param {object} overrides - optional roughness/metalness/clearcoat overrides
+   */
+  getMaterial(type, overrides = {}) {
+    const key = `${type}_${JSON.stringify(overrides)}`;
+    if (this.cache.has(key)) return this.cache.get(key);
+
+    const textures = this.generator.getTextureSet(type);
+
+    // Apply repeating and filtering
+    Object.values(textures).forEach(tex => {
+      tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+      tex.repeat.set(2, 2);   // scale to world units
+      tex.minFilter = THREE.LinearMipmapLinearFilter;
+      tex.magFilter = THREE.LinearFilter;
+    });
+
+    const materialParams = {
+      map: textures.map,
+      roughnessMap: textures.roughnessMap,
+      metalnessMap: textures.metalnessMap,
+      normalMap: textures.normalMap,
+      roughness: overrides.roughness ?? 1.0,
+      metalness: overrides.metalness ?? 0.0,
+      normalScale: new THREE.Vector2(1.5, 1.5),
+      color: new THREE.Color(1, 1, 1)   // multiply with map
+    };
+
+    // For wet surfaces or polished metal, use physical material with clearcoat
+    let material;
+    if (overrides.clearcoat) {
+      material = new THREE.MeshPhysicalMaterial(materialParams);
+      material.clearcoat = overrides.clearcoat;
+      material.clearcoatRoughness = overrides.clearcoatRoughness ?? 0.1;
+    } else {
+      material = new THREE.MeshStandardMaterial(materialParams);
+    }
+
+    this.cache.set(key, material);
+    return material;
+  }
+=======
+// EnvironmentSetup.js
+import * as THREE from 'three';
+import { PBRTextureGenerator } from './PBRTextureGenerator.js';
+
+/**
+ * Configures the WebGL renderer, lighting, fog, and enforces PBR-only materials.
+ */
+export function createPBRRenderer(domElement, width, height) {
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // Shadows
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;   // soft, realistic penumbra
+
+  // HDR‑ish tone mapping (ACES, as used in modern Battlefield engines)
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.2;   // adjust to taste, keep highlights crisp
+
+  domElement.appendChild(renderer.domElement);
+  return renderer;
+}
+
+/**
+ * Creates the primary key light (directional) and fill light.
+ */
+export function createLighting(scene) {
+  // Main sun / overhead searchlight
+  const sun = new THREE.DirectionalLight(0xffeedd, 1.5);
+  sun.position.set(15, 20, 5);
+  sun.castShadow = true;
+  sun.shadow.mapSize.width = 2048;
+  sun.shadow.mapSize.height = 2048;
+  sun.shadow.camera.near = 0.5;
+  sun.shadow.camera.far = 50;
+  sun.shadow.camera.left = -15;
+  sun.shadow.camera.right = 15;
+  sun.shadow.camera.top = 15;
+  sun.shadow.camera.bottom = -15;
+  sun.shadow.bias = -0.0005;
+  scene.add(sun);
+
+  // Soft fill from below (simulating bounced light)
+  const fill = new THREE.DirectionalLight(0x445566, 0.6);
+  fill.position.set(-5, 0, 10);
+  scene.add(fill);
+
+  // Ambient to prevent totally black shadows
+  scene.add(new THREE.AmbientLight(0x1a1a2e, 0.4));
+}
+
+/**
+ * Applies exponential fog – thick, moody atmospheric depth.
+ */
+export function applyAtmosphere(scene) {
+  scene.fog = new THREE.FogExp2(0x0a0a14, 0.015);
+  scene.background = new THREE.Color(0x0a0a14);   // matches fog colour
+}
+
+/**
+ * Factory that creates a `MeshStandardMaterial` with the generated PBR textures.
+ * All meshes in the environment **must** use this factory – no flat colours, no unlit shaders.
+ */
+export class PBRMaterialFactory {
+  constructor() {
+    this.generator = new PBRTextureGenerator(1024);
+    this.cache = new Map();
+  }
+
+  /**
+   * Returns a full `MeshStandardMaterial` (or `MeshPhysicalMaterial` if `clearcoat` is set).
+   * @param {string} type - 'concrete', 'corridorMetal', ...
+   * @param {object} overrides - optional roughness/metalness/clearcoat overrides
+   */
+  getMaterial(type, overrides = {}) {
+    const key = `${type}_${JSON.stringify(overrides)}`;
+    if (this.cache.has(key)) return this.cache.get(key);
+
+    const textures = this.generator.getTextureSet(type);
+
+    // Apply repeating and filtering
+    Object.values(textures).forEach(tex => {
+      tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+      tex.repeat.set(2, 2);   // scale to world units
+      tex.minFilter = THREE.LinearMipmapLinearFilter;
+      tex.magFilter = THREE.LinearFilter;
+    });
+
+    const materialParams = {
+      map: textures.map,
+      roughnessMap: textures.roughnessMap,
+      metalnessMap: textures.metalnessMap,
+      normalMap: textures.normalMap,
+      roughness: overrides.roughness ?? 1.0,
+      metalness: overrides.metalness ?? 0.0,
+      normalScale: new THREE.Vector2(1.5, 1.5),
+      color: new THREE.Color(1, 1, 1)   // multiply with map
+    };
+
+    // For wet surfaces or polished metal, use physical material with clearcoat
+    let material;
+    if (overrides.clearcoat) {
+      material = new THREE.MeshPhysicalMaterial(materialParams);
+      material.clearcoat = overrides.clearcoat;
+      material.clearcoatRoughness = overrides.clearcoatRoughness ?? 0.1;
+    } else {
+      material = new THREE.MeshStandardMaterial(materialParams);
+    }
+
+    this.cache.set(key, material);
+    return material;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/rendering/PBRTextureGenerator.js">
+<<<<<<< HEAD
+// PBRTextureGenerator.js
+import * as THREE from 'three';
+
+/**
+ * Generates high‑frequency canvas‑based PBR texture maps.
+ * Every material type yields an albedo, roughness, metalness, and normal map.
+ */
+export class PBRTextureGenerator {
+  constructor(resolution = 1024) {
+    this.res = resolution;
+  }
+
+  /**
+   * Core noise generator – creates a grainy canvas for surface variation.
+   */
+  _noiseCanvas(intensity = 1, colorBase = [128, 128, 128]) {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    const imgData = ctx.createImageData(this.res, this.res);
+
+    for (let i = 0; i < imgData.data.length; i += 4) {
+      const r = Math.random() * 255 * intensity;
+      const g = Math.random() * 255 * intensity;
+      const b = Math.random() * 255 * intensity;
+      imgData.data[i]     = colorBase[0] - 128 + r;
+      imgData.data[i + 1] = colorBase[1] - 128 + g;
+      imgData.data[i + 2] = colorBase[2] - 128 + b;
+      imgData.data[i + 3] = 255;
+    }
+    ctx.putImageData(imgData, 0, 0);
+    return canvas;
+  }
+
+  /**
+   * Creates a concrete albedo map – gritty, dusty gray with dark stains.
+   */
+  createConcreteAlbedo() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Base dirty gray
+    ctx.fillStyle = '#7a7a7a';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Noise overlay for grain
+    const noise = this._noiseCanvas(0.5, [128, 128, 128]);
+    ctx.globalAlpha = 0.6;
+    ctx.drawImage(noise, 0, 0);
+
+    // Dark stains (paint splatters)
+    ctx.globalAlpha = 0.3;
+    ctx.fillStyle = '#3b3b3b';
+    for (let i = 0; i < 50; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.arc(x, y, Math.random() * this.res * 0.05 + 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Cracks
+    ctx.globalAlpha = 0.8;
+    ctx.strokeStyle = '#1a1a1a';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    for (let i = 0; i < 30; i++) {
+      ctx.moveTo(Math.random() * this.res, Math.random() * this.res);
+      ctx.lineTo(
+        Math.random() * this.res,
+        Math.random() * this.res
+      );
+    }
+    ctx.stroke();
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Creates a roughness map for concrete – matte with occasional wet patches.
+   */
+  createConcreteRoughness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Overall matte (high roughness)
+    ctx.fillStyle = '#c0c0c0';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Darker (smoother) wet spots
+    ctx.fillStyle = '#505050';
+    for (let i = 0; i < 80; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.arc(x, y, Math.random() * this.res * 0.02 + 1, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Concrete has almost no metal – black map.
+   */
+  createConcreteMetalness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, this.res, this.res);
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Normal map from a synthetic height map – simulates panel gaps, chips.
+   * We reuse an internal height map + Sobel filter.
+   */
+  createConcreteNormal() {
+    return this._createNormalFromHeight(this._concreteHeightMap());
+  }
+
+  _concreteHeightMap() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    // Mid gray base
+    ctx.fillStyle = '#808080';
+    ctx.fillRect(0, 0, this.res, this.res);
+    // Panel gaps (dark lines = lower)
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = 3;
+    for (let i = 0; i < 15; i++) {
+      const x = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x + (Math.random() - 0.5) * 40, this.res);
+      ctx.stroke();
+    }
+    // Chips (brighter spots)
+    ctx.fillStyle = '#ffffff';
+    for (let i = 0; i < 100; i++) {
+      ctx.fillRect(
+        Math.random() * this.res,
+        Math.random() * this.res,
+        2, 2
+      );
+    }
+    return canvas;
+  }
+
+  /**
+   * Corridor metal – painted steel with worn edges revealing raw metal.
+   */
+  createCorridorMetalAlbedo() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Painted olive‑drab base
+    ctx.fillStyle = '#5a5e4b';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Worn metal patches (brighter, metallic grey)
+    ctx.globalAlpha = 0.7;
+    ctx.fillStyle = '#a0a0a0';
+    for (let i = 0; i < 200; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.fillRect(x, y, Math.random() * 8 + 2, Math.random() * 8 + 2);
+    }
+
+    // Rivets
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#3a3a3a';
+    for (let y = 100; y < this.res; y += 200) {
+      for (let x = 100; x < this.res; x += 200) {
+        ctx.beginPath();
+        ctx.arc(x, y, 8, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalRoughness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Mostly polished (low roughness) but with grime
+    ctx.fillStyle = '#202020';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Dirt streaks (higher roughness)
+    ctx.fillStyle = '#b0b0b0';
+    for (let i = 0; i < 40; i++) {
+      const x = Math.random() * this.res;
+      ctx.fillRect(x, 0, 2 + Math.random() * 4, this.res);
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalMetalness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    // Painted areas are non‑metal (black), raw metal is white
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, this.res, this.res);
+    ctx.fillStyle = '#ffffff';
+    // Exposed metal where albedo has patches
+    for (let i = 0; i < 200; i++) {
+      ctx.fillRect(
+        Math.random() * this.res,
+        Math.random() * this.res,
+        Math.random() * 8 + 2,
+        Math.random() * 8 + 2
+      );
+    }
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalNormal() {
+    return this._createNormalFromHeight(this._corridorHeightMap());
+  }
+
+  _corridorHeightMap() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#808080';
+    ctx.fillRect(0, 0, this.res, this.res);
+    // Weld seams
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = 4;
+    for (let y = 200; y < this.res; y += 300) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(this.res, y + (Math.random() - 0.5) * 10);
+      ctx.stroke();
+    }
+    return canvas;
+  }
+
+  /**
+   * Convert a height canvas to a tangent‑space normal map.
+   */
+  _createNormalFromHeight(heightCanvas) {
+    const res = this.res;
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = res;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(heightCanvas, 0, 0);
+    const imgData = ctx.getImageData(0, 0, res, res);
+    const height = new Float32Array(res * res);
+
+    for (let i = 0; i < res * res; i++) {
+      height[i] = imgData.data[i * 4] / 255;   // use red channel
+    }
+
+    const normalCtx = canvas.getContext('2d');
+    const normalImg = normalCtx.createImageData(res, res);
+
+    for (let y = 0; y < res; y++) {
+      for (let x = 0; x < res; x++) {
+        const idx = y * res + x;
+        const left   = height[y * res + Math.max(x - 1, 0)];
+        const right  = height[y * res + Math.min(x + 1, res - 1)];
+        const up     = height[Math.max(y - 1, 0) * res + x];
+        const down   = height[Math.min(y + 1, res - 1) * res + x];
+
+        const dx = (right - left) * 2;
+        const dy = (down - up) * 2;
+
+        const nx = -dx;
+        const ny = -dy;
+        const nz = 1.0;
+        const len = Math.sqrt(nx * nx + ny * ny + nz * nz);
+
+        const r = ((nx / len) * 0.5 + 0.5) * 255;
+        const g = ((ny / len) * 0.5 + 0.5) * 255;
+        const b = ((nz / len) * 0.5 + 0.5) * 255;
+
+        const pi = idx * 4;
+        normalImg.data[pi]     = r;
+        normalImg.data[pi + 1] = g;
+        normalImg.data[pi + 2] = b;
+        normalImg.data[pi + 3] = 255;
+      }
+    }
+
+    normalCtx.putImageData(normalImg, 0, 0);
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+    return texture;
+  }
+
+  /**
+   * Master method: returns a complete PBR texture set for a named material type.
+   */
+  getTextureSet(type) {
+    switch (type) {
+      case 'concrete':
+        return {
+          map: this.createConcreteAlbedo(),
+          roughnessMap: this.createConcreteRoughness(),
+          metalnessMap: this.createConcreteMetalness(),
+          normalMap: this.createConcreteNormal()
+        };
+      case 'corridorMetal':
+        return {
+          map: this.createCorridorMetalAlbedo(),
+          roughnessMap: this.createCorridorMetalRoughness(),
+          metalnessMap: this.createCorridorMetalMetalness(),
+          normalMap: this.createCorridorMetalNormal()
+        };
+      // Additional types can be added in the same manner
+      default:
+        throw new Error(`Unknown material type: ${type}`);
+    }
+  }
+=======
+// PBRTextureGenerator.js
+import * as THREE from 'three';
+
+/**
+ * Generates high‑frequency canvas‑based PBR texture maps.
+ * Every material type yields an albedo, roughness, metalness, and normal map.
+ */
+export class PBRTextureGenerator {
+  constructor(resolution = 1024) {
+    this.res = resolution;
+  }
+
+  /**
+   * Core noise generator – creates a grainy canvas for surface variation.
+   */
+  _noiseCanvas(intensity = 1, colorBase = [128, 128, 128]) {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    const imgData = ctx.createImageData(this.res, this.res);
+
+    for (let i = 0; i < imgData.data.length; i += 4) {
+      const r = Math.random() * 255 * intensity;
+      const g = Math.random() * 255 * intensity;
+      const b = Math.random() * 255 * intensity;
+      imgData.data[i]     = colorBase[0] - 128 + r;
+      imgData.data[i + 1] = colorBase[1] - 128 + g;
+      imgData.data[i + 2] = colorBase[2] - 128 + b;
+      imgData.data[i + 3] = 255;
+    }
+    ctx.putImageData(imgData, 0, 0);
+    return canvas;
+  }
+
+  /**
+   * Creates a concrete albedo map – gritty, dusty gray with dark stains.
+   */
+  createConcreteAlbedo() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Base dirty gray
+    ctx.fillStyle = '#7a7a7a';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Noise overlay for grain
+    const noise = this._noiseCanvas(0.5, [128, 128, 128]);
+    ctx.globalAlpha = 0.6;
+    ctx.drawImage(noise, 0, 0);
+
+    // Dark stains (paint splatters)
+    ctx.globalAlpha = 0.3;
+    ctx.fillStyle = '#3b3b3b';
+    for (let i = 0; i < 50; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.arc(x, y, Math.random() * this.res * 0.05 + 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Cracks
+    ctx.globalAlpha = 0.8;
+    ctx.strokeStyle = '#1a1a1a';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    for (let i = 0; i < 30; i++) {
+      ctx.moveTo(Math.random() * this.res, Math.random() * this.res);
+      ctx.lineTo(
+        Math.random() * this.res,
+        Math.random() * this.res
+      );
+    }
+    ctx.stroke();
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Creates a roughness map for concrete – matte with occasional wet patches.
+   */
+  createConcreteRoughness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Overall matte (high roughness)
+    ctx.fillStyle = '#c0c0c0';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Darker (smoother) wet spots
+    ctx.fillStyle = '#505050';
+    for (let i = 0; i < 80; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.arc(x, y, Math.random() * this.res * 0.02 + 1, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Concrete has almost no metal – black map.
+   */
+  createConcreteMetalness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, this.res, this.res);
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  /**
+   * Normal map from a synthetic height map – simulates panel gaps, chips.
+   * We reuse an internal height map + Sobel filter.
+   */
+  createConcreteNormal() {
+    return this._createNormalFromHeight(this._concreteHeightMap());
+  }
+
+  _concreteHeightMap() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    // Mid gray base
+    ctx.fillStyle = '#808080';
+    ctx.fillRect(0, 0, this.res, this.res);
+    // Panel gaps (dark lines = lower)
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = 3;
+    for (let i = 0; i < 15; i++) {
+      const x = Math.random() * this.res;
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x + (Math.random() - 0.5) * 40, this.res);
+      ctx.stroke();
+    }
+    // Chips (brighter spots)
+    ctx.fillStyle = '#ffffff';
+    for (let i = 0; i < 100; i++) {
+      ctx.fillRect(
+        Math.random() * this.res,
+        Math.random() * this.res,
+        2, 2
+      );
+    }
+    return canvas;
+  }
+
+  /**
+   * Corridor metal – painted steel with worn edges revealing raw metal.
+   */
+  createCorridorMetalAlbedo() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Painted olive‑drab base
+    ctx.fillStyle = '#5a5e4b';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Worn metal patches (brighter, metallic grey)
+    ctx.globalAlpha = 0.7;
+    ctx.fillStyle = '#a0a0a0';
+    for (let i = 0; i < 200; i++) {
+      const x = Math.random() * this.res;
+      const y = Math.random() * this.res;
+      ctx.fillRect(x, y, Math.random() * 8 + 2, Math.random() * 8 + 2);
+    }
+
+    // Rivets
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#3a3a3a';
+    for (let y = 100; y < this.res; y += 200) {
+      for (let x = 100; x < this.res; x += 200) {
+        ctx.beginPath();
+        ctx.arc(x, y, 8, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalRoughness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+
+    // Mostly polished (low roughness) but with grime
+    ctx.fillStyle = '#202020';
+    ctx.fillRect(0, 0, this.res, this.res);
+
+    // Dirt streaks (higher roughness)
+    ctx.fillStyle = '#b0b0b0';
+    for (let i = 0; i < 40; i++) {
+      const x = Math.random() * this.res;
+      ctx.fillRect(x, 0, 2 + Math.random() * 4, this.res);
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalMetalness() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    // Painted areas are non‑metal (black), raw metal is white
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, this.res, this.res);
+    ctx.fillStyle = '#ffffff';
+    // Exposed metal where albedo has patches
+    for (let i = 0; i < 200; i++) {
+      ctx.fillRect(
+        Math.random() * this.res,
+        Math.random() * this.res,
+        Math.random() * 8 + 2,
+        Math.random() * 8 + 2
+      );
+    }
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createCorridorMetalNormal() {
+    return this._createNormalFromHeight(this._corridorHeightMap());
+  }
+
+  _corridorHeightMap() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = this.res;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#808080';
+    ctx.fillRect(0, 0, this.res, this.res);
+    // Weld seams
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = 4;
+    for (let y = 200; y < this.res; y += 300) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(this.res, y + (Math.random() - 0.5) * 10);
+      ctx.stroke();
+    }
+    return canvas;
+  }
+
+  /**
+   * Convert a height canvas to a tangent‑space normal map.
+   */
+  _createNormalFromHeight(heightCanvas) {
+    const res = this.res;
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = res;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(heightCanvas, 0, 0);
+    const imgData = ctx.getImageData(0, 0, res, res);
+    const height = new Float32Array(res * res);
+
+    for (let i = 0; i < res * res; i++) {
+      height[i] = imgData.data[i * 4] / 255;   // use red channel
+    }
+
+    const normalCtx = canvas.getContext('2d');
+    const normalImg = normalCtx.createImageData(res, res);
+
+    for (let y = 0; y < res; y++) {
+      for (let x = 0; x < res; x++) {
+        const idx = y * res + x;
+        const left   = height[y * res + Math.max(x - 1, 0)];
+        const right  = height[y * res + Math.min(x + 1, res - 1)];
+        const up     = height[Math.max(y - 1, 0) * res + x];
+        const down   = height[Math.min(y + 1, res - 1) * res + x];
+
+        const dx = (right - left) * 2;
+        const dy = (down - up) * 2;
+
+        const nx = -dx;
+        const ny = -dy;
+        const nz = 1.0;
+        const len = Math.sqrt(nx * nx + ny * ny + nz * nz);
+
+        const r = ((nx / len) * 0.5 + 0.5) * 255;
+        const g = ((ny / len) * 0.5 + 0.5) * 255;
+        const b = ((nz / len) * 0.5 + 0.5) * 255;
+
+        const pi = idx * 4;
+        normalImg.data[pi]     = r;
+        normalImg.data[pi + 1] = g;
+        normalImg.data[pi + 2] = b;
+        normalImg.data[pi + 3] = 255;
+      }
+    }
+
+    normalCtx.putImageData(normalImg, 0, 0);
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+    return texture;
+  }
+
+  /**
+   * Master method: returns a complete PBR texture set for a named material type.
+   */
+  getTextureSet(type) {
+    switch (type) {
+      case 'concrete':
+        return {
+          map: this.createConcreteAlbedo(),
+          roughnessMap: this.createConcreteRoughness(),
+          metalnessMap: this.createConcreteMetalness(),
+          normalMap: this.createConcreteNormal()
+        };
+      case 'corridorMetal':
+        return {
+          map: this.createCorridorMetalAlbedo(),
+          roughnessMap: this.createCorridorMetalRoughness(),
+          metalnessMap: this.createCorridorMetalMetalness(),
+          normalMap: this.createCorridorMetalNormal()
+        };
+      // Additional types can be added in the same manner
+      default:
+        throw new Error(`Unknown material type: ${type}`);
+    }
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/scene/Camera.js">
+
+</file>
+
+<file path="src/scene/CameraManager.js">
+
+</file>
+
+<file path="src/scene/Environment.js">
+
+</file>
+
+<file path="src/scene/Scene.js">
+import { SceneState } from './SceneState.js';
+import { CameraManager } from './CameraManager.js';
+import { Environment } from './Environment.js';
+
+/**
+ * High-level scene container. Owns world, camera manager, environment,
+ * and metadata. Does NOT own rendering, physics, or ECS.
+ */
+export class Scene {
+    /**
+     * @param {string} id
+     * @param {string} name
+     */
+    constructor(id, name) {
+        this._id = id;
+        this._name = name;
+        this._world = null; // will be assigned later (World subsystem)
+        this._cameraManager = new CameraManager();
+        this._environment = new Environment();
+        this._state = SceneState.CREATED;
+        this._metadata = new Map();
+    }
+
+    get id() { return this._id; }
+    get name() { return this._name; }
+    get world() { return this._world; }
+    set world(w) { this._world = w; }
+    get cameraManager() { return this._cameraManager; }
+    get environment() { return this._environment; }
+    get state() { return this._state; }
+    get metadata() { return this._metadata; }
+
+    /** One state transition: CREATED/UNLOADING → LOADING */
+    load() {
+        if (this._state !== SceneState.CREATED && this._state !== SceneState.UNLOADING) {
+            throw new Error(`Cannot load from state ${this._state}`);
+        }
+        this._state = SceneState.LOADING;
+    }
+
+    /** One state transition: LOADING → INITIALIZING → RUNNING */
+    initialize() {
+        if (this._state !== SceneState.LOADING) {
+            throw new Error(`Cannot initialize from state ${this._state}`);
+        }
+        this._state = SceneState.INITIALIZING;
+        // (future init logic)
+        this._state = SceneState.RUNNING;
+    }
+
+    /** Update only when RUNNING */
+    update(delta) {
+        if (this._state === SceneState.RUNNING) {
+            // (future update logic)
+        }
+    }
+
+    /** One state transition: RUNNING → PAUSED */
+    pause() {
+        if (this._state === SceneState.RUNNING) {
+            this._state = SceneState.PAUSED;
+        }
+    }
+
+    /** One state transition: PAUSED → RUNNING */
+    resume() {
+        if (this._state === SceneState.PAUSED) {
+            this._state = SceneState.RUNNING;
+        }
+    }
+
+    /** One state transition: RUNNING/PAUSED → STOPPING */
+    stop() {
+        if (this._state === SceneState.RUNNING || this._state === SceneState.PAUSED) {
+            this._state = SceneState.STOPPING;
+        }
+    }
+
+    /** One state transition: STOPPING → UNLOADING */
+    unload() {
+        if (this._state !== SceneState.STOPPING && this._state !== SceneState.DESTROYED) {
+            throw new Error(`Cannot unload from state ${this._state}`);
+        }
+        this._state = SceneState.UNLOADING;
+    }
+
+    /** One state transition: UNLOADING → DESTROYED */
+    destroy() {
+        if (this._state !== SceneState.UNLOADING) {
+            throw new Error(`Cannot destroy from state ${this._state}`);
+        }
+        this._state = SceneState.DESTROYED;
+        this._world = null;
+        this._cameraManager.clear();
+        this._environment = null;           // ✅ Fixed
+        this._metadata.clear();
+    }
+}
+</file>
+
+<file path="src/scene/SceneManager.js">
+import { SceneState } from './SceneState.js';
+import { TransitionState } from './TransitionState.js';
+import { SceneTransition } from './SceneTransition.js';
+
+/**
+ * Orchestrates scene registration, switching, stacking, and updates.
+ * Does not own rendering, physics, or ECS.
+ */
+export class SceneManager {
+    constructor() {
+        /** @type {Map<string, Scene>} */
+        this._registry = new Map();
+        /** @type {Scene|null} */
+        this._current = null;
+        /** @type {Scene[]} */
+        this._stack = [];
+        /** @type {SceneTransition|null} */
+        this._transition = null;
+    }
+
+    current() { return this._current; }
+    get stack() { return this._stack; }
+    get transition() { return this._transition; }
+
+    /**
+     * @param {Scene} scene
+     */
+    register(scene) {
+        if (this._registry.has(scene.id)) {
+            throw new Error(`Scene "${scene.id}" already registered`);
+        }
+        this._registry.set(scene.id, scene);
+    }
+
+    /**
+     * @param {string} id
+     */
+    unregister(id) {
+        const scene = this._registry.get(id);
+        if (!scene) return;
+        if (scene === this._current) {
+            throw new Error(`Cannot unregister active scene "${id}"`);
+        }
+        this._shutdownScene(scene);
+        this._registry.delete(id);
+    }
+
+    /**
+     * @param {string} id
+     */
+    load(id) {
+        const scene = this._registry.get(id);
+        if (!scene) throw new Error(`Scene "${id}" not registered`);
+        scene.load();
+    }
+
+    /**
+     * @param {string} id
+     */
+    unload(id) {
+        const scene = this._registry.get(id);
+        if (!scene) throw new Error(`Scene "${id}" not registered`);
+        if (scene === this._current) {
+            throw new Error(`Cannot unload active scene "${id}"`);
+        }
+        this._shutdownScene(scene);
+    }
+
+    /**
+     * Replace current scene with another.
+     * @param {string} id
+     */
+    switch(id) {
+        const toScene = this._registry.get(id);
+        if (!toScene) throw new Error(`Scene "${id}" not registered`);
+
+        const fromScene = this._current;
+        this._transition = new SceneTransition(fromScene, toScene);
+        this._transition.status = TransitionState.ACTIVE;
+
+        if (fromScene) {
+            this._shutdownScene(fromScene);
+        }
+
+        toScene.load();
+        toScene.initialize();
+
+        this._current = toScene;
+        this._transition.status = TransitionState.COMPLETED;
+        this._transition.progress = 1.0;
+        this._stack = [];
+    }
+
+    /**
+     * Push a scene onto the stack (pauses current).
+     * @param {string} id
+     */
+    push(id) {
+        const scene = this._registry.get(id);
+        if (!scene) throw new Error(`Scene "${id}" not registered`);
+
+        if (this._current) {
+            this._stack.push(this._current);
+            this._current.pause();
+        }
+
+        scene.load();
+        scene.initialize();
+        this._current = scene;
+    }
+
+    /**
+     * Pop the top scene (restores previous).
+     */
+    pop() {
+        if (this._stack.length === 0) {
+            throw new Error('Scene stack is empty');
+        }
+
+        if (this._current) {
+            this._shutdownScene(this._current);
+        }
+
+        this._current = this._stack.pop();
+        this._current.resume();
+    }
+
+    /**
+     * @param {number} delta
+     */
+    update(delta) {
+        // TODO: Replace with proper transition system (not time‑based)
+        if (this._transition && this._transition.status !== TransitionState.COMPLETED) {
+            this._transition.progress = Math.min(1, this._transition.progress + delta);
+            if (this._transition.progress >= 1) {
+                this._transition.status = TransitionState.COMPLETED;
+            }
+        }
+        if (this._current) {
+            this._current.update(delta);
+        }
+    }
+
+    /** @param {string} id */
+    getScene(id) { return this._registry.get(id); }
+
+    /** @param {string} id */
+    isRegistered(id) { return this._registry.has(id); }
+
+    /** @returns {string[]} */
+    getRegisteredSceneIds() { return Array.from(this._registry.keys()); }
+
+    /**
+     * Private helper to fully shut down a scene.
+     * @param {Scene} scene
+     * @private
+     */
+    _shutdownScene(scene) {
+        if (scene.state === SceneState.DESTROYED) return;
+        scene.stop();
+        scene.unload();
+        scene.destroy();
+    }
+}
+</file>
+
+<file path="src/scene/SceneState.js">
+
+</file>
+
+<file path="src/scene/SceneTransition.js">
+
+</file>
+
+<file path="src/scene/TransitionState.js">
+
+</file>
+
+<file path="src/spatial/GridPartition.js">
+<<<<<<< HEAD
+/**
+ * Maps world positions to cell IDs using a uniform grid.
+ */
+export class GridPartition {
+  /**
+   * @param {number} cellSize - edge length of a cell in world units
+   */
+  constructor(cellSize) {
+    this.cellSize = cellSize;
+    /** @type {Map<string, string>} key "i,j" → CellID value */
+    this._gridToCellId = new Map();
+    /** @type {Map<string, string>} CellID value → key */
+    this._cellIdToKey = new Map();
+  }
+
+  /**
+   * Register a cell at a specific grid coordinate.
+   * @param {number} gridX - integer column index
+   * @param {number} gridZ - integer row index
+   * @param {string} cellIdValue - the string value of a CellID
+   */
+  addCell(gridX, gridZ, cellIdValue) {
+    const key = `${gridX},${gridZ}`;
+    this._gridToCellId.set(key, cellIdValue);
+    this._cellIdToKey.set(cellIdValue, key);
+  }
+
+  /**
+   * Remove a cell by its string ID.
+   * @param {string} cellIdValue
+   */
+  removeCell(cellIdValue) {
+    const key = this._cellIdToKey.get(cellIdValue);
+    if (key) {
+      this._gridToCellId.delete(key);
+      this._cellIdToKey.delete(cellIdValue);
+    }
+  }
+
+  /**
+   * Get the cell ID at a world position, or null if no cell loaded.
+   * @param {{x: number, y: number, z: number}} position
+   * @returns {string|null}
+   */
+  getCellId(position) {
+    const i = Math.floor(position.x / this.cellSize);
+    const j = Math.floor(position.z / this.cellSize);
+    return this._gridToCellId.get(`${i},${j}`) || null;
+  }
+
+  /**
+   * Get all cell IDs that intersect an axis-aligned bounding box (XZ plane).
+   * @param {number} minX
+   * @param {number} minZ
+   * @param {number} maxX
+   * @param {number} maxZ
+   * @returns {string[]}
+   */
+  getCellsInBounds(minX, minZ, maxX, maxZ) {
+    const startI = Math.floor(minX / this.cellSize);
+    const startJ = Math.floor(minZ / this.cellSize);
+    const endI = Math.floor(maxX / this.cellSize);
+    const endJ = Math.floor(maxZ / this.cellSize);
+    const ids = [];
+    for (let i = startI; i <= endI; i++) {
+      for (let j = startJ; j <= endJ; j++) {
+        const id = this._gridToCellId.get(`${i},${j}`);
+        if (id) ids.push(id);
+      }
+    }
+    return ids;
+  }
+=======
+/**
+ * Maps world positions to cell IDs using a uniform grid.
+ */
+export class GridPartition {
+  /**
+   * @param {number} cellSize - edge length of a cell in world units
+   */
+  constructor(cellSize) {
+    this.cellSize = cellSize;
+    /** @type {Map<string, string>} key "i,j" → CellID value */
+    this._gridToCellId = new Map();
+    /** @type {Map<string, string>} CellID value → key */
+    this._cellIdToKey = new Map();
+  }
+
+  /**
+   * Register a cell at a specific grid coordinate.
+   * @param {number} gridX - integer column index
+   * @param {number} gridZ - integer row index
+   * @param {string} cellIdValue - the string value of a CellID
+   */
+  addCell(gridX, gridZ, cellIdValue) {
+    const key = `${gridX},${gridZ}`;
+    this._gridToCellId.set(key, cellIdValue);
+    this._cellIdToKey.set(cellIdValue, key);
+  }
+
+  /**
+   * Remove a cell by its string ID.
+   * @param {string} cellIdValue
+   */
+  removeCell(cellIdValue) {
+    const key = this._cellIdToKey.get(cellIdValue);
+    if (key) {
+      this._gridToCellId.delete(key);
+      this._cellIdToKey.delete(cellIdValue);
+    }
+  }
+
+  /**
+   * Get the cell ID at a world position, or null if no cell loaded.
+   * @param {{x: number, y: number, z: number}} position
+   * @returns {string|null}
+   */
+  getCellId(position) {
+    const i = Math.floor(position.x / this.cellSize);
+    const j = Math.floor(position.z / this.cellSize);
+    return this._gridToCellId.get(`${i},${j}`) || null;
+  }
+
+  /**
+   * Get all cell IDs that intersect an axis-aligned bounding box (XZ plane).
+   * @param {number} minX
+   * @param {number} minZ
+   * @param {number} maxX
+   * @param {number} maxZ
+   * @returns {string[]}
+   */
+  getCellsInBounds(minX, minZ, maxX, maxZ) {
+    const startI = Math.floor(minX / this.cellSize);
+    const startJ = Math.floor(minZ / this.cellSize);
+    const endI = Math.floor(maxX / this.cellSize);
+    const endJ = Math.floor(maxZ / this.cellSize);
+    const ids = [];
+    for (let i = startI; i <= endI; i++) {
+      for (let j = startJ; j <= endJ; j++) {
+        const id = this._gridToCellId.get(`${i},${j}`);
+        if (id) ids.push(id);
+      }
+    }
+    return ids;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/streaming/SectorLoader.js">
+<<<<<<< HEAD
+import { StreamingJob } from './StreamingJob.js';
+import { CellID } from '../CellID.js';
+
+/**
+ * Loads a sector from its data definition into the world.
+ */
+export class SectorLoader extends StreamingJob {
+  /**
+   * @param {import('../data/SectorData.js').SectorData} sectorData
+   */
+  constructor(sectorData) {
+    super();
+    this.sectorData = sectorData;
+  }
+
+  /**
+   * @param {import('../World.js').World} world
+   */
+  execute(world) {
+    const data = this.sectorData;
+    const sectorId = data.id;
+
+    // Ensure sector exists
+    let sector = world.getSector(sectorId);
+    if (!sector) {
+      sector = world.hierarchy.createSector(sectorId.value);
+    }
+    sector.state = 'loading';
+
+    // Create cells
+    for (const cellDef of data.cells) {
+      const cellId = new CellID(cellDef.id);
+      let cell = world.getCell(cellId);
+      if (!cell) {
+        cell = world.hierarchy.createCell(cellId.value);
+      }
+      // Register in spatial index
+      world.spatialManager.addCell(cellId, cellDef.gridX, cellDef.gridZ);
+      // Link cell to sector
+      if (!sector.cellIDs.some(cid => cid.equals(cellId))) {
+        sector.cellIDs.push(cellId);
+      }
+    }
+
+    sector.state = 'loaded';
+  }
+=======
+import { StreamingJob } from './StreamingJob.js';
+import { CellID } from '../CellID.js';
+
+/**
+ * Loads a sector from its data definition into the world.
+ */
+export class SectorLoader extends StreamingJob {
+  /**
+   * @param {import('../data/SectorData.js').SectorData} sectorData
+   */
+  constructor(sectorData) {
+    super();
+    this.sectorData = sectorData;
+  }
+
+  /**
+   * @param {import('../World.js').World} world
+   */
+  execute(world) {
+    const data = this.sectorData;
+    const sectorId = data.id;
+
+    // Ensure sector exists
+    let sector = world.getSector(sectorId);
+    if (!sector) {
+      sector = world.hierarchy.createSector(sectorId.value);
+    }
+    sector.state = 'loading';
+
+    // Create cells
+    for (const cellDef of data.cells) {
+      const cellId = new CellID(cellDef.id);
+      let cell = world.getCell(cellId);
+      if (!cell) {
+        cell = world.hierarchy.createCell(cellId.value);
+      }
+      // Register in spatial index
+      world.spatialManager.addCell(cellId, cellDef.gridX, cellDef.gridZ);
+      // Link cell to sector
+      if (!sector.cellIDs.some(cid => cid.equals(cellId))) {
+        sector.cellIDs.push(cellId);
+      }
+    }
+
+    sector.state = 'loaded';
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/streaming/SectorUnloader.js">
+<<<<<<< HEAD
+import { StreamingJob } from './StreamingJob.js';
+import { CellID } from '../CellID.js';
+
+/**
+ * Unloads a sector and removes its cells and entities.
+ */
+export class SectorUnloader extends StreamingJob {
+  /**
+   * @param {import('../SectorID.js').SectorID} sectorId
+   */
+  constructor(sectorId) {
+    super();
+    this.sectorId = sectorId;
+  }
+
+  /**
+   * @param {import('../World.js').World} world
+   */
+  execute(world) {
+    const sector = world.getSector(this.sectorId);
+    if (!sector || sector.state === 'unloaded') return;
+
+    sector.state = 'unloading';
+
+    // Remove all cells of this sector
+    for (const cellId of sector.cellIDs) {
+      const cell = world.getCell(cellId);
+      if (cell) {
+        // Destroy all entities in the cell
+        for (const entityIdNum of cell.entityIDs) {
+          // We need the EntityID object; we can retrieve the entity and get its ID
+          const entity = world.entityManager.entityRegistry._entities.get(entityIdNum);
+          if (entity) {
+            world.destroyEntity(entity.id);
+          }
+        }
+        // Remove from spatial index
+        world.spatialManager.removeCell(cellId);
+        // Unregister cell
+        world.cellRegistry.unregister(cellId);
+      }
+    }
+
+    sector.cellIDs.length = 0;
+    sector.state = 'unloaded';
+    world.sectorRegistry.unregister(this.sectorId);
+  }
+=======
+import { StreamingJob } from './StreamingJob.js';
+import { CellID } from '../CellID.js';
+
+/**
+ * Unloads a sector and removes its cells and entities.
+ */
+export class SectorUnloader extends StreamingJob {
+  /**
+   * @param {import('../SectorID.js').SectorID} sectorId
+   */
+  constructor(sectorId) {
+    super();
+    this.sectorId = sectorId;
+  }
+
+  /**
+   * @param {import('../World.js').World} world
+   */
+  execute(world) {
+    const sector = world.getSector(this.sectorId);
+    if (!sector || sector.state === 'unloaded') return;
+
+    sector.state = 'unloading';
+
+    // Remove all cells of this sector
+    for (const cellId of sector.cellIDs) {
+      const cell = world.getCell(cellId);
+      if (cell) {
+        // Destroy all entities in the cell
+        for (const entityIdNum of cell.entityIDs) {
+          // We need the EntityID object; we can retrieve the entity and get its ID
+          const entity = world.entityManager.entityRegistry._entities.get(entityIdNum);
+          if (entity) {
+            world.destroyEntity(entity.id);
+          }
+        }
+        // Remove from spatial index
+        world.spatialManager.removeCell(cellId);
+        // Unregister cell
+        world.cellRegistry.unregister(cellId);
+      }
+    }
+
+    sector.cellIDs.length = 0;
+    sector.state = 'unloaded';
+    world.sectorRegistry.unregister(this.sectorId);
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/systems/AnimationSystem.js">
+import { System } from '../System.js';
+import { EntitySignature } from '../EntitySignature.js';
+
+export class AnimationSystem extends System {
+  constructor() {
+    super();
+    this.priority = 300;
+    this._requiredSig = new EntitySignature();
+    this._meshId = -1;
+  }
+
+  initialize(ecs) {
+    this._meshId = ecs.getTypeId('Mesh');
+    this._requiredSig.add(this._meshId);
+  }
+
+  requiredSignature() {
+    return this._requiredSig;
+  }
+
+  update(delta, entityIds, ecs) {
+    const meshStore = ecs.getStore('Mesh');
+    for (const eid of entityIds) {
+      const mesh = meshStore.get(eid);
+      if (mesh) {
+        // TODO: Update animation state based on movement, combat, etc.
+      }
+    }
+  }
+}
+</file>
+
+<file path="src/systems/HealthSystem.js">
+import { System } from '../System.js';
+import { EntitySignature } from '../EntitySignature.js';
+
+export class HealthSystem extends System {
+  constructor() {
+    super();
+    this.priority = 200;
+    this._requiredSig = new EntitySignature();
+    this._healthId = -1;
+  }
+
+  initialize(ecs) {
+    this._healthId = ecs.getTypeId('Health');
+    this._requiredSig.add(this._healthId);
+  }
+
+  requiredSignature() {
+    return this._requiredSig;
+  }
+
+  update(delta, entityIds, ecs) {
+    const healthStore = ecs.getStore('Health');
+    for (const eid of entityIds) {
+      const health = healthStore.get(eid);
+      if (health && health.current <= 0) {
+        // TODO: trigger death sequence
+      }
+    }
+  }
+}
+</file>
+
+<file path="src/systems/MovementSystem.js">
+import { System } from '../System.js';
+import { EntitySignature } from '../EntitySignature.js';
+
+export class MovementSystem extends System {
+  constructor() {
+    super();
+    this.priority = 100;
+    this._requiredSig = new EntitySignature();
+    /** @private */
+    this._transformId = -1;
+    this._velocityId = -1;
+  }
+
+  /**
+   * @param {import('../ECSManager.js').ECSManager} ecs
+   */
+  initialize(ecs) {
+    this._transformId = ecs.getTypeId('Transform');
+    this._velocityId = ecs.getTypeId('Velocity');
+    this._requiredSig.add(this._transformId);
+    this._requiredSig.add(this._velocityId);
+  }
+
+  requiredSignature() {
+    return this._requiredSig;
+  }
+
+  /**
+   * @param {number} delta
+   * @param {number[]} entityIds
+   * @param {import('../ECSManager.js').ECSManager} ecs
+   */
+  update(delta, entityIds, ecs) {
+    const transformStore = ecs.getStore('Transform');
+    const velocityStore = ecs.getStore('Velocity');
+    for (const eid of entityIds) {
+      const transform = transformStore.get(eid);
+      const velocity = velocityStore.get(eid);
+      if (transform && velocity) {
+        transform.position.x += velocity.x * delta;
+        transform.position.y += velocity.y * delta;
+        transform.position.z += velocity.z * delta;
+      }
+    }
+  }
+}
+</file>
+
+<file path="src/time/DependencyGraph.js">
+<<<<<<< HEAD
+// src/time/DependencyGraph.js
+
+/**
+ * Tracks dependency relationships between scheduled events.
+ * Does not perform scheduling or execution.
+ */
+export class DependencyGraph {
+  constructor() {
+    /** @type {Map<number, Set<number>>} waiting event id → set of unmet dependency ids */
+    this._waiting = new Map();
+    /** @type {Map<number, Set<number>>} dependency id → set of dependent event ids */
+    this._dependents = new Map();
+    /** @type {Set<number>} all event IDs known to the graph */
+    this._knownIds = new Set();
+    /** @type {Set<number>} event IDs that have been marked completed */
+    this._completed = new Set();
+  }
+
+  /**
+   * Register an event and its dependencies.
+   * @param {import('./ScheduledEvent.js').ScheduledEvent} event
+   */
+  addEvent(event) {
+    const eventId = event.id;
+    if (this._knownIds.has(eventId)) {
+      throw new Error(`Event ${eventId} already registered in DependencyGraph.`);
+    }
+    if (event.dependencies.includes(eventId)) {
+      throw new Error(`Event ${eventId} cannot depend on itself.`);
+    }
+    for (const depId of event.dependencies) {
+      if (!this._knownIds.has(depId)) {
+        throw new Error(`Unknown dependency ${depId} referenced by event ${eventId}.`);
+      }
+    }
+
+    this._knownIds.add(eventId);
+
+    const unmet = new Set();
+    for (const depId of event.dependencies) {
+      if (!this._completed.has(depId)) {
+        unmet.add(depId);
+      }
+      if (!this._dependents.has(depId)) {
+        this._dependents.set(depId, new Set());
+      }
+      this._dependents.get(depId).add(eventId);
+    }
+
+    if (unmet.size > 0) {
+      this._waiting.set(eventId, unmet);
+    }
+  }
+
+  /**
+   * Remove an event entirely (cancelled).
+   * @param {number} eventId
+   */
+  removeEvent(eventId) {
+    this._waiting.delete(eventId);
+
+    for (const [, dependents] of this._dependents) {
+      dependents.delete(eventId);
+      // We do not delete the whole entry here for simplicity; markCompleted will clean up later.
+    }
+
+    this._completed.delete(eventId);
+    this._knownIds.delete(eventId);
+  }
+
+  /**
+   * Mark an event as completed. Returns IDs of newly unblocked events.
+   * @param {number} eventId
+   * @returns {number[]}
+   */
+  markCompleted(eventId) {
+    this._completed.add(eventId);
+
+    const newlyReady = [];
+    const dependents = this._dependents.get(eventId);
+    if (dependents) {
+      for (const waitingId of dependents) {
+        const unmet = this._waiting.get(waitingId);
+        if (unmet) {
+          unmet.delete(eventId);
+          if (unmet.size === 0) {
+            this._waiting.delete(waitingId);
+            newlyReady.push(waitingId);
+          }
+        }
+      }
+      this._dependents.delete(eventId);
+    }
+
+    return newlyReady;
+  }
+
+  /**
+   * Check if an event has unresolved dependencies.
+   * @param {number} eventId
+   * @returns {boolean}
+   */
+  hasUnresolvedDependencies(eventId) {
+    return this._waiting.has(eventId);
+  }
+
+  /**
+   * Get IDs of events that depend on the given event.
+   * @param {number} eventId
+   * @returns {number[]}
+   */
+  getDependents(eventId) {
+    const set = this._dependents.get(eventId);
+    return set ? Array.from(set) : [];
+  }
+
+  clear() {
+    this._waiting.clear();
+    this._dependents.clear();
+    this._knownIds.clear();
+    this._completed.clear();
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize the entire graph state into a plain object.
+   * @returns {object}
+   */
+  serialize() {
+    const waiting = {};
+    for (const [id, unmet] of this._waiting) {
+      waiting[id] = Array.from(unmet);
+    }
+    const dependents = {};
+    for (const [depId, deps] of this._dependents) {
+      dependents[depId] = Array.from(deps);
+    }
+    return {
+      waiting,
+      dependents,
+      completed: Array.from(this._completed),
+      knownIds: Array.from(this._knownIds)
+    };
+  }
+
+  /**
+   * Restore graph state from a plain object.
+   * @param {object} data
+   */
+  deserialize(data) {
+    this.clear();
+    this._knownIds = new Set(data.knownIds);
+    this._completed = new Set(data.completed);
+
+    for (const [idStr, unmetArr] of Object.entries(data.waiting)) {
+      this._waiting.set(Number(idStr), new Set(unmetArr));
+    }
+    for (const [depIdStr, depArr] of Object.entries(data.dependents)) {
+      this._dependents.set(Number(depIdStr), new Set(depArr));
+    }
+  }
+=======
+// src/time/DependencyGraph.js
+
+/**
+ * Tracks dependency relationships between scheduled events.
+ * Does not perform scheduling or execution.
+ */
+export class DependencyGraph {
+  constructor() {
+    /** @type {Map<number, Set<number>>} waiting event id → set of unmet dependency ids */
+    this._waiting = new Map();
+    /** @type {Map<number, Set<number>>} dependency id → set of dependent event ids */
+    this._dependents = new Map();
+    /** @type {Set<number>} all event IDs known to the graph */
+    this._knownIds = new Set();
+    /** @type {Set<number>} event IDs that have been marked completed */
+    this._completed = new Set();
+  }
+
+  /**
+   * Register an event and its dependencies.
+   * @param {import('./ScheduledEvent.js').ScheduledEvent} event
+   */
+  addEvent(event) {
+    const eventId = event.id;
+    if (this._knownIds.has(eventId)) {
+      throw new Error(`Event ${eventId} already registered in DependencyGraph.`);
+    }
+    if (event.dependencies.includes(eventId)) {
+      throw new Error(`Event ${eventId} cannot depend on itself.`);
+    }
+    for (const depId of event.dependencies) {
+      if (!this._knownIds.has(depId)) {
+        throw new Error(`Unknown dependency ${depId} referenced by event ${eventId}.`);
+      }
+    }
+
+    this._knownIds.add(eventId);
+
+    const unmet = new Set();
+    for (const depId of event.dependencies) {
+      if (!this._completed.has(depId)) {
+        unmet.add(depId);
+      }
+      if (!this._dependents.has(depId)) {
+        this._dependents.set(depId, new Set());
+      }
+      this._dependents.get(depId).add(eventId);
+    }
+
+    if (unmet.size > 0) {
+      this._waiting.set(eventId, unmet);
+    }
+  }
+
+  /**
+   * Remove an event entirely (cancelled).
+   * @param {number} eventId
+   */
+  removeEvent(eventId) {
+    this._waiting.delete(eventId);
+
+    for (const [, dependents] of this._dependents) {
+      dependents.delete(eventId);
+      // We do not delete the whole entry here for simplicity; markCompleted will clean up later.
+    }
+
+    this._completed.delete(eventId);
+    this._knownIds.delete(eventId);
+  }
+
+  /**
+   * Mark an event as completed. Returns IDs of newly unblocked events.
+   * @param {number} eventId
+   * @returns {number[]}
+   */
+  markCompleted(eventId) {
+    this._completed.add(eventId);
+
+    const newlyReady = [];
+    const dependents = this._dependents.get(eventId);
+    if (dependents) {
+      for (const waitingId of dependents) {
+        const unmet = this._waiting.get(waitingId);
+        if (unmet) {
+          unmet.delete(eventId);
+          if (unmet.size === 0) {
+            this._waiting.delete(waitingId);
+            newlyReady.push(waitingId);
+          }
+        }
+      }
+      this._dependents.delete(eventId);
+    }
+
+    return newlyReady;
+  }
+
+  /**
+   * Check if an event has unresolved dependencies.
+   * @param {number} eventId
+   * @returns {boolean}
+   */
+  hasUnresolvedDependencies(eventId) {
+    return this._waiting.has(eventId);
+  }
+
+  /**
+   * Get IDs of events that depend on the given event.
+   * @param {number} eventId
+   * @returns {number[]}
+   */
+  getDependents(eventId) {
+    const set = this._dependents.get(eventId);
+    return set ? Array.from(set) : [];
+  }
+
+  clear() {
+    this._waiting.clear();
+    this._dependents.clear();
+    this._knownIds.clear();
+    this._completed.clear();
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize the entire graph state into a plain object.
+   * @returns {object}
+   */
+  serialize() {
+    const waiting = {};
+    for (const [id, unmet] of this._waiting) {
+      waiting[id] = Array.from(unmet);
+    }
+    const dependents = {};
+    for (const [depId, deps] of this._dependents) {
+      dependents[depId] = Array.from(deps);
+    }
+    return {
+      waiting,
+      dependents,
+      completed: Array.from(this._completed),
+      knownIds: Array.from(this._knownIds)
+    };
+  }
+
+  /**
+   * Restore graph state from a plain object.
+   * @param {object} data
+   */
+  deserialize(data) {
+    this.clear();
+    this._knownIds = new Set(data.knownIds);
+    this._completed = new Set(data.completed);
+
+    for (const [idStr, unmetArr] of Object.entries(data.waiting)) {
+      this._waiting.set(Number(idStr), new Set(unmetArr));
+    }
+    for (const [depIdStr, depArr] of Object.entries(data.dependents)) {
+      this._dependents.set(Number(depIdStr), new Set(depArr));
+    }
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/time/DiagnosticsCollector.js">
+<<<<<<< HEAD
+// src/time/DiagnosticsCollector.js
+
+/**
+ * Passive collector of runtime statistics for the Time System.
+ *
+ * Tracks counts of scheduled, executed, completed, cancelled, and
+ * validation‑failed events, as well as current queue sizes and
+ * simulation time.  Provides a snapshot for debug overlays.
+ *
+ * Does NOT modify any scheduler state and does NOT contain scheduling logic.
+ */
+export class DiagnosticsCollector {
+  constructor() {
+    this._registered = 0;
+    this._executed = 0;
+    this._completed = 0;
+    this._cancelled = 0;
+    this._validationFailures = 0;
+    this._queueSize = 0;
+    this._dependencyCount = 0;
+    this._simulationTime = 0;
+  }
+
+  /** Increment the registered event counter. */
+  recordRegistered() {
+    this._registered++;
+  }
+
+  /** Increment the executed event counter. */
+  recordExecuted() {
+    this._executed++;
+  }
+
+  /** Increment the completed event counter. */
+  recordCompleted() {
+    this._completed++;
+  }
+
+  /** Increment the cancelled event counter. */
+  recordCancelled() {
+    this._cancelled++;
+  }
+
+  /** Increment the validation failure counter. */
+  recordValidationFailed() {
+    this._validationFailures++;
+  }
+
+  /**
+   * Set the current number of events in the ready queue.
+   * @param {number} size
+   */
+  setQueueSize(size) {
+    this._queueSize = size;
+  }
+
+  /**
+   * Set the current number of waiting dependencies.
+   * @param {number} count
+   */
+  setDependencyCount(count) {
+    this._dependencyCount = count;
+  }
+
+  /**
+   * Set the current simulation time (seconds).
+   * @param {number} time
+   */
+  setSimulationTime(time) {
+    this._simulationTime = time;
+  }
+
+  /**
+   * Return a snapshot of all collected statistics.
+   * @returns {{
+   *   registered: number,
+   *   executed: number,
+   *   completed: number,
+   *   cancelled: number,
+   *   validationFailures: number,
+   *   queueSize: number,
+   *   dependencyCount: number,
+   *   simulationTime: number
+   * }}
+   */
+  getSnapshot() {
+    return {
+      registered: this._registered,
+      executed: this._executed,
+      completed: this._completed,
+      cancelled: this._cancelled,
+      validationFailures: this._validationFailures,
+      queueSize: this._queueSize,
+      dependencyCount: this._dependencyCount,
+      simulationTime: this._simulationTime
+    };
+  }
+
+  /** Reset all counters to zero. */
+  reset() {
+    this._registered = 0;
+    this._executed = 0;
+    this._completed = 0;
+    this._cancelled = 0;
+    this._validationFailures = 0;
+    this._queueSize = 0;
+    this._dependencyCount = 0;
+    this._simulationTime = 0;
+  }
+=======
+// src/time/DiagnosticsCollector.js
+
+/**
+ * Passive collector of runtime statistics for the Time System.
+ *
+ * Tracks counts of scheduled, executed, completed, cancelled, and
+ * validation‑failed events, as well as current queue sizes and
+ * simulation time.  Provides a snapshot for debug overlays.
+ *
+ * Does NOT modify any scheduler state and does NOT contain scheduling logic.
+ */
+export class DiagnosticsCollector {
+  constructor() {
+    this._registered = 0;
+    this._executed = 0;
+    this._completed = 0;
+    this._cancelled = 0;
+    this._validationFailures = 0;
+    this._queueSize = 0;
+    this._dependencyCount = 0;
+    this._simulationTime = 0;
+  }
+
+  /** Increment the registered event counter. */
+  recordRegistered() {
+    this._registered++;
+  }
+
+  /** Increment the executed event counter. */
+  recordExecuted() {
+    this._executed++;
+  }
+
+  /** Increment the completed event counter. */
+  recordCompleted() {
+    this._completed++;
+  }
+
+  /** Increment the cancelled event counter. */
+  recordCancelled() {
+    this._cancelled++;
+  }
+
+  /** Increment the validation failure counter. */
+  recordValidationFailed() {
+    this._validationFailures++;
+  }
+
+  /**
+   * Set the current number of events in the ready queue.
+   * @param {number} size
+   */
+  setQueueSize(size) {
+    this._queueSize = size;
+  }
+
+  /**
+   * Set the current number of waiting dependencies.
+   * @param {number} count
+   */
+  setDependencyCount(count) {
+    this._dependencyCount = count;
+  }
+
+  /**
+   * Set the current simulation time (seconds).
+   * @param {number} time
+   */
+  setSimulationTime(time) {
+    this._simulationTime = time;
+  }
+
+  /**
+   * Return a snapshot of all collected statistics.
+   * @returns {{
+   *   registered: number,
+   *   executed: number,
+   *   completed: number,
+   *   cancelled: number,
+   *   validationFailures: number,
+   *   queueSize: number,
+   *   dependencyCount: number,
+   *   simulationTime: number
+   * }}
+   */
+  getSnapshot() {
+    return {
+      registered: this._registered,
+      executed: this._executed,
+      completed: this._completed,
+      cancelled: this._cancelled,
+      validationFailures: this._validationFailures,
+      queueSize: this._queueSize,
+      dependencyCount: this._dependencyCount,
+      simulationTime: this._simulationTime
+    };
+  }
+
+  /** Reset all counters to zero. */
+  reset() {
+    this._registered = 0;
+    this._executed = 0;
+    this._completed = 0;
+    this._cancelled = 0;
+    this._validationFailures = 0;
+    this._queueSize = 0;
+    this._dependencyCount = 0;
+    this._simulationTime = 0;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/time/EventScheduler.js">
+<<<<<<< HEAD
+// src/time/EventScheduler.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Runtime execution engine for scheduled events.
+ *
+ * Owns references to the WorldClock, SchedulerState, a validator function,
+ * and a dispatcher callback.  Its single responsibility is to process
+ * events that are due each frame.
+ *
+ * Lifecycle transitions performed:
+ *   Queued → Validated (event.validate())
+ *   Validated → Executed (event.execute())
+ *   Executed → Completed (event.complete())
+ *
+ * After successful completion, `SchedulerState.markCompleted()` is called
+ * to resolve dependencies and unblock waiting events.
+ *
+ * Validation failures result in the event being cancelled and removed
+ * from the SchedulerState.
+ */
+export class EventScheduler {
+  /**
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   * @param {function(import('./ScheduledEvent.js').ScheduledEvent): boolean} validator
+   * @param {function(import('./ScheduledEvent.js').ScheduledEvent): void} dispatcher
+   */
+  constructor(clock, state, validator, dispatcher) {
+    this._clock = clock;
+    this._state = state;
+    this._validator = validator;
+    this._dispatcher = dispatcher;
+  }
+
+  /**
+   * Process all events in the ready queue whose fire time is ≤ current time.
+   * Should be called once per simulation frame.
+   */
+  update() {
+    const currentTime = this._clock.getCurrentTime();
+    const readyQueue = this._state.getReadyQueue();
+
+    while (true) {
+      const event = readyQueue.peek();
+      if (!event || event.fireTime > currentTime) {
+        break;
+      }
+
+      readyQueue.dequeue();
+
+      // Validate the event.
+      event.validate();
+      if (!this._validator(event)) {
+        event.validationFailed();
+        this._state.removeEvent(event.id);
+        continue;
+      }
+
+      // Execute.
+      event.execute();
+      this._dispatcher(event);
+
+      // Complete and resolve dependencies.
+      event.complete();
+      this._state.markCompleted(event.id);
+    }
+  }
+=======
+// src/time/EventScheduler.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Runtime execution engine for scheduled events.
+ *
+ * Owns references to the WorldClock, SchedulerState, a validator function,
+ * and a dispatcher callback.  Its single responsibility is to process
+ * events that are due each frame.
+ *
+ * Lifecycle transitions performed:
+ *   Queued → Validated (event.validate())
+ *   Validated → Executed (event.execute())
+ *   Executed → Completed (event.complete())
+ *
+ * After successful completion, `SchedulerState.markCompleted()` is called
+ * to resolve dependencies and unblock waiting events.
+ *
+ * Validation failures result in the event being cancelled and removed
+ * from the SchedulerState.
+ */
+export class EventScheduler {
+  /**
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   * @param {function(import('./ScheduledEvent.js').ScheduledEvent): boolean} validator
+   * @param {function(import('./ScheduledEvent.js').ScheduledEvent): void} dispatcher
+   */
+  constructor(clock, state, validator, dispatcher) {
+    this._clock = clock;
+    this._state = state;
+    this._validator = validator;
+    this._dispatcher = dispatcher;
+  }
+
+  /**
+   * Process all events in the ready queue whose fire time is ≤ current time.
+   * Should be called once per simulation frame.
+   */
+  update() {
+    const currentTime = this._clock.getCurrentTime();
+    const readyQueue = this._state.getReadyQueue();
+
+    while (true) {
+      const event = readyQueue.peek();
+      if (!event || event.fireTime > currentTime) {
+        break;
+      }
+
+      readyQueue.dequeue();
+
+      // Validate the event.
+      event.validate();
+      if (!this._validator(event)) {
+        event.validationFailed();
+        this._state.removeEvent(event.id);
+        continue;
+      }
+
+      // Execute.
+      event.execute();
+      this._dispatcher(event);
+
+      // Complete and resolve dependencies.
+      event.complete();
+      this._state.markCompleted(event.id);
+    }
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/time/ReadyQueue.js">
+<<<<<<< HEAD
+// src/time/ReadyQueue.js
+
+/**
+ * Deterministic, ordered container for ready-to-execute ScheduledEvent objects.
+ *
+ * Maintains events sorted by fireTime, priority, and sequenceNumber.
+ * This is a pure data structure – no scheduling or lifecycle logic.
+ */
+export class ReadyQueue {
+  constructor() {
+    /** @type {import('./ScheduledEvent.js').ScheduledEvent[]} */
+    this._events = [];
+    /** @type {Map<number, import('./ScheduledEvent.js').ScheduledEvent>} */
+    this._idMap = new Map();
+  }
+
+  /**
+   * Insert an event while preserving sort order.
+   * @param {import('./ScheduledEvent.js').ScheduledEvent} event
+   */
+  enqueue(event) {
+    if (this._idMap.has(event.id)) {
+      throw new Error(`Duplicate event id ${event.id} in ReadyQueue.`);
+    }
+    const index = this._binarySearchIndex(event);
+    this._events.splice(index, 0, event);
+    this._idMap.set(event.id, event);
+  }
+
+  /** Remove and return the next event. */
+  dequeue() {
+    if (this._events.length === 0) return null;
+    const event = this._events.shift();
+    this._idMap.delete(event.id);
+    return event;
+  }
+
+  /** Peek at the next event without removing. */
+  peek() {
+    return this._events.length > 0 ? this._events[0] : null;
+  }
+
+  /** Remove a specific event by its id. */
+  remove(eventId) {
+    const index = this._events.findIndex(e => e.id === eventId);
+    if (index !== -1) {
+      this._events.splice(index, 1);
+      this._idMap.delete(eventId);
+    }
+  }
+
+  clear() {
+    this._events.length = 0;
+    this._idMap.clear();
+  }
+
+  size() {
+    return this._events.length;
+  }
+
+  isEmpty() {
+    return this._events.length === 0;
+  }
+
+  // ---- internal helpers ----
+
+  _binarySearchIndex(event) {
+    let low = 0;
+    let high = this._events.length;
+    while (low < high) {
+      const mid = (low + high) >>> 1;
+      if (this._compare(event, this._events[mid]) < 0) {
+        high = mid;
+      } else {
+        low = mid + 1;
+      }
+    }
+    return low;
+  }
+
+  _compare(a, b) {
+    if (a.fireTime !== b.fireTime) return a.fireTime - b.fireTime;
+    if (a.priority !== b.priority) return a.priority - b.priority;
+    return a.sequenceNumber - b.sequenceNumber;
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize queue state: an array of event IDs in queue order.
+   * @returns {number[]}
+   */
+  serialize() {
+    return this._events.map(e => e.id);
+  }
+
+  /**
+   * Restore queue from an ordered array of event IDs and a map of id→event.
+   * @param {number[]} ids
+   * @param {Map<number, import('./ScheduledEvent.js').ScheduledEvent>} eventsById
+   */
+  deserialize(ids, eventsById) {
+    this.clear();
+    for (const id of ids) {
+      const event = eventsById.get(id);
+      if (event) {
+        this._events.push(event);
+        this._idMap.set(id, event);
+      }
+    }
+  }
+=======
+// src/time/ReadyQueue.js
+
+/**
+ * Deterministic, ordered container for ready-to-execute ScheduledEvent objects.
+ *
+ * Maintains events sorted by fireTime, priority, and sequenceNumber.
+ * This is a pure data structure – no scheduling or lifecycle logic.
+ */
+export class ReadyQueue {
+  constructor() {
+    /** @type {import('./ScheduledEvent.js').ScheduledEvent[]} */
+    this._events = [];
+    /** @type {Map<number, import('./ScheduledEvent.js').ScheduledEvent>} */
+    this._idMap = new Map();
+  }
+
+  /**
+   * Insert an event while preserving sort order.
+   * @param {import('./ScheduledEvent.js').ScheduledEvent} event
+   */
+  enqueue(event) {
+    if (this._idMap.has(event.id)) {
+      throw new Error(`Duplicate event id ${event.id} in ReadyQueue.`);
+    }
+    const index = this._binarySearchIndex(event);
+    this._events.splice(index, 0, event);
+    this._idMap.set(event.id, event);
+  }
+
+  /** Remove and return the next event. */
+  dequeue() {
+    if (this._events.length === 0) return null;
+    const event = this._events.shift();
+    this._idMap.delete(event.id);
+    return event;
+  }
+
+  /** Peek at the next event without removing. */
+  peek() {
+    return this._events.length > 0 ? this._events[0] : null;
+  }
+
+  /** Remove a specific event by its id. */
+  remove(eventId) {
+    const index = this._events.findIndex(e => e.id === eventId);
+    if (index !== -1) {
+      this._events.splice(index, 1);
+      this._idMap.delete(eventId);
+    }
+  }
+
+  clear() {
+    this._events.length = 0;
+    this._idMap.clear();
+  }
+
+  size() {
+    return this._events.length;
+  }
+
+  isEmpty() {
+    return this._events.length === 0;
+  }
+
+  // ---- internal helpers ----
+
+  _binarySearchIndex(event) {
+    let low = 0;
+    let high = this._events.length;
+    while (low < high) {
+      const mid = (low + high) >>> 1;
+      if (this._compare(event, this._events[mid]) < 0) {
+        high = mid;
+      } else {
+        low = mid + 1;
+      }
+    }
+    return low;
+  }
+
+  _compare(a, b) {
+    if (a.fireTime !== b.fireTime) return a.fireTime - b.fireTime;
+    if (a.priority !== b.priority) return a.priority - b.priority;
+    return a.sequenceNumber - b.sequenceNumber;
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize queue state: an array of event IDs in queue order.
+   * @returns {number[]}
+   */
+  serialize() {
+    return this._events.map(e => e.id);
+  }
+
+  /**
+   * Restore queue from an ordered array of event IDs and a map of id→event.
+   * @param {number[]} ids
+   * @param {Map<number, import('./ScheduledEvent.js').ScheduledEvent>} eventsById
+   */
+  deserialize(ids, eventsById) {
+    this.clear();
+    for (const id of ids) {
+      const event = eventsById.get(id);
+      if (event) {
+        this._events.push(event);
+        this._idMap.set(id, event);
+      }
+    }
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/time/ScheduledEvent.js">
+<<<<<<< HEAD
+// src/time/ScheduledEvent.js
+
+/**
+ * Immutable scheduled event data. Lifecycle state is the only mutable property.
+ * id and sequenceNumber are assigned by SchedulerState upon registration.
+ */
+export const EventState = Object.freeze({
+  CREATED: 'Created',
+  QUEUED: 'Queued',
+  VALIDATED: 'Validated',
+  EXECUTED: 'Executed',
+  COMPLETED: 'Completed',
+  VALIDATION_FAILED: 'ValidationFailed',
+  CANCELLED: 'Cancelled'
+});
+
+export class ScheduledEvent {
+  /**
+   * @param {number} fireTime
+   * @param {number} priority
+   * @param {string} eventType
+   * @param {*} payload
+   * @param {Object} [options]
+   * @param {string} [options.source='unknown']
+   * @param {string|null} [options.sectorId=null]
+   * @param {number[]} [options.dependencies=[]]
+   * @param {string[]} [options.validatorIds=[]]
+   */
+  constructor(fireTime, priority, eventType, payload, options = {}) {
+    if (!Number.isFinite(fireTime)) {
+      throw new TypeError(`fireTime must be a finite number, got ${fireTime}`);
+    }
+    if (!Number.isInteger(priority)) {
+      throw new TypeError(`priority must be an integer, got ${priority}`);
+    }
+    if (typeof eventType !== 'string' || eventType.length === 0) {
+      throw new TypeError(`eventType must be a non‑empty string, got "${eventType}"`);
+    }
+    this.fireTime = fireTime;
+    this.priority = priority;
+    this.eventType = eventType;
+    this.payload = payload;
+    /** Assigned by SchedulerState later. */
+    this.id = -1;
+    /** Assigned by SchedulerState later. */
+    this.sequenceNumber = -1;
+    this.source = options.source || 'unknown';
+    this.sectorId = options.sectorId || null;
+    this.dependencies = Object.freeze([...(options.dependencies ?? [])]);
+    this.validatorIds = Object.freeze([...(options.validatorIds ?? [])]);
+    this.state = EventState.CREATED;
+  }
+
+  queue() { this._transitionTo(EventState.QUEUED); }
+  validate() { this._transitionTo(EventState.VALIDATED); }
+  execute() { this._transitionTo(EventState.EXECUTED); }
+  complete() { this._transitionTo(EventState.COMPLETED); }
+  cancel() { this._transitionTo(EventState.CANCELLED); }
+  validationFailed() { this._transitionTo(EventState.VALIDATION_FAILED); }
+
+  _transitionTo(nextState) {
+    const allowed = VALID_STATE_TRANSITIONS[this.state];
+    if (!allowed || !allowed.has(nextState)) {
+      throw new Error(
+        `Invalid state transition for event ${this.id}: ${this.state} → ${nextState}`
+      );
+    }
+    this.state = nextState;
+  }
+
+  /**
+   * Serialize event metadata into a plain object.
+   * @returns {object}
+   */
+  serialize() {
+    return {
+      id: this.id,
+      sequenceNumber: this.sequenceNumber,
+      fireTime: this.fireTime,
+      priority: this.priority,
+      eventType: this.eventType,
+      payload: this.payload,
+      source: this.source,
+      sectorId: this.sectorId,
+      dependencies: [...this.dependencies],
+      validatorIds: [...this.validatorIds],
+      state: this.state
+    };
+  }
+
+  /**
+   * Create a new event from serialized data. ID, sequenceNumber, and state are restored.
+   * @param {object} data
+   * @returns {ScheduledEvent}
+   */
+  static deserialize(data) {
+    const event = new ScheduledEvent(data.fireTime, data.priority, data.eventType, data.payload, {
+      source: data.source,
+      sectorId: data.sectorId,
+      dependencies: data.dependencies,
+      validatorIds: data.validatorIds
+    });
+    event.id = data.id;
+    event.sequenceNumber = data.sequenceNumber;
+    event.state = data.state; // direct set (bypass transition validation because it's a restore)
+    return event;
+  }
+}
+
+const VALID_STATE_TRANSITIONS = Object.freeze({
+  [EventState.CREATED]: new Set([EventState.QUEUED, EventState.CANCELLED]),
+  [EventState.QUEUED]: new Set([EventState.VALIDATED, EventState.CANCELLED]),
+  [EventState.VALIDATED]: new Set([EventState.EXECUTED, EventState.VALIDATION_FAILED, EventState.CANCELLED]),
+  [EventState.EXECUTED]: new Set([EventState.COMPLETED, EventState.CANCELLED]),
+  [EventState.COMPLETED]: new Set([]),
+  [EventState.VALIDATION_FAILED]: new Set([]),
+  [EventState.CANCELLED]: new Set([])
+=======
+// src/time/ScheduledEvent.js
+
+/**
+ * Immutable scheduled event data. Lifecycle state is the only mutable property.
+ * id and sequenceNumber are assigned by SchedulerState upon registration.
+ */
+export const EventState = Object.freeze({
+  CREATED: 'Created',
+  QUEUED: 'Queued',
+  VALIDATED: 'Validated',
+  EXECUTED: 'Executed',
+  COMPLETED: 'Completed',
+  VALIDATION_FAILED: 'ValidationFailed',
+  CANCELLED: 'Cancelled'
+});
+
+export class ScheduledEvent {
+  /**
+   * @param {number} fireTime
+   * @param {number} priority
+   * @param {string} eventType
+   * @param {*} payload
+   * @param {Object} [options]
+   * @param {string} [options.source='unknown']
+   * @param {string|null} [options.sectorId=null]
+   * @param {number[]} [options.dependencies=[]]
+   * @param {string[]} [options.validatorIds=[]]
+   */
+  constructor(fireTime, priority, eventType, payload, options = {}) {
+    if (!Number.isFinite(fireTime)) {
+      throw new TypeError(`fireTime must be a finite number, got ${fireTime}`);
+    }
+    if (!Number.isInteger(priority)) {
+      throw new TypeError(`priority must be an integer, got ${priority}`);
+    }
+    if (typeof eventType !== 'string' || eventType.length === 0) {
+      throw new TypeError(`eventType must be a non‑empty string, got "${eventType}"`);
+    }
+    this.fireTime = fireTime;
+    this.priority = priority;
+    this.eventType = eventType;
+    this.payload = payload;
+    /** Assigned by SchedulerState later. */
+    this.id = -1;
+    /** Assigned by SchedulerState later. */
+    this.sequenceNumber = -1;
+    this.source = options.source || 'unknown';
+    this.sectorId = options.sectorId || null;
+    this.dependencies = Object.freeze([...(options.dependencies ?? [])]);
+    this.validatorIds = Object.freeze([...(options.validatorIds ?? [])]);
+    this.state = EventState.CREATED;
+  }
+
+  queue() { this._transitionTo(EventState.QUEUED); }
+  validate() { this._transitionTo(EventState.VALIDATED); }
+  execute() { this._transitionTo(EventState.EXECUTED); }
+  complete() { this._transitionTo(EventState.COMPLETED); }
+  cancel() { this._transitionTo(EventState.CANCELLED); }
+  validationFailed() { this._transitionTo(EventState.VALIDATION_FAILED); }
+
+  _transitionTo(nextState) {
+    const allowed = VALID_STATE_TRANSITIONS[this.state];
+    if (!allowed || !allowed.has(nextState)) {
+      throw new Error(
+        `Invalid state transition for event ${this.id}: ${this.state} → ${nextState}`
+      );
+    }
+    this.state = nextState;
+  }
+
+  /**
+   * Serialize event metadata into a plain object.
+   * @returns {object}
+   */
+  serialize() {
+    return {
+      id: this.id,
+      sequenceNumber: this.sequenceNumber,
+      fireTime: this.fireTime,
+      priority: this.priority,
+      eventType: this.eventType,
+      payload: this.payload,
+      source: this.source,
+      sectorId: this.sectorId,
+      dependencies: [...this.dependencies],
+      validatorIds: [...this.validatorIds],
+      state: this.state
+    };
+  }
+
+  /**
+   * Create a new event from serialized data. ID, sequenceNumber, and state are restored.
+   * @param {object} data
+   * @returns {ScheduledEvent}
+   */
+  static deserialize(data) {
+    const event = new ScheduledEvent(data.fireTime, data.priority, data.eventType, data.payload, {
+      source: data.source,
+      sectorId: data.sectorId,
+      dependencies: data.dependencies,
+      validatorIds: data.validatorIds
+    });
+    event.id = data.id;
+    event.sequenceNumber = data.sequenceNumber;
+    event.state = data.state; // direct set (bypass transition validation because it's a restore)
+    return event;
+  }
+}
+
+const VALID_STATE_TRANSITIONS = Object.freeze({
+  [EventState.CREATED]: new Set([EventState.QUEUED, EventState.CANCELLED]),
+  [EventState.QUEUED]: new Set([EventState.VALIDATED, EventState.CANCELLED]),
+  [EventState.VALIDATED]: new Set([EventState.EXECUTED, EventState.VALIDATION_FAILED, EventState.CANCELLED]),
+  [EventState.EXECUTED]: new Set([EventState.COMPLETED, EventState.CANCELLED]),
+  [EventState.COMPLETED]: new Set([]),
+  [EventState.VALIDATION_FAILED]: new Set([]),
+  [EventState.CANCELLED]: new Set([])
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+});
+</file>
+
+<file path="src/time/SchedulerState.js">
+<<<<<<< HEAD
+// src/time/SchedulerState.js
+
+import { ReadyQueue } from './ReadyQueue.js';
+import { DependencyGraph } from './DependencyGraph.js';
+import { ScheduledEvent } from './ScheduledEvent.js';
+
+export class SchedulerState {
+  constructor() {
+    this._readyQueue = new ReadyQueue();
+    this._dependencyGraph = new DependencyGraph();
+    this._events = new Map();
+    this._nextEventId = 1;
+    this._nextSequenceNumber = 1;
+  }
+
+  registerEvent(event) {
+    const id = this._nextEventId++;
+    event.id = id;
+    event.sequenceNumber = this._nextSequenceNumber++;
+    this._events.set(id, event);
+    this._dependencyGraph.addEvent(event);
+    event.queue();
+    if (!this._dependencyGraph.hasUnresolvedDependencies(id)) {
+      this._readyQueue.enqueue(event);
+    }
+    return id;
+  }
+
+  removeEvent(eventId) {
+    const event = this._events.get(eventId);
+    if (!event) return;
+    this._readyQueue.remove(eventId);
+    this._dependencyGraph.removeEvent(eventId);
+    this._events.delete(eventId);
+  }
+
+  markCompleted(eventId) {
+    const event = this._events.get(eventId);
+    if (!event) return [];
+    const readyIds = this._dependencyGraph.markCompleted(eventId);
+    for (const id of readyIds) {
+      const readyEvent = this._events.get(id);
+      if (readyEvent) {
+        this._readyQueue.enqueue(readyEvent);
+      }
+    }
+    return readyIds;
+  }
+
+  getEvent(eventId) {
+    return this._events.get(eventId);
+  }
+
+  contains(eventId) {
+    return this._events.has(eventId);
+  }
+
+  getReadyQueue() {
+    return this._readyQueue;
+  }
+
+  getDependencyGraph() {
+    return this._dependencyGraph;
+  }
+
+  clear() {
+    this._readyQueue.clear();
+    this._dependencyGraph.clear();
+    this._events.clear();
+    this._nextEventId = 1;
+    this._nextSequenceNumber = 1;
+  }
+
+  eventCount() {
+    return this._events.size;
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize complete state using subcomponent serialization.
+   * @returns {object}
+   */
+  serialize() {
+    const eventsData = [];
+    for (const [, event] of this._events) {
+      eventsData.push(event.serialize());
+    }
+    return {
+      nextEventId: this._nextEventId,
+      nextSequenceNumber: this._nextSequenceNumber,
+      events: eventsData,
+      readyQueue: this._readyQueue.serialize(),
+      dependencyGraph: this._dependencyGraph.serialize()
+    };
+  }
+
+  /**
+   * Deserialize and restore state from a plain object.
+   * @param {object} data
+   */
+  deserialize(data) {
+    this.clear();
+    this._nextEventId = data.nextEventId;
+    this._nextSequenceNumber = data.nextSequenceNumber;
+
+    // Reconstruct events
+    const eventsById = new Map();
+    for (const raw of data.events) {
+      const event = ScheduledEvent.deserialize(raw);
+      eventsById.set(event.id, event);
+    }
+    this._events = eventsById;
+
+    // Restore ready queue
+    this._readyQueue.deserialize(data.readyQueue, eventsById);
+
+    // Restore dependency graph
+    this._dependencyGraph.deserialize(data.dependencyGraph);
+  }
+=======
+// src/time/SchedulerState.js
+
+import { ReadyQueue } from './ReadyQueue.js';
+import { DependencyGraph } from './DependencyGraph.js';
+import { ScheduledEvent } from './ScheduledEvent.js';
+
+export class SchedulerState {
+  constructor() {
+    this._readyQueue = new ReadyQueue();
+    this._dependencyGraph = new DependencyGraph();
+    this._events = new Map();
+    this._nextEventId = 1;
+    this._nextSequenceNumber = 1;
+  }
+
+  registerEvent(event) {
+    const id = this._nextEventId++;
+    event.id = id;
+    event.sequenceNumber = this._nextSequenceNumber++;
+    this._events.set(id, event);
+    this._dependencyGraph.addEvent(event);
+    event.queue();
+    if (!this._dependencyGraph.hasUnresolvedDependencies(id)) {
+      this._readyQueue.enqueue(event);
+    }
+    return id;
+  }
+
+  removeEvent(eventId) {
+    const event = this._events.get(eventId);
+    if (!event) return;
+    this._readyQueue.remove(eventId);
+    this._dependencyGraph.removeEvent(eventId);
+    this._events.delete(eventId);
+  }
+
+  markCompleted(eventId) {
+    const event = this._events.get(eventId);
+    if (!event) return [];
+    const readyIds = this._dependencyGraph.markCompleted(eventId);
+    for (const id of readyIds) {
+      const readyEvent = this._events.get(id);
+      if (readyEvent) {
+        this._readyQueue.enqueue(readyEvent);
+      }
+    }
+    return readyIds;
+  }
+
+  getEvent(eventId) {
+    return this._events.get(eventId);
+  }
+
+  contains(eventId) {
+    return this._events.has(eventId);
+  }
+
+  getReadyQueue() {
+    return this._readyQueue;
+  }
+
+  getDependencyGraph() {
+    return this._dependencyGraph;
+  }
+
+  clear() {
+    this._readyQueue.clear();
+    this._dependencyGraph.clear();
+    this._events.clear();
+    this._nextEventId = 1;
+    this._nextSequenceNumber = 1;
+  }
+
+  eventCount() {
+    return this._events.size;
+  }
+
+  // ---- serialization ----
+
+  /**
+   * Serialize complete state using subcomponent serialization.
+   * @returns {object}
+   */
+  serialize() {
+    const eventsData = [];
+    for (const [, event] of this._events) {
+      eventsData.push(event.serialize());
+    }
+    return {
+      nextEventId: this._nextEventId,
+      nextSequenceNumber: this._nextSequenceNumber,
+      events: eventsData,
+      readyQueue: this._readyQueue.serialize(),
+      dependencyGraph: this._dependencyGraph.serialize()
+    };
+  }
+
+  /**
+   * Deserialize and restore state from a plain object.
+   * @param {object} data
+   */
+  deserialize(data) {
+    this.clear();
+    this._nextEventId = data.nextEventId;
+    this._nextSequenceNumber = data.nextSequenceNumber;
+
+    // Reconstruct events
+    const eventsById = new Map();
+    for (const raw of data.events) {
+      const event = ScheduledEvent.deserialize(raw);
+      eventsById.set(event.id, event);
+    }
+    this._events = eventsById;
+
+    // Restore ready queue
+    this._readyQueue.deserialize(data.readyQueue, eventsById);
+
+    // Restore dependency graph
+    this._dependencyGraph.deserialize(data.dependencyGraph);
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/time/SectorSchedulerState.js">
+<<<<<<< HEAD
+// src/time/SectorSchedulerState.js
+
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Lightweight wrapper that owns a SchedulerState for a single streamed
+ * world sector.
+ */
+export class SectorSchedulerState {
+  /**
+   * @param {string} sectorId
+   */
+  constructor(sectorId) {
+    /** @readonly */
+    this.sectorId = sectorId;
+    /** @type {SchedulerState} */
+    this.schedulerState = new SchedulerState();
+  }
+
+  /**
+   * Returns the underlying SchedulerState.
+   * @returns {SchedulerState}
+   */
+  getState() {
+    return this.schedulerState;
+  }
+
+  /**
+   * Clear all events and reset.
+   */
+  clear() {
+    this.schedulerState.clear();
+  }
+=======
+// src/time/SectorSchedulerState.js
+
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Lightweight wrapper that owns a SchedulerState for a single streamed
+ * world sector.
+ */
+export class SectorSchedulerState {
+  /**
+   * @param {string} sectorId
+   */
+  constructor(sectorId) {
+    /** @readonly */
+    this.sectorId = sectorId;
+    /** @type {SchedulerState} */
+    this.schedulerState = new SchedulerState();
+  }
+
+  /**
+   * Returns the underlying SchedulerState.
+   * @returns {SchedulerState}
+   */
+  getState() {
+    return this.schedulerState;
+  }
+
+  /**
+   * Clear all events and reset.
+   */
+  clear() {
+    this.schedulerState.clear();
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/time/TimeEvents.js">
+<<<<<<< HEAD
+// src/time/TimeEvents.js
+
+/**
+ * Centralized event name constants for the Time System.
+ * All public events that the Time System publishes or subscribes to
+ * are defined here to avoid magic strings.
+ *
+ * This module is stateless and has no runtime logic.
+ */
+export const TimeEvents = Object.freeze({
+  /** A scheduled event has been successfully dispatched. */
+  SCHEDULED_FIRE: 'scheduled:fire',
+
+  /** A scheduled event has been cancelled. */
+  SCHEDULED_CANCELLED: 'scheduled:cancelled',
+
+  /** A scheduled event failed validation and was discarded. */
+  SCHEDULED_VALIDATION_FAILED: 'scheduled:validation_failed',
+
+  /** The world clock has been paused. */
+  TIME_PAUSED: 'time:paused',
+
+  /** The world clock has been resumed. */
+  TIME_RESUMED: 'time:resumed',
+
+  /** The world clock's time scale has changed. */
+  TIME_SCALE_CHANGED: 'time:scale_changed',
+
+  /** A time jump (sleep/fast‑forward) has started. */
+  TIME_JUMP_STARTED: 'time:jump_started',
+
+  /** A time jump has completed. */
+  TIME_JUMP_COMPLETED: 'time:jump_completed',
+
+  /** The current world time has been updated (fired every frame). */
+  WORLD_TIME_UPDATED: 'time:world_time_updated'
+=======
+// src/time/TimeEvents.js
+
+/**
+ * Centralized event name constants for the Time System.
+ * All public events that the Time System publishes or subscribes to
+ * are defined here to avoid magic strings.
+ *
+ * This module is stateless and has no runtime logic.
+ */
+export const TimeEvents = Object.freeze({
+  /** A scheduled event has been successfully dispatched. */
+  SCHEDULED_FIRE: 'scheduled:fire',
+
+  /** A scheduled event has been cancelled. */
+  SCHEDULED_CANCELLED: 'scheduled:cancelled',
+
+  /** A scheduled event failed validation and was discarded. */
+  SCHEDULED_VALIDATION_FAILED: 'scheduled:validation_failed',
+
+  /** The world clock has been paused. */
+  TIME_PAUSED: 'time:paused',
+
+  /** The world clock has been resumed. */
+  TIME_RESUMED: 'time:resumed',
+
+  /** The world clock's time scale has changed. */
+  TIME_SCALE_CHANGED: 'time:scale_changed',
+
+  /** A time jump (sleep/fast‑forward) has started. */
+  TIME_JUMP_STARTED: 'time:jump_started',
+
+  /** A time jump has completed. */
+  TIME_JUMP_COMPLETED: 'time:jump_completed',
+
+  /** The current world time has been updated (fired every frame). */
+  WORLD_TIME_UPDATED: 'time:world_time_updated'
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+});
+</file>
+
+<file path="src/time/TimeManager.js">
+<<<<<<< HEAD
+// src/time/TimeManager.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+import { EventScheduler } from './EventScheduler.js';
+import { ScheduledEvent } from './ScheduledEvent.js';
+
+/**
+ * Public façade for the entire Time System.
+ *
+ * Owns and wires together the WorldClock, SchedulerState, and EventScheduler.
+ * External systems interact with the Time System exclusively through this class.
+ */
+export class TimeManager {
+  /**
+   * @param {function(ScheduledEvent): boolean} validator – validates an event before execution
+   * @param {function(ScheduledEvent): void} dispatcher – executes the event (e.g. publishes to EventBus)
+   */
+  constructor(validator, dispatcher) {
+    this._clock = new WorldClock();
+    this._state = new SchedulerState();
+    this._scheduler = new EventScheduler(this._clock, this._state, validator, dispatcher);
+  }
+
+  /**
+   * Advance simulation time and process due events.
+   *
+   * @param {number} deltaTime – real‑time delta in seconds.
+   */
+  update(deltaTime) {
+    this._clock.advance(deltaTime);
+    this._scheduler.update();
+  }
+
+  /**
+   * Register a new scheduled event.
+   *
+   * The event must already be populated with its dependencies, validators,
+   * fire time, priority, payload, etc.  The manager assigns identity and
+   * queues it if ready.
+   *
+   * @param {ScheduledEvent} event
+   * @returns {number} The assigned event ID.
+   */
+  scheduleEvent(event) {
+    return this._state.registerEvent(event);
+  }
+
+  /**
+   * Cancel a previously scheduled event.
+   *
+   * @param {number} eventId
+   */
+  cancelEvent(eventId) {
+    const event = this._state.getEvent(eventId);
+    if (event) {
+      // Advance lifecycle to Cancelled (only if not already terminal).
+      if (event.state !== 'Cancelled' && event.state !== 'Completed') {
+        event.cancel();
+      }
+      this._state.removeEvent(eventId);
+    }
+  }
+
+  /** Pause the simulation clock. */
+  pause() {
+    this._clock.pause();
+  }
+
+  /** Resume the simulation clock. */
+  resume() {
+    this._clock.resume();
+  }
+
+  /** Reset the entire Time System to initial state. */
+  reset() {
+    this._clock.reset();
+    this._state.clear();
+  }
+
+  /**
+   * @returns {number} Current simulation time in seconds.
+   */
+  getCurrentTime() {
+    return this._clock.getCurrentTime();
+  }
+
+  /**
+   * Expose the underlying clock (read‑only).
+   * @returns {WorldClock}
+   */
+  getClock() {
+    return this._clock;
+  }
+
+  /**
+   * Expose the underlying scheduler state (read‑only).
+   * @returns {SchedulerState}
+   */
+  getSchedulerState() {
+    return this._state;
+  }
+=======
+// src/time/TimeManager.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+import { EventScheduler } from './EventScheduler.js';
+import { ScheduledEvent } from './ScheduledEvent.js';
+
+/**
+ * Public façade for the entire Time System.
+ *
+ * Owns and wires together the WorldClock, SchedulerState, and EventScheduler.
+ * External systems interact with the Time System exclusively through this class.
+ */
+export class TimeManager {
+  /**
+   * @param {function(ScheduledEvent): boolean} validator – validates an event before execution
+   * @param {function(ScheduledEvent): void} dispatcher – executes the event (e.g. publishes to EventBus)
+   */
+  constructor(validator, dispatcher) {
+    this._clock = new WorldClock();
+    this._state = new SchedulerState();
+    this._scheduler = new EventScheduler(this._clock, this._state, validator, dispatcher);
+  }
+
+  /**
+   * Advance simulation time and process due events.
+   *
+   * @param {number} deltaTime – real‑time delta in seconds.
+   */
+  update(deltaTime) {
+    this._clock.advance(deltaTime);
+    this._scheduler.update();
+  }
+
+  /**
+   * Register a new scheduled event.
+   *
+   * The event must already be populated with its dependencies, validators,
+   * fire time, priority, payload, etc.  The manager assigns identity and
+   * queues it if ready.
+   *
+   * @param {ScheduledEvent} event
+   * @returns {number} The assigned event ID.
+   */
+  scheduleEvent(event) {
+    return this._state.registerEvent(event);
+  }
+
+  /**
+   * Cancel a previously scheduled event.
+   *
+   * @param {number} eventId
+   */
+  cancelEvent(eventId) {
+    const event = this._state.getEvent(eventId);
+    if (event) {
+      // Advance lifecycle to Cancelled (only if not already terminal).
+      if (event.state !== 'Cancelled' && event.state !== 'Completed') {
+        event.cancel();
+      }
+      this._state.removeEvent(eventId);
+    }
+  }
+
+  /** Pause the simulation clock. */
+  pause() {
+    this._clock.pause();
+  }
+
+  /** Resume the simulation clock. */
+  resume() {
+    this._clock.resume();
+  }
+
+  /** Reset the entire Time System to initial state. */
+  reset() {
+    this._clock.reset();
+    this._state.clear();
+  }
+
+  /**
+   * @returns {number} Current simulation time in seconds.
+   */
+  getCurrentTime() {
+    return this._clock.getCurrentTime();
+  }
+
+  /**
+   * Expose the underlying clock (read‑only).
+   * @returns {WorldClock}
+   */
+  getClock() {
+    return this._clock;
+  }
+
+  /**
+   * Expose the underlying scheduler state (read‑only).
+   * @returns {SchedulerState}
+   */
+  getSchedulerState() {
+    return this._state;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/time/TimeSerializer.js">
+<<<<<<< HEAD
+// src/time/TimeSerializer.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Handles persistence of the Time System by orchestrating the serialization
+ * of the WorldClock and SchedulerState.  No knowledge of internal structures
+ * is required.
+ */
+export class TimeSerializer {
+  /**
+   * Serialize the entire Time System state.
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   * @returns {object}
+   */
+  static serialize(clock, state) {
+    return {
+      clock: clock.serialize(),
+      scheduler: state.serialize()
+    };
+  }
+
+  /**
+   * Deserialize and apply the data to the given clock and state.
+   * @param {object} data
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   */
+  static deserialize(data, clock, state) {
+    clock.deserialize(data.clock);
+    state.deserialize(data.scheduler);
+  }
+=======
+// src/time/TimeSerializer.js
+
+import { WorldClock } from './WorldClock.js';
+import { SchedulerState } from './SchedulerState.js';
+
+/**
+ * Handles persistence of the Time System by orchestrating the serialization
+ * of the WorldClock and SchedulerState.  No knowledge of internal structures
+ * is required.
+ */
+export class TimeSerializer {
+  /**
+   * Serialize the entire Time System state.
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   * @returns {object}
+   */
+  static serialize(clock, state) {
+    return {
+      clock: clock.serialize(),
+      scheduler: state.serialize()
+    };
+  }
+
+  /**
+   * Deserialize and apply the data to the given clock and state.
+   * @param {object} data
+   * @param {WorldClock} clock
+   * @param {SchedulerState} state
+   */
+  static deserialize(data, clock, state) {
+    clock.deserialize(data.clock);
+    state.deserialize(data.scheduler);
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/time/WorldClock.js">
+<<<<<<< HEAD
+// src/time/WorldClock.js
+
+/**
+ * Owns the simulation clock for the Time System.
+ *
+ * Provides deterministic advancement of simulation time, pause/resume,
+ * and direct time setting (e.g. for loading saves).
+ * The clock does **not** know about events, queues, or scheduling.
+ */
+export class WorldClock {
+  constructor(initialTime = 0) {
+    /** Current simulation time (seconds). */
+    this._currentTime = initialTime;
+    /** Whether the clock is currently paused. */
+    this._paused = false;
+  }
+
+  /**
+   * Advance the simulation time by a delta, if not paused.
+   *
+   * @param {number} deltaTime – real‑time delta in seconds (must be ≥ 0).
+   */
+  advance(deltaTime) {
+    if (!this._paused && deltaTime > 0) {
+      this._currentTime += deltaTime;
+    }
+  }
+
+  /**
+   * Return the current simulation time.
+   *
+   * @returns {number}
+   */
+  getCurrentTime() {
+    return this._currentTime;
+  }
+
+  /**
+   * Set the simulation time to a specific value (e.g. for loading a save).
+   *
+   * @param {number} time
+   */
+  setCurrentTime(time) {
+    this._currentTime = time;
+  }
+
+  /**
+   * Pause the clock – subsequent calls to `advance` will have no effect.
+   */
+  pause() {
+    this._paused = true;
+  }
+
+  /**
+   * Resume the clock.
+   */
+  resume() {
+    this._paused = false;
+  }
+
+  /**
+   * Check whether the clock is currently paused.
+   *
+   * @returns {boolean}
+   */
+  isPaused() {
+    return this._paused;
+  }
+
+  /**
+   * Reset the clock to time zero and unpause.
+   */
+  reset() {
+    this._currentTime = 0;
+    this._paused = false;
+  }
+=======
+// src/time/WorldClock.js
+
+/**
+ * Owns the simulation clock for the Time System.
+ *
+ * Provides deterministic advancement of simulation time, pause/resume,
+ * and direct time setting (e.g. for loading saves).
+ * The clock does **not** know about events, queues, or scheduling.
+ */
+export class WorldClock {
+  constructor(initialTime = 0) {
+    /** Current simulation time (seconds). */
+    this._currentTime = initialTime;
+    /** Whether the clock is currently paused. */
+    this._paused = false;
+  }
+
+  /**
+   * Advance the simulation time by a delta, if not paused.
+   *
+   * @param {number} deltaTime – real‑time delta in seconds (must be ≥ 0).
+   */
+  advance(deltaTime) {
+    if (!this._paused && deltaTime > 0) {
+      this._currentTime += deltaTime;
+    }
+  }
+
+  /**
+   * Return the current simulation time.
+   *
+   * @returns {number}
+   */
+  getCurrentTime() {
+    return this._currentTime;
+  }
+
+  /**
+   * Set the simulation time to a specific value (e.g. for loading a save).
+   *
+   * @param {number} time
+   */
+  setCurrentTime(time) {
+    this._currentTime = time;
+  }
+
+  /**
+   * Pause the clock – subsequent calls to `advance` will have no effect.
+   */
+  pause() {
+    this._paused = true;
+  }
+
+  /**
+   * Resume the clock.
+   */
+  resume() {
+    this._paused = false;
+  }
+
+  /**
+   * Check whether the clock is currently paused.
+   *
+   * @returns {boolean}
+   */
+  isPaused() {
+    return this._paused;
+  }
+
+  /**
+   * Reset the clock to time zero and unpause.
+   */
+  reset() {
+    this._currentTime = 0;
+    this._paused = false;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/world/CellID.js">
+<<<<<<< HEAD
+export class CellID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof CellID && this.value === other.value;
+  }
+
+  toString() {
+    return `CellID(${this.value})`;
+  }
+=======
+export class CellID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof CellID && this.value === other.value;
+  }
+
+  toString() {
+    return `CellID(${this.value})`;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/world/Entity.js">
+import { EntityID } from './EntityID.js';
+import { Transform } from './Transform.js';
+
+/**
+ * Lightweight simulation entity. No gameplay logic.
+ */
+export class Entity {
+  /**
+   * @param {EntityID} id
+   * @param {string|null} [cellId] – value of the CellID
+   */
+  constructor(id, cellId = null) {
+    /** @readonly */
+    this.id = id;
+    this.generation = id.generation;
+    this.transform = new Transform();
+    this.cellId = cellId;
+    /** @type {'created'|'active'|'sleeping'|'hidden'|'destroyed'} */
+    this.state = 'created';
+    /** Persistent handle set by EntityManager after creation. */
+    this.handle = null;
+  }
+
+  setState(state) {
+    this.state = state;
+  }
+}
+</file>
+
+<file path="src/world/EntityHandle.js">
+/**
+ * Safe reference to an entity that checks generation on each access.
+ * Created once and stored on the entity.
+ */
+export class EntityHandle {
+  /**
+   * @param {import('./EntityID.js').EntityID} entityId
+   * @param {function(import('./EntityID.js').EntityID): import('./Entity.js').Entity|null} getEntityFn
+   */
+  constructor(entityId, getEntityFn) {
+    this._entityId = entityId;
+    this._getEntity = getEntityFn;
+  }
+
+  /** @returns {import('./EntityID.js').EntityID} */
+  get id() {
+    return this._entityId;
+  }
+
+  /**
+   * @returns {boolean} true if the entity still exists with the same generation.
+   */
+  isValid() {
+    const entity = this._getEntity(this._entityId);
+    return entity !== null && entity.generation === this._entityId.generation;
+  }
+
+  /**
+   * @returns {import('./Entity.js').Entity|null} the entity or null if invalid.
+   */
+  get() {
+    const entity = this._getEntity(this._entityId);
+    return (entity && entity.generation === this._entityId.generation) ? entity : null;
+  }
+}
+</file>
+
+<file path="src/world/EntityID.js">
+/**
+ * Unique numeric identifier with generation tracking.
+ * Immutable once created.
+ */
+export class EntityID {
+  /**
+   * @param {number} id
+   * @param {number} generation
+   */
+  constructor(id, generation = 0) {
+    this.id = id;
+    this.generation = generation;
+    Object.freeze(this);
+  }
+
+  /**
+   * Two IDs are equal if both id and generation match.
+   * @param {EntityID} other
+   * @returns {boolean}
+   */
+  equals(other) {
+    return other instanceof EntityID && this.id === other.id && this.generation === other.generation;
+  }
+
+  toString() {
+    return `EntityID(${this.id}:${this.generation})`;
+  }
+}
+</file>
+
+<file path="src/world/RegionID.js">
+<<<<<<< HEAD
+export class RegionID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof RegionID && this.value === other.value;
+  }
+
+  toString() {
+    return `RegionID(${this.value})`;
+  }
+=======
+export class RegionID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof RegionID && this.value === other.value;
+  }
+
+  toString() {
+    return `RegionID(${this.value})`;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/world/SectorID.js">
+<<<<<<< HEAD
+export class SectorID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof SectorID && this.value === other.value;
+  }
+
+  toString() {
+    return `SectorID(${this.value})`;
+  }
+=======
+export class SectorID {
+  /** @param {string} value */
+  constructor(value) {
+    this.value = value;
+    Object.freeze(this);
+  }
+
+  equals(other) {
+    return other instanceof SectorID && this.value === other.value;
+  }
+
+  toString() {
+    return `SectorID(${this.value})`;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/world/Transform.js">
+<<<<<<< HEAD
+/**
+ * Pure‑math transform with no Three.js dependency.
+ * Position, rotation, and scale stored as plain objects.
+ */
+export class Transform {
+  constructor() {
+    /** @type {{x: number, y: number, z: number}} */
+    this.position = { x: 0, y: 0, z: 0 };
+    /** Euler rotation in radians @type {{x: number, y: number, z: number}} */
+    this.rotation = { x: 0, y: 0, z: 0 };
+    /** @type {{x: number, y: number, z: number}} */
+    this.scale = { x: 1, y: 1, z: 1 };
+  }
+
+  copy(other) {
+    this.position.x = other.position.x;
+    this.position.y = other.position.y;
+    this.position.z = other.position.z;
+    this.rotation.x = other.rotation.x;
+    this.rotation.y = other.rotation.y;
+    this.rotation.z = other.rotation.z;
+    this.scale.x = other.scale.x;
+    this.scale.y = other.scale.y;
+    this.scale.z = other.scale.z;
+  }
+
+  setPosition(x, y, z) {
+    this.position.x = x;
+    this.position.y = y;
+    this.position.z = z;
+  }
+
+  setRotation(x, y, z) {
+    this.rotation.x = x;
+    this.rotation.y = y;
+    this.rotation.z = z;
+  }
+
+  setScale(x, y, z) {
+    this.scale.x = x;
+    this.scale.y = y;
+    this.scale.z = z;
+  }
+=======
+/**
+ * Pure‑math transform with no Three.js dependency.
+ * Position, rotation, and scale stored as plain objects.
+ */
+export class Transform {
+  constructor() {
+    /** @type {{x: number, y: number, z: number}} */
+    this.position = { x: 0, y: 0, z: 0 };
+    /** Euler rotation in radians @type {{x: number, y: number, z: number}} */
+    this.rotation = { x: 0, y: 0, z: 0 };
+    /** @type {{x: number, y: number, z: number}} */
+    this.scale = { x: 1, y: 1, z: 1 };
+  }
+
+  copy(other) {
+    this.position.x = other.position.x;
+    this.position.y = other.position.y;
+    this.position.z = other.position.z;
+    this.rotation.x = other.rotation.x;
+    this.rotation.y = other.rotation.y;
+    this.rotation.z = other.rotation.z;
+    this.scale.x = other.scale.x;
+    this.scale.y = other.scale.y;
+    this.scale.z = other.scale.z;
+  }
+
+  setPosition(x, y, z) {
+    this.position.x = x;
+    this.position.y = y;
+    this.position.z = z;
+  }
+
+  setRotation(x, y, z) {
+    this.rotation.x = x;
+    this.rotation.y = y;
+    this.rotation.z = z;
+  }
+
+  setScale(x, y, z) {
+    this.scale.x = x;
+    this.scale.y = y;
+    this.scale.z = z;
+  }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="src/world/World.js">
+import { RegionRegistry } from './registries/RegionRegistry.js';
+import { SectorRegistry } from './registries/SectorRegistry.js';
+import { CellRegistry } from './registries/CellRegistry.js';
+import { EntityRegistry } from './registries/EntityRegistry.js';
+import { WorldGraph } from './managers/WorldGraph.js';
+import { EntityManager } from './managers/EntityManager.js';
+import { SpatialManager } from './managers/SpatialManager.js';
+import { QueryManager } from './managers/QueryManager.js';
+import { StreamingManager } from './managers/StreamingManager.js';
+import { CellID } from './CellID.js';
+
+export class World {
+  /**
+   * @param {import('../framework/core/GameClock.js').GameClock} clock
+   * @param {import('../framework/events/EventBus.js').EventBus} eventBus
+   */
+  constructor(clock, eventBus) {
+    this.clock = clock;
+    this.eventBus = eventBus;
+
+    this.regionRegistry = new RegionRegistry();
+    this.sectorRegistry = new SectorRegistry();
+    this.cellRegistry = new CellRegistry();
+    this.entityRegistry = new EntityRegistry();
+
+    this.hierarchy = new WorldGraph(this.regionRegistry, this.sectorRegistry, this.cellRegistry);
+    this.spatialManager = new SpatialManager(50);
+    this.entityManager = new EntityManager(this.entityRegistry);
+    this.queryManager = new QueryManager(this, this.spatialManager);
+    this.streamingManager = new StreamingManager(this);
+  }
+
+  createEntity(cellId) {
+    const handle = this.entityManager.create(cellId);
+    const entity = handle.get();
+    if (entity && this.eventBus) {
+      this.eventBus.publish('entity:created', this, { entityId: entity.id });
+    }
+    return handle;
+  }
+
+  destroyEntity(entityId) {
+    const entity = this.entityRegistry.get(entityId);
+    if (entity && entity.cellId) {
+      const cell = this.cellRegistry.get(new CellID(entity.cellId));
+      if (cell) cell.removeEntity(entityId.id);
+    }
+    this.entityManager.destroy(entityId);
+    if (this.eventBus) {
+      this.eventBus.publish('entity:destroyed', this, { entityId });
+    }
+  }
+
+  getEntityHandle(entityId) {
+    return this.entityManager.getHandle(entityId);
+  }
+
+  getRegion(id) {
+    return this.regionRegistry.get(id);
+  }
+
+  getSector(id) {
+    return this.sectorRegistry.get(id);
+  }
+
+  getCell(id) {
+    return this.cellRegistry.get(id);
+  }
+
+  queryRadius(center, radius, out) {
+    return this.queryManager.queryRadius(center, radius, out);
+  }
+
+  queryNearest(center) {
+    return this.queryManager.queryNearest(center);
+  }
+
+  queryCell(cellId, out) {
+    return this.queryManager.queryCell(cellId, out);
+  }
+
+  update(delta) {
+    this.streamingManager.update(delta);
+  }
+}
+</file>
+
+<file path="src/world/WorldManager.js">
+import { Service } from '../framework/services/Service.js';
+import { World } from './World.js';
+
+export class WorldManager extends Service {
+  constructor(framework) {
+    super('world', framework);
+    this.world = null;
+  }
+
+  async initialize() {
+    this.world = new World(this.framework.clock, this.framework.eventBus);
+  }
+
+  update(delta) {
+    if (this.world) {
+      this.world.update(delta);
+    }
+  }
+
+  async shutdown() {
+    this.world = null;
+  }
+}
+</file>
+
+<file path="src/main.js">
+// src/main.js
+import * as THREE from 'three';
+import {
+  createPBRRenderer,
+  createLighting,
+  applyAtmosphere,
+  PBRMaterialFactory
+} from './EnvironmentSetup.js';
+
+// ── Renderer, Scene, Camera ────────────────────────────
+const renderer = createPBRRenderer(document.body, window.innerWidth, window.innerHeight);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  100
+);
+camera.position.set(0, 2, 5);
+
+// ── Atmospheric depth (fog) ────────────────────────────
+applyAtmosphere(scene);
+
+// ── Lighting (shadow‑cast enabled) ─────────────────────
+createLighting(scene);
+
+// ── PBR Material Factory ───────────────────────────────
+const materialFactory = new PBRMaterialFactory();
+
+// ── Procedural concrete floor (receives shadows) ──────
+const floorGeometry = new THREE.PlaneGeometry(20, 20);
+const floorMaterial = materialFactory.getMaterial('concrete', {
+  roughness: 0.85,
+  metalness: 0
+});
+const floor = new THREE.Mesh(floorGeometry, floorMaterial);
+floor.rotation.x = -Math.PI / 2;
+floor.receiveShadow = true;
+scene.add(floor);
+
+// ── Procedural corridor metal wall (casts shadows) ────
+const wallGeometry = new THREE.BoxGeometry(10, 4, 0.3);
+const wallMaterial = materialFactory.getMaterial('corridorMetal', {
+  roughness: 0.4,
+  metalness: 0.9,
+  clearcoat: 0.15
+});
+const wall = new THREE.Mesh(wallGeometry, wallMaterial);
+wall.position.set(0, 2, -3);
+wall.castShadow = true;
+wall.receiveShadow = true;
+scene.add(wall);
+
+// ── Game loop (delta time + resize) ────────────────────
+const clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  const delta = clock.getDelta();   // seconds since last frame
+  // (Game logic would go here in the future)
+
+  renderer.render(scene, camera);
+}
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+animate();
+</file>
+
+<file path="cinematic-baker.js">
+<<<<<<< HEAD
+class CinematicBaker {
+    constructor(canvas, fps = 60, videoBitrate = 8000000) {
+        this.canvas = canvas;
+        this.fps = fps;
+        this.mediaRecorder = null;
+        this.recordedChunks = [];
+        this.options = { 
+            mimeType: 'video/webm; codecs=vp9', 
+            videoBitsPerSecond: videoBitrate 
+        };
+    }
+
+    startRecording() {
+        this.recordedChunks = [];
+        const stream = this.canvas.captureStream(this.fps);
+        
+        try {
+            this.mediaRecorder = new MediaRecorder(stream, this.options);
+        } catch (e) {
+            console.error("MediaRecorder error:", e);
+            return;
+        }
+
+        this.mediaRecorder.ondataavailable = (event) => {
+            if (event.data.size > 0) this.recordedChunks.push(event.data);
+        };
+
+        this.mediaRecorder.onstop = () => this.downloadBakedCinematic();
+        this.mediaRecorder.start();
+        console.log("🎥 Cinematic Baking Started...");
+    }
+
+    stopRecording() {
+        if (this.mediaRecorder && this.mediaRecorder.state !== "inactive") {
+            this.mediaRecorder.stop();
+            console.log("🎥 Cinematic Baking Stopped. Processing file...");
+        }
+    }
+
+    downloadBakedCinematic() {
+        const blob = new Blob(this.recordedChunks, { type: 'video/webm' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        document.body.appendChild(a);
+        a.style.display = 'none';
+        a.href = url;
+        a.download = `cutscene_baked_${Date.now()}.webm`; 
+        a.click();
+        window.URL.revokeObjectURL(url);
+        console.log("✅ Cinematic successfully baked and saved locally.");
+    }
+=======
+class CinematicBaker {
+    constructor(canvas, fps = 60, videoBitrate = 8000000) {
+        this.canvas = canvas;
+        this.fps = fps;
+        this.mediaRecorder = null;
+        this.recordedChunks = [];
+        this.options = { 
+            mimeType: 'video/webm; codecs=vp9', 
+            videoBitsPerSecond: videoBitrate 
+        };
+    }
+
+    startRecording() {
+        this.recordedChunks = [];
+        const stream = this.canvas.captureStream(this.fps);
+        
+        try {
+            this.mediaRecorder = new MediaRecorder(stream, this.options);
+        } catch (e) {
+            console.error("MediaRecorder error:", e);
+            return;
+        }
+
+        this.mediaRecorder.ondataavailable = (event) => {
+            if (event.data.size > 0) this.recordedChunks.push(event.data);
+        };
+
+        this.mediaRecorder.onstop = () => this.downloadBakedCinematic();
+        this.mediaRecorder.start();
+        console.log("🎥 Cinematic Baking Started...");
+    }
+
+    stopRecording() {
+        if (this.mediaRecorder && this.mediaRecorder.state !== "inactive") {
+            this.mediaRecorder.stop();
+            console.log("🎥 Cinematic Baking Stopped. Processing file...");
+        }
+    }
+
+    downloadBakedCinematic() {
+        const blob = new Blob(this.recordedChunks, { type: 'video/webm' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        document.body.appendChild(a);
+        a.style.display = 'none';
+        a.href = url;
+        a.download = `cutscene_baked_${Date.now()}.webm`; 
+        a.click();
+        window.URL.revokeObjectURL(url);
+        console.log("✅ Cinematic successfully baked and saved locally.");
+    }
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+<file path="index.html">
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echoes of Tomorrow</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Courier New', Courier, monospace; user-select: none; }
+        #gameCanvas { width: 100vw; height: 100vh; display: block; }
+        
+        /* Cutscene Player */
+        #cutscenePlayer { 
+            position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; 
+            display: none; object-fit: cover; z-index: 10; background: black;
+        }
+
+        /* Cinematic UI Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+            to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+        }
+
+        #uiLayer {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: white; z-index: 20; text-align: center; width: 100%;
+        }
+
+        h1 {
+            font-size: 4rem; letter-spacing: 15px; font-weight: normal; margin-bottom: 5px;
+            opacity: 0; animation: fadeIn 4s ease-out forwards; animation-delay: 1s;
+        }
+        
+        h2 {
+            font-size: 1rem; letter-spacing: 5px; color: #888; font-weight: normal;
+            opacity: 0; animation: fadeIn 3s ease-out forwards; animation-delay: 3s;
+        }
+
+        .button-container {
+            margin-top: 50px; opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 5s;
+        }
+
+        button { 
+            padding: 15px 40px; font-size: 16px; cursor: pointer; letter-spacing: 2px;
+            background: transparent; color: #fff; border: 1px solid #555; 
+            transition: all 0.3s; font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+        }
+        
+        button:hover { background: #fff; color: #000; box-shadow: 0 0 15px rgba(255,255,255,0.5); border-color: #fff; }
+
+        /* Crosshair for Gameplay */
+        #crosshair {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 4px; height: 4px; background: rgba(255,255,255,0.8); border-radius: 50%;
+            display: none; z-index: 5; pointer-events: none; mix-blend-mode: difference;
+        }
+    </style>
+</head>
+<body>
+    <video id="cutscenePlayer" controls="false"></video>
+    <div id="crosshair"></div>
+    
+    <div id="uiLayer">
+        <h1>ECHOES OF TOMORROW</h1>
+        <h2>A Memory Fragment</h2>
+        <div class="button-container">
+            <!-- Step 1: Authorize folder -->
+            <button id="loadFolderBtn">Initialize Data Link (Select Cutscenes Folder)</button>
+            <!-- Step 2: Start Game (Hidden initially) -->
+            <button id="startGameBtn" style="display:none;">START GAME</button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Load Three.js Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Load Our Custom Scripts -->
+    <script src="cinematic-baker.js"></script>
+    <script src="engine.js"></script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echoes of Tomorrow</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Courier New', Courier, monospace; user-select: none; }
+        #gameCanvas { width: 100vw; height: 100vh; display: block; }
+        
+        /* Cutscene Player */
+        #cutscenePlayer { 
+            position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; 
+            display: none; object-fit: cover; z-index: 10; background: black;
+        }
+
+        /* Cinematic UI Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+            to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+        }
+
+        #uiLayer {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: white; z-index: 20; text-align: center; width: 100%;
+        }
+
+        h1 {
+            font-size: 4rem; letter-spacing: 15px; font-weight: normal; margin-bottom: 5px;
+            opacity: 0; animation: fadeIn 4s ease-out forwards; animation-delay: 1s;
+        }
+        
+        h2 {
+            font-size: 1rem; letter-spacing: 5px; color: #888; font-weight: normal;
+            opacity: 0; animation: fadeIn 3s ease-out forwards; animation-delay: 3s;
+        }
+
+        .button-container {
+            margin-top: 50px; opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 5s;
+        }
+
+        button { 
+            padding: 15px 40px; font-size: 16px; cursor: pointer; letter-spacing: 2px;
+            background: transparent; color: #fff; border: 1px solid #555; 
+            transition: all 0.3s; font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+        }
+        
+        button:hover { background: #fff; color: #000; box-shadow: 0 0 15px rgba(255,255,255,0.5); border-color: #fff; }
+
+        /* Crosshair for Gameplay */
+        #crosshair {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 4px; height: 4px; background: rgba(255,255,255,0.8); border-radius: 50%;
+            display: none; z-index: 5; pointer-events: none; mix-blend-mode: difference;
+        }
+    </style>
+</head>
+<body>
+    <video id="cutscenePlayer" controls="false"></video>
+    <div id="crosshair"></div>
+    
+    <div id="uiLayer">
+        <h1>ECHOES OF TOMORROW</h1>
+        <h2>A Memory Fragment</h2>
+        <div class="button-container">
+            <!-- Step 1: Authorize folder -->
+            <button id="loadFolderBtn">Initialize Data Link (Select Cutscenes Folder)</button>
+            <!-- Step 2: Start Game (Hidden initially) -->
+            <button id="startGameBtn" style="display:none;">START GAME</button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Load Three.js Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Load Our Custom Scripts -->
+    <script src="cinematic-baker.js"></script>
+    <script src="engine.js"></script>
+</body>
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+</html>
+</file>
+
+<file path="package.json">
+{
+  "name": "echoesoftomorrow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
+</file>
+
+<file path="README.md">
+# Echoes of Tomorrow
+
+**A first‑person, open‑world, story‑driven immersive simulation built on a custom AAA‑grade engine architecture.**
+
+This repository contains the complete source code of the game **Echoes of Tomorrow** and the custom engine that powers it. The engine is **not** a generic reusable framework; it is specifically designed around the needs of the game. Over time, it will evolve into **Forge Engine**, a standalone, reusable foundation for future projects.
+
+---
+
+## Table of Contents
+
+1. [Game Overview](#game-overview)  
+2. [Engine Philosophy](#engine-philosophy)  
+3. [High‑Level Architecture](#high-level-architecture)  
+4. [Subsystem Deep Dive](#subsystem-deep-dive)  
+   - [Framework](#framework)  
+   - [Time System](#time-system)  
+   - [World System](#world-system)  
+   - [Entity Component System (ECS)](#entity-component-system-ecs)  
+   - [Streaming](#streaming)  
+   - [Rendering](#rendering)  
+   - [Input, Audio, and Other Services](#input-audio-and-other-services)  
+5. [Performance](#performance)  
+6. [Coding Standards](#coding-standards)  
+7. [Project Goals](#project-goals)  
+8. [Roadmap](#roadmap)  
+9. [Development Philosophy](#development-philosophy)  
+10. [Contributing](#contributing)  
+11. [License](#license)
+
+---
+
+## Game Overview
+
+**Echoes of Tomorrow** is a narrative‑driven, first‑person shooter set in a massive, post‑war Indian megacity. The game blends military authenticity, psychological tension, and open‑world simulation into a seamless experience. The player assumes the role of Captain Arjun Rao, navigating a world that shifts between reality and corrupted memory.
+
+**Core inspirations:** Metro, STALKER, Battlefield, Escape from Tarkov, Far Cry, Half‑Life, Dying Light.  
+**Not** a clone – the goal is to combine the strongest aspects of these titles into a unique, cohesive vision.
+
+**World:** A sprawling Indian metropolis merging classical architecture with cyberpunk verticality, military occupation, abandoned infrastructure, and nature reclaiming civilization. The world is divided into a hierarchy of **Regions → Sectors → Cells** to enable seamless streaming and simulation at scale.
+
+---
+
+## Engine Philosophy
+
+The engine is built on a set of unwavering principles that guide every architectural decision:
+
+- **Architecture First:** No code is written without a frozen design.  
+- **Scalability:** Designed for 100 000+ entities, large streaming worlds, and future multiplayer.  
+- **Deterministic Simulation:** Identical inputs produce identical outputs – essential for debugging, replay, and networking.  
+- **Low Coupling, High Cohesion:** Every subsystem has a single responsibility and communicates through well‑defined interfaces.  
+- **Composition over Inheritance:** Behaviour is built from components, not deep class hierarchies.  
+- **Data‑Driven Design:** Simulation state is separate from presentation; rendering is a visualisation, not the source of truth.  
+- **Service‑Based Architecture:** Major systems are implemented as Framework services, managed by a central `ServiceRegistry`.  
+- **Long‑Term Maintainability:** Readability, stable APIs, and subsystem isolation trump immediate convenience.  
+- **Performance before Convenience:** Hot paths avoid allocations, cache misses, and unnecessary work.  
+- **Subsystem Freezing:** Once a module’s design is approved, it is frozen; changes require strong justification.
+
+---
+
+## High‑Level Architecture
+
+```
+                          Game Loop (requestAnimationFrame)
+                                   │
+                                   ▼
+                          Framework (Boot, Clock, Scheduler)
+                                   │
+                         ┌─────────┼─────────┐
+                         │         │         │
+                    ServiceRegistry  EventBus  Diagnostics
+                         │
+         ┌───────────────┼───────────────┬───────────────┐
+         │               │               │               │
+    InputService    TimeService    WorldService    ECSService
+         │               │               │               │
+   PlayerController  WorldClock     World           ECSManager
+                   SchedulerState   ├─Registries    ├─ComponentStores
+                   EventScheduler   ├─WorldGraph    ├─Systems
+                   DiagnosticsColl. ├─StreamingMgr  └─SystemScheduler
+                                    └─SpatialManager
+```
+
+**Data Flow:**  
+`Input` → `PlayerController` (reads input, updates camera/position) → `World` updates simulation state → `ECS` processes per‑frame logic (movement, health, etc.) → `Rendering` reads transform and mesh components to draw the scene.
+
+**Ownership:**  
+The `World` owns the spatial organisation of entities. The `ECS` owns the simulation data (components) and behaviour (systems). The `TimeManager` owns the passage of time and scheduled events. Rendering is a separate layer that visualises the current state without owning any game data.
+
+**Communication:**  
+All cross‑subsystem communication occurs via the `EventBus`. No system calls another directly. This keeps dependencies minimal and allows new features (like memory corruption) to be inserted as event listeners.
+
+---
+
+## Subsystem Deep Dive
+
+### Framework
+
+The Framework is the skeleton of the engine. It provides:
+
+- **GameClock:** A single authoritative timing source, used by all subsystems.  
+- **ServiceRegistry:** Registers and manages the lifecycle (`initialize`, `start`, `shutdown`) of every major service.  
+- **FrameScheduler:** Executes a fixed, data‑driven sequence of phases every frame (`input` → `time` → `world` → `ecs` → `gameplay` → `rendering` → `ui`).  
+- **EventBus:** A publish/subscribe system with queued, per‑frame dispatch. Events are immutable and carry a `type`, `sender`, and `payload`.  
+- **GameStateMachine:** Controls high‑level states (`Boot`, `MainMenu`, `Playing`, `Paused`, `Cutscene`, `Shutdown`) and validates transitions.  
+- **DiagnosticsService:** Collects FPS, frame times, and event queue sizes, publishing them via the EventBus.
+
+The Framework owns the game loop and enforces a strict update order. It is the only module that knows about `requestAnimationFrame`; no other subsystem uses raw browser timers.
+
+### Time System
+
+The Time System is responsible for the simulation clock and scheduled events. It is the heartbeat of the living world.
+
+**Components:**  
+- `WorldClock` – authoritative simulation time, pausing, and time scaling.  
+- `SchedulerState` – owns all scheduled events, the `ReadyQueue`, and the `DependencyGraph`.  
+- `EventScheduler` – processes ready events each frame, validates and dispatches them, and resolves dependencies.  
+- `SectorSchedulerState` – per‑sector snapshot of `SchedulerState` for unloaded areas.  
+- `TimeSerializer` – saves and restores the entire time state without accessing internal data of other modules.  
+- `DiagnosticsCollector` – tracks registered, executed, cancelled, and failed events.  
+
+**Design Highlights:**  
+- Events are ordered deterministically: `fireTime` → `priority` → `sequenceNumber`.  
+- Dependencies are handled by a `DependencyGraph`; blocked events never enter the `ReadyQueue`.  
+- Time jumps (sleeping, waiting) are explicit and process all intermediate events in a tight loop.  
+- Sectors that are unloaded retain their scheduled events; they are fast‑forwarded when the sector reloads.  
+- Serialization is delegated to each module; `TimeSerializer` merely orchestrates.
+
+### World System
+
+The World System provides the spatial and hierarchical organisation of all entities. It is a pure simulation layer – it knows nothing about rendering, AI, or gameplay.
+
+**Hierarchy:**  
+```
+World
+ └─ Region (major playable area)
+      └─ Sector (streaming unit)
+           └─ Cell (spatial partition)
+                └─ Entity (via ID references)
+```
+
+**Key Managers:**  
+- `WorldGraph` – creates and maintains the region/sector/cell hierarchy.  
+- `EntityManager` – handles entity creation, destruction, and lifecycle (state transitions are external).  
+- `SpatialManager` – maps world positions to cells via a uniform grid (`GridPartition`).  
+- `StreamingManager` – loads and unloads sectors on demand; loads are processed by `SectorLoader` jobs, unloads by `SectorUnloader` jobs.  
+- `QueryManager` – exposes `queryRadius`, `queryNearest`, and `queryCell` using the spatial index.  
+
+**Registries:**  
+`RegionRegistry`, `SectorRegistry`, `CellRegistry`, `EntityRegistry` are pure storage containers (Maps) with O(1) lookup. They never construct objects.
+
+**IDs and Handles:**  
+Every entity is identified by an `EntityID` (numeric + generation). External code holds `EntityHandle` objects that become invalid when the entity is destroyed.
+
+**Streaming:**  
+Sectors are loaded/unloaded without freezing gameplay. Unloaded sectors store their entities and scheduled events; when reloaded, they are fast‑forwarded to the current world time.
+
+### Entity Component System (ECS)
+
+The ECS is the simulation backbone. Entities are pure identities; components are pure data; systems contain behaviour. This separation enables cache‑friendly iteration, clear responsibilities, and easy integration of new features.
+
+**Core Concepts:**  
+- **Entity** – an `EntityID`, a `Signature` (bitmask), and active flags. No data.  
+- **Component** – plain data containers (`Transform`, `Velocity`, `Health`, `Mesh`, `Audio`, etc.). No logic.  
+- **System** – reads component data, performs updates, writes results. Systems only know about their required components.  
+
+**Storage:**  
+Components are stored in `ComponentStore<T>`, backed by a `SparseSet`. Each component type has its own store, providing O(1) add/remove/lookup and cache‑friendly iteration.
+
+**Entity Signature:**  
+A 128‑bit mask tracks which components an entity possesses. Systems define a `requiredSignature()`; the scheduler automatically collects matching entities before calling `system.update()`.
+
+**SystemScheduler:**  
+Runs systems in a configurable order (`Input` → `Movement` → `Health` → `Animation` → …). Each system receives the delta time and an array of matching entity IDs.
+
+**Why ECS?**  
+Compared to deep inheritance trees, ECS offers:
+- Better performance through data locality.
+- Easier composition of behaviour (e.g., adding a `Flammable` component to any entity).
+- Simplified serialisation and networking.
+- Clean separation between data and logic.
+
+### Streaming
+
+World streaming is sector‑based. As the player moves, sectors in range are loaded, and distant sectors are unloaded.
+
+**Process:**  
+1. `StreamingManager` receives sector load/unload requests (driven by player position or events).  
+2. `SectorLoader` creates cells, registers them in the spatial index, and instantiates static entities.  
+3. `SectorUnloader` removes cells, unregisters entities, and stores any pending scheduled events in a `SectorSchedulerState`.  
+4. Loading is currently synchronous but designed to be easily split into asynchronous chunks (using `StreamingJob` base class).  
+
+**Future:**  
+- Asynchronous loading via Web Workers.  
+- Priority‑based streaming budgets.  
+- Preloading hints from mission logic.
+
+### Rendering
+
+Rendering is a separate service that reads the `Transform` and `Mesh` components from the ECS and draws the scene using Three.js (currently) or a future custom renderer. The renderer never owns game state; it is purely a visualisation layer.
+
+**Current capabilities:**  
+- PBR materials with albedo, roughness, metalness, and normal maps.  
+- Shadow mapping (PCF soft shadows).  
+- ACES filmic tone mapping with exposure control.  
+- Exponential fog for atmospheric depth.
+
+**Planned:**  
+- Custom shader pipeline.  
+- Post‑processing stack.  
+- Reflection probes and global illumination approximations.  
+- Level‑of‑detail (LOD) system driven by ECS components.
+
+### Input, Audio, and Other Services
+
+All peripheral systems are implemented as Framework services:
+
+- **InputService** – captures keyboard and mouse state, including pointer lock for first‑person controls.  
+- **AudioService** – placeholder for spatial audio.  
+- **UIService** – handles menus and HUD.  
+- **PlayerService** – wires together input, camera, and player movement logic.  
+
+These services communicate exclusively through the EventBus.
+
+---
+
+## Performance
+
+The engine is designed for stable, predictable performance on modern browsers.
+
+**Key strategies:**  
+- **Cache‑friendly data structures:** `SparseSet` component storage, contiguous arrays for entity iteration.  
+- **Minimal per‑frame allocations:** Reused temporary arrays, pooled events where possible.  
+- **Streaming:** Only active sectors are simulated; distant entities are sleeping.  
+- **Deterministic update order:** Prevents unexpected spikes from unordered processing.  
+- **Profiling‑first approach:** Optimisation is done only after measurement; no premature micro‑optimisations.
+
+Target: 100 000+ dynamic entities, tens of thousands of components, 60 FPS on mid‑range hardware.
+
+---
+
+## Coding Standards
+
+All code follows a strict set of rules designed to maximise long‑term maintainability.
+
+- **ES2023 modules** – no global scripts.  
+- **JSDoc** on every public class and method.  
+- **Single Responsibility Principle** – each class does one thing.  
+- **Composition over Inheritance** – shared behaviour via components, not base classes.  
+- **No global state, no singletons** – state is owned by specific objects.  
+- **No circular dependencies** – the dependency graph is a DAG.  
+- **No magic numbers or strings** – use constants and enums.  
+- **Clear ownership** – every piece of data has exactly one owner.  
+- **Freeze architecture before coding** – design documents precede implementation.  
+- **Code reviews are mandatory** – no merge without review.
+
+---
+
+## Project Goals
+
+**Near‑term (current milestone):**  
+- Complete the World System, ECS, and Time System integration.  
+- Implement basic player movement and interaction.  
+- Establish the rendering pipeline with PBR environment.
+
+**Mid‑term:**  
+- NPC daily schedules and world population simulation.  
+- AI behaviour trees and perception.  
+- Combat system (ballistics, damage, inventory).  
+- Mission and dialogue systems.  
+- Full save/load support.
+
+**Long‑term:**  
+- Dynamic weather, traffic, and economy.  
+- Memory corruption mechanics (signature game feature).  
+- Multiplayer support.  
+- Editor and tooling suite.  
+- Extract the engine into **Forge Engine** as a standalone, reusable platform.
+
+---
+
+## Roadmap
+
+| System           | Status        |
+| ---------------- | ------------- |
+| Framework        | ✅ Complete    |
+| Time System      | ✅ Complete    |
+| World System     | 🚧 In Progress |
+| ECS              | 🚧 In Progress |
+| Rendering        | 🚧 In Progress |
+| Animation        | 📋 Planned     |
+| Physics          | 📋 Planned     |
+| Audio            | 📋 Planned     |
+| AI               | 📋 Planned     |
+| Networking       | 📋 Future      |
+| Editor           | 📋 Future      |
+| Asset Pipeline   | 📋 Future      |
+| Optimisation     | 🔄 Continuous  |
+| Documentation    | 🔄 Continuous  |
+
+---
+
+## Development Philosophy
+
+This project is built with a professional, long‑term mindset. Every feature starts as a design document, is reviewed, frozen, and then implemented. Subsystems are isolated and testable. Technical debt is minimised by strict adherence to architectural principles and rigorous code review.
+
+**Workflow:**  
+1. Architecture design → review → freeze.  
+2. Implementation module‑by‑module.  
+3. Code review → merge.  
+4. Integration tests.  
+5. Move to next subsystem.
+
+No feature is merged until it meets the acceptance criteria defined in its architecture document.
+
+---
+
+## Contributing
+
+Contributions must follow the established architecture and coding standards.
+
+**Requirements:**  
+- Discuss major changes through an issue or design document first.  
+- PRs must be focused, with a clear description.  
+- All public APIs require JSDoc.  
+- New subsystems must follow the service pattern and communicate via EventBus.  
+- Performance‑sensitive code must include benchmarks.  
+- Any change that modifies a frozen architecture requires a formal review.
+
+**Naming conventions:**  
+- Classes: `PascalCase`.  
+- Methods and variables: `camelCase`.  
+- Private members: underscore prefix `_privateMethod`.  
+- Constants: `UPPER_SNAKE_CASE`.
+
+---
+
+## License
+
+[License placeholder – to be defined]
+
+---
+
+*Echoes of Tomorrow – Engine and Game. Built for the long run.*
+</file>
+
+<file path="style.css">
+<<<<<<< HEAD
+body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Courier New', Courier, monospace; user-select: none; }
+#gameCanvas { width: 100vw; height: 100vh; display: block; }
+
+#cutscenePlayer { 
+    position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; 
+    display: none; object-fit: cover; z-index: 10; background: black;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+    to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+}
+
+#uiLayer {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    color: white; z-index: 20; text-align: center; width: 100%;
+}
+
+h1 {
+    font-size: 4rem; letter-spacing: 15px; font-weight: normal; margin-bottom: 5px;
+    opacity: 0; animation: fadeIn 4s ease-out forwards; animation-delay: 1s;
+}
+
+h2 {
+    font-size: 1rem; letter-spacing: 5px; color: #888; font-weight: normal;
+    opacity: 0; animation: fadeIn 3s ease-out forwards; animation-delay: 3s;
+}
+
+.button-container {
+    margin-top: 50px; opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 5s;
+}
+
+button { 
+    padding: 15px 40px; font-size: 16px; cursor: pointer; letter-spacing: 2px;
+    background: transparent; color: #fff; border: 1px solid #555; 
+    transition: all 0.3s; font-family: 'Courier New', Courier, monospace; text-transform: uppercase;
+}
+
+button:hover { background: #fff; color: #000; box-shadow: 0 0 15px rgba(255,255,255,0.5); border-color: #fff; }
+
+#crosshair {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 4px; height: 4px; background: rgba(255,255,255,0.8); border-radius: 50%;
+    display: none; z-index: 5; pointer-events: none; mix-blend-mode: difference;
+=======
+body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Courier New', Courier, monospace; user-select: none; }
+#gameCanvas { width: 100vw; height: 100vh; display: block; }
+
+#cutscenePlayer { 
+    position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; 
+    display: none; object-fit: cover; z-index: 10; background: black;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+    to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+}
+
+#uiLayer {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    color: white; z-index: 20; text-align: center; width: 100%;
+}
+
+h1 {
+    font-size: 4rem; letter-spacing: 15px; font-weight: normal; margin-bottom: 5px;
+    opacity: 0; animation: fadeIn 4s ease-out forwards; animation-delay: 1s;
+}
+
+h2 {
+    font-size: 1rem; letter-spacing: 5px; color: #888; font-weight: normal;
+    opacity: 0; animation: fadeIn 3s ease-out forwards; animation-delay: 3s;
+}
+
+.button-container {
+    margin-top: 50px; opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 5s;
+}
+
+button { 
+    padding: 15px 40px; font-size: 16px; cursor: pointer; letter-spacing: 2px;
+    background: transparent; color: #fff; border: 1px solid #555; 
+    transition: all 0.3s; font-family: 'Courier New', Courier, monospace; text-transform: uppercase;
+}
+
+button:hover { background: #fff; color: #000; box-shadow: 0 0 15px rgba(255,255,255,0.5); border-color: #fff; }
+
+#crosshair {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 4px; height: 4px; background: rgba(255,255,255,0.8); border-radius: 50%;
+    display: none; z-index: 5; pointer-events: none; mix-blend-mode: difference;
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+</file>
+
+</files>
+````
+
+## File: style.css
+````css
+<<<<<<< HEAD
+body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Courier New', Courier, monospace; user-select: none; }
+#gameCanvas { width: 100vw; height: 100vh; display: block; }
+
+#cutscenePlayer { 
+    position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; 
+    display: none; object-fit: cover; z-index: 10; background: black;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+    to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+}
+
+#uiLayer {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    color: white; z-index: 20; text-align: center; width: 100%;
+}
+
+h1 {
+    font-size: 4rem; letter-spacing: 15px; font-weight: normal; margin-bottom: 5px;
+    opacity: 0; animation: fadeIn 4s ease-out forwards; animation-delay: 1s;
+}
+
+h2 {
+    font-size: 1rem; letter-spacing: 5px; color: #888; font-weight: normal;
+    opacity: 0; animation: fadeIn 3s ease-out forwards; animation-delay: 3s;
+}
+
+.button-container {
+    margin-top: 50px; opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 5s;
+}
+
+button { 
+    padding: 15px 40px; font-size: 16px; cursor: pointer; letter-spacing: 2px;
+    background: transparent; color: #fff; border: 1px solid #555; 
+    transition: all 0.3s; font-family: 'Courier New', Courier, monospace; text-transform: uppercase;
+}
+
+button:hover { background: #fff; color: #000; box-shadow: 0 0 15px rgba(255,255,255,0.5); border-color: #fff; }
+
+#crosshair {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 4px; height: 4px; background: rgba(255,255,255,0.8); border-radius: 50%;
+    display: none; z-index: 5; pointer-events: none; mix-blend-mode: difference;
+=======
+body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Courier New', Courier, monospace; user-select: none; }
+#gameCanvas { width: 100vw; height: 100vh; display: block; }
+
+#cutscenePlayer { 
+    position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; 
+    display: none; object-fit: cover; z-index: 10; background: black;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+    to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+}
+
+#uiLayer {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    color: white; z-index: 20; text-align: center; width: 100%;
+}
+
+h1 {
+    font-size: 4rem; letter-spacing: 15px; font-weight: normal; margin-bottom: 5px;
+    opacity: 0; animation: fadeIn 4s ease-out forwards; animation-delay: 1s;
+}
+
+h2 {
+    font-size: 1rem; letter-spacing: 5px; color: #888; font-weight: normal;
+    opacity: 0; animation: fadeIn 3s ease-out forwards; animation-delay: 3s;
+}
+
+.button-container {
+    margin-top: 50px; opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 5s;
+}
+
+button { 
+    padding: 15px 40px; font-size: 16px; cursor: pointer; letter-spacing: 2px;
+    background: transparent; color: #fff; border: 1px solid #555; 
+    transition: all 0.3s; font-family: 'Courier New', Courier, monospace; text-transform: uppercase;
+}
+
+button:hover { background: #fff; color: #000; box-shadow: 0 0 15px rgba(255,255,255,0.5); border-color: #fff; }
+
+#crosshair {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 4px; height: 4px; background: rgba(255,255,255,0.8); border-radius: 50%;
+    display: none; z-index: 5; pointer-events: none; mix-blend-mode: difference;
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+}
+````
+
+## File: src/animation/skeleton/Bone.js
+````javascript
+/**
+ * src/animation/skeleton/Bone.js
+ * 
+ * D016 Animation System — Bone
+ * 
+ * Represents a single bone in a skeleton hierarchy.
+ * 
+ * A Bone is an IMMUTABLE DEFINITION of a skeletal node.
+ * It does NOT contain runtime transforms.
+ * Runtime transforms are stored in SkeletonPose.
+ * 
+ * Responsibilities:
+ * - Store bone identity (id, name, index)
+ * - Maintain parent-child relationships (hierarchy)
+ * - Store bind pose matrix (local space)
+ * - Store inverse bind matrix (world-to-local)
+ * - Provide optional metadata (IK targets, constraints, etc.)
+ * 
+ * Design Principles:
+ * - Single Responsibility: Bone is only the definition
+ * - Immutable Identity: id, name, index, bind matrices never change
+ * - No Runtime State: No position, rotation, scale, matrices
+ * - No Math Dependencies: Uses only Matrix4 from math library for bind data
+ * - No Serialization: Persistence belongs to importers/exporters
+ * - Optional Metadata: Lazy-allocated Map for extension data
+ * 
+ * Separation of Concerns:
+ * - Bone = Skeleton Definition (immutable)
+ * - SkeletonPose = Runtime Pose (mutable per instance)
+ * - Skeleton = Container of Bones (shared across instances)
+ * 
+ * Future-Proof:
+ * - Supports animation sharing (one skeleton, many poses)
+ * - Supports layered animation (multiple pose layers)
+ * - Supports IK, procedural animation, motion matching
+ */
+
+// ============================================================
+// Imports: Central Math Library
+// ============================================================
+
+import { Matrix4 } from '../../../framework/math/Matrix4.js';
+
+// ============================================================
+// Bone Class
+// ============================================================
+
+export class Bone {
+    /**
+     * Create a new Bone definition.
+     * 
+     * @param {string} id - Unique bone identifier (immutable)
+     * @param {string} name - Human-readable bone name (immutable)
+     * @param {Object} [options] - Optional configuration
+     * @param {Bone} [options.parent] - Parent bone (null for root)
+     * @param {Matrix4} [options.bindTransform] - Bind pose matrix (local space)
+     * @param {Matrix4} [options.inverseBindTransform] - Inverse bind matrix (world-to-local)
+     * @param {number} [options.index] - Bone index in skeleton (for array lookups)
+     */
+    constructor(id, name, options = {}) {
+        // --- Identity (immutable) ---
+        /** @readonly @type {string} */
+        this._id = id;
+        /** @readonly @type {string} */
+        this._name = name;
+        
+        // --- Index (for array-based operations) ---
+        /** @type {number} */
+        this._index = options.index ?? -1;
+
+        // --- Hierarchy ---
+        /** @type {Bone|null} */
+        this._parent = options.parent ?? null;
+        /** @type {Bone[]} */
+        this._children = [];
+
+        // --- Bind Transforms (provided by importer, immutable) ---
+        /** @type {Matrix4} */
+        this._bindTransform = options.bindTransform 
+            ? options.bindTransform.clone()
+            : new Matrix4();
+        
+        /** @type {Matrix4} */
+        this._inverseBindTransform = options.inverseBindTransform
+            ? options.inverseBindTransform.clone()
+            : this._bindTransform.clone().invert();
+
+        // --- Optional Metadata (lazy-allocated) ---
+        /** @type {Map<string, any>|null} */
+        this._metadata = null;
+    }
+
+    // ============================================================
+    // Getters (Read-Only Properties)
+    // ============================================================
+
+    /** @returns {string} Unique bone identifier */
+    getId() {
+        return this._id;
+    }
+
+    /** @returns {string} Human-readable bone name */
+    getName() {
+        return this._name;
+    }
+
+    /** @returns {number} Bone index in skeleton (-1 if not assigned) */
+    getIndex() {
+        return this._index;
+    }
+
+    // ============================================================
+    // Hierarchy Methods
+    // ============================================================
+
+    /**
+     * Add a child bone.
+     * 
+     * @param {Bone} child - Child bone to add
+     * @throws {TypeError} If child is not a Bone instance
+     * @throws {Error} If child would create a circular hierarchy
+     * @returns {this} For method chaining
+     */
+    addChild(child) {
+        if (!(child instanceof Bone)) {
+            throw new TypeError('Child must be an instance of Bone');
+        }
+
+        // Prevent circular references
+        if (this._isAncestorOf(child)) {
+            throw new Error(`Cannot add child: would create circular hierarchy`);
+        }
+
+        // Remove from existing parent if any
+        if (child._parent) {
+            child._parent.removeChild(child);
+        }
+
+        // Set parent
+        child._parent = this;
+        this._children.push(child);
+
+        return this;
+    }
+
+    /**
+     * Remove a child bone.
+     * 
+     * @param {Bone} child - Child bone to remove
+     * @returns {this} For method chaining
+     */
+    removeChild(child) {
+        const index = this._children.indexOf(child);
+        if (index === -1) {
+            return this;
+        }
+
+        this._children.splice(index, 1);
+        child._parent = null;
+
+        return this;
+    }
+
+    /**
+     * Get the parent bone.
+     * @returns {Bone|null} Parent bone or null if root
+     */
+    getParent() {
+        return this._parent;
+    }
+
+    /**
+     * Get all children bones.
+     * @returns {Bone[]} Array of child bones (preserves insertion order)
+     */
+    getChildren() {
+        return [...this._children];
+    }
+
+    /**
+     * Check if this bone is a root (has no parent).
+     * @returns {boolean}
+     */
+    isRoot() {
+        return this._parent === null;
+    }
+
+    /**
+     * Check if this bone is a leaf (has no children).
+     * @returns {boolean}
+     */
+    isLeaf() {
+        return this._children.length === 0;
+    }
+
+    /**
+     * Get the root ancestor of this bone.
+     * @returns {Bone} Root bone
+     */
+    getRoot() {
+        let current = this;
+        while (current._parent) {
+            current = current._parent;
+        }
+        return current;
+    }
+
+    /**
+     * Count all descendants (children, grandchildren, etc.).
+     * @returns {number} Number of descendant bones
+     */
+    getDescendantCount() {
+        let count = 0;
+        for (const child of this._children) {
+            count += 1 + child.getDescendantCount();
+        }
+        return count;
+    }
+
+    /**
+     * Traverse the hierarchy in depth-first order.
+     * 
+     * @param {function(Bone, number): void} callback - Called for each bone
+     * @param {number} [depth] - Current depth (used internally)
+     */
+    traverse(callback, depth = 0) {
+        callback(this, depth);
+        for (const child of this._children) {
+            child.traverse(callback, depth + 1);
+        }
+    }
+
+    /**
+     * Compute the depth of this bone (distance from root).
+     * This is computed on-demand to avoid storing it.
+     * @returns {number} Depth (0 = root)
+     */
+    computeDepth() {
+        let depth = 0;
+        let current = this._parent;
+        while (current) {
+            depth++;
+            current = current._parent;
+        }
+        return depth;
+    }
+
+    // ============================================================
+    // Bind Transforms (Read-Only)
+    // ============================================================
+
+    /**
+     * Get the local bind transform matrix.
+     * @returns {Matrix4} Bind transform matrix (clone)
+     */
+    getBindTransform() {
+        return this._bindTransform.clone();
+    }
+
+    /**
+     * Get the inverse bind transform matrix.
+     * @returns {Matrix4} Inverse bind transform matrix (clone)
+     */
+    getInverseBindTransform() {
+        return this._inverseBindTransform.clone();
+    }
+
+    // ============================================================
+    // Optional Metadata (Lazy-Allocated)
+    // ============================================================
+
+    /**
+     * Store arbitrary metadata on this bone.
+     * Use this for IK targets, constraints, weights, etc.
+     * 
+     * @param {string} key - Metadata key
+     * @param {*} value - Metadata value
+     * @returns {this} For method chaining
+     */
+    setMetadata(key, value) {
+        if (!this._metadata) {
+            this._metadata = new Map();
+        }
+        this._metadata.set(key, value);
+        return this;
+    }
+
+    /**
+     * Retrieve metadata by key.
+     * @param {string} key - Metadata key
+     * @returns {*} Metadata value or undefined
+     */
+    getMetadata(key) {
+        return this._metadata ? this._metadata.get(key) : undefined;
+    }
+
+    /**
+     * Check if metadata key exists.
+     * @param {string} key - Metadata key
+     * @returns {boolean}
+     */
+    hasMetadata(key) {
+        return this._metadata ? this._metadata.has(key) : false;
+    }
+
+    /**
+     * Remove metadata by key.
+     * @param {string} key - Metadata key
+     * @returns {boolean} True if removed
+     */
+    removeMetadata(key) {
+        if (!this._metadata) return false;
+        const removed = this._metadata.delete(key);
+        if (this._metadata.size === 0) {
+            this._metadata = null;
+        }
+        return removed;
+    }
+
+    /**
+     * Get all metadata keys.
+     * @returns {string[]} Array of metadata keys
+     */
+    getMetadataKeys() {
+        return this._metadata ? Array.from(this._metadata.keys()) : [];
+    }
+
+    // ============================================================
+    // Private Methods
+    // ============================================================
+
+    /**
+     * Check if this bone is an ancestor of another bone.
+     * @param {Bone} bone - Bone to check
+     * @returns {boolean} True if this bone is an ancestor
+     * @private
+     */
+    _isAncestorOf(bone) {
+        let current = bone._parent;
+        while (current) {
+            if (current === this) return true;
+            current = current._parent;
+        }
+        return false;
+    }
+}
+
+// ============================================================
+// Exports
+// ============================================================
+
+export default Bone;
+````
+
+## File: src/animation/skeleton/Skeleton.js
+````javascript
+/**
+ * src/animation/skeleton/Skeleton.js
+ * 
+ * D016 Animation System — Skeleton
+ * 
+ * Represents an immutable container of Bone definitions.
+ * 
+ * A Skeleton is a SHARED DEFINITION of a skeletal structure.
+ * It does NOT contain runtime animation state.
+ * Runtime transforms belong exclusively to SkeletonPose.
+ * 
+ * Responsibilities:
+ * - Own a collection of Bone objects (immutable)
+ * - Provide fast O(1) lookup by id, name, and index
+ * - Maintain root bone(s) for traversal
+ * - Provide deterministic traversal utilities (DFS, BFS)
+ * - Provide iteration via forEachBone() and Symbol.iterator
+ * - Immutable after construction (no modification methods)
+ * 
+ * Design Principles:
+ * - Single Responsibility: Skeleton only defines and stores the hierarchy
+ * - Immutable: Once constructed, the skeleton definition is frozen
+ * - Shareable: One Skeleton can be used by hundreds of SkeletonPose instances
+ * - Construction: Skeleton is created by SkeletonBuilder, not directly
+ * - No Runtime State: Absolutely no position, rotation, scale, or matrices
+ * - No Mutations: No add/remove methods. Hierarchy is fixed after construction
+ * 
+ * Separation of Concerns:
+ * - SkeletonBuilder = Constructs and validates the skeleton
+ * - Bone = Individual skeleton definition node (immutable)
+ * - Skeleton = Container of Bones (immutable, shareable)
+ * - SkeletonPose = Runtime transforms (mutable, per instance)
+ * 
+ * Future-Proof:
+ * - Supports animation sharing across thousands of instances
+ * - Supports hierarchical traversal for IK and procedural animation
+ * - Efficient iteration without array allocations
+ */
+
+// ============================================================
+// Imports
+// ============================================================
+
+import { Bone } from './Bone.js';
+
+// ============================================================
+// Skeleton Class
+// ============================================================
+
+export class Skeleton {
+    /**
+     * Create a new Skeleton definition.
+     * 
+     * This constructor is intentionally minimal. It does NOT perform
+     * validation, hierarchy building, or map construction.
+     * 
+     * Use SkeletonBuilder to construct validated Skeleton instances.
+     * 
+     * @param {Object} data - Skeleton data
+     * @param {Map<string, Bone>} data.bonesById - Map of id → Bone
+     * @param {Map<string, Bone>} data.bonesByName - Map of name → Bone
+     * @param {Bone[]} data.bonesByIndex - Array of Bones (index order)
+     * @param {Bone[]} data.rootBones - Array of root Bones
+     * @param {number} data.boneCount - Total number of bones
+     */
+    constructor(data) {
+        /** @type {Map<string, Bone>} */
+        this.#bonesById = data.bonesById;
+        
+        /** @type {Map<string, Bone>} */
+        this.#bonesByName = data.bonesByName;
+        
+        /** @type {Bone[]} */
+        this.#bonesByIndex = data.bonesByIndex;
+        
+        /** @type {Bone[]} */
+        this.#rootBones = data.rootBones;
+        
+        /** @type {number} */
+        this.#boneCount = data.boneCount;
+
+        // Freeze internal arrays for immutability
+        Object.freeze(this.#bonesByIndex);
+        Object.freeze(this.#rootBones);
+        
+        // Mark the skeleton as immutable
+        Object.freeze(this);
+    }
+
+    // ============================================================
+    // Lookup Methods (O(1))
+    // ============================================================
+
+    /**
+     * Retrieve a bone by its unique identifier.
+     * 
+     * @param {string} id - Bone ID
+     * @returns {Bone|undefined} The bone, or undefined if not found
+     */
+    getBoneById(id) {
+        return this.#bonesById.get(id);
+    }
+
+    /**
+     * Retrieve a bone by its name.
+     * 
+     * @param {string} name - Bone name
+     * @returns {Bone|undefined} The bone, or undefined if not found
+     */
+    getBoneByName(name) {
+        return this.#bonesByName.get(name);
+    }
+
+    /**
+     * Retrieve a bone by its index.
+     * 
+     * @param {number} index - Bone index
+     * @returns {Bone|undefined} The bone, or undefined if out of range
+     */
+    getBoneByIndex(index) {
+        if (index < 0 || index >= this.#bonesByIndex.length) {
+            return undefined;
+        }
+        return this.#bonesByIndex[index];
+    }
+
+    /**
+     * Get all root bones of the hierarchy.
+     * 
+     * @returns {readonly Bone[]} Array of root bones (read-only)
+     */
+    getRootBones() {
+        return this.#rootBones;
+    }
+
+    /**
+     * Get all bones in the skeleton (index order).
+     * 
+     * @returns {readonly Bone[]} Array of all bones (read-only)
+     */
+    getBones() {
+        return this.#bonesByIndex;
+    }
+
+    /**
+     * Get the total number of bones in the skeleton.
+     * 
+     * @returns {number} Bone count
+     */
+    getBoneCount() {
+        return this.#boneCount;
+    }
+
+    /**
+     * Check if the skeleton contains a specific bone.
+     * 
+     * @param {Bone|string} bone - Bone instance or ID
+     * @returns {boolean} True if the bone belongs to this skeleton
+     */
+    containsBone(bone) {
+        if (bone instanceof Bone) {
+            return this.#bonesById.has(bone.getId()) && 
+                   this.#bonesById.get(bone.getId()) === bone;
+        }
+        if (typeof bone === 'string') {
+            return this.#bonesById.has(bone);
+        }
+        return false;
+    }
+
+    // ============================================================
+    // Iteration Methods (No Allocations)
+    // ============================================================
+
+    /**
+     * Iterate over all bones in the skeleton.
+     * 
+     * This is the preferred method for iterating bones
+     * because it avoids allocating an array.
+     * 
+     * @param {function(Bone, number): void} callback - Called for each bone with its index
+     */
+    forEachBone(callback) {
+        const bones = this.#bonesByIndex;
+        for (let i = 0; i < bones.length; i++) {
+            callback(bones[i], i);
+        }
+    }
+
+    /**
+     * Iterate over all root bones in the skeleton.
+     * 
+     * @param {function(Bone, number): void} callback - Called for each root bone with its index
+     */
+    forEachRootBone(callback) {
+        const roots = this.#rootBones;
+        for (let i = 0; i < roots.length; i++) {
+            callback(roots[i], i);
+        }
+    }
+
+    /**
+     * Implement Symbol.iterator for for...of support.
+     * 
+     * This allows:
+     *   for (const bone of skeleton) { ... }
+     * 
+     * Without allocating an array.
+     * 
+     * @returns {Iterator<Bone>}
+     */
+    [Symbol.iterator]() {
+        const bones = this.#bonesByIndex;
+        let index = 0;
+        const length = bones.length;
+
+        return {
+            next() {
+                if (index < length) {
+                    return { value: bones[index++], done: false };
+                }
+                return { value: undefined, done: true };
+            }
+        };
+    }
+
+    // ============================================================
+    // Traversal Methods (Iterative, No Recursion)
+    // ============================================================
+
+    /**
+     * Traverse the hierarchy in Depth-First order (iterative).
+     * 
+     * This uses an explicit stack to avoid recursion depth limits.
+     * It visits nodes in pre-order (parent before children).
+     * 
+     * @param {function(Bone, number): void} callback - Called for each bone
+     * @param {Bone|Bone[]} [roots] - Starting bone(s). Defaults to all root bones.
+     * @param {number} [maxDepth] - Maximum traversal depth (inclusive). Defaults to Infinity.
+     */
+    traverseDepthFirst(callback, roots = null, maxDepth = Infinity) {
+        const startNodes = roots 
+            ? (Array.isArray(roots) ? roots : [roots])
+            : this.#rootBones;
+
+        // Explicit stack for iterative traversal
+        const stack = [];
+        const depthMap = new Map();
+
+        for (const root of startNodes) {
+            if (!this.containsBone(root)) {
+                continue;
+            }
+            stack.push(root);
+            depthMap.set(root, 0);
+        }
+
+        while (stack.length > 0) {
+            const bone = stack.pop();
+            const depth = depthMap.get(bone) || 0;
+            
+            callback(bone, depth);
+
+            if (depth >= maxDepth) {
+                continue;
+            }
+
+            // Push children in reverse order to maintain original order
+            const children = bone.getChildren();
+            for (let i = children.length - 1; i >= 0; i--) {
+                const child = children[i];
+                if (!this.containsBone(child)) {
+                    continue;
+                }
+                if (!depthMap.has(child)) {
+                    depthMap.set(child, depth + 1);
+                    stack.push(child);
+                }
+            }
+        }
+    }
+
+    /**
+     * Traverse the hierarchy in Breadth-First order (iterative).
+     * 
+     * This uses a head-index queue to avoid O(n) shift() operations.
+     * It visits nodes level by level.
+     * 
+     * @param {function(Bone, number): void} callback - Called for each bone
+     * @param {Bone|Bone[]} [roots] - Starting bone(s). Defaults to all root bones.
+     * @param {number} [maxDepth] - Maximum traversal depth (inclusive). Defaults to Infinity.
+     */
+    traverseBreadthFirst(callback, roots = null, maxDepth = Infinity) {
+        const startNodes = roots 
+            ? (Array.isArray(roots) ? roots : [roots])
+            : this.#rootBones;
+
+        // Use head-index queue to avoid O(n) shift()
+        const queue = [];
+        const depthMap = new Map();
+        let head = 0;
+
+        for (const root of startNodes) {
+            if (!this.containsBone(root)) {
+                continue;
+            }
+            queue.push(root);
+            depthMap.set(root, 0);
+        }
+
+        while (head < queue.length) {
+            const bone = queue[head++];
+            const depth = depthMap.get(bone) || 0;
+            
+            callback(bone, depth);
+
+            if (depth >= maxDepth) {
+                continue;
+            }
+
+            for (const child of bone.getChildren()) {
+                if (!this.containsBone(child)) {
+                    continue;
+                }
+                if (!depthMap.has(child)) {
+                    depthMap.set(child, depth + 1);
+                    queue.push(child);
+                }
+            }
+        }
+    }
+
+    // ============================================================
+    // Private Fields
+    // ============================================================
+
+    /** @type {Map<string, Bone>} */
+    #bonesById;
+
+    /** @type {Map<string, Bone>} */
+    #bonesByName;
+
+    /** @type {Bone[]} */
+    #bonesByIndex;
+
+    /** @type {Bone[]} */
+    #rootBones;
+
+    /** @type {number} */
+    #boneCount;
+}
+
+// ============================================================
+// Exports
+// ============================================================
+
+export default Skeleton;
+````
+
+## File: README.md
+````markdown
+# -GPT--EchoesOfTomorrow-
+A modern browser-native 3D game engine built for scalable worlds, modular architecture, and high-performance gameplay.
+## testing git
+````
