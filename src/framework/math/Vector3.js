@@ -1082,5 +1082,3 @@ export class Vector3 {
      */
     static BACK = Object.freeze(new Vector3(0, 0, 1));
 }
-
-export { Vector3 };
