@@ -1,0 +1,166 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echoes of Tomorrow</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Courier New', Courier, monospace; user-select: none; }
+        #gameCanvas { width: 100vw; height: 100vh; display: block; }
+        
+        /* Cutscene Player */
+        #cutscenePlayer { 
+            position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; 
+            display: none; object-fit: cover; z-index: 10; background: black;
+        }
+
+        /* Cinematic UI Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+            to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+        }
+
+        #uiLayer {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: white; z-index: 20; text-align: center; width: 100%;
+        }
+
+        h1 {
+            font-size: 4rem; letter-spacing: 15px; font-weight: normal; margin-bottom: 5px;
+            opacity: 0; animation: fadeIn 4s ease-out forwards; animation-delay: 1s;
+        }
+        
+        h2 {
+            font-size: 1rem; letter-spacing: 5px; color: #888; font-weight: normal;
+            opacity: 0; animation: fadeIn 3s ease-out forwards; animation-delay: 3s;
+        }
+
+        .button-container {
+            margin-top: 50px; opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 5s;
+        }
+
+        button { 
+            padding: 15px 40px; font-size: 16px; cursor: pointer; letter-spacing: 2px;
+            background: transparent; color: #fff; border: 1px solid #555; 
+            transition: all 0.3s; font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+        }
+        
+        button:hover { background: #fff; color: #000; box-shadow: 0 0 15px rgba(255,255,255,0.5); border-color: #fff; }
+
+        /* Crosshair for Gameplay */
+        #crosshair {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 4px; height: 4px; background: rgba(255,255,255,0.8); border-radius: 50%;
+            display: none; z-index: 5; pointer-events: none; mix-blend-mode: difference;
+        }
+    </style>
+</head>
+<body>
+    <video id="cutscenePlayer" controls="false"></video>
+    <div id="crosshair"></div>
+    
+    <div id="uiLayer">
+        <h1>ECHOES OF TOMORROW</h1>
+        <h2>A Memory Fragment</h2>
+        <div class="button-container">
+            <!-- Step 1: Authorize folder -->
+            <button id="loadFolderBtn">Initialize Data Link (Select Cutscenes Folder)</button>
+            <!-- Step 2: Start Game (Hidden initially) -->
+            <button id="startGameBtn" style="display:none;">START GAME</button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Load Three.js Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Load Our Custom Scripts -->
+    <script src="cinematic-baker.js"></script>
+    <script src="engine.js"></script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echoes of Tomorrow</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Courier New', Courier, monospace; user-select: none; }
+        #gameCanvas { width: 100vw; height: 100vh; display: block; }
+        
+        /* Cutscene Player */
+        #cutscenePlayer { 
+            position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; 
+            display: none; object-fit: cover; z-index: 10; background: black;
+        }
+
+        /* Cinematic UI Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+            to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+        }
+
+        #uiLayer {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: white; z-index: 20; text-align: center; width: 100%;
+        }
+
+        h1 {
+            font-size: 4rem; letter-spacing: 15px; font-weight: normal; margin-bottom: 5px;
+            opacity: 0; animation: fadeIn 4s ease-out forwards; animation-delay: 1s;
+        }
+        
+        h2 {
+            font-size: 1rem; letter-spacing: 5px; color: #888; font-weight: normal;
+            opacity: 0; animation: fadeIn 3s ease-out forwards; animation-delay: 3s;
+        }
+
+        .button-container {
+            margin-top: 50px; opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 5s;
+        }
+
+        button { 
+            padding: 15px 40px; font-size: 16px; cursor: pointer; letter-spacing: 2px;
+            background: transparent; color: #fff; border: 1px solid #555; 
+            transition: all 0.3s; font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+        }
+        
+        button:hover { background: #fff; color: #000; box-shadow: 0 0 15px rgba(255,255,255,0.5); border-color: #fff; }
+
+        /* Crosshair for Gameplay */
+        #crosshair {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 4px; height: 4px; background: rgba(255,255,255,0.8); border-radius: 50%;
+            display: none; z-index: 5; pointer-events: none; mix-blend-mode: difference;
+        }
+    </style>
+</head>
+<body>
+    <video id="cutscenePlayer" controls="false"></video>
+    <div id="crosshair"></div>
+    
+    <div id="uiLayer">
+        <h1>ECHOES OF TOMORROW</h1>
+        <h2>A Memory Fragment</h2>
+        <div class="button-container">
+            <!-- Step 1: Authorize folder -->
+            <button id="loadFolderBtn">Initialize Data Link (Select Cutscenes Folder)</button>
+            <!-- Step 2: Start Game (Hidden initially) -->
+            <button id="startGameBtn" style="display:none;">START GAME</button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Load Three.js Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Load Our Custom Scripts -->
+    <script src="cinematic-baker.js"></script>
+    <script src="engine.js"></script>
+</body>
+>>>>>>> 2f42efe7e19574d94df56c89784f42d3d4e2c85a
+</html>
