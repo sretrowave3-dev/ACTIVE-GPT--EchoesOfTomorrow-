@@ -1,0 +1,894 @@
+# Echo Engine Design Document (EDD)
+
+## Volume XIX – Professional Mode & Spatial Awareness System
+
+---
+
+> *"The difference between a game and a professional engine is what happens when things go wrong. Players play. Engineers debug. The engine must serve both."*
+
+---
+
+## Chapter 26 – Professional Mode: Diagnostics & Developer Tooling
+
+### 1. Introduction
+
+Every professional game engine requires a suite of development tools that remain invisible to players. Echo Engine is no exception. The Professional Mode system provides developers with comprehensive runtime diagnostics, asset inspection, spatial visualisation, and performance analysis tools—all of which are completely hidden in shipping builds.
+
+The philosophy is simple:
+
+> **Players experience the game. Engineers understand the engine.**
+
+Professional Mode exists to bridge the gap between "it works" and "I know exactly why it works."
+
+---
+
+### 2. Engine Modes
+
+Echo Engine supports two distinct runtime modes:
+
+| Mode | Purpose | Diagnostics | Asset Names | Overlays |
+|------|---------|-------------|-------------|----------|
+| **Runtime Mode** | Player-facing gameplay | OFF | Hidden | None |
+| **Professional Mode** | Development & debugging | ON | Internal IDs | Full suite |
+
+#### 2.1 Runtime Mode (Player)
+
+```text
+Diagnostics        : OFF
+Asset IDs          : Hidden
+Spatial Matrix     : Hidden
+Streaming Cells    : Hidden
+LOD Viewer         : Hidden
+BVH Debug          : Hidden
+Memory Usage       : Hidden
+FPS Graph          : Hidden
+AI States          : Hidden
+Physics Debug      : Hidden
+Event Tracing      : Hidden
+```
+
+The player sees absolutely nothing. Zero overhead. Zero visual clutter.
+
+#### 2.2 Professional Mode (Developer)
+
+Activated via:
+
+```text
+Developer Console      →  `professionalMode(true)`
+Launch Flag            →  `--professional`
+Engine Config          →  `ProfessionalMode = TRUE`
+Keyboard Shortcut      →  `F12` (toggle)
+```
+
+All debugging systems become available. The engine still runs the same simulation—only the visualisation and diagnostics layers are enabled.
+
+---
+
+### 3. Professional Overlay System
+
+The Professional Overlay is a composable HUD that displays runtime information without affecting gameplay.
+
+#### 3.1 Core Overlay Components
+
+| Component | Purpose | Data Displayed |
+|-----------|---------|----------------|
+| **Performance HUD** | Frame timing | FPS, CPU ms, GPU ms, frame time graph |
+| **Player HUD** | Player state | Position, sector, cell, velocity, rotation |
+| **Streaming HUD** | World streaming | Loaded sectors, pending loads, memory budget |
+| **Entity HUD** | Entity counts | Total entities, visible entities, active AI |
+| **Asset HUD** | Asset management | Loaded assets, cache hits, memory usage |
+| **Spatial HUD** | Spatial queries | Current cell, neighbours, query results |
+| **AI HUD** | AI debugging | Active AI, states, perception, decisions |
+| **Physics HUD** | Physics debug | Bodies, collisions, contacts, constraints |
+| **Audio HUD** | Audio debug | Active voices, sources, occlusion |
+| **Network HUD** | Networking | Latency, bandwidth, replication stats |
+
+#### 3.2 Toggle System
+
+Each overlay component can be toggled independently:
+
+```text
+F1  →  Performance HUD
+F2  →  Player HUD
+F3  →  Streaming HUD
+F4  →  Entity HUD
+F5  →  Asset HUD
+F6  →  Spatial HUD
+F7  →  AI HUD
+F8  →  Physics HUD
+F9  →  Audio HUD
+F10 →  Network HUD
+F11 →  All Overlays
+F12 →  Professional Mode (toggle)
+```
+
+---
+
+### 4. Asset Naming System
+
+One of the most distinctive features of Professional Mode is its approach to asset identification.
+
+Instead of exposing descriptive filenames at runtime:
+
+```text
+IndianTempleWall_Diffuse_4K.png
+CyberTree03.glb
+Footstep_Concrete_01.wav
+Walk_Animation_01.fbx
+```
+
+The engine stores and displays compact internal identifiers:
+
+| Asset Type | Prefix | Example |
+|------------|--------|---------|
+| Texture | TX | `TX001` |
+| Model | MD | `MD034` |
+| Material | MT | `MT091` |
+| Shader | SH | `SH022` |
+| Animation | AN | `AN044` |
+| Audio | AU | `AU017` |
+| Level | LV | `LV005` |
+| Scene | SC | `SC011` |
+| Prefab | PR | `PR003` |
+| Font | FT | `FT008` |
+| Video | VD | `VD002` |
+| Particle | PT | `PT019` |
+
+#### 4.1 Asset Registry
+
+The Asset Registry maintains the mapping between internal IDs and source filenames:
+
+```text
+TX001
+   ↓
+Asset Registry
+   ↓
+Type        : Texture
+Real Path   : assets/textures/india/wall_diffuse_4k.webp
+Loaded      : TRUE
+Reference   : 3
+Compression : WEBP_90
+```
+
+Gameplay systems never know the original filename. They work exclusively with internal IDs.
+
+#### 4.2 Build Pipeline Integration
+
+The asset ID system is fully automated during the build process:
+
+```text
+Development
+│
+├── Source Asset (Artist)
+│   └── Old_Indian_Brick_Wall_Albedo_4K.webp
+│
+↓ Build Pipeline
+│
+├── Asset Importer
+│   ├── Validate
+│   ├── Process
+│   └── Optimise
+│
+↓
+│
+├── Generate Internal ID → TX041
+│
+↓
+│
+├── Register in Registry
+│   └── TX041 → Old_Indian_Brick_Wall_Albedo_4K.webp
+│
+↓
+│
+├── Compress
+│
+↓
+│
+├── Package
+│
+↓
+Shipping Build
+│
+└── TX041 (no source filename)
+```
+
+Artists continue using descriptive filenames during development. The engine generates and uses compact internal IDs during packaging. No manual renaming is required.
+
+#### 4.3 Professional Mode Asset Inspection
+
+When hovering over any object in Professional Mode:
+
+```text
+┌─────────────────────────────────┐
+│  Asset Inspection               │
+├─────────────────────────────────┤
+│  Model    : MD034               │
+│  Material : MT120               │
+│  Texture  : TX007               │
+│  Shader   : SH011               │
+│  LOD      : LOD0                │
+│  Resident : YES                 │
+│  Priority : Medium              │
+│  Distance : 12.7m               │
+│  Triangles: 2048                │
+│  Draw Calls: 1                  │
+└─────────────────────────────────┘
+```
+
+---
+
+### 5. Professional Mode Architecture
+
+#### 5.1 High-Level Architecture
+
+```text
+Professional Mode
+│
+├── Diagnostics Service
+│   ├── Logging
+│   ├── Metrics
+│   ├── Telemetry
+│   └── Tracing
+│
+├── Overlay System
+│   ├── Performance HUD
+│   ├── Player HUD
+│   ├── Streaming HUD
+│   ├── Entity HUD
+│   └── Asset HUD
+│
+├── Visualisation System
+│   ├── Spatial Visualiser
+│   ├── Streaming Visualiser
+│   ├── Physics Visualiser
+│   ├── AI Visualiser
+│   └── BVH Visualiser
+│
+├── Asset Inspector
+│   ├── Registry Lookup
+│   ├── Reference Tracker
+│   └── Cache Visualiser
+│
+└── Console
+    ├── Command Parser
+    ├── Command Registry
+    └── Output Renderer
+```
+
+#### 5.2 Core Components
+
+| Component | Purpose | Dependencies |
+|-----------|---------|--------------|
+| `DiagnosticsService` | Central diagnostics coordination | Framework, EventBus |
+| `OverlayManager` | Manages HUD overlays | RenderService, UIService |
+| `VisualisationManager` | Manages debug visualisations | RenderService, WorldSystem |
+| `AssetInspector` | Asset inspection and registry | AssetService |
+| `DeveloperConsole` | Command execution | EventBus, DiagnosticsService |
+| `SpatialVisualiser` | Visualises spatial data | WorldSystem, RenderService |
+| `StreamingVisualiser` | Visualises streaming | StreamingManager, RenderService |
+| `PhysicsVisualiser` | Visualises physics | PhysicsService, RenderService |
+| `AIVisualiser` | Visualises AI | AIService, RenderService |
+
+#### 5.3 Integration with Existing Systems
+
+Professional Mode is designed to be a **consumer** of engine state, not a modifier:
+
+```text
+Engine Systems (ECS, World, Physics, AI, etc.)
+    │
+    ▼
+Professional Mode (Reads state)
+    │
+    ▼
+Render Service (Visualises diagnostics)
+```
+
+No subsystem knows about Professional Mode. Professional Mode observes subsystems. This preserves the decoupled architecture established throughout Echo Engine.
+
+---
+
+### 6. Spatial Visualiser
+
+One of the most powerful Professional Mode tools is the Spatial Visualiser. It provides real-time visualisation of the engine's spatial hierarchy and queries.
+
+#### 6.1 Features
+
+| Feature | Description |
+|---------|-------------|
+| **Sector Grid** | Visual overlay of all sectors with colour-coded status (loaded/unloaded/loading) |
+| **Cell Highlight** | Current cell highlighted with streaming radius overlay |
+| **Spatial Queries** | Visualise radius, nearest, and cell queries |
+| **Transform Debug** | Display local, cell, sector, and world transforms |
+| **Ray Visualisation** | Visualise view rays and collision points |
+| **Bounding Volumes** | Display AABBs for entities and spatial nodes |
+
+#### 6.2 Spatial HUD
+
+```text
+┌─────────────────────────────────────────┐
+│  Spatial Matrix                        │
+├─────────────────────────────────────────┤
+│  Player                                 │
+│    Position  : (120, 42, -17)          │
+│    Sector    : S12                     │
+│    Cell      : C03                     │
+│    Local     : (+2.3, 0.0, -1.2)      │
+│                                         │
+│  View Ray                               │
+│    Direction : (0.92, -0.12, 0.38)    │
+│    Distance  : 200.0m                  │
+│    Hit       : Wall                    │
+│    Hit Pos   : (137.3, 41.8, -33.1)   │
+│    Hit Dist  : 17.32m                  │
+│                                         │
+│  Streaming                              │
+│    Loaded    : 12 sectors              │
+│    Pending   : 2 sectors               │
+│    Budget    : 85%                     │
+└─────────────────────────────────────────┘
+```
+
+#### 6.3 Cell Highlighting
+
+The player's current cell and neighbours are visually highlighted:
+
+```text
+┌──────┬──────┬──────┐
+│      │      │      │
+│ C02  │ C03  │ C04  │
+│      │      │      │
+├──────┼──────┼──────┤
+│      │██████│      │
+│ C12  │██████│ C14  │  ← Current Cell (highlighted)
+│      │██████│      │
+├──────┼──────┼──────┤
+│      │      │      │
+│ C22  │ C23  │ C24  │
+│      │      │      │
+└──────┴──────┴──────┘
+```
+
+---
+
+### 7. Developer Console
+
+The Developer Console provides direct control over Professional Mode features and runtime inspection.
+
+#### 7.1 Console Commands
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `professionalMode(on/off)` | Toggle Professional Mode | `professionalMode true` |
+| `showOverlay(name)` | Show specific overlay | `showOverlay fps` |
+| `hideOverlay(name)` | Hide specific overlay | `hideOverlay streaming` |
+| `inspectAsset(id)` | Inspect asset details | `inspectAsset TX041` |
+| `inspectEntity(id)` | Inspect entity details | `inspectEntity 1234` |
+| `inspectSector(id)` | Inspect sector details | `inspectSector S12` |
+| `inspectCell(id)` | Inspect cell details | `inspectCell C03` |
+| `showSpatial()` | Show spatial visualiser | `showSpatial` |
+| `hideSpatial()` | Hide spatial visualiser | `hideSpatial` |
+| `showPhysics()` | Show physics debug | `showPhysics` |
+| `showAI()` | Show AI debug | `showAI` |
+| `showStreaming()` | Show streaming debug | `showStreaming` |
+| `freezeTime()` | Pause simulation | `freezeTime` |
+| `resumeTime()` | Resume simulation | `resumeTime` |
+| `setTimeScale(scale)` | Set time scale | `setTimeScale 0.5` |
+| `teleport(x,y,z)` | Teleport player | `teleport 100 10 50` |
+| `spawnEntity(type)` | Spawn entity | `spawnEntity NPC_Guard` |
+| `destroyEntity(id)` | Destroy entity | `destroyEntity 1234` |
+| `listEntities()` | List all entities | `listEntities` |
+| `listAssets()` | List all assets | `listAssets` |
+| `listSectors()` | List all sectors | `listSectors` |
+| `help()` | List all commands | `help` |
+
+#### 7.2 Console Output
+
+```text
+> professionalMode true
+Professional Mode enabled.
+
+> showSpatial
+Spatial visualiser enabled.
+
+> inspectAsset TX041
+┌─────────────────────────────────────┐
+│ Asset: TX041                       │
+├─────────────────────────────────────┤
+│ Type        : Texture              │
+│ Real Path   : wall_diffuse_4k.webp │
+│ Loaded      : TRUE                 │
+│ Reference   : 3                    │
+│ Compression : WEBP_90              │
+│ Resolution  : 4096x4096           │
+│ Format      : sRGB                │
+│ Mipmaps     : 12                   │
+└─────────────────────────────────────┘
+
+> inspectSector S12
+┌─────────────────────────────────────┐
+│ Sector: S12                        │
+├─────────────────────────────────────┤
+│ State        : LOADED              │
+│ Cells        : 16                  │
+│ Entities     : 147                 │
+│ Load Time    : 124ms               │
+│ Memory       : 34.2MB             │
+│ Priority     : HIGH                │
+└─────────────────────────────────────┘
+```
+
+---
+
+### 8. Performance Considerations
+
+Professional Mode is designed to have **negligible** performance impact when enabled.
+
+#### 8.1 Optimisation Strategies
+
+| Strategy | Description | Impact |
+|----------|-------------|--------|
+| **Lazy Updates** | Only update when data changes | Reduces CPU usage by ~90% |
+| **Sampling** | Update at lower frequency | 1-5% CPU usage |
+| **Selective Visualisation** | Only visualise when visible | Zero rendering overhead |
+| **Cache** | Cache query results | Eliminates redundant calculations |
+| **Toggle** | Disable unused overlays | User-controlled overhead |
+
+#### 8.2 Performance Budgets
+
+Professional Mode is designed to use less than 5% of the engine's CPU budget. This ensures that debugging does not mask performance issues in the underlying game.
+
+```text
+Professional Mode Budget
+├── Overlay Rendering   : ≤ 1%
+├── Spatial Queries     : ≤ 1%
+├── Asset Inspection    : ≤ 0.5%
+├── Visualisation       : ≤ 1%
+├── Console             : ≤ 0.5%
+└── Total               : ≤ 5%
+```
+
+---
+
+### 9. Integration Roadmap
+
+#### Phase 1: Foundation (Current)
+- ✅ DiagnositcsService foundation
+- ✅ PerformanceCounters
+- ✅ EventBus tracing
+
+#### Phase 2: Overlay System (Next)
+- ⬜ OverlayManager
+- ⬜ Performance HUD
+- ⬜ Player HUD
+- ⬜ Streaming HUD
+- ⬜ Entity HUD
+
+#### Phase 3: Visualisation (Future)
+- ⬜ Spatial Visualiser
+- ⬜ Streaming Visualiser
+- ⬜ Physics Visualiser
+- ⬜ AI Visualiser
+
+#### Phase 4: Asset Inspection (Future)
+- ⬜ Asset Inspector
+- ⬜ Registry Viewer
+- ⬜ Cache Visualiser
+
+#### Phase 5: Console (Future)
+- ⬜ Developer Console
+- ⬜ Command Registry
+- ⬜ Command Execution
+
+---
+
+### 10. Chapter Summary
+
+Professional Mode provides a comprehensive development and debugging environment for Echo Engine, completely hidden from players in shipping builds.
+
+Key principles:
+
+- **Zero Player Impact:** Professional Mode never affects gameplay.
+- **Read-Only Observation:** Professional Mode observes engine state without modifying it.
+- **Negligible Overhead:** Professional Mode uses less than 5% of CPU budget.
+- **Modular Architecture:** Each tool is a separate, togglable component.
+- **Asset ID System:** Internal IDs keep asset names hidden while enabling fast lookups.
+- **Build Integration:** Asset IDs are generated automatically during packaging.
+
+By providing engineers with a powerful diagnostics suite while maintaining the modular, decoupled architecture of Echo Engine, Professional Mode embodies the engine's philosophy of serving both players and developers.
+
+---
+
+## Chapter 27 – Player Spatial Matrix (PSM)
+
+### 1. Introduction
+
+The Player Spatial Matrix (PSM) is a **spatial awareness cache** that provides every subsystem with fast, low-cost access to player-centric spatial information.
+
+Instead of each subsystem performing its own distance checks, raycasts, and visibility tests:
+
+- AI queries: "Can I see the player?"
+- Audio queries: "How far is the sound source?"
+- Interaction queries: "What's under the crosshair?"
+- LOD queries: "How far is this mesh?"
+- Streaming queries: "Should this sector stay loaded?"
+- UI queries: "Is the objective visible?"
+
+Each subsystem reads from the same cached spatial data—reducing redundant calculations and improving overall performance.
+
+---
+
+### 2. Philosophy
+
+The PSM exists to answer one question efficiently:
+
+> **"What does the player know about the world?"**
+
+It does not calculate coordinates. It provides a **snapshot of player-relative spatial awareness**.
+
+> **Every subsystem can ask a single question without recomputing anything.**
+
+---
+
+### 3. High-Level Architecture
+
+```text
+Player Movement
+       │
+       ▼
+Update Trigger
+       │
+       ▼
+Player Spatial Matrix (PSM)
+       │
+       ├── Raycast Results
+       ├── Distance Cache
+       ├── Visibility Cache
+       ├── Sector/Cell Cache
+       ├── Occlusion Cache
+       └── Priority Cache
+       │
+       ▼
+Subsystems (AI, Audio, Rendering, Streaming, etc.)
+```
+
+---
+
+### 4. Core Components
+
+```text
+spatial/
+├── PlayerSpatialMatrix.js    │  Main cache & coordinator
+├── SpatialRaycaster.js       │  Ray casting (multi-resolution)
+├── VisibilityCache.js        │  Visibility results
+├── OcclusionFilter.js        │  Occlusion types
+├── MatrixCache.js            │  Distance, angle, sector, cell
+├── QueryBudget.js            │  Update frequency & budget
+└── MatrixDebugger.js         │  Professional Mode visualisation
+```
+
+---
+
+### 5. Update Triggers
+
+The PSM does not update every frame. It updates only when necessary.
+
+#### 5.1 Threshold-Based Updates
+
+```text
+Player Movement Threshold
+
+Move > 10 cm
+
+OR
+
+Rotate > 2°
+
+↓
+
+Update Matrix
+
+Else
+
+Skip
+```
+
+#### 5.2 Update Frequency Modes
+
+| Mode | Frequency | Use Case |
+|------|-----------|----------|
+| **OFF** | Never | No spatial queries needed |
+| **STATIC** | Every 1 second | Low-end hardware |
+| **LOW** | 10 Hz | Background processing |
+| **NORMAL** | 30 Hz | Mid-range hardware |
+| **HIGH** | 60 Hz | High-end hardware |
+| **MAX** | Every frame | Debugging / Professional Mode |
+
+#### 5.3 Distance Tiers
+
+Nearby objects (0-50m):    Update every frame
+Mid-distance (50-150m):    Update every 2nd frame
+Far distance (150-500m):   Update every 5th frame
+Background (>500m):        Update every 30th frame
+
+---
+
+### 6. Ray System
+
+Instead of expensive cone tracing, PSM uses a multi-resolution ray system.
+
+#### 6.1 Multi-Resolution Rays
+
+```text
+           upper ray   ──────────►
+           center ray  ═══════════►
+           lower ray   ──────────►
+```
+
+Only 3 rays. Not 500. Not cone traces. Three rays already give excellent precision.
+
+#### 6.2 Ray Behaviour with Occlusion Types
+
+Each object has an occlusion type flag:
+
+| Type | Behaviour |
+|------|-----------|
+| **SOLID** | Stop ray |
+| **TRANSPARENT** | Continue ray |
+| **NOCLIP** | Continue ray |
+| **IGNORE** | Continue ray |
+
+Glass, fog volumes, triggers, etc. won't block the matrix.
+
+#### 6.3 BVH Integration
+
+Rays test geometry using the existing spatial partition:
+
+```text
+Player
+    │
+    ▼
+Ray
+    │
+    ▼
+BVH / Spatial Grid
+    │
+    ▼
+Current Cell + Neighbours
+    │
+    ▼
+Test Candidates
+    │
+    ▼
+Hit Result
+```
+
+No testing against the whole world.
+
+---
+
+### 7. Matrix Data Structure
+
+For each nearby object, the PSM caches:
+
+```text
+Object: Chair
+├── World Position   : (120, 8, -22)
+├── Relative Vector  : (+2, 0, -2)
+├── Distance         : 2.82m
+├── Angle            : 12.4° (from forward)
+├── Horizontal Angle : 8.2°
+├── Vertical Angle   : -4.1°
+├── Visibility       : YES
+├── Occluded         : NO
+├── Sector           : S12
+├── Cell             : C04
+├── Ray Hit          : YES
+├── Priority         : HIGH
+└── LOD              : LOD0
+```
+
+---
+
+### 8. Integration with Echo Engine
+
+#### 8.1 Directory Structure
+
+```text
+src/
+├── world/
+│   ├── Transform.js
+│   ├── CellID.js
+│   ├── SectorID.js
+│   └── ...
+│
+└── spatial/
+    ├── PlayerSpatialMatrix.js
+    ├── SpatialRaycaster.js
+    ├── VisibilityCache.js
+    ├── OcclusionFilter.js
+    ├── MatrixCache.js
+    ├── QueryBudget.js
+    └── MatrixDebugger.js
+```
+
+#### 8.2 Dependencies
+
+| Component | Depends On |
+|-----------|------------|
+| PlayerSpatialMatrix | Transform, CellID, SectorID, WorldManager |
+| SpatialRaycaster | WorldManager, PhysicsService, BVH |
+| VisibilityCache | PlayerSpatialMatrix |
+| OcclusionFilter | PhysicsService, MaterialSystem |
+| MatrixCache | PlayerSpatialMatrix |
+| QueryBudget | Framework, DiagnosticsService |
+| MatrixDebugger | PlayerSpatialMatrix, RenderService |
+
+#### 8.3 Service Integration
+
+```javascript
+// Example: AI queries the PSM
+class AISystem {
+  update(delta, entityIds, ecs) {
+    const playerPos = this.framework.playerService.getPosition();
+    const matrix = this.framework.spatialService.getPlayerMatrix();
+    
+    for (const eid of entityIds) {
+      const entity = ecs.getEntity(eid);
+      const entry = matrix.getEntry(entity.id);
+      
+      if (entry && entry.visibility) {
+        // Entity can see player
+        // Update AI state
+      }
+    }
+  }
+}
+```
+
+---
+
+### 9. Performance Optimisations
+
+| Technique | Description | Impact |
+|-----------|-------------|--------|
+| **Threshold Updates** | Only update after meaningful player movement or rotation | 80% reduction |
+| **Cell-Limited Processing** | Query only current and adjacent cells | 90% reduction |
+| **Distance Tiers** | Nearby objects update every cycle; distant objects less often | 50% reduction |
+| **Cached Results** | Reuse previous calculations until something changes | 70% reduction |
+| **Incremental Updates** | Only rebuild changed entries | 60% reduction |
+| **Web Workers** | Offload matrix updates to a background thread | Significant (future) |
+| **GPU Acceleration** | Compute visibility via compute shaders | Significant (future) |
+
+---
+
+### 10. Professional Mode Integration
+
+PSM is fully integrated with Professional Mode:
+
+```text
+F6 → Spatial HUD
+
+┌─────────────────────────────────────────┐
+│  Spatial Matrix                        │
+├─────────────────────────────────────────┤
+│  Player                                 │
+│    Position  : (120, 42, -17)          │
+│    Sector    : S12                     │
+│    Cell      : C03                     │
+│    Local     : (+2.3, 0.0, -1.2)      │
+│                                         │
+│  View Ray                               │
+│    Direction : (0.92, -0.12, 0.38)    │
+│    Distance  : 200.0m                  │
+│    Hit       : Wall                    │
+│    Hit Pos   : (137.3, 41.8, -33.1)   │
+│    Hit Dist  : 17.32m                  │
+│                                         │
+│  Nearby Objects                         │
+│    Total     : 47                      │
+│    Visible   : 12                      │
+│    Occluded  : 35                      │
+│                                         │
+│  Matrix Cache                           │
+│    Entries   : 147                     │
+│    Updated   : 12.4ms ago             │
+│    Size      : 4.2KB                  │
+└─────────────────────────────────────────┘
+```
+
+---
+
+### 11. Implementation Phases
+
+#### Phase 1: Core Matrix (Current)
+- ⬜ PlayerSpatialMatrix class
+- ⬜ Distance and angle calculations
+- ⬜ Sector/cell caching
+- ⬜ Basic raycasting
+
+#### Phase 2: Visibility (Next)
+- ⬜ VisibilityCache
+- ⬜ OcclusionFilter
+- ⬜ BVH integration
+- ⬜ Multi-resolution rays
+
+#### Phase 3: Optimisation (Future)
+- ⬜ Threshold updates
+- ⬜ Distance tiers
+- ⬜ Incremental updates
+- ⬜ Query budgets
+
+#### Phase 4: Integration (Future)
+- ⬜ AI integration
+- ⬜ Audio integration
+- ⬜ Rendering integration
+- ⬜ Streaming integration
+
+#### Phase 5: Professional Mode (Future)
+- ⬜ Spatial visualiser
+- ⬜ Matrix debugger
+- ⬜ Performance monitoring
+
+---
+
+### 12. Chapter Summary
+
+The Player Spatial Matrix provides a **spatial awareness cache** that eliminates redundant calculations across all subsystems.
+
+Key principles:
+
+- **Single Source of Truth:** Every subsystem reads from the same cached data.
+- **Threshold Updates:** Only update when meaningful movement occurs.
+- **Distance Tiers:** Update frequency scales with distance.
+- **Multi-Resolution Rays:** Three rays instead of cone tracing.
+- **Cell-Limited Processing:** Only query current and adjacent cells.
+- **Negligible Overhead:** Designed for minimal CPU usage.
+- **Professional Mode Integration:** Full visualisation and debugging support.
+
+By providing a shared spatial cache, PSM improves performance across AI, audio, rendering, streaming, interaction, and UI while maintaining Echo Engine's commitment to modular, decoupled architecture.
+
+---
+
+## End of Chapter 27
+
+### Next: Chapter 28 – Professional Mode & PSM Integration Plan
+
+This chapter will define the complete integration roadmap, dependency graph, and implementation timeline for Professional Mode and the Player Spatial Matrix within Echo Engine.
+
+---
+
+## Appendix: Professional Mode & PSM Implementation Status
+
+| System | Status | Priority |
+|--------|--------|----------|
+| DiagnosticsService | ✅ Complete | Done |
+| PerformanceCounters | ✅ Complete | Done |
+| EventBus Tracing | ✅ Complete | Done |
+| OverlayManager | ⬜ Not Started | High |
+| Performance HUD | ⬜ Not Started | High |
+| Player HUD | ⬜ Not Started | High |
+| Streaming HUD | ⬜ Not Started | Medium |
+| Entity HUD | ⬜ Not Started | Medium |
+| Asset HUD | ⬜ Not Started | Medium |
+| Spatial HUD | ⬜ Not Started | Medium |
+| AI HUD | ⬜ Not Started | Low |
+| Physics HUD | ⬜ Not Started | Low |
+| Audio HUD | ⬜ Not Started | Low |
+| Network HUD | ⬜ Not Started | Low |
+| Asset Inspector | ⬜ Not Started | Medium |
+| Developer Console | ⬜ Not Started | High |
+| Spatial Visualiser | ⬜ Not Started | Medium |
+| Streaming Visualiser | ⬜ Not Started | Medium |
+| Physics Visualiser | ⬜ Not Started | Low |
+| AI Visualiser | ⬜ Not Started | Low |
+| PlayerSpatialMatrix | ⬜ Not Started | High |
+| SpatialRaycaster | ⬜ Not Started | High |
+| VisibilityCache | ⬜ Not Started | High |
+| OcclusionFilter | ⬜ Not Started | Medium |
+| MatrixCache | ⬜ Not Started | High |
+| QueryBudget | ⬜ Not Started | Medium |
+| MatrixDebugger | ⬜ Not Started | Medium |
+
+---
+
+*Professional Mode and the Player Spatial Matrix represent the final layer of Echo Engine's architecture—the bridge between a working game and a professional development environment. Both systems are designed to be implemented incrementally, starting with the core infrastructure and expanding to full functionality as the engine matures.*
