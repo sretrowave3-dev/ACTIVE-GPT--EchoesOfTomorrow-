@@ -1162,4 +1162,3 @@ export class Quaternion {
     static IDENTITY = Object.freeze(new Quaternion(0, 0, 0, 1));
 }
 
-export { Quaternion };
