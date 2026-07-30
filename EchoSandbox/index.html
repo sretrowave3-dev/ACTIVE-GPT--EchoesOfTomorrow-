@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Sandbox — Engine Development Environment</title>
+    <link rel="stylesheet" href="styles/sandbox.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Startup Overlay -->
+    <div id="startupOverlay">
+        <div class="startup-container">
+            <div class="startup-logo">
+                <span class="logo-symbol">⎔</span>
+                <span class="logo-text">ECHO</span>
+                <span class="logo-sub">SANDBOX</span>
+            </div>
+            <div class="startup-progress">
+                <div class="startup-bar" id="startupBar">
+                    <div class="startup-fill" id="startupFill"></div>
+                </div>
+                <div class="startup-message" id="startupMessage">Initializing...</div>
+            </div>
+            <div class="startup-steps" id="startupSteps">
+                <span class="step" data-step="framework">Framework</span>
+                <span class="step" data-step="services">Services</span>
+                <span class="step" data-step="world">World</span>
+                <span class="step" data-step="scene">Scene</span>
+                <span class="step" data-step="animation">Animation</span>
+                <span class="step" data-step="assets">Assets</span>
+                <span class="step" data-step="runtime">Runtime</span>
+            </div>
+            <div class="startup-version">Echo Engine v1.0.0</div>
+        </div>
+    </div>
+
+    <!-- Sandbox Application -->
+    <div id="sandboxApp" style="display:none;">
+        <!-- Top Toolbar -->
+        <header id="toolbar">
+            <div class="toolbar-left">
+                <span class="toolbar-logo">⎔</span>
+                <span class="toolbar-title">ECHO SANDBOX</span>
+                <span class="toolbar-version">v1.0.0</span>
+            </div>
+            <div class="toolbar-center">
+                <div class="toolbar-status">
+                    <span class="status-dot" id="statusDot"></span>
+                    <span class="status-text" id="statusText">RUNNING</span>
+                </div>
+            </div>
+            <div class="toolbar-right">
+                <span class="toolbar-stat" id="fpsDisplay">FPS: --</span>
+                <span class="toolbar-stat" id="frameTimeDisplay">Frame: --ms</span>
+                <span class="toolbar-stat" id="memoryDisplay">Memory: --MB</span>
+                <button class="toolbar-btn" id="playBtn" title="Play / Pause">⏸</button>
+                <button class="toolbar-btn" id="stepBtn" title="Step Frame">⏭</button>
+                <button class="toolbar-btn" id="reloadBtn" title="Reload">⟳</button>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div id="sandboxLayout">
+            <!-- Left Sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header">MODULES</div>
+                <ul class="module-list" id="moduleList">
+                    <li class="module-item" data-module="framework">Framework</li>
+                    <li class="module-item" data-module="services">Services</li>
+                    <li class="module-item" data-module="world">World</li>
+                    <li class="module-item" data-module="scene">Scene</li>
+                    <li class="module-item" data-module="streaming">Streaming</li>
+                    <li class="module-item" data-module="rendering">Rendering</li>
+                    <li class="module-item" data-module="animation">Animation</li>
+                    <li class="module-item" data-module="assets">Assets</li>
+                    <li class="module-item" data-module="ecs">ECS</li>
+                    <li class="module-item" data-module="physics">Physics</li>
+                    <li class="module-item" data-module="audio">Audio</li>
+                    <li class="module-item" data-module="gameplay">Gameplay</li>
+                    <li class="module-item" data-module="ai">AI</li>
+                    <li class="module-item" data-module="networking">Networking</li>
+                    <li class="module-item" data-module="save">Save</li>
+                    <li class="module-item" data-module="tools">Tools</li>
+                </ul>
+                <div class="sidebar-footer">
+                    <span class="sidebar-engine-status" id="engineStatus">● Running</span>
+                </div>
+            </nav>
+
+            <!-- Center Viewport -->
+            <main id="viewport">
+                <canvas id="viewportCanvas"></canvas>
+                <div class="viewport-overlay" id="viewportOverlay">
+                    <div class="viewport-info" id="viewportInfo">
+                        <span>RENDERER</span>
+                        <span id="rendererStatus">● Active</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Inspector -->
+            <aside id="inspector">
+                <div class="inspector-header">INSPECTOR</div>
+                <div class="inspector-content" id="inspectorContent">
+                    <div class="inspector-empty">Select a module to inspect</div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Bottom Panel -->
+        <footer id="bottomPanel">
+            <div class="bottom-tabs">
+                <button class="tab-btn active" data-tab="console">Console</button>
+                <button class="tab-btn" data-tab="statistics">Statistics</button>
+                <button class="tab-btn" data-tab="logs">Logs</button>
+                <button class="tab-btn" data-tab="warnings">Warnings</button>
+                <button class="tab-btn" data-tab="errors">Errors</button>
+                <button class="tab-btn" data-tab="events">Events</button>
+            </div>
+            <div class="bottom-content">
+                <div class="tab-panel active" id="panel-console">
+                    <div class="console-output" id="consoleOutput">
+                        <div class="console-line">[Sandbox] Ready</div>
+                    </div>
+                    <div class="console-input">
+                        <input type="text" id="consoleInput" placeholder="Enter command...">
+                    </div>
+                </div>
+                <div class="tab-panel" id="panel-statistics">
+                    <div class="stat-grid" id="statGrid"></div>
+                </div>
+                <div class="tab-panel" id="panel-logs"></div>
+                <div class="tab-panel" id="panel-warnings"></div>
+                <div class="tab-panel" id="panel-errors"></div>
+                <div class="tab-panel" id="panel-events"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

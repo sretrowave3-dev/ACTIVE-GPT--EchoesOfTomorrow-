@@ -1,0 +1,11 @@
+* [33mb7731fe[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m git commit -m "fix: Corrected syntax errors in Matrix4, Vector3, and Quaternion classes"
+* [33m71a6ecd[m git commit -m "fix: Corrected the closing brace in Vector3 class and removed unnecessary export statements in Matrix4 and Quaternion classes."
+* [33md0da9f7[m git commit -m "fix: Corrected the definition of the BACK vector in Vector3 class"
+* [33m499c0a8[m git commit -m "fix: update Quaternion and Vector3 math operations"
+* [33m73dd54b[m git commit -m "feat: add new math classes and repomix output"
+* [33m23289d5[m git commit -m "feat: add animation system"
+[31m|[m * [33me46a6dc[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m git commit -m "feat: add animation system"
+[31m|[m[31m/[m  
+* [33m7652b3a[m git commit -m "feat: add animation system"
+* [33m21a7e29[m git commit -m "Added new features to the project"
+* [33m0f04d4a[m Updated README
