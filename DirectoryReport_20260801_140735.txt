@@ -1,0 +1,572 @@
+﻿================================================================================
+DIRECTORY INSPECTOR REPORT
+================================================================================
+Root scanned : C:\Users\HELLO KUMAR SINGH\(GPT)-EchoesOfTomorrow
+Generated    : 08/01/2026 14:07:35
+
+SUMMARY
+Total folders scanned    : 250
+Empty folders found      : 32
+Total files scanned      : 500
+Empty files found        : 95
+Files with content       : 405
+Skipped (binary/large)   : 205
+Total lines (all files)  : 69519
+Scan duration            : 1.21s
+
+EMPTY FOLDERS
+  [EMPTY DIR] config
+  [EMPTY DIR] tools
+  [EMPTY DIR] .git\objects\info
+  [EMPTY DIR] .git\objects\pack
+  [EMPTY DIR] .git\refs\tags
+  [EMPTY DIR] assets\audio
+  [EMPTY DIR] assets\fonts
+  [EMPTY DIR] assets\models
+  [EMPTY DIR] assets\shaders
+  [EMPTY DIR] assets\textures
+  [EMPTY DIR] assets\videos
+  [EMPTY DIR] src\ai
+  [EMPTY DIR] src\audio
+  [EMPTY DIR] src\camera
+  [EMPTY DIR] src\dialogue
+  [EMPTY DIR] src\entities
+  [EMPTY DIR] src\gameplay
+  [EMPTY DIR] src\input
+  [EMPTY DIR] src\inventory
+  [EMPTY DIR] src\memory
+  [EMPTY DIR] src\missions
+  [EMPTY DIR] src\physics
+  [EMPTY DIR] src\save
+  [EMPTY DIR] src\ui
+  [EMPTY DIR] src\utilities
+  [EMPTY DIR] src\vehicles
+  [EMPTY DIR] src\animation\core
+  [EMPTY DIR] src\animation\debug
+  [EMPTY DIR] src\animation\utilities
+  [EMPTY DIR] src\framework\interfaces
+  [EMPTY DIR] src\framework\state
+  [EMPTY DIR] src\framework\utilities
+
+EMPTY FILES
+  [EMPTY FILE] EchoSandbox\core\DependencyChecker.js
+  [EMPTY FILE] EchoSandbox\core\EngineLoader.js
+  [EMPTY FILE] EchoSandbox\core\EngineState.js
+  [EMPTY FILE] EchoSandbox\core\ModuleScanner.js
+  [EMPTY FILE] EchoSandbox\core\ProgressAnalyzer.js
+  [EMPTY FILE] EchoSandbox\debug\ConsolePanel.js
+  [EMPTY FILE] EchoSandbox\debug\LogViewer.js
+  [EMPTY FILE] EchoSandbox\debug\StatisticsPanel.js
+  [EMPTY FILE] EchoSandbox\runtime\MemoryMonitor.js
+  [EMPTY FILE] EchoSandbox\runtime\PerformanceMonitor.js
+  [EMPTY FILE] EchoSandbox\runtime\RuntimeMonitor.js
+  [EMPTY FILE] EchoSandbox\styles\sandbox.css
+  [EMPTY FILE] EchoSandbox\styles\theme.css
+  [EMPTY FILE] EchoSandbox\ui\ConsolePanel.js
+  [EMPTY FILE] EchoSandbox\ui\Dashboard.js
+  [EMPTY FILE] EchoSandbox\ui\InspectorPanel.js
+  [EMPTY FILE] EchoSandbox\ui\Panels.js
+  [EMPTY FILE] EchoSandbox\ui\Sidebar.js
+  [EMPTY FILE] EchoSandbox\ui\StartupScreen.js
+  [EMPTY FILE] EchoSandbox\ui\StatisticsPanel.js
+  [EMPTY FILE] EchoSandbox\ui\StatusBar.js
+  [EMPTY FILE] EchoSandbox\ui\Toolbar.js
+  [EMPTY FILE] EchoSandbox\ui\Viewport.js
+  [EMPTY FILE] EchoSandbox\ui\components\LogEntry.js
+  [EMPTY FILE] EchoSandbox\ui\components\ModuleItem.js
+  [EMPTY FILE] EchoSandbox\ui\components\StatCard.js
+  [EMPTY FILE] EchoSandbox\utils\FileTree.js
+  [EMPTY FILE] EchoSandbox\utils\ModuleRegistry.js
+  [EMPTY FILE] EchoSandbox\utils\StatusFormatter.js
+  [EMPTY FILE] src\animation\assets\AnimationAsset.js
+  [EMPTY FILE] src\animation\assets\AnimationClip.js
+  [EMPTY FILE] src\animation\assets\AnimationCompression.js
+  [EMPTY FILE] src\animation\assets\AnimationMetadata.js
+  [EMPTY FILE] src\animation\assets\AnimationPackage.js
+  [EMPTY FILE] src\animation\baking\AnimationBaker.js
+  [EMPTY FILE] src\animation\baking\FramePacker.js
+  [EMPTY FILE] src\animation\baking\MetadataGenerator.js
+  [EMPTY FILE] src\animation\baking\TextureChecker.js
+  [EMPTY FILE] src\animation\baking\VertexSampler.js
+  [EMPTY FILE] src\animation\events\AnimationEvent.js
+  [EMPTY FILE] src\animation\events\AnimationEventBus.js
+  [EMPTY FILE] src\animation\events\EventTrack.js
+  [EMPTY FILE] src\animation\graph\AnimationGraph.js
+  [EMPTY FILE] src\animation\graph\AnimationState.js
+  [EMPTY FILE] src\animation\graph\AnimationTransition.js
+  [EMPTY FILE] src\animation\graph\BlendTree.js
+  [EMPTY FILE] src\animation\graph\GraphNode.js
+  [EMPTY FILE] src\animation\runtime\AnimationController.js
+  [EMPTY FILE] src\animation\runtime\AnimationPlayer.js
+  [EMPTY FILE] src\animation\runtime\AnimationRuntime.js
+  [EMPTY FILE] src\animation\skeleton\Pose.js
+  [EMPTY FILE] src\animation\skeleton\SkeletonPose.js
+  [EMPTY FILE] src\animation\skeleton\SkeletonUtils.js
+  [EMPTY FILE] src\animation\vat\VATDecoder.js
+  [EMPTY FILE] src\animation\vat\VATMetadata.js
+  [EMPTY FILE] src\animation\vat\VATPlayer.js
+  [EMPTY FILE] src\animation\vat\VATTexture.js
+  [EMPTY FILE] src\assets\AssetLoader.js
+  [EMPTY FILE] src\assets\AssetState.js
+  [EMPTY FILE] src\assets\AssetType.js
+  [EMPTY FILE] src\assets\loaders\AudioLoader.js
+  [EMPTY FILE] src\assets\loaders\FontLoader.js
+  [EMPTY FILE] src\assets\loaders\ModelLoader.js
+  [EMPTY FILE] src\assets\loaders\ShaderLoader.js
+  [EMPTY FILE] src\assets\loaders\TextureLoader.js
+  [EMPTY FILE] src\assets\loaders\VideoLoader.js
+  [EMPTY FILE] src\framework\core\CompositionRoot.js
+  [EMPTY FILE] src\framework\core\FrameworkBuilder.js
+  [EMPTY FILE] src\framework\core\RuntimeBuilder.js
+  [EMPTY FILE] src\framework\runtime\RuntimeClock.js
+  [EMPTY FILE] src\framework\runtime\RuntimeConfiguration.js
+  [EMPTY FILE] src\framework\runtime\RuntimeContext.js
+  [EMPTY FILE] src\framework\runtime\RuntimeHost.js
+  [EMPTY FILE] src\framework\runtime\RuntimeScheduler.js
+  [EMPTY FILE] src\framework\runtime\errors\RuntimeHostError.js
+  [EMPTY FILE] src\framework\runtime\pipeline\FramePipeline.js
+  [EMPTY FILE] src\framework\runtime\pipeline\FrameStage.js
+  [EMPTY FILE] src\framework\runtime\session\RuntimeSession.js
+  [EMPTY FILE] src\framework\runtime\session\RuntimeSessionFactory.js
+  [EMPTY FILE] src\framework\runtime\session\RuntimeSessionLifecycle.js
+  [EMPTY FILE] src\framework\runtime\session\RuntimeSessionManager.js
+  [EMPTY FILE] src\framework\runtime\session\RuntimeSessionRegistry.js
+  [EMPTY FILE] src\framework\runtime\session\SessionDescriptor.js
+  [EMPTY FILE] src\framework\runtime\session\SessionSelectionPolicy.js
+  [EMPTY FILE] src\framework\runtime\state\RuntimeState.js
+  [EMPTY FILE] src\framework\runtime\state\RuntimeStateMachine.js
+  [EMPTY FILE] src\framework\runtime\state\RuntimeTransition.js
+  [EMPTY FILE] src\framework\runtime\statistics\RuntimeStatistics.js
+  [EMPTY FILE] src\framework\services\Service.js
+  [EMPTY FILE] src\scene\Camera.js
+  [EMPTY FILE] src\scene\CameraManager.js
+  [EMPTY FILE] src\scene\Environment.js
+  [EMPTY FILE] src\scene\SceneState.js
+  [EMPTY FILE] src\scene\SceneTransition.js
+  [EMPTY FILE] src\scene\TransitionState.js
+
+FILES WITH CONTENT
+  .git\COMMIT_EDITMSG  |  ext:(none)  |  size:2.52 KB  |  lines:58
+  .git\config  |  ext:(none)  |  size:354 B  |  lines:14
+  .git\description  |  ext:(none)  |  size:73 B  |  lines:1
+  .git\FETCH_HEAD  |  ext:(none)  |  size:118 B  |  lines:1
+  .git\HEAD  |  ext:(none)  |  size:21 B  |  lines:1
+  .git\hooks\applypatch-msg.sample  |  ext:.sample  |  size:478 B  |  lines:15
+  .git\hooks\commit-msg.sample  |  ext:.sample  |  size:1.93 KB  |  lines:74
+  .git\hooks\fsmonitor-watchman.sample  |  ext:.sample  |  size:4.50 KB  |  lines:168
+  .git\hooks\post-update.sample  |  ext:.sample  |  size:189 B  |  lines:8
+  .git\hooks\pre-applypatch.sample  |  ext:.sample  |  size:424 B  |  lines:14
+  .git\hooks\pre-commit.sample  |  ext:.sample  |  size:1.61 KB  |  lines:49
+  .git\hooks\pre-merge-commit.sample  |  ext:.sample  |  size:416 B  |  lines:13
+  .git\hooks\prepare-commit-msg.sample  |  ext:.sample  |  size:1.46 KB  |  lines:42
+  .git\hooks\pre-push.sample  |  ext:.sample  |  size:1.34 KB  |  lines:53
+  .git\hooks\pre-rebase.sample  |  ext:.sample  |  size:4.78 KB  |  lines:169
+  .git\hooks\pre-receive.sample  |  ext:.sample  |  size:544 B  |  lines:24
+  .git\hooks\push-to-checkout.sample  |  ext:.sample  |  size:2.72 KB  |  lines:78
+  .git\hooks\sendemail-validate.sample  |  ext:.sample  |  size:2.25 KB  |  lines:77
+  .git\hooks\update.sample  |  ext:.sample  |  size:3.56 KB  |  lines:128
+  .git\index  |  ext:(none)  |  size:19.49 KB  |  lines:0
+  .git\info\exclude  |  ext:(none)  |  size:240 B  |  lines:6
+  .git\logs\HEAD  |  ext:(none)  |  size:4.53 KB  |  lines:21
+  .git\logs\refs\heads\main  |  ext:(none)  |  size:2.85 KB  |  lines:14
+  .git\logs\refs\remotes\origin\HEAD  |  ext:(none)  |  size:145 B  |  lines:1
+  .git\logs\refs\remotes\origin\main  |  ext:(none)  |  size:1.06 KB  |  lines:7
+  .git\objects\02\6155a4f1eb7ed16f268ecfa99302d953fb4c18  |  ext:(none)  |  size:922 B  |  lines:0
+  .git\objects\04\1fb8fa71b2ad9dd9c4959347afcbbb4b0d0f42  |  ext:(none)  |  size:262 B  |  lines:1
+  .git\objects\06\48d619b6623a852d290db41940393457496c17  |  ext:(none)  |  size:167 B  |  lines:0
+  .git\objects\07\4e6f1926349c007721023627781fd30ceabf0a  |  ext:(none)  |  size:1003 B  |  lines:0
+  .git\objects\07\953153ccef02016aefef113905d4efa44969b9  |  ext:(none)  |  size:1.05 KB  |  lines:0
+  .git\objects\0b\9cc397e746ae896fa33e1321589d55f1891a56  |  ext:(none)  |  size:3.20 KB  |  lines:0
+  .git\objects\0e\2160ff1618fb217317a3e45945432605ffe9bf  |  ext:(none)  |  size:601 B  |  lines:0
+  .git\objects\0e\21f58eda8f87fb7e3672b5048e7f210357a59e  |  ext:(none)  |  size:810 B  |  lines:0
+  .git\objects\0e\a47e89a049f7f69b67d13f64c4b7899f9fc317  |  ext:(none)  |  size:759 B  |  lines:0
+  .git\objects\0f\04d4af2b9b9f8322aada0cdcf8521f79fe7fa1  |  ext:(none)  |  size:167 B  |  lines:0
+  .git\objects\10\88cfc47fa3d34dba855ada9d5914c031837784  |  ext:(none)  |  size:9.64 KB  |  lines:0
+  .git\objects\16\81c0cd7f44d9e8826183d7e6b0c1b078ad9d6d  |  ext:(none)  |  size:3.01 KB  |  lines:0
+  .git\objects\16\d25c25cc024ce9fbdc15328c8953ff145eb8bf  |  ext:(none)  |  size:153 B  |  lines:0
+  .git\objects\17\4245d17c25f90eb60031d5c5fc30068429419a  |  ext:(none)  |  size:210 B  |  lines:4
+  .git\objects\18\320495f8747a30210138c2687dcc49ce815886  |  ext:(none)  |  size:189 B  |  lines:0
+  .git\objects\19\cf2cd92f14fffa96c3fb6885900bf7e4832799  |  ext:(none)  |  size:160 B  |  lines:0
+  .git\objects\19\f07dc3834d35d5cdccf2d0af97ed49ac019c82  |  ext:(none)  |  size:296 B  |  lines:0
+  .git\objects\1a\2b068a7491c3c3a55deddbc002af8411828aa3  |  ext:(none)  |  size:1.59 KB  |  lines:0
+  .git\objects\1a\f0992fa659a72f4cc24e1c9fcabdf41d48661d  |  ext:(none)  |  size:348 B  |  lines:0
+  .git\objects\1b\689598c2be4ab7afe228b006b74d4fd28bb12d  |  ext:(none)  |  size:304 B  |  lines:0
+  .git\objects\1c\a47abc87cff9cac25717a737280c0d5bb0e453  |  ext:(none)  |  size:92 B  |  lines:0
+  .git\objects\1d\4279cf4995892660802465dad518042e9d6d04  |  ext:(none)  |  size:206 B  |  lines:1
+  .git\objects\1d\68c7a60d043b91bf138e44cec6d80c52b68703  |  ext:(none)  |  size:349 B  |  lines:0
+  .git\objects\1d\750f58461b0d47b090a848f9e69cf74d754cca  |  ext:(none)  |  size:1.45 KB  |  lines:0
+  .git\objects\21\2afef7e05d3598d53f6c22b60d3b4037977466  |  ext:(none)  |  size:281 B  |  lines:0
+  .git\objects\21\3cba90c98da872c46c72bdb6e84cda72d41f02  |  ext:(none)  |  size:304 B  |  lines:0
+  .git\objects\21\a7e295efdea30ecd1c6daac0f126a8608d82be  |  ext:(none)  |  size:184 B  |  lines:0
+  .git\objects\22\9fd37137f77015158117f02ad02ee367a45804  |  ext:(none)  |  size:193 B  |  lines:0
+  .git\objects\22\cb3d5155b4a184497b2e03f9d3ab5a3a4fd060  |  ext:(none)  |  size:389 B  |  lines:0
+  .git\objects\23\289d5563098bb323072ea27ba0e3832dc24094  |  ext:(none)  |  size:187 B  |  lines:0
+  .git\objects\23\d376cc9833c5b27d4e923288ada67db269b248  |  ext:(none)  |  size:254 B  |  lines:0
+  .git\objects\24\336a3e8af4596ff63deee7b04f8f71e359b9d6  |  ext:(none)  |  size:167 B  |  lines:3
+  .git\objects\25\f312749faeb993b59f2e34e29173be95a40e3c  |  ext:(none)  |  size:888 B  |  lines:0
+  .git\objects\26\a0188f7f644e66d8ffdd80efedd874b45d4363  |  ext:(none)  |  size:203 B  |  lines:2
+  .git\objects\26\ea40034702186f0f94aee1b965ee4dcfdd17d5  |  ext:(none)  |  size:144 B  |  lines:0
+  .git\objects\26\f707d16d464ea1ab85e5b098fd8015b8fdced0  |  ext:(none)  |  size:819 B  |  lines:0
+  .git\objects\27\46c7ae801636c2911287a810e701737f713e99  |  ext:(none)  |  size:1.82 KB  |  lines:0
+  .git\objects\27\fa470d6e7405a3d1ed5143522e0d8d9ff37092  |  ext:(none)  |  size:1.52 KB  |  lines:0
+  .git\objects\28\cbe727ec04dac2ba103d752abbd2ac014c7734  |  ext:(none)  |  size:602 B  |  lines:0
+  .git\objects\29\9e9511c1fbfbdf56adb8075ffcc82a2599cecc  |  ext:(none)  |  size:172 B  |  lines:0
+  .git\objects\2c\5b51b43a3e308bb15fc96316f34cfc1071b7ec  |  ext:(none)  |  size:172 B  |  lines:0
+  .git\objects\2c\f0e55552c0534881a23db9c18673ec918b002a  |  ext:(none)  |  size:87 B  |  lines:0
+  .git\objects\2e\e8f4712fbf8a0fe850bbdd7ed9000f9fa4a68a  |  ext:(none)  |  size:373 B  |  lines:0
+  .git\objects\2f\2987b746d1c88e0e457d6590e6b01ab08bd89d  |  ext:(none)  |  size:403 B  |  lines:0
+  .git\objects\30\1ec5bdd10751b430f8b4123ad52e423a6d6d7e  |  ext:(none)  |  size:120 B  |  lines:0
+  .git\objects\30\af4c0f09b31b6f36848363831faf1796c92835  |  ext:(none)  |  size:101 B  |  lines:0
+  .git\objects\31\fa0c69165d7f9f8204800660728050eb5b1ff1  |  ext:(none)  |  size:1.88 KB  |  lines:0
+  .git\objects\34\6ccdceb17bbbacb0d48b1fb48f54c2eb529d59  |  ext:(none)  |  size:424 B  |  lines:0
+  .git\objects\35\d789617266a99352bcd5a642062b378feca69c  |  ext:(none)  |  size:5.50 KB  |  lines:0
+  .git\objects\38\1acd3c657fc93e94a4a2e90e8a11cb884c8b7c  |  ext:(none)  |  size:601 B  |  lines:0
+  .git\objects\3a\e5d5223b0af17d1fc69be3087e9631eaaceb37  |  ext:(none)  |  size:982 B  |  lines:0
+  .git\objects\3b\6e8d3cdfa46f4be387510e5af3170918f35c0c  |  ext:(none)  |  size:165 B  |  lines:0
+  .git\objects\3c\f734bb1c98ca8e81bc4560f5ad6fe9f055b5fa  |  ext:(none)  |  size:108.29 KB  |  lines:0
+  .git\objects\3e\5953c4292849839056476cf83c8825f5eb5e4f  |  ext:(none)  |  size:63 B  |  lines:1
+  .git\objects\3f\436ac4d7332722c95bb0122270031517800fce  |  ext:(none)  |  size:141 B  |  lines:2
+  .git\objects\41\547243d34ad7ffa028953966b346ae036a8753  |  ext:(none)  |  size:767 B  |  lines:0
+  .git\objects\41\e4292407ff7f9d30af0f8289ab38c7d8bf7538  |  ext:(none)  |  size:85 B  |  lines:0
+  .git\objects\41\fe3b889c154ad34318f1546d45eebb20617828  |  ext:(none)  |  size:575 B  |  lines:4
+  .git\objects\42\34188d69c16129cf2bca22fd3f104a1c08a3ae  |  ext:(none)  |  size:83 B  |  lines:0
+  .git\objects\44\5d758fab2aaf91d114b28b78149f76371e7385  |  ext:(none)  |  size:134 B  |  lines:3
+  .git\objects\44\b2252ef43fec3a2122b91b15abb62e62857d29  |  ext:(none)  |  size:527 B  |  lines:0
+  .git\objects\45\cbdd28340cf546598f3b8a4ba82f828aaf21bd  |  ext:(none)  |  size:2.04 KB  |  lines:0
+  .git\objects\45\cc6a1832fca031d9769a31da0feec7cddc0d0f  |  ext:(none)  |  size:2.24 KB  |  lines:0
+  .git\objects\46\b8a4811b07927fd4cec2c6506f248309e8d2e0  |  ext:(none)  |  size:784 B  |  lines:0
+  .git\objects\46\ceeda9d2b49fd36f70bda02f7a2b18da678a87  |  ext:(none)  |  size:765 B  |  lines:0
+  .git\objects\48\5f33b74a9c0b80d305d9f2594739fe33701ea4  |  ext:(none)  |  size:205 B  |  lines:2
+  .git\objects\49\9c0a8b4d385690dff601be200d4167f831aca0  |  ext:(none)  |  size:200 B  |  lines:4
+  .git\objects\49\f74c0caff5a15ce076d7eb582c21f846b94064  |  ext:(none)  |  size:150 B  |  lines:0
+  .git\objects\50\341f7e5e180ae61eb924df3ec1e54ca24f4841  |  ext:(none)  |  size:519 B  |  lines:5
+  .git\objects\51\216ca0687f88cf38383043419608d8d7dea169  |  ext:(none)  |  size:200 B  |  lines:5
+  .git\objects\51\550d0440b89f9f444898c7e3bc344bf6d3c8ab  |  ext:(none)  |  size:602 B  |  lines:0
+  .git\objects\52\17cae388439989826e234854348972fb9cec0e  |  ext:(none)  |  size:253 B  |  lines:0
+  .git\objects\54\6836bb015c3a2d40b4acc6b1c19c523fb39020  |  ext:(none)  |  size:785 B  |  lines:0
+  .git\objects\56\74a469fcbb31d33e31a091695546014f0d5550  |  ext:(none)  |  size:118 B  |  lines:0
+  .git\objects\56\b7a7bf65f66de08dbb0f4aed81bea4f4300c0d  |  ext:(none)  |  size:568 B  |  lines:0
+  .git\objects\57\1efdb9b61f59bfdd3eebebe2b46437f0228f22  |  ext:(none)  |  size:649 B  |  lines:0
+  .git\objects\57\c79e39cf4c2575ab57a6e969eb2eca6512ce31  |  ext:(none)  |  size:693 B  |  lines:0
+  .git\objects\58\5247f76db795134a5fff29e8fe7b11c23d29a1  |  ext:(none)  |  size:1.28 KB  |  lines:0
+  .git\objects\58\93b9522ad315f6c0f725b5406db580a273f6cd  |  ext:(none)  |  size:147 B  |  lines:0
+  .git\objects\59\4a9e8890896965d67bbb6a1156fd645cf6244b  |  ext:(none)  |  size:3.01 KB  |  lines:0
+  .git\objects\5c\51da73e6aae54bb30c67e6364d7454a6324776  |  ext:(none)  |  size:128 B  |  lines:0
+  .git\objects\5c\5b59917fecda8bca7af491e4c8e81c11bdd6f2  |  ext:(none)  |  size:81 B  |  lines:0
+  .git\objects\5d\6ccf8fdf888e19d34b7f671e8669e6ac1562c4  |  ext:(none)  |  size:54 B  |  lines:0
+  .git\objects\5e\d557386fcd34902cf02c77bbead150e87ea49e  |  ext:(none)  |  size:373 B  |  lines:0
+  .git\objects\60\60236d9059a20a3a4a72efceb427ed13883404  |  ext:(none)  |  size:5.51 KB  |  lines:0
+  .git\objects\63\84e5ab90d2a1f4c1e7725c485a5edae9211f92  |  ext:(none)  |  size:261 B  |  lines:0
+  .git\objects\64\f1ccaffe569d5787fc7c2cb2074f8f9dabd9aa  |  ext:(none)  |  size:707 B  |  lines:0
+  .git\objects\65\244feed53ecdd50dbcab3d7cd64953eb1870d0  |  ext:(none)  |  size:211 B  |  lines:0
+  .git\objects\68\26a08d807e9ac271bab50059c00b1d03405e3f  |  ext:(none)  |  size:1.62 KB  |  lines:0
+  .git\objects\6a\06b2f4e08db959c587c3d7346e2eec8293a849  |  ext:(none)  |  size:331 B  |  lines:0
+  .git\objects\6b\34082fced6a4ce30c550e0a48656f1acd43e7f  |  ext:(none)  |  size:374 B  |  lines:0
+  .git\objects\6b\4376d585a01f781f04feb63813ec4862e18a1d  |  ext:(none)  |  size:9.03 KB  |  lines:0
+  .git\objects\6e\c3bc0b0091f13f500329394f5b389761e7b163  |  ext:(none)  |  size:2.13 KB  |  lines:0
+  .git\objects\71\a6ecddfaf2801c6f2f9c42df5ea54a962ea2c7  |  ext:(none)  |  size:247 B  |  lines:0
+  .git\objects\73\dd54bfef91b92c106d5da571bbd3f09fc23cef  |  ext:(none)  |  size:194 B  |  lines:2
+  .git\objects\75\2f6427251e34fd160cb6caa3abbe9be05ea2b1  |  ext:(none)  |  size:500 B  |  lines:0
+  .git\objects\76\1690e3ee2485fc957739345f1a6e40d12486d3  |  ext:(none)  |  size:579 B  |  lines:0
+  .git\objects\76\52b3a8057e8fc0e7822dcebc1be73ec8877885  |  ext:(none)  |  size:180 B  |  lines:3
+  .git\objects\76\538ba7651ced8ffeea50ea227f8a8879d4f37c  |  ext:(none)  |  size:137 B  |  lines:3
+  .git\objects\7a\ed30c8daa16cf78d3133ad661020d3f0d9458d  |  ext:(none)  |  size:518 B  |  lines:0
+  .git\objects\7c\dfc2f940ca60358597c9d89295fd0b3a071265  |  ext:(none)  |  size:1.14 KB  |  lines:0
+  .git\objects\7f\4ab01752f72574204bbc32bcea0bc70baae3f4  |  ext:(none)  |  size:162 B  |  lines:4
+  .git\objects\80\3fca50bc1224e123860a6bc6bb73e39c973411  |  ext:(none)  |  size:840 B  |  lines:0
+  .git\objects\82\923272a618f1e68b3f1e8e2d853a39de0e1ccc  |  ext:(none)  |  size:105 B  |  lines:0
+  .git\objects\83\8b64dda58f88f6d4ec2c04e17d285ebbe6075b  |  ext:(none)  |  size:487 B  |  lines:0
+  .git\objects\83\ca1154dc9b04df33589f897401def798cb4251  |  ext:(none)  |  size:1.38 KB  |  lines:0
+  .git\objects\86\3a24c851f1c47341398ec24b5372af81c46027  |  ext:(none)  |  size:355 B  |  lines:0
+  .git\objects\86\9ff8b15c4f6812f727af05fcfe5b561b7ea394  |  ext:(none)  |  size:115 B  |  lines:0
+  .git\objects\87\100240ec8f3f4caea5c68b26057d9d92d7acda  |  ext:(none)  |  size:374 B  |  lines:0
+  .git\objects\87\1e14af2217eccba14bf32ccbee718ea9d9c1f7  |  ext:(none)  |  size:401 B  |  lines:0
+  .git\objects\88\7fb12dcede01cf6600aefa172892a695cb7f08  |  ext:(none)  |  size:620 B  |  lines:0
+  .git\objects\88\edec7394ae5f2d54d172c6aa899ae2b7e836d6  |  ext:(none)  |  size:88 B  |  lines:0
+  .git\objects\89\1caadcf7c3e2fa15fab916ccceb3d4592cd8f3  |  ext:(none)  |  size:600 B  |  lines:0
+  .git\objects\8a\d228e77751987e08697206bca3e11ac99602ae  |  ext:(none)  |  size:673 B  |  lines:0
+  .git\objects\8b\24a38d5f05e1dff3415f9eb6effbc52afd8cc4  |  ext:(none)  |  size:1.23 KB  |  lines:0
+  .git\objects\8b\5f6e61a20c2e2c727a4a2ba7ba4a70112d3ca4  |  ext:(none)  |  size:1.87 KB  |  lines:0
+  .git\objects\8b\fcee9f0a57ef7215a158571895a397e8ca062b  |  ext:(none)  |  size:566 B  |  lines:0
+  .git\objects\8d\ae107e39b7621e944c5c1e77cef10600576e42  |  ext:(none)  |  size:8.29 KB  |  lines:0
+  .git\objects\8f\afacfc37e3617c54c8ba1f4d5b341ad790c725  |  ext:(none)  |  size:227 B  |  lines:0
+  .git\objects\90\382a193c4c2d68589d5eec08c53b3c82f53df6  |  ext:(none)  |  size:470 B  |  lines:0
+  .git\objects\92\085cbed8c0e714adb207e8c0eeef71364c2f7b  |  ext:(none)  |  size:211 B  |  lines:0
+  .git\objects\92\43358036425eba85ee08ba9caaa1495cca3a92  |  ext:(none)  |  size:1.03 KB  |  lines:0
+  .git\objects\93\cd060efd2d017529424daf982a29eef5120c81  |  ext:(none)  |  size:1.22 KB  |  lines:0
+  .git\objects\94\b4c618883b805e88cc902dfa630d141a9d97b4  |  ext:(none)  |  size:3.08 KB  |  lines:0
+  .git\objects\96\5d8d580fb66e20efdc3992b22574785197fbd2  |  ext:(none)  |  size:496 B  |  lines:0
+  .git\objects\98\e0476b7ad0d779efca6e578019b6140cd500a3  |  ext:(none)  |  size:135 B  |  lines:0
+  .git\objects\9b\8e0869b53f8d91f74f8390714975455ebdfc25  |  ext:(none)  |  size:382 B  |  lines:0
+  .git\objects\a0\0fa1b784bbd381c02f5c7252cf628b20c8e821  |  ext:(none)  |  size:1.82 KB  |  lines:0
+  .git\objects\a0\b99eaacea152979718b25ea8a8e20bb845e551  |  ext:(none)  |  size:247 B  |  lines:0
+  .git\objects\a1\92b573d720433fe7b83ed1608d0c27b861f0cf  |  ext:(none)  |  size:362 B  |  lines:0
+  .git\objects\a2\25f31bc860640721feb6ae43b79a1139d7565d  |  ext:(none)  |  size:1.81 KB  |  lines:0
+  .git\objects\a2\519b87bd05d8e0b0830bc348811c2076240a77  |  ext:(none)  |  size:172 B  |  lines:0
+  .git\objects\a2\6cac9aac7226b1d50523c509e20ae15826c149  |  ext:(none)  |  size:214 B  |  lines:5
+  .git\objects\a3\ccdedcc469e25e855443b9e311d827f5230e89  |  ext:(none)  |  size:1.88 MB  |  lines:0
+  .git\objects\a4\e8da77310de15577e9e6fe7b737148330acd1f  |  ext:(none)  |  size:118 B  |  lines:2
+  .git\objects\a5\308f67407353626ce9eedb3c6f24a10b0b3cfa  |  ext:(none)  |  size:477 B  |  lines:0
+  .git\objects\a5\5161d3efeb6f987366323150ec7237385c3686  |  ext:(none)  |  size:348 B  |  lines:0
+  .git\objects\a6\f6aabcfbdf5f7cb160fd2135fbac15f213e5e9  |  ext:(none)  |  size:174 B  |  lines:0
+  .git\objects\a9\09f6df70a8b3ada714cc729212333ca2dd0218  |  ext:(none)  |  size:468 B  |  lines:0
+  .git\objects\aa\a09150f1fbc8ab4db51f95136e83d2b558bb78  |  ext:(none)  |  size:155 B  |  lines:5
+  .git\objects\aa\c8c778fa6852147bbecc464ee3542a681a1ff7  |  ext:(none)  |  size:438 B  |  lines:0
+  .git\objects\ab\56947fe0447fddf285eca8a8548d6ba9e7307a  |  ext:(none)  |  size:899 B  |  lines:0
+  .git\objects\ad\e79b74754c8092aeadb6bfbf00006699b928f8  |  ext:(none)  |  size:447 B  |  lines:0
+  .git\objects\af\1e7bd7658befc1e724a8cbe50970be4b6e4f29  |  ext:(none)  |  size:7.31 KB  |  lines:0
+  .git\objects\af\5c64a8c778be168190aaace7cb6d01fce5d267  |  ext:(none)  |  size:213 B  |  lines:0
+  .git\objects\af\a7da046f42564b6c4a56449c62c0d46f93025d  |  ext:(none)  |  size:547 B  |  lines:0
+  .git\objects\b0\78f752aa32d8c48bf144ded965a7a53ae83967  |  ext:(none)  |  size:343 B  |  lines:0
+  .git\objects\b0\8316f10ac8e9c37fc0f7bc1a4dee8b899ee878  |  ext:(none)  |  size:310 B  |  lines:0
+  .git\objects\b0\eac9f1cbb503ccead8ce1af86a62a89061278f  |  ext:(none)  |  size:304 B  |  lines:0
+  .git\objects\b1\5477618fb6f701e7342de349e8c375f1c51bcd  |  ext:(none)  |  size:215 B  |  lines:0
+  .git\objects\b1\7a9e36b0bdab85e4afe6ea661798f8cfb90040  |  ext:(none)  |  size:538 B  |  lines:0
+  .git\objects\b2\d17cf89766579a19a06d3ae1a74aa24048c2da  |  ext:(none)  |  size:601 B  |  lines:0
+  .git\objects\b3\e78c1f8e00ccb5a9febe445945a4528974bc6e  |  ext:(none)  |  size:228 B  |  lines:0
+  .git\objects\b3\f11612f87b3d9f38152698e81bf7a275a17e60  |  ext:(none)  |  size:61 B  |  lines:0
+  .git\objects\b4\06485f5a4f5ac7657bccd7d61dd8da86ded677  |  ext:(none)  |  size:2.19 KB  |  lines:0
+  .git\objects\b5\e701c599e4dcdfa62caa217c3c0494f2ba9b78  |  ext:(none)  |  size:2.41 KB  |  lines:0
+  .git\objects\b6\31d9628f3cb9fc7f24d889633600c05607277b  |  ext:(none)  |  size:223 B  |  lines:1
+  .git\objects\b7\731fe492c98b8c0a8def8c66e74015c13b4595  |  ext:(none)  |  size:218 B  |  lines:0
+  .git\objects\b9\c60177775a3140fb323d99a39e3e0849a8968a  |  ext:(none)  |  size:499 B  |  lines:0
+  .git\objects\b9\d3eca7bce4e63e5fd82ebe9c880ebf52ee91ea  |  ext:(none)  |  size:65 B  |  lines:0
+  .git\objects\ba\971aa159dbe940642fc896a05327dde7856bf4  |  ext:(none)  |  size:602 B  |  lines:0
+  .git\objects\bc\937a2f85c3d0aa67f00e73a0efd5098528e2d1  |  ext:(none)  |  size:602 B  |  lines:0
+  .git\objects\be\011bc31f81535d64a0736f43f59e72702f6059  |  ext:(none)  |  size:191 B  |  lines:5
+  .git\objects\bf\e345a70bf9ce7b5ba82cf962c06af76f5e3ac7  |  ext:(none)  |  size:8.28 KB  |  lines:0
+  .git\objects\c0\9f457da08c0a7455d111a3111ca463b9df2765  |  ext:(none)  |  size:244 B  |  lines:0
+  .git\objects\c1\e59bbe9468a23cd20826bc1fbf7ff896a754e4  |  ext:(none)  |  size:187 B  |  lines:0
+  .git\objects\c3\251beec58f831dd351c009532c6fbbccd4f187  |  ext:(none)  |  size:4.12 MB  |  lines:0
+  .git\objects\c3\86992f52f2be29beed30f0bd4f8445de40eadc  |  ext:(none)  |  size:349 B  |  lines:0
+  .git\objects\c5\28ceb29513b3167df503462985b4855bbc0e27  |  ext:(none)  |  size:570 B  |  lines:0
+  .git\objects\c5\787db57fc4e45e5787e26b843863c288cebc95  |  ext:(none)  |  size:638 B  |  lines:0
+  .git\objects\c6\014a9f5b13ca4361f6ac231672330b11f9455c  |  ext:(none)  |  size:1.51 KB  |  lines:0
+  .git\objects\c6\094c26477145cfb7da0ce107fbfc5c84542438  |  ext:(none)  |  size:170 B  |  lines:0
+  .git\objects\c8\65e1cf37edd13432f585a60e3e699f6d813837  |  ext:(none)  |  size:103 B  |  lines:0
+  .git\objects\c8\d36da9360af5604d150ca68b192fbbf0d1de9e  |  ext:(none)  |  size:402 B  |  lines:0
+  .git\objects\c9\610989c50ce879cbcde85cdccb93bd6a7e3b4a  |  ext:(none)  |  size:243 B  |  lines:2
+  .git\objects\c9\f1092b3468e249889e306585824f83f2d0a16f  |  ext:(none)  |  size:639 B  |  lines:0
+  .git\objects\cc\80bbd2dcf9fd74cadcc3207e6ed5412c7236c6  |  ext:(none)  |  size:7.41 KB  |  lines:0
+  .git\objects\cc\9abcfc44c7ce7e03e70dc583be6ba0034522e1  |  ext:(none)  |  size:875 B  |  lines:0
+  .git\objects\cf\60fc3e774f92b6520a4a5e9259b1c0387d56f0  |  ext:(none)  |  size:187 B  |  lines:0
+  .git\objects\cf\7a325c48be17ee5f10df6377256e11ce82a657  |  ext:(none)  |  size:373 B  |  lines:0
+  .git\objects\cf\acb6e315351f4ab1354827571c87da853a6ab8  |  ext:(none)  |  size:80 B  |  lines:0
+  .git\objects\d0\cfc64780cf4349907a65992fc84e8e7fed92d9  |  ext:(none)  |  size:121 B  |  lines:0
+  .git\objects\d0\da9f708ff3e3fed0efce2816b410fe49e595ad  |  ext:(none)  |  size:210 B  |  lines:0
+  .git\objects\d3\1b4bda7a4ddba83f2791ec6e08879ebb138799  |  ext:(none)  |  size:303 B  |  lines:0
+  .git\objects\d3\51ab0b698650540ed76744601f59713a9bcbde  |  ext:(none)  |  size:807 B  |  lines:0
+  .git\objects\d5\3061883fc2db3a6031a4ed18f4d140176f1ae2  |  ext:(none)  |  size:603 B  |  lines:0
+  .git\objects\d5\e865a73cfd4bb2cf83d1e42fe2bcfadee44e20  |  ext:(none)  |  size:86 B  |  lines:0
+  .git\objects\d7\68a34ca15ef7e09cd2428f556c457c486d0733  |  ext:(none)  |  size:191 B  |  lines:0
+  .git\objects\d9\d8741c338e4a95ac3a3e10ef015f86cf967ec7  |  ext:(none)  |  size:131 B  |  lines:1
+  .git\objects\db\344ca43f3159efa9967cef690871207522877d  |  ext:(none)  |  size:423 B  |  lines:0
+  .git\objects\dc\0f0ed0e55433303fc0d18195fc8807addd4de5  |  ext:(none)  |  size:1.46 MB  |  lines:0
+  .git\objects\dc\8c1e217b76d0f0094a90bbbcdfdb69865c4922  |  ext:(none)  |  size:451 B  |  lines:0
+  .git\objects\dd\7fd73fef582bc7a049819f072e9497273b8ea5  |  ext:(none)  |  size:131 B  |  lines:0
+  .git\objects\de\0711c883e7c76d6c9d09ce2b7ff47f4d888049  |  ext:(none)  |  size:181 B  |  lines:3
+  .git\objects\de\5ddd93aae5b023e62117e7bd8e07eef429c64f  |  ext:(none)  |  size:4.00 KB  |  lines:0
+  .git\objects\e0\689cb8c828665be395790d1d9ec6e880a9132a  |  ext:(none)  |  size:602 B  |  lines:0
+  .git\objects\e1\291c83d1bf124d2780a3b64f8f74eea4a65f99  |  ext:(none)  |  size:576 B  |  lines:0
+  .git\objects\e2\aa5465361e66219197f8d98c4bef9455f3ff0c  |  ext:(none)  |  size:963 B  |  lines:0
+  .git\objects\e4\09264b3d9561a098a88b2a223c9dc82a129c6b  |  ext:(none)  |  size:304 B  |  lines:0
+  .git\objects\e4\606e37885b7430a6cafe6d337233379d3ee395  |  ext:(none)  |  size:193 B  |  lines:0
+  .git\objects\e4\6a6dcd21478f9b3ecec241f8c079ba4d91b250  |  ext:(none)  |  size:182 B  |  lines:0
+  .git\objects\e6\19bc88cb7594cfc000ea3e6e1f8e62aac92daf  |  ext:(none)  |  size:227 B  |  lines:0
+  .git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391  |  ext:(none)  |  size:15 B  |  lines:0
+  .git\objects\e6\9e4e26b77c7bbd33617df46abccf9feb570f8f  |  ext:(none)  |  size:214 B  |  lines:1
+  .git\objects\e6\bfeb3b1f65051a60d32daaae45977c4e961697  |  ext:(none)  |  size:1.41 KB  |  lines:0
+  .git\objects\e7\16111c392a7ca6957debb97a456af196e526cd  |  ext:(none)  |  size:1.63 KB  |  lines:0
+  .git\objects\e7\29ff5ea960a095781456d19ca4ef030cc59517  |  ext:(none)  |  size:989 B  |  lines:0
+  .git\objects\e7\a67bafba317ee2e86336eaf964e15119d152ff  |  ext:(none)  |  size:108 B  |  lines:0
+  .git\objects\e8\b33202f046aa8c8d62b6146ce655e2af072b19  |  ext:(none)  |  size:769 B  |  lines:0
+  .git\objects\e8\deee008f492bfe05762b8ab3c1dfdc36a1ad0f  |  ext:(none)  |  size:282 B  |  lines:0
+  .git\objects\ea\0a12c707838a5b3b63724ef24939014d129a69  |  ext:(none)  |  size:86 B  |  lines:0
+  .git\objects\ec\5db7150310c978e2ae6cad1e94ef28798428fe  |  ext:(none)  |  size:82 B  |  lines:0
+  .git\objects\ec\bca6ea29ecd7250a694263a49557a121710a1f  |  ext:(none)  |  size:129 B  |  lines:0
+  .git\objects\ee\734ba32352be0772dd0101c92e01a8d3da7c80  |  ext:(none)  |  size:67 B  |  lines:0
+  .git\objects\f1\7fea2048fe689fb2f55a6b10d2698ecbf62cd9  |  ext:(none)  |  size:87 B  |  lines:0
+  .git\objects\f2\650c9f92ef05f15c7bc4e907026678adbdb281  |  ext:(none)  |  size:172 B  |  lines:0
+  .git\objects\f3\71ea281c9cc558622b3a832414c3e14ce78417  |  ext:(none)  |  size:302 B  |  lines:0
+  .git\objects\f3\9da36dd5fdd31b19ca01dc04a4ff606a2a7317  |  ext:(none)  |  size:246 B  |  lines:0
+  .git\objects\f4\743b130ad445e5ef4618a52828d8cc605f7fb1  |  ext:(none)  |  size:172 B  |  lines:0
+  .git\objects\f4\ad9a075d1eca26e4bcc7f5c77e52ccf1b9e4b3  |  ext:(none)  |  size:960 B  |  lines:0
+  .git\objects\f7\388c75ce46349eafae1581620c6a96e1858f36  |  ext:(none)  |  size:337 B  |  lines:0
+  .git\objects\f8\b1b1ce885eea29cb9d65438f3ecee93f1b55fd  |  ext:(none)  |  size:216 B  |  lines:1
+  .git\objects\fa\3e05c35fad938ff7c9205220bc6a978c0db2f5  |  ext:(none)  |  size:49.44 KB  |  lines:0
+  .git\objects\fb\3d5c2ab0e22ee81e2860f566618534243a000c  |  ext:(none)  |  size:466 B  |  lines:0
+  .git\objects\fc\5d004c449d941cf7e1672f0bc23a07c5694972  |  ext:(none)  |  size:321 B  |  lines:5
+  .git\objects\fe\b253845bc8fb14ccd647ed46698c184eba6b11  |  ext:(none)  |  size:3.10 KB  |  lines:0
+  .git\objects\ff\1106e61c16e56a8b00839b25dea3987edcaa14  |  ext:(none)  |  size:1.07 KB  |  lines:0
+  .git\ORIG_HEAD  |  ext:(none)  |  size:41 B  |  lines:1
+  .git\refs\heads\main  |  ext:(none)  |  size:41 B  |  lines:1
+  .git\refs\remotes\origin\HEAD  |  ext:(none)  |  size:30 B  |  lines:1
+  .git\refs\remotes\origin\main  |  ext:(none)  |  size:41 B  |  lines:1
+  bgmusic.mp3  |  ext:.mp3  |  size:469.94 KB  |  lines:0
+  cinematic-baker.js  |  ext:.js  |  size:3.46 KB  |  lines:106
+  cutscenes\bridge.webm  |  ext:.webm  |  size:1.46 MB  |  lines:0
+  cutscenes\freeze.webm  |  ext:.webm  |  size:1.88 MB  |  lines:0
+  cutscenes\prologue.webm  |  ext:.webm  |  size:4.11 MB  |  lines:0
+  DirectoryInspector#.bat  |  ext:.bat  |  size:12.95 KB  |  lines:447
+  DirectoryInspector.ps1  |  ext:.ps1  |  size:25.33 KB  |  lines:662
+  DirectoryReport_20260801_133855.txt  |  ext:.txt  |  size:41.75 KB  |  lines:563
+  DirectoryReport_20260801_134620.txt  |  ext:.txt  |  size:41.89 KB  |  lines:566
+  DirectoryReport_20260801_135309.txt  |  ext:.txt  |  size:41.98 KB  |  lines:567
+  DirectoryReport_20260801_140551.txt  |  ext:.txt  |  size:42.11 KB  |  lines:569
+  DirectoryReport_20260801_140653.txt  |  ext:.txt  |  size:42.20 KB  |  lines:570
+  DirectoryReport_20260801_140713.txt  |  ext:.txt  |  size:42.20 KB  |  lines:570
+  docs\# Echo Engine Design Document (EDD).txt  |  ext:.txt  |  size:273.48 KB  |  lines:16029
+  docs\[DeepSeek].txt  |  ext:.txt  |  size:5.46 KB  |  lines:167
+  docs\addative features.txt  |  ext:.txt  |  size:28.77 KB  |  lines:894
+  Echo_Engine_Implementation_Roadmap.md  |  ext:.md  |  size:16.46 KB  |  lines:230
+  EchoesOfTomorrow_ChatLog (1).txt  |  ext:.txt  |  size:63.56 KB  |  lines:4066
+  EchoSandbox\adapters\AnimationAdapter.js  |  ext:.js  |  size:2.84 KB  |  lines:99
+  EchoSandbox\adapters\AssetAdapter.js  |  ext:.js  |  size:3.27 KB  |  lines:130
+  EchoSandbox\adapters\ECSAdapter.js  |  ext:.js  |  size:3.28 KB  |  lines:131
+  EchoSandbox\adapters\EngineAdapter.js  |  ext:.js  |  size:2.23 KB  |  lines:95
+  EchoSandbox\adapters\FrameworkAdapter.js  |  ext:.js  |  size:2.37 KB  |  lines:88
+  EchoSandbox\adapters\RenderingAdapter.js  |  ext:.js  |  size:3.01 KB  |  lines:114
+  EchoSandbox\adapters\TimeAdapter.js  |  ext:.js  |  size:1.81 KB  |  lines:83
+  EchoSandbox\adapters\WorldAdapter.js  |  ext:.js  |  size:3.47 KB  |  lines:138
+  EchoSandbox\core\SandboxBootstrap.js  |  ext:.js  |  size:9.11 KB  |  lines:292
+  EchoSandbox\core\SandboxEvents.js  |  ext:.js  |  size:1.27 KB  |  lines:43
+  EchoSandbox\core\SandboxState.js  |  ext:.js  |  size:8.13 KB  |  lines:293
+  EchoSandbox\DebugOverlay.js  |  ext:.js  |  size:6.63 KB  |  lines:206
+  EchoSandbox\index.html  |  ext:.html  |  size:7.08 KB  |  lines:145
+  EchoSandbox\main.js  |  ext:.js  |  size:1.04 KB  |  lines:34
+  EchoSandbox\monitors\MemoryMonitor.js  |  ext:.js  |  size:4.56 KB  |  lines:170
+  EchoSandbox\monitors\PerformanceMonitor.js  |  ext:.js  |  size:4.05 KB  |  lines:140
+  EchoSandbox\monitors\RuntimeMonitor.js  |  ext:.js  |  size:5.70 KB  |  lines:169
+  EchoSandbox\SandboxApplication.js  |  ext:.js  |  size:7.77 KB  |  lines:278
+  git config --global user.email.txt  |  ext:.txt  |  size:103 B  |  lines:2
+  how --stat e46a6dc  |  ext:(none)  |  size:978 B  |  lines:11
+  index.html  |  ext:.html  |  size:6.34 KB  |  lines:166
+  package.json  |  ext:.json  |  size:327 B  |  lines:17
+  README.md  |  ext:.md  |  size:163 B  |  lines:3
+  repomix-output.md  |  ext:.md  |  size:485.49 KB  |  lines:17264
+  repomix-output.xml  |  ext:.xml  |  size:217.76 KB  |  lines:7779
+  Screenshot_20260801_134018.png  |  ext:.png  |  size:38.90 KB  |  lines:0
+  src\animation\skeleton\Bone.js  |  ext:.js  |  size:10.34 KB  |  lines:352
+  src\animation\skeleton\Skeleton.js  |  ext:.js  |  size:11.16 KB  |  lines:357
+  src\animation\skeleton\SkeletonBuilder.js  |  ext:.js  |  size:4.61 KB  |  lines:150
+  src\assets\AssetCache.js  |  ext:.js  |  size:2.02 KB  |  lines:88
+  src\assets\AssetDescriptor.js  |  ext:.js  |  size:1.41 KB  |  lines:52
+  src\assets\AssetHandle.js  |  ext:.js  |  size:1.07 KB  |  lines:40
+  src\assets\AssetManager.js  |  ext:.js  |  size:5.91 KB  |  lines:201
+  src\assets\AssetRegistry.js  |  ext:.js  |  size:625 B  |  lines:29
+  src\assets\AssetService.js  |  ext:.js  |  size:722 B  |  lines:31
+  src\assets\loaders\MaterialLoader.js  |  ext:.js  |  size:458 B  |  lines:17
+  src\components\AudioComponent.js  |  ext:.js  |  size:230 B  |  lines:11
+  src\components\HealthComponent.js  |  ext:.js  |  size:175 B  |  lines:9
+  src\components\MeshComponent.js  |  ext:.js  |  size:222 B  |  lines:9
+  src\components\TransformComponent.js  |  ext:.js  |  size:257 B  |  lines:10
+  src\components\VelocityComponent.js  |  ext:.js  |  size:181 B  |  lines:10
+  src\data\CellData.js  |  ext:.js  |  size:171 B  |  lines:10
+  src\data\RegionData.js  |  ext:.js  |  size:184 B  |  lines:10
+  src\data\SectorData.js  |  ext:.js  |  size:262 B  |  lines:11
+  src\ecs\Component.js  |  ext:.js  |  size:284 B  |  lines:12
+  src\ecs\ComponentStore.js  |  ext:.js  |  size:1.61 KB  |  lines:77
+  src\ecs\ECSManager.js  |  ext:.js  |  size:4.99 KB  |  lines:164
+  src\ecs\ECSService.js  |  ext:.js  |  size:1.75 KB  |  lines:52
+  src\ecs\Entity.js  |  ext:.js  |  size:447 B  |  lines:17
+  src\ecs\EntitySignature.js  |  ext:.js  |  size:1.44 KB  |  lines:67
+  src\ecs\EntityView.js  |  ext:.js  |  size:393 B  |  lines:14
+  src\ecs\SparseSet.js  |  ext:.js  |  size:2.17 KB  |  lines:90
+  src\ecs\System.js  |  ext:.js  |  size:1.22 KB  |  lines:54
+  src\ecs\SystemScheduler.js  |  ext:.js  |  size:1.47 KB  |  lines:59
+  src\framework\core\Bootstrap.js  |  ext:.js  |  size:1.48 KB  |  lines:40
+  src\framework\core\FrameScheduler.js  |  ext:.js  |  size:1.50 KB  |  lines:66
+  src\framework\core\Framework.js  |  ext:.js  |  size:1.45 KB  |  lines:44
+  src\framework\core\ServiceManifest.js  |  ext:.js  |  size:556 B  |  lines:17
+  src\framework\diagnostics\PerformanceCounters.js  |  ext:.js  |  size:2.15 KB  |  lines:76
+  src\framework\events\Event.js  |  ext:.js  |  size:262 B  |  lines:13
+  src\framework\events\EventBus.js  |  ext:.js  |  size:1.50 KB  |  lines:73
+  src\framework\math\Matrix4.js  |  ext:.js  |  size:41.77 KB  |  lines:1154
+  src\framework\math\Quaternion.js  |  ext:.js  |  size:41.74 KB  |  lines:1164
+  src\framework\math\Transform.js  |  ext:.js  |  size:13.32 KB  |  lines:428
+  src\framework\math\TransformAlgorithms.js  |  ext:.js  |  size:10.11 KB  |  lines:261
+  src\framework\math\TransformInterpolator.js  |  ext:.js  |  size:12.45 KB  |  lines:307
+  src\framework\math\TransformSpatial.js  |  ext:.js  |  size:17.04 KB  |  lines:399
+  src\framework\math\Vector3.js  |  ext:.js  |  size:35.83 KB  |  lines:1084
+  src\framework\runtime\errors\MissingDependencyError.js  |  ext:.js  |  size:739 B  |  lines:23
+  src\framework\runtime\errors\RuntimeError.js  |  ext:.js  |  size:535 B  |  lines:18
+  src\framework\runtime\errors\RuntimeInitializationError.js  |  ext:.js  |  size:723 B  |  lines:23
+  src\framework\runtime\errors\RuntimeKernelError.js  |  ext:.js  |  size:683 B  |  lines:23
+  src\framework\runtime\errors\RuntimeSessionError.js  |  ext:.js  |  size:722 B  |  lines:24
+  src\framework\runtime\errors\RuntimeStateError.js  |  ext:.js  |  size:716 B  |  lines:24
+  src\framework\runtime\events\RuntimeEvent.js  |  ext:.js  |  size:4.16 KB  |  lines:120
+  src\framework\runtime\events\RuntimeEventBus.js  |  ext:.js  |  size:4.22 KB  |  lines:141
+  src\framework\runtime\events\RuntimeEventDispatcher.js  |  ext:.js  |  size:5.30 KB  |  lines:183
+  src\framework\runtime\events\RuntimeEvents.js  |  ext:.js  |  size:2.28 KB  |  lines:68
+  src\framework\runtime\pipeline\PipelineResult.js  |  ext:.js  |  size:2.13 KB  |  lines:80
+  src\framework\runtime\RuntimeKernel.js  |  ext:.js  |  size:9.03 KB  |  lines:249
+  src\framework\services\SceneService.js  |  ext:.js  |  size:1.17 KB  |  lines:53
+  src\hierarchy\Cell.js  |  ext:.js  |  size:626 B  |  lines:32
+  src\hierarchy\Region.js  |  ext:.js  |  size:248 B  |  lines:13
+  src\hierarchy\Sector.js  |  ext:.js  |  size:332 B  |  lines:15
+  src\main.js  |  ext:.js  |  size:2.27 KB  |  lines:72
+  src\managers\EntityManager.js  |  ext:.js  |  size:2.16 KB  |  lines:77
+  src\managers\QueryManager.js  |  ext:.js  |  size:1.48 KB  |  lines:48
+  src\managers\SpatialManager.js  |  ext:.js  |  size:1.30 KB  |  lines:52
+  src\managers\StreamingManager.js  |  ext:.js  |  size:1.17 KB  |  lines:47
+  src\managers\WorldGraph.js  |  ext:.js  |  size:2.36 KB  |  lines:85
+  src\player\PlayerController.js  |  ext:.js  |  size:4.64 KB  |  lines:129
+  src\queries\CellQuery.js  |  ext:.js  |  size:607 B  |  lines:20
+  src\queries\NearestQuery.js  |  ext:.js  |  size:693 B  |  lines:22
+  src\queries\RadiusQuery.js  |  ext:.js  |  size:2.86 KB  |  lines:80
+  src\registries\CellRegistry.js  |  ext:.js  |  size:1.68 KB  |  lines:80
+  src\registries\EntityRegistry.js  |  ext:.js  |  size:3.50 KB  |  lines:130
+  src\registries\RegionRegistry.js  |  ext:.js  |  size:2.02 KB  |  lines:88
+  src\registries\SectorRegistry.js  |  ext:.js  |  size:1.75 KB  |  lines:80
+  src\rendering\EnvironmentSetup.js  |  ext:.js  |  size:7.69 KB  |  lines:230
+  src\rendering\PBRTextureGenerator.js  |  ext:.js  |  size:19.65 KB  |  lines:656
+  src\scene\Scene.js  |  ext:.js  |  size:3.17 KB  |  lines:98
+  src\scene\SceneManager.js  |  ext:.js  |  size:4.48 KB  |  lines:164
+  src\spatial\GridPartition.js  |  ext:.js  |  size:4.36 KB  |  lines:148
+  src\streaming\SectorLoader.js  |  ext:.js  |  size:2.48 KB  |  lines:96
+  src\streaming\SectorUnloader.js  |  ext:.js  |  size:2.77 KB  |  lines:98
+  src\systems\AnimationSystem.js  |  ext:.js  |  size:702 B  |  lines:30
+  src\systems\HealthSystem.js  |  ext:.js  |  size:708 B  |  lines:30
+  src\systems\MovementSystem.js  |  ext:.js  |  size:1.25 KB  |  lines:46
+  src\time\DependencyGraph.js  |  ext:.js  |  size:8.75 KB  |  lines:328
+  src\time\DiagnosticsCollector.js  |  ext:.js  |  size:5.22 KB  |  lines:222
+  src\time\EventScheduler.js  |  ext:.js  |  size:4.16 KB  |  lines:144
+  src\time\ReadyQueue.js  |  ext:.js  |  size:5.64 KB  |  lines:226
+  src\time\ScheduledEvent.js  |  ext:.js  |  size:8.20 KB  |  lines:238
+  src\time\SchedulerState.js  |  ext:.js  |  size:6.02 KB  |  lines:244
+  src\time\SectorSchedulerState.js  |  ext:.js  |  size:1.40 KB  |  lines:70
+  src\time\TimeEvents.js  |  ext:.js  |  size:2.39 KB  |  lines:76
+  src\time\TimeManager.js  |  ext:.js  |  size:5.33 KB  |  lines:208
+  src\time\TimeSerializer.js  |  ext:.js  |  size:1.87 KB  |  lines:72
+  src\time\WorldClock.js  |  ext:.js  |  size:3.20 KB  |  lines:156
+  src\world\CellID.js  |  ext:.js  |  size:633 B  |  lines:32
+  src\world\Entity.js  |  ext:.js  |  size:710 B  |  lines:27
+  src\world\EntityHandle.js  |  ext:.js  |  size:1.03 KB  |  lines:35
+  src\world\EntityID.js  |  ext:.js  |  size:647 B  |  lines:28
+  src\world\RegionID.js  |  ext:.js  |  size:645 B  |  lines:32
+  src\world\SectorID.js  |  ext:.js  |  size:645 B  |  lines:32
+  src\world\Transform.js  |  ext:.js  |  size:2.34 KB  |  lines:90
+  src\world\World.js  |  ext:.js  |  size:2.58 KB  |  lines:85
+  src\world\WorldManager.js  |  ext:.js  |  size:462 B  |  lines:23
+  style.css  |  ext:.css  |  size:3.54 KB  |  lines:92
+  test.bat  |  ext:.bat  |  size:18.38 KB  |  lines:496
+  test.ps1  |  ext:.ps1  |  size:28.69 KB  |  lines:723
+
+BREAKDOWN BY EXTENSION
+  .bat  -  files: 2   lines: 943
+  .css  -  files: 1   lines: 92
+  .html  -  files: 2   lines: 311
+  .js  -  files: 120   lines: 15801
+  .json  -  files: 1   lines: 17
+  .md  -  files: 3   lines: 17497
+  .mp3  -  files: 1   lines: 0
+  (none)  -  files: 243   lines: 219
+  .png  -  files: 1   lines: 0
+  .ps1  -  files: 2   lines: 1385
+  .sample  -  files: 14   lines: 912
+  .txt  -  files: 11   lines: 24563
+  .webm  -  files: 3   lines: 0
+  .xml  -  files: 1   lines: 7779
+
+================================================================================
+End of report.

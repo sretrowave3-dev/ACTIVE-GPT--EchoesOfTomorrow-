@@ -1,0 +1,167 @@
+[DeepSeek]:
+We need to implement the final support modules: DiagnosticsCollector.js and TimeEvents.js. They should be lightweight, not affect scheduling, and follow the architecture. The prompt specifies APIs and responsibilities.
+
+Let's design DiagnosticsCollector. It needs to collect runtime metrics, track counts of events, queue size, simulation time, etc. It should provide a snapshot method and reset. The API: constructor, record methods (registered, executed, completed, cancelled, validationFailed), setters for queue size, dependency count, simulation time, getSnapshot, reset. It must not modify state, only observe.
+
+TimeEvents.js is a constants file, like a set of event names. Use Object.freeze for immutability. Could include factory helpers for common scheduled events? The prompt says "optionally", but I'll keep it simple just constants.
+
+Now, to integrate with existing TimeManager, but we're not modifying any existing module. DiagnosticsCollector will be used by TimeManager (or any external code) to record metrics. The prompt says it can observe TimeManager, SchedulerState, WorldClock but must not modify them. So the collector is passive. We'll just output these two files.
+
+I'll write the code with proper JSDoc, no side effects. DiagnosticsCollector will have private counters and methods to update them. getSnapshot() returns an object with all current values. reset() clears all counters.
+
+TimeEvents.js will define constants like SCHEDULED_FIRE, SCHEDULED_CANCELLED, etc., as used in the Time System. We'll also include event types like TIME_PAUSED, TIME_RESUMED, etc.
+
+Now, output the final code.
+
+---
+
+[DeepSeek]:
+javascript
+// src/time/DiagnosticsCollector.js
+
+/**
+ * Passive collector of runtime statistics for the Time System.
+ *
+ * Tracks counts of scheduled, executed, completed, cancelled, and
+ * validation‑failed events, as well as current queue sizes and
+ * simulation time.  Provides a snapshot for debug overlays.
+ *
+ * Does NOT modify any scheduler state and does NOT contain scheduling logic.
+ */
+export class DiagnosticsCollector {
+  constructor() {
+    this._registered = 0;
+    this._executed = 0;
+    this._completed = 0;
+    this._cancelled = 0;
+    this._validationFailures = 0;
+    this._queueSize = 0;
+    this._dependencyCount = 0;
+    this._simulationTime = 0;
+  }
+
+  /** Increment the registered event counter. */
+  recordRegistered() {
+    this._registered++;
+  }
+
+  /** Increment the executed event counter. */
+  recordExecuted() {
+    this._executed++;
+  }
+
+  /** Increment the completed event counter. */
+  recordCompleted() {
+    this._completed++;
+  }
+
+  /** Increment the cancelled event counter. */
+  recordCancelled() {
+    this._cancelled++;
+  }
+
+  /** Increment the validation failure counter. */
+  recordValidationFailed() {
+    this._validationFailures++;
+  }
+
+  /**
+   * Set the current number of events in the ready queue.
+   * @param {number} size
+   */
+  setQueueSize(size) {
+    this._queueSize = size;
+  }
+
+  /**
+   * Set the current number of waiting dependencies.
+   * @param {number} count
+   */
+  setDependencyCount(count) {
+    this._dependencyCount = count;
+  }
+
+  /**
+   * Set the current simulation time (seconds).
+   * @param {number} time
+   */
+  setSimulationTime(time) {
+    this._simulationTime = time;
+  }
+
+  /**
+   * Return a snapshot of all collected statistics.
+   * @returns {{
+   *   registered: number,
+   *   executed: number,
+   *   completed: number,
+   *   cancelled: number,
+   *   validationFailures: number,
+   *   queueSize: number,
+   *   dependencyCount: number,
+   *   simulationTime: number
+   * }}
+   */
+  getSnapshot() {
+    return {
+      registered: this._registered,
+      executed: this._executed,
+      completed: this._completed,
+      cancelled: this._cancelled,
+      validationFailures: this._validationFailures,
+      queueSize: this._queueSize,
+      dependencyCount: this._dependencyCount,
+      simulationTime: this._simulationTime
+    };
+  }
+
+  /** Reset all counters to zero. */
+  reset() {
+    this._registered = 0;
+    this._executed = 0;
+    this._completed = 0;
+    this._cancelled = 0;
+    this._validationFailures = 0;
+    this._queueSize = 0;
+    this._dependencyCount = 0;
+    this._simulationTime = 0;
+  }
+}
+javascript
+// src/time/TimeEvents.js
+
+/**
+ * Centralized event name constants for the Time System.
+ * All public events that the Time System publishes or subscribes to
+ * are defined here to avoid magic strings.
+ *
+ * This module is stateless and has no runtime logic.
+ */
+export const TimeEvents = Object.freeze({
+  /** A scheduled event has been successfully dispatched. */
+  SCHEDULED_FIRE: 'scheduled:fire',
+
+  /** A scheduled event has been cancelled. */
+  SCHEDULED_CANCELLED: 'scheduled:cancelled',
+
+  /** A scheduled event failed validation and was discarded. */
+  SCHEDULED_VALIDATION_FAILED: 'scheduled:validation_failed',
+
+  /** The world clock has been paused. */
+  TIME_PAUSED: 'time:paused',
+
+  /** The world clock has been resumed. */
+  TIME_RESUMED: 'time:resumed',
+
+  /** The world clock's time scale has changed. */
+  TIME_SCALE_CHANGED: 'time:scale_changed',
+
+  /** A time jump (sleep/fast‑forward) has started. */
+  TIME_JUMP_STARTED: 'time:jump_started',
+
+  /** A time jump has completed. */
+  TIME_JUMP_COMPLETED: 'time:jump_completed',
+
+  /** The current world time has been updated (fired every frame). */
+  WORLD_TIME_UPDATED: 'time:world_time_updated'
+});
