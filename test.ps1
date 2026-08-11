@@ -1,8 +1,8 @@
 ﻿<#
 .SYNOPSIS
-    Enterprise System & Directory Analytics Engine (SYNONYM EDITION)
+    Enterprise System & Directory Analytics Engine (VRAM EDITION) – with Folder Tree
 .DESCRIPTION
-    Full system with file code allotment, catalog, and synonym-based narration variation.
+    Full system with Virtual RAM File System, background loading, and folder tree viewer.
 #>
 
 [CmdletBinding()]
@@ -41,7 +41,7 @@ trap {
 }
 # ----------------------------------
 
-$script:ENGINE_VERSION = "v10.0-SYNONYM"
+$script:ENGINE_VERSION = "v10.0-VRAM-BGLOAD-TREE"
 $script:EngineState = @{
     AudioProcess      = $null
     AudioPlaying      = $false
@@ -51,6 +51,11 @@ $script:EngineState = @{
     NarratorData      = $null
     ConversationData  = $null
     SynonymData       = $null
+    VRAMFile          = $null
+    VRAMConvFile      = $null
+    VRAMConvIsArray   = $false
+    VRAMConvMonolithicCache = $null
+    VRAMSynonymFile   = $null
     LastScan          = $null
     ChatHistory       = @()
     FileCatalog       = @{}
@@ -68,10 +73,174 @@ $script:EngineState = @{
         preferences = @{}
         interactionCount = 0
     }
+    # Background load status
+    LoadJob          = $null
+    LoadComplete     = $false
+    LoadError        = $null
 }
 
 # =============================================================================
-# AUDIO & SPEECH FUNCTIONS
+# VIRTUAL RAM FILE SYSTEM (same as before)
+# =============================================================================
+
+function New-VRAMFile {
+    param([string]$FilePath)
+    
+    $vram = @{
+        Path = $FilePath
+        Size = (Get-Item $FilePath).Length
+        Stream = $null
+        Reader = $null
+        BlockSize = 8192
+        BlockCache = @{}
+        Index = @{}
+        TotalBlocks = 0
+        IsObjectRoot = $false
+    }
+    
+    $vram.Stream = [System.IO.File]::OpenRead($FilePath)
+    $vram.Reader = New-Object System.IO.BinaryReader($vram.Stream)
+    $vram.TotalBlocks = [math]::Ceiling($vram.Size / $vram.BlockSize)
+    
+    Write-Progress -Activity "VRAM Indexing" -Status "Scanning structure..." -PercentComplete 0
+    
+    $buffer = New-Object byte[] 65536
+    $position = 0
+    $totalRead = 0
+    $depth = 0
+    $inString = $false
+    $objectStart = 0
+    $objectCount = 0
+    $rootDepth = -1
+    $expectPropName = $false
+    $currentPropName = $null
+    $propStart = 0
+    $propDepth = 0
+    $isRootObject = $false
+    $foundFirstObject = $false
+    $firstObjectStart = 0
+    $firstObjectEnd = 0
+    $firstObjectContent = $null
+    
+    $vram.Stream.Seek(0, [System.IO.SeekOrigin]::Begin) | Out-Null
+    
+    $peekBuffer = New-Object byte[] 1024
+    $bytesRead = $vram.Stream.Read($peekBuffer, 0, 1024)
+    $peekString = [System.Text.Encoding]::UTF8.GetString($peekBuffer, 0, $bytesRead)
+    $trimmed = $peekString.TrimStart()
+    $isObjectRoot = $trimmed.StartsWith('{')
+    $vram.Stream.Seek(0, [System.IO.SeekOrigin]::Begin) | Out-Null
+    
+    while ($totalRead -lt $vram.Size) {
+        $bytesRead = $vram.Stream.Read($buffer, 0, $buffer.Length)
+        if ($bytesRead -eq 0) { break }
+        
+        for ($i = 0; $i -lt $bytesRead; $i++) {
+            $byte = $buffer[$i]
+            $char = [char]$byte
+            $position++
+            
+            if ($char -eq '"' -and ($i -eq 0 -or $buffer[$i-1] -ne 92)) {
+                $inString = -not $inString
+            }
+            
+            if (-not $inString) {
+                if ($char -eq '{') {
+                    if ($depth -eq 0) {
+                        $objectStart = $position
+                        if (-not $foundFirstObject) {
+                            $firstObjectStart = $position
+                            $foundFirstObject = $true
+                        }
+                    }
+                    $depth++
+                    if ($depth -eq 2 -and $isObjectRoot -and $currentPropName) {
+                        $propStart = $position
+                        $propDepth = $depth
+                    }
+                }
+                if ($char -eq '}') {
+                    $depth--
+                    if ($depth -eq 0) {
+                        $objectCount++
+                        if ($objectCount -eq 1) {
+                            $firstObjectEnd = $position
+                        }
+                        if ($isObjectRoot -and $currentPropName -and $propDepth -eq $depth + 1) {
+                            $vram.Index["prop_$currentPropName"] = @{
+                                Start = $propStart
+                                End = $position
+                                Name = $currentPropName
+                            }
+                            $currentPropName = $null
+                            $propDepth = 0
+                        } else {
+                            $vram.Index["obj_$objectCount"] = @{
+                                Start = $objectStart
+                                End = $position
+                            }
+                        }
+                    }
+                    if ($depth -eq 0) {
+                        $isRootObject = $false
+                    }
+                }
+                if ($char -eq '"' -and $depth -eq 1 -and -not $inString -and $isObjectRoot) {
+                    # placeholder – will be handled by monolithic fallback
+                }
+            }
+        }
+        
+        $totalRead += $bytesRead
+        $percent = [math]::Min(100, [int](($totalRead / $vram.Size) * 100))
+        Write-Progress -Activity "VRAM Indexing" -Status "Scanning... $percent%" -PercentComplete $percent
+    }
+    
+    Write-Progress -Activity "VRAM Indexing" -Completed
+    
+    if ($vram.Index.Count -eq 1 -and $isObjectRoot) {
+        $vram.IsObjectRoot = $true
+        Write-Host "  [VRAM] Detected monolithic object. Will parse entire file on first use." -ForegroundColor Yellow
+    } else {
+        Write-Host "  [VRAM] Indexed $($vram.Index.Count) JSON objects." -ForegroundColor Green
+    }
+    
+    $vram.GetObject = {
+        param([string]$Key)
+        if (-not $this.Index.ContainsKey($Key)) { return $null }
+        $entry = $this.Index[$Key]
+        $start = $entry.Start - 1
+        $length = $entry.End - $entry.Start + 1
+        $this.Stream.Seek($start, [System.IO.SeekOrigin]::Begin) | Out-Null
+        $buffer = New-Object byte[] $length
+        $this.Stream.Read($buffer, 0, $length) | Out-Null
+        return [System.Text.Encoding]::UTF8.GetString($buffer)
+    }
+    
+    $vram.GetKeys = { return $this.Index.Keys }
+    $vram.GetCount = { return $this.Index.Count }
+    $vram.Close = {
+        if ($this.Reader) { $this.Reader.Close() }
+        if ($this.Stream) { $this.Stream.Close() }
+        $this.BlockCache.Clear()
+    }
+    
+    return $vram
+}
+
+function Open-VRAM {
+    param([string]$FilePath)
+    if (-not (Test-Path $FilePath)) {
+        Write-Host "  [VRAM] File not found: $FilePath" -ForegroundColor Red
+        return $null
+    }
+    $size = (Get-Item $FilePath).Length / 1MB
+    Write-Host "  [VRAM] Opening $([math]::Round($size,2)) MB file..." -ForegroundColor Cyan
+    return New-VRAMFile -FilePath $FilePath
+}
+
+# =============================================================================
+# AUDIO & SPEECH FUNCTIONS (unchanged)
 # =============================================================================
 
 function Invoke-SystemSound {
@@ -107,7 +276,7 @@ function Invoke-SpeechText {
 }
 
 # =============================================================================
-# DATA LOADERS
+# DATA LOADERS (with background job support)
 # =============================================================================
 
 function Import-NarratorData {
@@ -127,50 +296,309 @@ function Import-NarratorData {
     }
 }
 
-function Import-ConversationData {
-    $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
-    $convFile = Join-Path $scriptDir "conversation_commands.json"
-    if (Test-Path -LiteralPath $convFile) {
+function Import-ConversationDataSync {
+    param([string]$ConvFile)
+    if (-not (Test-Path -LiteralPath $ConvFile)) { return $null }
+    
+    $fileSize = (Get-Item $ConvFile).Length / 1MB
+    Write-Host "  [CHATBOT] File size: $([math]::Round($fileSize,2)) MB" -ForegroundColor Gray
+    
+    $useVRAM = $fileSize -gt 10
+    if ($useVRAM) {
+        Write-Host "  [CHATBOT] Large file. Using VRAM streaming..." -ForegroundColor Cyan
         try {
-            Write-Host "  Loading conversation database..." -ForegroundColor DarkGray
-            $rawJson = Get-Content -LiteralPath $convFile -Raw -Encoding UTF8
-            $script:EngineState.ConversationData = $rawJson | ConvertFrom-Json
-            $intentCount = $script:EngineState.ConversationData.intents.PSObject.Properties.Name.Count
-            Write-Host "  [CHATBOT] Loaded $intentCount intents." -ForegroundColor Green
+            $vram = Open-VRAM -FilePath $ConvFile
+            if ($null -eq $vram) {
+                Write-Host "  [CHATBOT] VRAM failed. Falling back to standard loading." -ForegroundColor Yellow
+            } else {
+                $result = @{
+                    ConversationData = $null
+                    VRAMConvFile = $vram
+                    VRAMConvIsArray = ($vram.GetCount() -gt 1)
+                    VRAMConvMonolithicCache = $null
+                }
+                Write-Host "  [CHATBOT] VRAM ready for on‑demand intent matching." -ForegroundColor Green
+                return $result
+            }
         } catch {
-            Write-Host "  [CHATBOT ERROR] Failed to parse conversation_commands.json." -ForegroundColor Red
-            $script:EngineState.ConversationData = $null
-            Invoke-SystemSound -Type Error
+            Write-Host "  [CHATBOT] VRAM error: $_" -ForegroundColor Yellow
         }
-    } else {
-        Write-Host "  [CHATBOT WARNING] conversation_commands.json not found." -ForegroundColor Yellow
-        $script:EngineState.ConversationData = $null
+    }
+    
+    try {
+        Write-Host "  Loading conversation database (standard mode)..." -ForegroundColor DarkGray
+        $rawJson = Get-Content -LiteralPath $ConvFile -Raw -Encoding UTF8
+        $convData = $rawJson | ConvertFrom-Json
+        $intentCount = $convData.intents.PSObject.Properties.Name.Count
+        Write-Host "  [CHATBOT] Loaded $intentCount intents into memory." -ForegroundColor Green
+        return @{
+            ConversationData = $convData
+            VRAMConvFile = $null
+            VRAMConvIsArray = $false
+            VRAMConvMonolithicCache = $null
+        }
+    } catch {
+        Write-Host "  [CHATBOT ERROR] Failed to parse: $_" -ForegroundColor Red
+        return $null
     }
 }
 
-function Import-SynonymData {
-    $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
-    $synFile = Join-Path $scriptDir "synonyms.json"
-    if (Test-Path -LiteralPath $synFile) {
-        try {
-            Write-Host "  Loading synonym database..." -ForegroundColor DarkGray
-            $rawJson = Get-Content -LiteralPath $synFile -Raw -Encoding UTF8
-            $script:EngineState.SynonymData = $rawJson | ConvertFrom-Json
-            $synCount = $script:EngineState.SynonymData.synonym_map.PSObject.Properties.Name.Count
-            Write-Host "  [SYNONYM] Loaded $synCount synonym groups." -ForegroundColor Green
-        } catch {
-            Write-Host "  [SYNONYM ERROR] Failed to parse synonyms.json." -ForegroundColor Red
-            $script:EngineState.SynonymData = $null
-            Invoke-SystemSound -Type Error
+function Import-SynonymDataSync {
+    param([string]$SynFile)
+    if (-not (Test-Path -LiteralPath $SynFile)) { return $null }
+    try {
+        $fileSize = (Get-Item $SynFile).Length / 1MB
+        Write-Host "  [SYNONYM] Loading $([math]::Round($fileSize,2)) MB file..." -ForegroundColor DarkGray
+        
+        if ($fileSize -gt 10) {
+            $vram = Open-VRAM -FilePath $SynFile
+            if ($vram) {
+                if ($vram.GetCount() -eq 1) {
+                    $rootJson = $vram.GetObject("obj_1")
+                    if ($rootJson) {
+                        $synData = $rootJson | ConvertFrom-Json
+                        Write-Host "  [SYNONYM] Loaded monolithic object via VRAM." -ForegroundColor Green
+                        $vram.Close()
+                        return $synData
+                    }
+                } else {
+                    $allData = @{ synonym_map = @{} }
+                    foreach ($key in $vram.GetKeys()) {
+                        $obj = $vram.GetObject($key) | ConvertFrom-Json
+                        if ($obj.PSObject.Properties) {
+                            foreach ($prop in $obj.PSObject.Properties) {
+                                $allData.synonym_map[$prop.Name] = $prop.Value
+                            }
+                        }
+                    }
+                    Write-Host "  [SYNONYM] Loaded combined objects via VRAM." -ForegroundColor Green
+                    $vram.Close()
+                    return $allData
+                }
+            }
         }
-    } else {
-        Write-Host "  [SYNONYM WARNING] synonyms.json not found." -ForegroundColor Yellow
-        $script:EngineState.SynonymData = $null
+        
+        $rawJson = Get-Content -LiteralPath $SynFile -Raw -Encoding UTF8
+        $synData = $rawJson | ConvertFrom-Json
+        $synCount = $synData.synonym_map.PSObject.Properties.Name.Count
+        Write-Host "  [SYNONYM] Loaded $synCount synonym groups." -ForegroundColor Green
+        return $synData
+    } catch {
+        Write-Host "  [SYNONYM ERROR] Failed to parse synonyms.json: $_" -ForegroundColor Red
+        return $null
     }
 }
 
 # =============================================================================
-# VLC AUDIO SUBSYSTEM
+# BACKGROUND LOADER JOB (unchanged)
+# =============================================================================
+
+function Start-BackgroundLoad {
+    $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
+    $convFile = Join-Path $scriptDir "conversation_commands.json"
+    $synFile = Join-Path $scriptDir "synonyms.json"
+    
+    $jobScript = {
+        param($ConvPath, $SynPath)
+        function New-VRAMFileJob {
+            param([string]$FilePath)
+            $vram = @{
+                Path = $FilePath
+                Size = (Get-Item $FilePath).Length
+                Stream = $null
+                Reader = $null
+                BlockSize = 8192
+                BlockCache = @{}
+                Index = @{}
+                TotalBlocks = 0
+                IsObjectRoot = $false
+            }
+            $vram.Stream = [System.IO.File]::OpenRead($FilePath)
+            $vram.Reader = New-Object System.IO.BinaryReader($vram.Stream)
+            $vram.TotalBlocks = [math]::Ceiling($vram.Size / $vram.BlockSize)
+            
+            $buffer = New-Object byte[] 65536
+            $position = 0
+            $totalRead = 0
+            $depth = 0
+            $inString = $false
+            $objectStart = 0
+            $objectCount = 0
+            $isRootObject = $false
+            $foundFirstObject = $false
+            
+            $peekBuffer = New-Object byte[] 1024
+            $bytesRead = $vram.Stream.Read($peekBuffer, 0, 1024)
+            $peekString = [System.Text.Encoding]::UTF8.GetString($peekBuffer, 0, $bytesRead)
+            $trimmed = $peekString.TrimStart()
+            $isObjectRoot = $trimmed.StartsWith('{')
+            $vram.Stream.Seek(0, [System.IO.SeekOrigin]::Begin) | Out-Null
+            
+            while ($totalRead -lt $vram.Size) {
+                $bytesRead = $vram.Stream.Read($buffer, 0, $buffer.Length)
+                if ($bytesRead -eq 0) { break }
+                for ($i = 0; $i -lt $bytesRead; $i++) {
+                    $byte = $buffer[$i]
+                    $char = [char]$byte
+                    $position++
+                    if ($char -eq '"' -and ($i -eq 0 -or $buffer[$i-1] -ne 92)) {
+                        $inString = -not $inString
+                    }
+                    if (-not $inString) {
+                        if ($char -eq '{') {
+                            if ($depth -eq 0) { $objectStart = $position; if (-not $foundFirstObject) { $foundFirstObject = $true } }
+                            $depth++
+                        }
+                        if ($char -eq '}') {
+                            $depth--
+                            if ($depth -eq 0) {
+                                $objectCount++
+                                $vram.Index["obj_$objectCount"] = @{ Start = $objectStart; End = $position }
+                            }
+                        }
+                    }
+                }
+                $totalRead += $bytesRead
+            }
+            if ($vram.Index.Count -eq 1 -and $isObjectRoot) {
+                $vram.IsObjectRoot = $true
+            }
+            $vram.GetObject = {
+                param([string]$Key)
+                if (-not $this.Index.ContainsKey($Key)) { return $null }
+                $entry = $this.Index[$Key]
+                $start = $entry.Start - 1
+                $length = $entry.End - $entry.Start + 1
+                $this.Stream.Seek($start, [System.IO.SeekOrigin]::Begin) | Out-Null
+                $buffer = New-Object byte[] $length
+                $this.Stream.Read($buffer, 0, $length) | Out-Null
+                return [System.Text.Encoding]::UTF8.GetString($buffer)
+            }
+            $vram.GetKeys = { return $this.Index.Keys }
+            $vram.GetCount = { return $this.Index.Count }
+            $vram.Close = {
+                if ($this.Reader) { $this.Reader.Close() }
+                if ($this.Stream) { $this.Stream.Close() }
+                $this.BlockCache.Clear()
+            }
+            return $vram
+        }
+        function Open-VRAMJob { param($FilePath) return New-VRAMFileJob -FilePath $FilePath }
+        
+        $convResult = $null
+        if (Test-Path $ConvPath) {
+            $fileSize = (Get-Item $ConvPath).Length / 1MB
+            $useVRAM = $fileSize -gt 10
+            if ($useVRAM) {
+                try {
+                    $vram = Open-VRAMJob -FilePath $ConvPath
+                    if ($vram) {
+                        $convResult = @{
+                            ConversationData = $null
+                            VRAMConvFile = $vram
+                            VRAMConvIsArray = ($vram.GetCount() -gt 1)
+                            VRAMConvMonolithicCache = $null
+                        }
+                    }
+                } catch {}
+            }
+            if (-not $convResult) {
+                try {
+                    $rawJson = Get-Content -LiteralPath $ConvPath -Raw -Encoding UTF8
+                    $convData = $rawJson | ConvertFrom-Json
+                    $convResult = @{
+                        ConversationData = $convData
+                        VRAMConvFile = $null
+                        VRAMConvIsArray = $false
+                        VRAMConvMonolithicCache = $null
+                    }
+                } catch {}
+            }
+        }
+        
+        $synResult = $null
+        if (Test-Path $SynPath) {
+            try {
+                $fileSize = (Get-Item $SynPath).Length / 1MB
+                if ($fileSize -gt 10) {
+                    $vram = Open-VRAMJob -FilePath $SynPath
+                    if ($vram) {
+                        if ($vram.GetCount() -eq 1) {
+                            $rootJson = $vram.GetObject("obj_1")
+                            if ($rootJson) {
+                                $synResult = $rootJson | ConvertFrom-Json
+                                $vram.Close()
+                            }
+                        } else {
+                            $allData = @{ synonym_map = @{} }
+                            foreach ($key in $vram.GetKeys()) {
+                                $obj = $vram.GetObject($key) | ConvertFrom-Json
+                                if ($obj.PSObject.Properties) {
+                                    foreach ($prop in $obj.PSObject.Properties) {
+                                        $allData.synonym_map[$prop.Name] = $prop.Value
+                                    }
+                                }
+                            }
+                            $synResult = $allData
+                            $vram.Close()
+                        }
+                    }
+                }
+                if (-not $synResult) {
+                    $rawJson = Get-Content -LiteralPath $SynPath -Raw -Encoding UTF8
+                    $synResult = $rawJson | ConvertFrom-Json
+                }
+            } catch {}
+        }
+        
+        return @{ Conversation = $convResult; Synonyms = $synResult }
+    }
+    
+    $script:EngineState.LoadJob = Start-Job -ScriptBlock $jobScript -ArgumentList $convFile, $synFile
+    Write-Host "  [BACKGROUND] Started loading conversation and synonyms in background." -ForegroundColor Cyan
+}
+
+function Wait-ForBackgroundLoad {
+    if (-not $script:EngineState.LoadJob) { return }
+    if ($script:EngineState.LoadComplete) { return }
+    
+    Write-Host "`n  [BACKGROUND] Waiting for data to load... (this may take a while)" -ForegroundColor Yellow
+    $job = $script:EngineState.LoadJob
+    while ($job.State -eq 'Running') {
+        Write-Host "  [BACKGROUND] Still loading... (use Ctrl+C to cancel and use fallback)" -ForegroundColor DarkGray
+        Start-Sleep -Seconds 2
+    }
+    if ($job.State -eq 'Completed') {
+        $result = Receive-Job -Job $job
+        if ($result) {
+            if ($result.Conversation) {
+                $conv = $result.Conversation
+                $script:EngineState.ConversationData = $conv.ConversationData
+                $script:EngineState.VRAMConvFile = $conv.VRAMConvFile
+                $script:EngineState.VRAMConvIsArray = $conv.VRAMConvIsArray
+                $script:EngineState.VRAMConvMonolithicCache = $conv.VRAMConvMonolithicCache
+                Write-Host "  [BACKGROUND] Conversation data loaded." -ForegroundColor Green
+            }
+            if ($result.Synonyms) {
+                $script:EngineState.SynonymData = $result.Synonyms
+                Write-Host "  [BACKGROUND] Synonyms loaded." -ForegroundColor Green
+            }
+            $script:EngineState.LoadComplete = $true
+        } else {
+            Write-Host "  [BACKGROUND] Load returned no data." -ForegroundColor Yellow
+            $script:EngineState.LoadComplete = $true
+        }
+    } else {
+        Write-Host "  [BACKGROUND] Job failed: $($job.State)" -ForegroundColor Red
+        $script:EngineState.LoadError = "Background job failed."
+        $script:EngineState.LoadComplete = $true
+    }
+    Remove-Job -Job $job -Force
+    $script:EngineState.LoadJob = $null
+}
+
+# =============================================================================
+# VLC AUDIO SUBSYSTEM (unchanged)
 # =============================================================================
 
 function Get-VlcPath {
@@ -234,7 +662,7 @@ function Stop-AudioSession {
 }
 
 # =============================================================================
-# UI COMPONENTS
+# UI COMPONENTS (unchanged)
 # =============================================================================
 
 function Show-FloatingBar {
@@ -261,7 +689,7 @@ function Show-DevDashboard {
 }
 
 # =============================================================================
-# SYNONYM REPLACEMENT ENGINE
+# SYNONYM REPLACEMENT ENGINE (unchanged)
 # =============================================================================
 
 function Invoke-SynonymReplacement {
@@ -292,7 +720,7 @@ function Invoke-SynonymReplacement {
 }
 
 # =============================================================================
-# NARRATOR FUNCTIONS
+# NARRATOR FUNCTIONS (unchanged)
 # =============================================================================
 
 function Get-FormattedByteSize {
@@ -321,8 +749,6 @@ function New-HumanNarration {
     $outro = $data.outro_phrases | Get-Random
 
     $baseScript = "$intro This file is named $($File.Name). $extDesc $sizeDesc It contains $LineCount lines in total. $selectedFact $outro"
-    
-    # Apply synonym replacement for variety
     $variedScript = Invoke-SynonymReplacement -Text $baseScript -ReplaceProbability 0.2
 
     return @{
@@ -333,7 +759,7 @@ function New-HumanNarration {
 }
 
 # =============================================================================
-# FILE CODE ALLOTMENT SYSTEM
+# FILE CODE ALLOTMENT SYSTEM (unchanged)
 # =============================================================================
 
 function Invoke-FileCodeAllotment {
@@ -515,7 +941,7 @@ function Invoke-CatalogReport {
 }
 
 # =============================================================================
-# SYSTEM ANALYTICS ENGINE
+# SYSTEM ANALYTICS ENGINE (unchanged)
 # =============================================================================
 
 function Invoke-SystemScanEngine {
@@ -569,11 +995,16 @@ function Invoke-SystemScanEngine {
 }
 
 # =============================================================================
-# RANDOM FILE SPEECH
+# RANDOM FILE SPEECH (unchanged)
 # =============================================================================
 
 function Invoke-RandomFileSpeech {
     param([string]$TargetDirectory)
+    if (-not $script:EngineState.SynonymData -and -not $script:EngineState.LoadComplete) {
+        Write-Host "  [NARRATOR] Synonyms not yet loaded. Waiting for background load..." -ForegroundColor Yellow
+        Wait-ForBackgroundLoad
+    }
+    
     $spinners = @('⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏')
     for ($i = 0; $i -lt 5; $i++) {
         Write-Host "`r   [$($spinners[$i % $spinners.Length])] Querying file clusters & selecting random node..." -NoNewline -ForegroundColor Magenta
@@ -626,8 +1057,78 @@ function Invoke-RandomFileSpeech {
 }
 
 # =============================================================================
-# CHATBOT ENGINE (condensed but complete)
+# CHATBOT ENGINE – unchanged
 # =============================================================================
+
+function Find-MatchingIntentVRAM {
+    param([string]$UserInput)
+    $vram = $script:EngineState.VRAMConvFile
+    if (-not $vram) { return $null }
+    $bestScore = 0
+    $bestResponses = $null
+
+    if ($vram.IsObjectRoot) {
+        if ($null -eq $script:EngineState.VRAMConvMonolithicCache) {
+            $key = $vram.GetKeys() | Select-Object -First 1
+            if ($key) {
+                $json = $vram.GetObject($key)
+                try {
+                    $script:EngineState.VRAMConvMonolithicCache = $json | ConvertFrom-Json
+                } catch {
+                    return $null
+                }
+            }
+        }
+        $obj = $script:EngineState.VRAMConvMonolithicCache
+        if ($obj.intents) {
+            foreach ($intentName in $obj.intents.PSObject.Properties.Name) {
+                $intent = $obj.intents.$intentName
+                if ($intent.patterns) {
+                    foreach ($pattern in $intent.patterns) {
+                        if ($UserInput -match $pattern) {
+                            if ($intent.responses) {
+                                return $intent.responses | Get-Random
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return $null
+    }
+
+    $keys = $vram.GetKeys()
+    foreach ($key in $keys) {
+        $objJson = $vram.GetObject($key)
+        try {
+            $obj = $objJson | ConvertFrom-Json
+        } catch { continue }
+        if ($obj.PSObject.Properties.Name -contains "patterns") {
+            foreach ($pattern in $obj.patterns) {
+                if ($UserInput -match $pattern) {
+                    if ($obj.responses) {
+                        return $obj.responses | Get-Random
+                    }
+                }
+            }
+        } elseif ($obj.PSObject.Properties.Name -contains "intents") {
+            $intents = $obj.intents
+            foreach ($intentName in $intents.PSObject.Properties.Name) {
+                $intent = $intents.$intentName
+                if ($intent.patterns) {
+                    foreach ($pattern in $intent.patterns) {
+                        if ($UserInput -match $pattern) {
+                            if ($intent.responses) {
+                                return $intent.responses | Get-Random
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return $null
+}
 
 function Invoke-SentimentAnalysis {
     param([string]$Text)
@@ -679,6 +1180,30 @@ function New-FallbackResponse {
 }
 
 function Invoke-Chatbot {
+    if (-not $script:EngineState.ConversationData -and -not $script:EngineState.VRAMConvFile -and -not $script:EngineState.LoadComplete) {
+        Write-Host "  [CHATBOT] Conversation data not yet loaded. Waiting for background load..." -ForegroundColor Yellow
+        Wait-ForBackgroundLoad
+    }
+    if (-not $script:EngineState.ConversationData -and -not $script:EngineState.VRAMConvFile) {
+        Write-Host "  [CHATBOT] Attempting to load conversation data synchronously..." -ForegroundColor Yellow
+        $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
+        $convFile = Join-Path $scriptDir "conversation_commands.json"
+        $result = Import-ConversationDataSync -ConvFile $convFile
+        if ($result) {
+            $script:EngineState.ConversationData = $result.ConversationData
+            $script:EngineState.VRAMConvFile = $result.VRAMConvFile
+            $script:EngineState.VRAMConvIsArray = $result.VRAMConvIsArray
+            $script:EngineState.VRAMConvMonolithicCache = $result.VRAMConvMonolithicCache
+        }
+    }
+    $convData = $script:EngineState.ConversationData
+    $vram = $script:EngineState.VRAMConvFile
+    if (-not $convData -and -not $vram) {
+        Write-Host "  [CHATBOT ERROR] No conversation data available." -ForegroundColor Red
+        Start-Sleep -Seconds 3
+        return
+    }
+
     Write-Host ""
     Write-Host "  ╔══════════════════════════════════════════════════════════════════════════╗" -ForegroundColor DarkBlue
     Write-Host "  ║          ██████  ADVANCED AI CHATBOT  ██████                            ║" -ForegroundColor Cyan
@@ -690,15 +1215,6 @@ function Invoke-Chatbot {
     Write-Host "  You can also ask me about the file catalog and codes!" -ForegroundColor Gray
     Write-Host ""
 
-    $convData = $script:EngineState.ConversationData
-    if ($null -eq $convData) {
-        Write-Host "  [CHATBOT ERROR] Conversation database not loaded." -ForegroundColor Red
-        Invoke-SystemSound -Type Error
-        Start-Sleep -Seconds 3
-        return
-    }
-
-    $intents = $convData.intents
     $chatActive = $true
     $script:EngineState.ChatHistory = @()
     $ctx = $script:EngineState.ConversationContext
@@ -766,36 +1282,40 @@ function Invoke-Chatbot {
         $isFollowUp = Test-FollowUp -Text $userInput
         if ($isFollowUp) { $ctx.followUpCount++ }
 
-        $matchedIntent = $null; $bestScore = 0
-        foreach ($intentName in $intents.PSObject.Properties.Name) {
-            $intent = $intents.$intentName
-            foreach ($pattern in $intent.patterns) {
-                $patternWords = $pattern -split " " | Where-Object { $_.Length -gt 2 }
-                $matches = 0; $exactMatches = 0
-                foreach ($pw in $patternWords) {
-                    $pwLower = $pw.ToLower()
-                    if ($userInput.ToLower() -match $pwLower) {
-                        $matches++
-                        if ($userInput.ToLower() -match "\b$pwLower\b") { $exactMatches++ }
+        $response = $null
+
+        if ($vram) {
+            $response = Find-MatchingIntentVRAM -UserInput $userInput
+        } elseif ($convData) {
+            $intents = $convData.intents
+            $matchedIntent = $null; $bestScore = 0
+            foreach ($intentName in $intents.PSObject.Properties.Name) {
+                $intent = $intents.$intentName
+                foreach ($pattern in $intent.patterns) {
+                    $patternWords = $pattern -split " " | Where-Object { $_.Length -gt 2 }
+                    $matches = 0; $exactMatches = 0
+                    foreach ($pw in $patternWords) {
+                        $pwLower = $pw.ToLower()
+                        if ($userInput.ToLower() -match $pwLower) {
+                            $matches++
+                            if ($userInput.ToLower() -match "\b$pwLower\b") { $exactMatches++ }
+                        }
                     }
+                    $score = if ($patternWords.Count -gt 0) { ($matches / $patternWords.Count) * 0.6 + ($exactMatches / $patternWords.Count) * 0.4 } else { 0 }
+                    if ($isFollowUp -and $intentName -eq $ctx.lastIntent) { $score += 0.3 }
+                    if ($score -gt $bestScore) { $bestScore = $score; $matchedIntent = $intent }
                 }
-                $score = if ($patternWords.Count -gt 0) { ($matches / $patternWords.Count) * 0.6 + ($exactMatches / $patternWords.Count) * 0.4 } else { 0 }
-                if ($isFollowUp -and $intentName -eq $ctx.lastIntent) { $score += 0.3 }
-                if ($score -gt $bestScore) { $bestScore = $score; $matchedIntent = $intent }
+            }
+            if ($null -ne $matchedIntent -and $bestScore -gt 0.15) {
+                $responses = $matchedIntent.responses
+                if ($responses -and $responses.Count -gt 0) {
+                    $response = $responses | Get-Random
+                    $ctx.lastIntent = $matchedIntent.PSObject.Properties.Name[0]
+                }
             }
         }
 
-        $response = ""
-        if ($null -ne $matchedIntent -and $bestScore -gt 0.15) {
-            $responses = $matchedIntent.responses
-            if ($responses -and $responses.Count -gt 0) {
-                $response = $responses | Get-Random
-                $ctx.lastIntent = $matchedIntent.PSObject.Properties.Name[0]
-                if ($sentiment -eq "positive") { $response = "I'm glad you asked! " + $response }
-                elseif ($sentiment -eq "negative") { $response = "I understand your concern. " + $response }
-                elseif ($sentiment -eq "curious") { $response = "Great question! " + $response }
-            } else { $response = New-FallbackResponse -Sentiment $sentiment }
-        } else {
+        if (-not $response) {
             if ($ctx.userFrustration -gt 3) {
                 $response = "I apologize for the confusion. What specifically would you like to know about?"
                 $ctx.userFrustration = 0
@@ -849,13 +1369,84 @@ function Invoke-Chatbot {
 }
 
 # =============================================================================
-# MAIN CONTROL LOOP
+# NEW: FOLDER TREE FUNCTION
+# =============================================================================
+
+function Show-FolderTree {
+    param(
+        [string]$TargetDirectory,
+        [int]$MaxDepth = 3,
+        [switch]$IncludeFiles
+    )
+
+    $TargetDirectory = (Resolve-Path -LiteralPath $TargetDirectory).Path.TrimEnd('\', '/')
+    Write-Host ""
+    Write-Host "  🌳 Generating folder tree for: $TargetDirectory" -ForegroundColor Cyan
+    Write-Host "  Depth limit: $MaxDepth, Include files: $IncludeFiles" -ForegroundColor Gray
+    Write-Host ""
+
+    # Build tree string
+    $sb = [System.Text.StringBuilder]::new()
+    [void]$sb.AppendLine("$TargetDirectory")
+
+    function Add-TreeLevel {
+        param(
+            [string]$Path,
+            [int]$CurrentDepth,
+            [string]$Prefix
+        )
+        if ($CurrentDepth -gt $MaxDepth) { return }
+
+        $items = Get-ChildItem -LiteralPath $Path -Force -ErrorAction SilentlyContinue
+        if (-not $items) { return }
+
+        $directories = $items | Where-Object { $_.PSIsContainer } | Sort-Object Name
+        $files = if ($IncludeFiles) { $items | Where-Object { -not $_.PSIsContainer } | Sort-Object Name } else { @() }
+
+        $allItems = @($directories) + @($files)
+        $count = $allItems.Count
+        for ($i = 0; $i -lt $count; $i++) {
+            $item = $allItems[$i]
+            $isLast = ($i -eq $count - 1)
+            $linePrefix = if ($isLast) { "$Prefix└── " } else { "$Prefix├── " }
+            $nextPrefix = if ($isLast) { "$Prefix    " } else { "$Prefix│   " }
+
+            [void]$sb.AppendLine("$linePrefix$($item.Name)")
+            if ($item.PSIsContainer) {
+                Add-TreeLevel -Path $item.FullName -CurrentDepth ($CurrentDepth + 1) -Prefix $nextPrefix
+            }
+        }
+    }
+
+    Add-TreeLevel -Path $TargetDirectory -CurrentDepth 1 -Prefix ""
+
+    $treeString = $sb.ToString().TrimEnd()
+    Write-Host $treeString -ForegroundColor White
+
+    # Ask to copy to clipboard
+    Write-Host ""
+    $copyChoice = Read-Host "  Copy this tree to clipboard? (y/n)"
+    if ($copyChoice -eq 'y' -or $copyChoice -eq 'Y') {
+        try {
+            $treeString | Set-Clipboard
+            Write-Host "  ✅ Tree copied to clipboard." -ForegroundColor Green
+            Invoke-SystemSound -Type Success
+        } catch {
+            Write-Host "  ❌ Failed to copy to clipboard: $_" -ForegroundColor Red
+        }
+    } else {
+        Write-Host "  Tree not copied." -ForegroundColor Gray
+    }
+    Write-Host ""
+}
+
+# =============================================================================
+# MAIN CONTROL LOOP – with new option 11
 # =============================================================================
 
 try {
     Import-NarratorData
-    Import-ConversationData
-    Import-SynonymData
+    Start-BackgroundLoad
 
     $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
     $audioFile = if ($Music) { $Music } else { Join-Path $scriptDir "bgmusic.mp3" }
@@ -866,30 +1457,44 @@ try {
         Clear-Host
         Write-Host ""
         Write-Host "  ╔══════════════════════════════════════════════════════════════════════════╗" -ForegroundColor DarkBlue
-        Write-Host "  ║          INTERSTELLAR QUANTUM ANALYTICS COMMAND CENTER v10.0 SYNONYM      ║" -ForegroundColor Cyan
-        Write-Host "  ║          Echo Engine — File Code Allotment & Synonym Narration           ║" -ForegroundColor Gray
+        Write-Host "  ║          INTERSTELLAR QUANTUM ANALYTICS COMMAND CENTER v10.0 VRAM         ║" -ForegroundColor Cyan
+        Write-Host "  ║          Echo Engine — Virtual RAM File System for 1GB+ Files           ║" -ForegroundColor Gray
         Write-Host "  ╚══════════════════════════════════════════════════════════════════════════╝" -ForegroundColor DarkBlue
         Write-Host ""
 
         Show-FloatingBar
         Show-DevDashboard
 
+        if (-not $script:EngineState.LoadComplete) {
+            Write-Host "  [⏳] Background loading in progress..." -ForegroundColor Yellow
+        } else {
+            Write-Host "  [✅] Data loaded" -ForegroundColor Green
+        }
+
         Write-Host "   [1] Engage System Analytics Engine" -ForegroundColor Cyan
         Write-Host "   [2] Toggle Diagnostics HUD" -ForegroundColor White
         Write-Host "   [3] Toggle Status Telemetry Bar" -ForegroundColor White
         Write-Host "   [4] Inspect & Narrate Random File (with Synonyms)" -ForegroundColor Magenta
         Write-Host "   [5] Change Target Directory Path" -ForegroundColor White
-        Write-Host "   [6] 🤖 AI Chatbot Interface" -ForegroundColor Green
+        Write-Host "   [6] 🤖 AI Chatbot Interface (VRAM Enhanced)" -ForegroundColor Green
         Write-Host "   [7] 📋 File Code Allotment (Assign Unique Codes)" -ForegroundColor Yellow
         Write-Host "   [8] 🔍 Search File Catalog by Code/Name" -ForegroundColor Yellow
         Write-Host "   [9] 📊 Generate File Catalog Report" -ForegroundColor Yellow
         Write-Host "   [10] Exit Engine" -ForegroundColor DarkRed
+        Write-Host "   [11] 🌳 Show Folder Tree (and copy to clipboard)" -ForegroundColor DarkCyan   # NEW
         Write-Host ""
         Write-Host "   Active Target Path: " -NoNewline -ForegroundColor Gray
         Write-Host $Path -ForegroundColor Cyan
         Write-Host ""
+        Write-Host "   VRAM Status: " -NoNewline
+        if ($script:EngineState.VRAMConvFile) {
+            Write-Host "✅ Active (conversation_commands.json)" -ForegroundColor Green
+        } else {
+            Write-Host "❌ Inactive" -ForegroundColor Red
+        }
+        Write-Host ""
 
-        $choice = Read-Host "   Command Input [1-10]"
+        $choice = Read-Host "   Command Input [1-11]"
 
         switch ($choice) {
             '1' {
@@ -975,9 +1580,24 @@ try {
                 [void](Read-Host)
             }
             '10' { $running = $false }
+            '11' {   # NEW: Folder Tree
+                Clear-Host
+                Show-FloatingBar
+                Write-Host ""
+                Write-Host "  🌳 Folder Tree Viewer" -ForegroundColor Cyan
+                Write-Host "  Using target path: $Path" -ForegroundColor Gray
+                $depth = Read-Host "  Max depth (default 3, 0 for unlimited)"
+                if ($depth -eq '') { $depth = 3 } else { $depth = [int]$depth }
+                if ($depth -lt 0) { $depth = 0 }
+                $include = Read-Host "  Include files? (y/n, default n)"
+                $includeFiles = ($include -eq 'y' -or $include -eq 'Y')
+                Show-FolderTree -TargetDirectory $Path -MaxDepth $depth -IncludeFiles:$includeFiles
+                Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
+                [void](Read-Host)
+            }
             Default { 
                 Invoke-SystemSound -Type Warning
-                Write-Host "  [WARNING] Invalid option. Please choose 1-10." -ForegroundColor Yellow
+                Write-Host "  [WARNING] Invalid option. Please choose 1-11." -ForegroundColor Yellow
                 Start-Sleep -Seconds 1
             }
         }
@@ -988,6 +1608,8 @@ try {
     Write-Host "  [ENGINE FATAL EXCEPTION] :: $_" -ForegroundColor Red
     Invoke-SystemSound -Type Error
 } finally {
+    if ($script:EngineState.VRAMConvFile) { $script:EngineState.VRAMConvFile.Close() }
+    if ($script:EngineState.VRAMSynonymFile) { $script:EngineState.VRAMSynonymFile.Close() }
     Stop-AudioSession
     Write-Host ""
     Write-Host "  Session terminated safely." -ForegroundColor White
