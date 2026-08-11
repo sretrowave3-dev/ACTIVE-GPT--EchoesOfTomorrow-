@@ -2,8 +2,8 @@
   "pairs": [
     {
       "id": "active",
-      "activePath": "C:\\Users\\HELLO KUMAR SINGH\\ACTIVE(GPT)-EchoesOfTomorrow",
-      "passivePath": "D:\\EXECUTABLES\\(GPT)-EchoesOfTomorrow-(backup-new)",
+      "activePath": "C:\\\\Users\\\\HELLO KUMAR SINGH\\\\ACTIVE(GPT)-EchoesOfTomorrow",
+      "passivePath": "D:\\\\EXECUTABLES\\\\(GPT)-EchoesOfTomorrow-(backup-new)",
       "policy": "Mirror",
       "enabled": true,
       "recursive": true,

@@ -217,3 +217,15 @@
 [2026-08-07 23:22:51.111] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
 [2026-08-07 23:22:51.191] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
 [2026-08-07 23:22:51.192] [INFO ] [PersistentCache] Saved 0 metadata entry(ies) to EchoSync.cache
+[2026-08-11 16:03:20.688] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-11 16:03:20.689] [INFO ] [Config] Successfully loaded 1 sync pair(s).
+[2026-08-11 16:03:20.690] [INFO ] [PersistentCache] Loaded 0 metadata entry(ies) from EchoSync.cache
+[2026-08-11 16:03:20.690] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-11 16:03:20.690] [INFO ] [IOCPWatcher] Successfully watching active path: C:\\Users\\HELLO KUMAR SINGH\\ACTIVE(GPT)-EchoesOfTomorrow [Pair: active]
+[2026-08-11 16:03:20.690] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-11 16:03:20.690] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-11 16:03:20.690] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-11 16:03:36.682] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-11 16:03:36.684] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-11 16:03:36.789] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-11 16:03:36.790] [INFO ] [PersistentCache] Saved 0 metadata entry(ies) to EchoSync.cache

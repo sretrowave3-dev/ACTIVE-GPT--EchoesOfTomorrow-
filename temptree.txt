@@ -1,0 +1,566 @@
+```
+├── 📄 # Echo Engine.txt
+├── 📄 11-AUG-2026 repomix_Echo Engine Development Policy.txt
+├── 📁 assets
+│ ├── 📁 audio
+│ ├── 📁 fonts
+│ ├── 📁 models
+│ ├── 📁 shaders
+│ ├── 📁 textures
+│ ├── 📁 videos
+├── 📄 bgmusic.mp3
+├── 🟨 cinematic-baker.js
+├── 📁 config
+├── 🗂️ conversation_commands.json
+├── 🗂️ conversation_commands_array.json
+├── 📁 cutscenes
+│ ├── 📄 bridge.webm
+│ ├── 📄 freeze.webm
+│ ├── 📄 prologue.webm
+├── 🎨 dashboard.css
+├── 📄 dashboard.html
+├── 🟨 dashboard.js
+├── 📄 DirectoryInspector#.bat
+├── 📄 DirectoryInspector.ps1
+├── 📁 docs
+│ ├── 📄 # Echo Engine Design Document (EDD).txt
+│ ├── 📄 1pdf.pdf
+│ ├── 📄 addative features.txt
+│ ├── 🗂️ index.json
+│ ├── 📄 [DeepSeek].txt
+├── 📄 echo-engine-d001-architecture-foundation.pdf
+├── 📄 echo-engine-d002-core-framework-architecture.pdf
+├── 📄 echo-engine-d003-asset-system-architecture.pdf
+├── 📄 echo-engine-d007-runtime-framework-architecture.pdf
+├── 📄 EchoArchitect.cpp
+├── 📄 EchoArchitect.exe
+├── 📄 EchoEngine.ps1
+├── 📄 EchoesOfTomorrow_ChatLog (1).txt
+├── 📁 EchoSandbox
+│ ├── 📁 adapters
+│ │ ├── 🟨 AnimationAdapter.js
+│ │ ├── 🟨 AssetAdapter.js
+│ │ ├── 🟨 ECSAdapter.js
+│ │ ├── 🟨 EngineAdapter.js
+│ │ ├── 🟨 FrameworkAdapter.js
+│ │ ├── 🟨 RenderingAdapter.js
+│ │ ├── 🟨 TimeAdapter.js
+│ │ ├── 🟨 WorldAdapter.js
+│ ├── 📁 core
+│ │ ├── 🟨 DependencyChecker.js
+│ │ ├── 🟨 EngineLoader.js
+│ │ ├── 🟨 EngineState.js
+│ │ ├── 🟨 ModuleScanner.js
+│ │ ├── 🟨 ProgressAnalyzer.js
+│ │ ├── 🟨 SandboxBootstrap.js
+│ │ ├── 🟨 SandboxEvents.js
+│ │ ├── 🟨 SandboxState.js
+│ ├── 📁 debug
+│ │ ├── 🟨 ConsolePanel.js
+│ │ ├── 🟨 LogViewer.js
+│ │ ├── 🟨 StatisticsPanel.js
+│ ├── 🟨 DebugOverlay.js
+│ ├── 📄 index.html
+│ ├── 🟨 main.js
+│ ├── 📁 monitors
+│ │ ├── 🟨 MemoryMonitor.js
+│ │ ├── 🟨 PerformanceMonitor.js
+│ │ ├── 🟨 RuntimeMonitor.js
+│ ├── 📁 runtime
+│ │ ├── 🟨 MemoryMonitor.js
+│ │ ├── 🟨 PerformanceMonitor.js
+│ │ ├── 🟨 RuntimeMonitor.js
+│ ├── 🟨 SandboxApplication.js
+│ ├── 📁 styles
+│ │ ├── 🎨 sandbox.css
+│ │ ├── 🎨 theme.css
+│ ├── 📁 ui
+│ │ ├── 📁 components
+│ │ │ ├── 🟨 LogEntry.js
+│ │ │ ├── 🟨 ModuleItem.js
+│ │ │ ├── 🟨 StatCard.js
+│ │ ├── 🟨 ConsolePanel.js
+│ │ ├── 🟨 Dashboard.js
+│ │ ├── 🟨 InspectorPanel.js
+│ │ ├── 🟨 Panels.js
+│ │ ├── 🟨 Sidebar.js
+│ │ ├── 🟨 StartupScreen.js
+│ │ ├── 🟨 StatisticsPanel.js
+│ │ ├── 🟨 StatusBar.js
+│ │ ├── 🟨 Toolbar.js
+│ │ ├── 🟨 Viewport.js
+│ ├── 📁 utils
+│ │ ├── 🟨 FileTree.js
+│ │ ├── 🟨 ModuleRegistry.js
+│ │ ├── 🟨 StatusFormatter.js
+├── 📁 EchoSync
+│ ├── 📁 build
+│ │ ├── 📁 ALL_BUILD.dir
+│ │ │ ├── 📁 Debug
+│ │ │ ├── 📁 MinSizeRel
+│ │ │ ├── 📁 Release
+│ │ │ ├── 📁 RelWithDebInfo
+│ │ ├── 📄 ALL_BUILD.vcxproj
+│ │ ├── 📄 ALL_BUILD.vcxproj.filters
+│ │ ├── 📁 bin
+│ │ │ ├── 📁 Release
+│ │ │ │ ├── 📄 EchoSync.exe
+│ │ ├── 📄 CMakeCache.txt
+│ │ ├── 📁 CMakeFiles
+│ │ │ ├── 📁 4.4.0-rc2
+│ │ │ │ ├── 📄 CMakeCXXCompiler.cmake
+│ │ │ │ ├── 📄 CMakeDetermineCompilerABI_CXX.bin
+│ │ │ │ ├── 📄 CMakeRCCompiler.cmake
+│ │ │ │ ├── 📄 CMakeSystem.cmake
+│ │ │ │ ├── 📁 CompilerIdCXX
+│ │ │ │ │ ├── 📄 CMakeCXXCompilerId.cpp
+│ │ │ │ │ ├── 📄 CompilerIdCXX.exe
+│ │ │ │ │ ├── 📄 CompilerIdCXX.vcxproj
+│ │ │ │ │ ├── 📁 Debug
+│ │ │ │ │ │ ├── 📄 CMakeCXXCompilerId.obj
+│ │ │ │ │ │ ├── 📄 CompilerIdCXX.exe.recipe
+│ │ │ │ │ │ ├── 📁 CompilerIdCXX.tlog
+│ │ │ │ │ │ │ ├── 📄 CL.command.1.tlog
+│ │ │ │ │ │ │ ├── 📄 Cl.items.tlog
+│ │ │ │ │ │ │ ├── 📄 CL.read.1.tlog
+│ │ │ │ │ │ │ ├── 📄 CL.write.1.tlog
+│ │ │ │ │ │ │ ├── 📄 CompilerIdCXX.lastbuildstate
+│ │ │ │ │ │ │ ├── 📄 link.command.1.tlog
+│ │ │ │ │ │ │ ├── 📄 link.read.1.tlog
+│ │ │ │ │ │ │ ├── 📄 link.secondary.1.tlog
+│ │ │ │ │ │ │ ├── 📄 link.write.1.tlog
+│ │ │ │ │ ├── 📁 tmp
+│ │ │ │ ├── 📁 VCTargetsPath
+│ │ │ │ │ ├── 📁 x64
+│ │ │ │ │ │ ├── 📁 Debug
+│ │ │ │ │ │ │ ├── 📄 VCTargetsPath.recipe
+│ │ │ │ │ │ │ ├── 📁 VCTargetsPath.tlog
+│ │ │ │ │ │ │ │ ├── 📄 VCTargetsPath.lastbuildstate
+│ │ │ │ ├── 📄 VCTargetsPath.txt
+│ │ │ │ ├── 📄 VCTargetsPath.vcxproj
+│ │ │ │ ├── 📁 x64
+│ │ │ │ │ ├── 📁 Debug
+│ │ │ ├── 📁 4b153c2dbb61fb50098f9a12c5d892d8
+│ │ │ │ ├── 📄 generate.stamp.rule
+│ │ │ ├── 📄 cmake.check_cache
+│ │ │ ├── 📄 CMakeConfigureLog.yaml
+│ │ │ ├── 📄 generate.stamp
+│ │ │ ├── 📄 generate.stamp.depend
+│ │ │ ├── 📄 generate.stamp.list
+│ │ │ ├── 🗂️ InstallScripts.json
+│ │ │ ├── 📁 pkgRedirects
+│ │ │ ├── 📄 TargetDirectories.txt
+│ │ ├── 📄 cmake_install.cmake
+│ │ ├── 📁 EchoSync.dir
+│ │ │ ├── 📁 Debug
+│ │ │ ├── 📁 MinSizeRel
+│ │ │ ├── 📁 Release
+│ │ │ │ ├── 📄 AppController.obj
+│ │ │ │ ├── 📄 ConfigManager.obj
+│ │ │ │ ├── 📄 ConsoleInterface.obj
+│ │ │ │ ├── 📄 CopyEngine.obj
+│ │ │ │ ├── 📄 DiagnosticsManager.obj
+│ │ │ │ ├── 📄 EchoSync.exe.recipe
+│ │ │ │ ├── 📄 EchoSync.iobj
+│ │ │ │ ├── 📁 EchoSync.tlog
+│ │ │ │ │ ├── 📄 CL.command.1.tlog
+│ │ │ │ │ ├── 📄 Cl.items.tlog
+│ │ │ │ │ ├── 📄 CL.read.1.tlog
+│ │ │ │ │ ├── 📄 CL.write.1.tlog
+│ │ │ │ │ ├── 📄 CustomBuild.command.1.tlog
+│ │ │ │ │ ├── 📄 CustomBuild.read.1.tlog
+│ │ │ │ │ ├── 📄 CustomBuild.write.1.tlog
+│ │ │ │ │ ├── 📄 EchoSync.lastbuildstate
+│ │ │ │ │ ├── 📄 link.command.1.tlog
+│ │ │ │ │ ├── 📄 link.read.1.tlog
+│ │ │ │ │ ├── 📄 link.secondary.1.tlog
+│ │ │ │ │ ├── 📄 link.write.1.tlog
+│ │ │ │ ├── 📁 EchoSync_MD.tlog
+│ │ │ │ ├── 📄 EventCoalescer.obj
+│ │ │ │ ├── 📄 HashCache.obj
+│ │ │ │ ├── 📄 HotkeyListener.obj
+│ │ │ │ ├── 📄 Logger.obj
+│ │ │ │ ├── 📄 main.obj
+│ │ │ │ ├── 📄 MetadataCache.obj
+│ │ │ │ ├── 📁 microsoft
+│ │ │ │ │ ├── 📁 STL
+│ │ │ │ ├── 📄 PathFilter.obj
+│ │ │ │ ├── 📄 PersistentCache.obj
+│ │ │ │ ├── 📄 SyncEngine.obj
+│ │ │ │ ├── 📄 Win32IOCPWatcher.obj
+│ │ │ ├── 📁 RelWithDebInfo
+│ │ ├── 📄 EchoSync.slnx
+│ │ ├── 📄 EchoSync.vcxproj
+│ │ ├── 📄 EchoSync.vcxproj.filters
+│ │ ├── 📁 Release
+│ │ ├── 📁 x64
+│ │ │ ├── 📁 Release
+│ │ │ │ ├── 📁 ALL_BUILD
+│ │ │ │ │ ├── 📄 ALL_BUILD.recipe
+│ │ │ │ │ ├── 📁 ALL_BUILD.tlog
+│ │ │ │ │ │ ├── 📄 ALL_BUILD.lastbuildstate
+│ │ │ │ │ │ ├── 📄 CustomBuild.command.1.tlog
+│ │ │ │ │ │ ├── 📄 CustomBuild.read.1.tlog
+│ │ │ │ │ │ ├── 📄 CustomBuild.write.1.tlog
+│ │ │ │ ├── 📁 ZERO_CHECK
+│ │ │ │ │ ├── 📄 ZERO_CHECK.recipe
+│ │ │ │ │ ├── 📁 ZERO_CHECK.tlog
+│ │ │ │ │ │ ├── 📄 CustomBuild.command.1.tlog
+│ │ │ │ │ │ ├── 📄 CustomBuild.read.1.tlog
+│ │ │ │ │ │ ├── 📄 CustomBuild.write.1.tlog
+│ │ │ │ │ │ ├── 📄 ZERO_CHECK.lastbuildstate
+│ │ ├── 📁 ZERO_CHECK.dir
+│ │ │ ├── 📁 Debug
+│ │ │ ├── 📁 MinSizeRel
+│ │ │ ├── 📁 Release
+│ │ │ ├── 📁 RelWithDebInfo
+│ │ ├── 📄 ZERO_CHECK.vcxproj
+│ │ ├── 📄 ZERO_CHECK.vcxproj.filters
+│ ├── 📄 Build.ps1
+│ ├── 📄 CMakeLists.txt
+│ ├── 📁 EchoSync
+│ │ ├── 📁 obj
+│ ├── 📄 EchoSync.cache
+│ ├── 📄 EchoSync.exe
+│ ├── 🗂️ EchoSync.json
+│ ├── 📄 EchoSync.log
+│ ├── 📄 EchoSyncTest.ps1
+│ ├── 📁 include
+│ │ ├── 📄 AppController.hpp
+│ │ ├── 📄 ConfigManager.hpp
+│ │ ├── 📄 ConsoleInterface.hpp
+│ │ ├── 📄 CopyEngine.hpp
+│ │ ├── 📄 DiagnosticsManager.hpp
+│ │ ├── 📄 EventCoalescer.hpp
+│ │ ├── 📄 HashCache.hpp
+│ │ ├── 📄 HotkeyListener.hpp
+│ │ ├── 📄 Logger.hpp
+│ │ ├── 📄 MetadataCache.hpp
+│ │ ├── 📄 PathFilter.hpp
+│ │ ├── 📄 PersistentCache.hpp
+│ │ ├── 📄 SyncEngine.hpp
+│ │ ├── 📄 Types.hpp
+│ │ ├── 📄 Win32IOCPWatcher.hpp
+│ ├── 📁 obj
+│ │ ├── 📄 AppController.o
+│ │ ├── 📄 ConfigManager.o
+│ │ ├── 📄 ConsoleInterface.o
+│ │ ├── 📄 CopyEngine.o
+│ │ ├── 📄 DiagnosticsManager.o
+│ │ ├── 📄 EventCoalescer.o
+│ │ ├── 📄 HashCache.o
+│ │ ├── 📄 HotkeyListener.o
+│ │ ├── 📄 Logger.o
+│ │ ├── 📄 main.o
+│ │ ├── 📄 MetadataCache.o
+│ │ ├── 📄 PathFilter.o
+│ │ ├── 📄 PersistentCache.o
+│ │ ├── 📄 SyncEngine.o
+│ │ ├── 📄 Win32IOCPWatcher.o
+│ ├── 📁 src
+│ │ ├── 📄 AppController.cpp
+│ │ ├── 📄 ConfigManager.cpp
+│ │ ├── 📄 ConsoleInterface.cpp
+│ │ ├── 📄 CopyEngine.cpp
+│ │ ├── 📄 DiagnosticsManager.cpp
+│ │ ├── 📄 EventCoalescer.cpp
+│ │ ├── 📄 HashCache.cpp
+│ │ ├── 📄 HotkeyListener.cpp
+│ │ ├── 📄 Logger.cpp
+│ │ ├── 📄 main.cpp
+│ │ ├── 📄 MetadataCache.cpp
+│ │ ├── 📄 PathFilter.cpp
+│ │ ├── 📄 PersistentCache.cpp
+│ │ ├── 📄 SyncEngine.cpp
+│ │ ├── 📄 Win32IOCPWatcher.cpp
+├── 🗂️ EchoSync.json
+├── 📄 EchoSync.log
+├── 📜 Echo_Engine_Implementation_Roadmap.md
+├── 🟨 engine.js
+├── 📄 Generate-ConversationCommands-500MB.ps1
+├── 📄 Generate-HeavyNarrator.ps1
+├── 📄 Generate-Synonyms.ps1
+├── 📄 git config --global user.email.txt
+├── 📄 Global Classics & Hit Songs.txt
+├── 📄 how --stat e46a6dc
+├── 📄 index.html
+├── 📄 login.html
+├── 📁 logs
+│ ├── 🗂️ index.json
+├── 🗂️ narrator_data.json
+├── 🗂️ narrator_data_heavy.json
+├── 🗂️ package.json
+├── 📄 ProjectSummary.debug.log
+├── 📜 ProjectSummary.md
+├── 📄 ProjectSummary.update.log
+├── 📜 README.md
+├── 📜 repomix-output.md
+├── 📄 repomix-output.xml
+├── 📁 reports
+│ ├── 📁 diagnostics
+│ ├── 📁 folder_trees
+│ ├── 📁 project_reports
+│ │ ├── 📄 project_summary_20260803_202003.txt
+│ │ ├── 📄 project_summary_20260803_202930.txt
+│ │ ├── 📄 project_summary_20260803_203116.txt
+│ │ ├── 📄 project_summary_20260803_203526.txt
+│ │ ├── 📄 project_summary_20260803_203658.txt
+│ │ ├── 📄 project_summary_20260806_222948.txt
+│ │ ├── 📄 project_summary_20260806_223108.txt
+│ │ ├── 📄 project_summary_20260808_233440.txt
+├── 🖼️ Screenshot_20260801_134018.png
+├── 🟨 server.js
+├── 📁 src
+│ ├── 📁 ai
+│ ├── 📁 animation
+│ │ ├── 📁 assets
+│ │ │ ├── 🟨 AnimationAsset.js
+│ │ │ ├── 🟨 AnimationClip.js
+│ │ │ ├── 🟨 AnimationCompression.js
+│ │ │ ├── 🟨 AnimationMetadata.js
+│ │ │ ├── 🟨 AnimationPackage.js
+│ │ ├── 📁 baking
+│ │ │ ├── 🟨 AnimationBaker.js
+│ │ │ ├── 🟨 FramePacker.js
+│ │ │ ├── 🟨 MetadataGenerator.js
+│ │ │ ├── 🟨 TextureChecker.js
+│ │ │ ├── 🟨 VertexSampler.js
+│ │ ├── 📁 core
+│ │ ├── 📁 debug
+│ │ ├── 📁 events
+│ │ │ ├── 🟨 AnimationEvent.js
+│ │ │ ├── 🟨 AnimationEventBus.js
+│ │ │ ├── 🟨 EventTrack.js
+│ │ ├── 📁 graph
+│ │ │ ├── 🟨 AnimationGraph.js
+│ │ │ ├── 🟨 AnimationState.js
+│ │ │ ├── 🟨 AnimationTransition.js
+│ │ │ ├── 🟨 BlendTree.js
+│ │ │ ├── 🟨 GraphNode.js
+│ │ ├── 📁 runtime
+│ │ │ ├── 🟨 AnimationController.js
+│ │ │ ├── 🟨 AnimationPlayer.js
+│ │ │ ├── 🟨 AnimationRuntime.js
+│ │ ├── 📁 skeleton
+│ │ │ ├── 🟨 Bone.js
+│ │ │ ├── 🟨 Pose.js
+│ │ │ ├── 🟨 Skeleton.js
+│ │ │ ├── 🟨 SkeletonBuilder.js
+│ │ │ ├── 🟨 SkeletonPose.js
+│ │ │ ├── 🟨 SkeletonUtils.js
+│ │ ├── 📁 utilities
+│ │ ├── 📁 vat
+│ │ │ ├── 🟨 VATDecoder.js
+│ │ │ ├── 🟨 VATMetadata.js
+│ │ │ ├── 🟨 VATPlayer.js
+│ │ │ ├── 🟨 VATTexture.js
+│ ├── 📁 assets
+│ │ ├── 🟨 AssetCache.js
+│ │ ├── 🟨 AssetDescriptor.js
+│ │ ├── 🟨 AssetHandle.js
+│ │ ├── 🟨 AssetLoader.js
+│ │ ├── 🟨 AssetManager.js
+│ │ ├── 🟨 AssetRegistry.js
+│ │ ├── 🟨 AssetService.js
+│ │ ├── 🟨 AssetState.js
+│ │ ├── 🟨 AssetType.js
+│ │ ├── 📁 loaders
+│ │ │ ├── 🟨 AudioLoader.js
+│ │ │ ├── 🟨 FontLoader.js
+│ │ │ ├── 🟨 MaterialLoader.js
+│ │ │ ├── 🟨 ModelLoader.js
+│ │ │ ├── 🟨 ShaderLoader.js
+│ │ │ ├── 🟨 TextureLoader.js
+│ │ │ ├── 🟨 VideoLoader.js
+│ ├── 📁 audio
+│ ├── 📁 camera
+│ ├── 📁 components
+│ │ ├── 🟨 AudioComponent.js
+│ │ ├── 🟨 HealthComponent.js
+│ │ ├── 🟨 MeshComponent.js
+│ │ ├── 🟨 TransformComponent.js
+│ │ ├── 🟨 VelocityComponent.js
+│ ├── 📁 data
+│ │ ├── 🟨 CellData.js
+│ │ ├── 🟨 RegionData.js
+│ │ ├── 🟨 SectorData.js
+│ ├── 📁 dialogue
+│ ├── 📁 ecs
+│ │ ├── 🟨 Component.js
+│ │ ├── 🟨 ComponentStore.js
+│ │ ├── 🟨 ECSManager.js
+│ │ ├── 🟨 ECSService.js
+│ │ ├── 🟨 Entity.js
+│ │ ├── 🟨 EntitySignature.js
+│ │ ├── 🟨 EntityView.js
+│ │ ├── 🟨 SparseSet.js
+│ │ ├── 🟨 System.js
+│ │ ├── 🟨 SystemScheduler.js
+│ ├── 📁 entities
+│ ├── 📁 framework
+│ │ ├── 📁 core
+│ │ │ ├── 🟨 Bootstrap.js
+│ │ │ ├── 🟨 CompositionRoot.js
+│ │ │ ├── 🟨 FrameScheduler.js
+│ │ │ ├── 🟨 Framework.js
+│ │ │ ├── 🟨 FrameworkBuilder.js
+│ │ │ ├── 🟨 GameClock.js
+│ │ │ ├── 🟨 RuntimeBuilder.js
+│ │ │ ├── 🟨 ServiceManifest.js
+│ │ │ ├── 🟨 ServiceRegistry.js
+│ │ ├── 📁 diagnostics
+│ │ │ ├── 🟨 DiagnosticsService.js
+│ │ │ ├── 🟨 PerformanceCounters.js
+│ │ ├── 📁 events
+│ │ │ ├── 🟨 Event.js
+│ │ │ ├── 🟨 EventBus.js
+│ │ ├── 📁 interfaces
+│ │ ├── 📁 math
+│ │ │ ├── 🟨 Matrix4.js
+│ │ │ ├── 🟨 Quaternion.js
+│ │ │ ├── 🟨 Transform.js
+│ │ │ ├── 🟨 TransformAlgorithms.js
+│ │ │ ├── 🟨 TransformInterpolator.js
+│ │ │ ├── 🟨 TransformSpatial.js
+│ │ │ ├── 🟨 Vector3.js
+│ │ ├── 📁 runtime
+│ │ │ ├── 📁 errors
+│ │ │ │ ├── 🟨 MissingDependencyError.js
+│ │ │ │ ├── 🟨 RuntimeConfigurationError.js
+│ │ │ │ ├── 🟨 RuntimeError.js
+│ │ │ │ ├── 🟨 RuntimeHostError.js
+│ │ │ │ ├── 🟨 RuntimeInitializationError.js
+│ │ │ │ ├── 🟨 RuntimeKernelError.js
+│ │ │ │ ├── 🟨 RuntimeSessionError.js
+│ │ │ │ ├── 🟨 RuntimeStateError.js
+│ │ │ ├── 📁 events
+│ │ │ │ ├── 🟨 RuntimeEvent.js
+│ │ │ │ ├── 🟨 RuntimeEventBus.js
+│ │ │ │ ├── 🟨 RuntimeEventDispatcher.js
+│ │ │ │ ├── 🟨 RuntimeEvents.js
+│ │ │ ├── 📁 pipeline
+│ │ │ │ ├── 🟨 FramePipeline.js
+│ │ │ │ ├── 🟨 FrameStage.js
+│ │ │ │ ├── 🟨 PipelineResult.js
+│ │ │ ├── 🟨 RuntimeClock.js
+│ │ │ ├── 🟨 RuntimeConfiguration.js
+│ │ │ ├── 🟨 RuntimeContext.js
+│ │ │ ├── 🟨 RuntimeHost.js
+│ │ │ ├── 🟨 RuntimeKernel.js
+│ │ │ ├── 🟨 RuntimeScheduler.js
+│ │ │ ├── 📁 session
+│ │ │ │ ├── 🟨 RuntimeSession.js
+│ │ │ │ ├── 🟨 RuntimeSessionFactory.js
+│ │ │ │ ├── 🟨 RuntimeSessionLifecycle.js
+│ │ │ │ ├── 🟨 RuntimeSessionManager.js
+│ │ │ │ ├── 🟨 RuntimeSessionRegistry.js
+│ │ │ │ ├── 🟨 SessionDescriptor.js
+│ │ │ │ ├── 🟨 SessionSelectionPolicy.js
+│ │ │ ├── 📁 state
+│ │ │ │ ├── 🟨 RuntimeState.js
+│ │ │ │ ├── 🟨 RuntimeStateMachine.js
+│ │ │ │ ├── 🟨 RuntimeTransition.js
+│ │ │ ├── 📁 statistics
+│ │ │ │ ├── 🟨 RuntimeStatistics.js
+│ │ ├── 📁 services
+│ │ │ ├── 🟨 AudioService.js
+│ │ │ ├── 🟨 InputService.js
+│ │ │ ├── 🟨 PlayerService.js
+│ │ │ ├── 🟨 RenderService.js
+│ │ │ ├── 🟨 SceneService.js
+│ │ │ ├── 🟨 Service.js
+│ │ │ ├── 🟨 TimeService.js
+│ │ │ ├── 🟨 UIService.js
+│ │ ├── 📁 state
+│ │ │ ├── 🟨 GameStateMachine.js
+│ │ ├── 📁 utilities
+│ ├── 📁 gameplay
+│ ├── 📁 hierarchy
+│ │ ├── 🟨 Cell.js
+│ │ ├── 🟨 Region.js
+│ │ ├── 🟨 Sector.js
+│ ├── 📁 input
+│ ├── 📁 inventory
+│ ├── 🟨 main.js
+│ ├── 📁 managers
+│ │ ├── 🟨 EntityManager.js
+│ │ ├── 🟨 QueryManager.js
+│ │ ├── 🟨 SpatialManager.js
+│ │ ├── 🟨 StreamingManager.js
+│ │ ├── 🟨 WorldGraph.js
+│ ├── 📁 memory
+│ ├── 📁 missions
+│ ├── 📁 physics
+│ ├── 📁 player
+│ │ ├── 🟨 PlayerController.js
+│ ├── 📁 queries
+│ │ ├── 🟨 CellQuery.js
+│ │ ├── 🟨 NearestQuery.js
+│ │ ├── 🟨 RadiusQuery.js
+│ ├── 📁 registries
+│ │ ├── 🟨 CellRegistry.js
+│ │ ├── 🟨 EntityRegistry.js
+│ │ ├── 🟨 RegionRegistry.js
+│ │ ├── 🟨 SectorRegistry.js
+│ ├── 📁 rendering
+│ │ ├── 🟨 EnvironmentSetup.js
+│ │ ├── 🟨 PBRTextureGenerator.js
+│ ├── 📁 save
+│ ├── 📁 scene
+│ │ ├── 🟨 Camera.js
+│ │ ├── 🟨 CameraManager.js
+│ │ ├── 🟨 Environment.js
+│ │ ├── 🟨 Scene.js
+│ │ ├── 🟨 SceneManager.js
+│ │ ├── 🟨 SceneState.js
+│ │ ├── 🟨 SceneTransition.js
+│ │ ├── 🟨 TransitionState.js
+│ ├── 📁 spatial
+│ │ ├── 🟨 GridPartition.js
+│ ├── 📁 streaming
+│ │ ├── 🟨 SectorLoader.js
+│ │ ├── 🟨 SectorUnloader.js
+│ │ ├── 🟨 StreamingJob.js
+│ ├── 📁 systems
+│ │ ├── 🟨 AnimationSystem.js
+│ │ ├── 🟨 HealthSystem.js
+│ │ ├── 🟨 MovementSystem.js
+│ ├── 📁 time
+│ │ ├── 🟨 DependencyGraph.js
+│ │ ├── 🟨 DiagnosticsCollector.js
+│ │ ├── 🟨 EventScheduler.js
+│ │ ├── 🟨 ReadyQueue.js
+│ │ ├── 🟨 ScheduledEvent.js
+│ │ ├── 🟨 SchedulerState.js
+│ │ ├── 🟨 SectorSchedulerState.js
+│ │ ├── 🟨 TimeEvents.js
+│ │ ├── 🟨 TimeManager.js
+│ │ ├── 🟨 TimeSerializer.js
+│ │ ├── 🟨 WorldClock.js
+│ ├── 📁 ui
+│ ├── 📁 utilities
+│ ├── 📁 vehicles
+│ ├── 📁 world
+│ │ ├── 🟨 CellID.js
+│ │ ├── 🟨 Entity.js
+│ │ ├── 🟨 EntityHandle.js
+│ │ ├── 🟨 EntityID.js
+│ │ ├── 🟨 RegionID.js
+│ │ ├── 🟨 SectorID.js
+│ │ ├── 🟨 Transform.js
+│ │ ├── 🟨 World.js
+│ │ ├── 🟨 WorldManager.js
+├── 📄 Start-Dashboard.bat
+├── 🎨 style.css
+├── 🗂️ synonyms.json
+├── 📁 test
+│ ├── 📁 ecs
+│ │ ├── 🟨 ComponentStore.test.js
+│ │ ├── 🟨 SparseSet.test.js
+│ ├── 📁 hierarchy
+│ │ ├── 🟨 Sector.test.js
+├── 📄 test.ps1
+├── 📁 tools
+├── 📄 VirtualRAMFileSystem.ps1
+
+```
