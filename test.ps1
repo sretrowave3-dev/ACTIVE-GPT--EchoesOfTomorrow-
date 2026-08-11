@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Enterprise System & Directory Analytics Engine (VRAM EDITION) – with Folder Tree
 .DESCRIPTION

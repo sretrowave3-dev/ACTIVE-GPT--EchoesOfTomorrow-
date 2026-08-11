@@ -1,0 +1,32 @@
+[33mebdca8a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: 
+[33m211abea[m HEAD@{1}: commit: Initial commit excluding large asset files
+[33m2a190d3[m HEAD@{2}: reset: moving to HEAD~1
+[33m8b3ef84[m HEAD@{3}: commit (amend): Upload project without heavy files
+[33m9c10865[m HEAD@{4}: commit: Upload project without heavy files
+[33m2a190d3[m HEAD@{5}: reset: moving to HEAD~1
+[33m7034c82[m HEAD@{6}: commit: Ignore large json files
+[33m2a190d3[m HEAD@{7}: commit: git commit -m "Initial commit with Echo Engine and related files"
+[33maf7ef19[m HEAD@{8}: commit: git commit -m "Initial commit with Echo Engine and related files"
+[33m5f3e78a[m HEAD@{9}: commit: git commit -m "Add VirtualRAMFileSystem and update EchoSandbox and core framework files"
+[33m013dd2f[m HEAD@{10}: commit: git commit -m "Added Generate-Synonyms.ps1 script to generate synonyms for words."
+[33me4606e3[m HEAD@{11}: commit: git commit -m "Initial commit of EchoSandbox project"
+[33mb631d96[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{12}: pull --rebase origin main (finish): returning to refs/heads/main
+[33mb631d96[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{13}: pull --rebase origin main (pick): git commit -m "fix: Corrected syntax errors in Matrix4, Vector3, and Quaternion classes"
+[33m5217cae[m HEAD@{14}: pull --rebase origin main (pick): git commit -m "fix: Corrected the closing brace in Vector3 class and removed unnecessary export statements in Matrix4 and Quaternion classes."
+[33me69e4e2[m HEAD@{15}: pull --rebase origin main (pick): git commit -m "fix: Corrected the definition of the BACK vector in Vector3 class"
+[33m485f33b[m HEAD@{16}: pull --rebase origin main (pick): git commit -m "fix: update Quaternion and Vector3 math operations"
+[33m51216ca[m HEAD@{17}: pull --rebase origin main (pick): git commit -m "feat: add new math classes and repomix output"
+[33mc1e59bb[m HEAD@{18}: pull --rebase origin main (pick): git commit -m "feat: add animation system"
+[33me46a6dc[m HEAD@{19}: pull --rebase origin main (start): checkout e46a6dcd21478f9b3ecec241f8c079ba4d91b250
+[33mb7731fe[m HEAD@{20}: commit: git commit -m "fix: Corrected syntax errors in Matrix4, Vector3, and Quaternion classes"
+[33m71a6ecd[m HEAD@{21}: commit: git commit -m "fix: Corrected the closing brace in Vector3 class and removed unnecessary export statements in Matrix4 and Quaternion classes."
+[33md0da9f7[m HEAD@{22}: commit: git commit -m "fix: Corrected the definition of the BACK vector in Vector3 class"
+[33m499c0a8[m HEAD@{23}: commit: git commit -m "fix: update Quaternion and Vector3 math operations"
+[33m73dd54b[m HEAD@{24}: commit: git commit -m "feat: add new math classes and repomix output"
+[33m23289d5[m HEAD@{25}: commit (amend): git commit -m "feat: add animation system"
+[33me46a6dc[m HEAD@{26}: commit: git commit -m "feat: add animation system"
+[33m7652b3a[m HEAD@{27}: commit: git commit -m "feat: add animation system"
+[33m21a7e29[m HEAD@{28}: commit: git commit -m "Added new features to the project"
+[33m0f04d4a[m HEAD@{29}: commit: Updated README
+[33m65244fe[m HEAD@{30}: commit (merge): Merge remote-tracking branch 'origin/main'
+[33md9d8741[m HEAD@{31}: commit (initial): Initial commit
