@@ -4,6 +4,7 @@ import { PlayerService } from '../services/PlayerService.js';
 import { AudioService } from '../services/AudioService.js';
 import { UIService } from '../services/UIService.js';
 import { WorldManager } from '../../world/WorldManager.js';
+import { TimeService } from '../services/TimeService.js';
 import { ECSService } from '../../ecs/ECSService.js';
 
 export const ServiceManifest = [
@@ -13,5 +14,6 @@ export const ServiceManifest = [
   AudioService,
   UIService,
   WorldManager,
+  TimeService,
   ECSService
 ];

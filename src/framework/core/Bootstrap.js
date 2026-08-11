@@ -13,6 +13,7 @@ export class Bootstrap {
     scheduler.addPhase('input');
     scheduler.addPhase('streaming');
     scheduler.addPhase('world');
+    scheduler.addPhase('time');
     scheduler.addPhase('ecs');
     scheduler.addPhase('ai');
     scheduler.addPhase('gameplay');
@@ -25,6 +26,7 @@ export class Bootstrap {
     // Assign services to phases
     scheduler.addServiceToPhase('input', framework.serviceRegistry.get('input'));
     scheduler.addServiceToPhase('world', framework.serviceRegistry.get('world'));
+    scheduler.addServiceToPhase('time', framework.serviceRegistry.get('time'));
     scheduler.addServiceToPhase('ecs', framework.serviceRegistry.get('ecs'));
     scheduler.addServiceToPhase('gameplay', framework.serviceRegistry.get('player'));
     scheduler.addServiceToPhase('audio', framework.serviceRegistry.get('audio'));

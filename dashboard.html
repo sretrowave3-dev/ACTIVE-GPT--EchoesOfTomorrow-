@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echoes of Tomorrow – Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <!-- Include marked.js for markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Echoes of Tomorrow – Project Overview</h1>
+  </header>
+  <main class="container">
+    <section id="doc-viewer" class="panel">
+      <h2>Document Summary</h2>
+      <select id="doc-select"></select>
+      <article id="doc-content" class="content"></article>
+    </section>
+    <section id="log-viewer" class="panel">
+      <h2>Recent Logs</h2>
+      <ul id="log-list"></ul>
+      <pre id="log-content" class="content"></pre>
+    </section>
+  </main>
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 import { RadiusQuery } from '../queries/RadiusQuery.js';
 import { NearestQuery } from '../queries/NearestQuery.js';
 import { CellQuery } from '../queries/CellQuery.js';
-import { CellID } from '../CellID.js';
+import { CellID } from '../world/CellID.js';
 
 /**
  * Central query interface. Delegates to specialised query implementations.
@@ -20,8 +20,8 @@ export class QueryManager {
    * Find all entities within a radius of a point.
    * @param {{x:number,y:number,z:number}} center
    * @param {number} radius
-   * @param {import('../EntityHandle.js').EntityHandle[]} [out] reusable array
-   * @returns {import('../EntityHandle.js').EntityHandle[]}
+  * @param {import('../world/EntityHandle.js').EntityHandle[]} [out] reusable array
+  * @returns {import('../world/EntityHandle.js').EntityHandle[]}
    */
   queryRadius(center, radius, out = []) {
     return RadiusQuery.query(this.world, center, radius, out, this.spatialManager);
@@ -30,7 +30,7 @@ export class QueryManager {
   /**
    * Find the nearest entity to a point.
    * @param {{x:number,y:number,z:number}} center
-   * @returns {import('../EntityHandle.js').EntityHandle|null}
+  * @returns {import('../world/EntityHandle.js').EntityHandle|null}
    */
   queryNearest(center) {
     return NearestQuery.query(this.world, center);

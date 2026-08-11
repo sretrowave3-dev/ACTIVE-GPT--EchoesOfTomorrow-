@@ -105,7 +105,10 @@ export class RuntimeMonitor {
                 triangles: 0, // Derived from renderer
                 streamingSectors: worldStatus.sectorCount || 0,
                 animationPlayers: animationStatus.systemCount || 0,
-                worldTime: timeStatus.elapsed || 0
+                worldTime: timeStatus.elapsed || 0,
+                timeQueueSize: timeStatus.diagnostics?.queueSize || 0,
+                timeDependencies: timeStatus.diagnostics?.dependencyCount || 0,
+                simulationTime: timeStatus.diagnostics?.simulationTime || 0
             }
         });
 
@@ -113,6 +116,13 @@ export class RuntimeMonitor {
         this.state.setModuleStatus('runtime', 'ready', {
             frame: timeStatus.frame || 0,
             delta: timeStatus.delta || 0
+        });
+        this.state.setModuleStatus('time', timeStatus.ready ? 'ready' : 'missing', {
+            elapsed: timeStatus.elapsed || 0,
+            frame: timeStatus.frame || 0,
+            queueSize: timeStatus.diagnostics?.queueSize || 0,
+            dependencies: timeStatus.diagnostics?.dependencyCount || 0,
+            simulationTime: timeStatus.diagnostics?.simulationTime || 0
         });
 
         // Update framework status

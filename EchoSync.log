@@ -1,0 +1,11 @@
+[2026-08-04 21:23:25.349] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-04 21:23:25.350] [INFO ] [Config] Successfully loaded 1 sync pair(s).
+[2026-08-04 21:23:25.350] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-04 21:23:25.352] [INFO ] [IOCPWatcher] Successfully watching active path: C:\\\\EchoSync_Test_Active [Pair: TestPair_01]
+[2026-08-04 21:23:25.352] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-04 21:23:25.353] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-04 21:23:25.353] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-04 21:23:27.459] [INFO ] [SyncEngine] Synchronized file [Mirror]: hello.txt (21 bytes)
+[2026-08-04 21:23:28.474] [INFO ] [SyncEngine] Synchronized file [Mirror]: hello.txt (38 bytes)
+[2026-08-04 21:23:29.227] [INFO ] [SyncEngine] Renamed on passive target: hello.txt -> hello_renamed.txt
+[2026-08-04 21:23:30.787] [INFO ] [SyncEngine] Deleted from passive target: hello_renamed.txt

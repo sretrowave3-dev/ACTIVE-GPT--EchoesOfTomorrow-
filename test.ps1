@@ -17,7 +17,9 @@ param(
     [Switch]$NoMusic,
 
     [ValidateRange(5, 500)]
-    [int]$MaxDisplayRows = 50
+    [int]$MaxDisplayRows = 50,
+
+    [switch]$NoInteractive
 )
 
 Set-StrictMode -Version Latest
@@ -73,10 +75,292 @@ $script:EngineState = @{
         preferences = @{}
         interactionCount = 0
     }
+    RuntimePaths      = @{}
     # Background load status
     LoadJob          = $null
     LoadComplete     = $false
     LoadError        = $null
+}
+
+function Initialize-EngineWorkspace {
+    param([string]$RootPath)
+
+    $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } else { $RootPath }
+    $cacheRoot = Join-Path $scriptDir ".engine_cache"
+    $virtualRamRoot = Join-Path $cacheRoot "virtualram"
+    $memoryRoot = Join-Path $cacheRoot "memory"
+    $reportsRoot = Join-Path $scriptDir "reports"
+    $projectReportsRoot = Join-Path $reportsRoot "project_reports"
+    $folderTreeRoot = Join-Path $reportsRoot "folder_trees"
+    $diagnosticsRoot = Join-Path $reportsRoot "diagnostics"
+
+    foreach ($path in @($cacheRoot, $virtualRamRoot, $memoryRoot, $reportsRoot, $projectReportsRoot, $folderTreeRoot, $diagnosticsRoot)) {
+        New-Item -ItemType Directory -Path $path -Force | Out-Null
+    }
+
+    $script:EngineState.RuntimePaths = [ordered]@{
+        RootPath = $scriptDir
+        CacheRoot = $cacheRoot
+        VirtualRamRoot = $virtualRamRoot
+        MemoryRoot = $memoryRoot
+        ReportsRoot = $reportsRoot
+        ProjectReportsRoot = $projectReportsRoot
+        FolderTreeRoot = $folderTreeRoot
+        DiagnosticsRoot = $diagnosticsRoot
+    }
+
+    return $script:EngineState.RuntimePaths
+}
+
+function Get-FileFingerprint {
+    param([string]$InputPath)
+    if (-not (Test-Path -LiteralPath $InputPath)) { return $null }
+    $item = Get-Item -LiteralPath $InputPath
+    $hash = Get-FileHash -LiteralPath $InputPath -Algorithm SHA256 -ErrorAction SilentlyContinue
+    return [pscustomobject]@{
+        Path = $InputPath
+        SizeBytes = $item.Length
+        LastWriteTimeUtc = $item.LastWriteTimeUtc.ToString('o')
+        Hash = if ($hash) { $hash.Hash } else { '00000000000000000000000000000000' }
+    }
+}
+
+function Read-JsonFileSafe {
+    param([string]$Path)
+    if (-not (Test-Path -LiteralPath $Path)) { return $null }
+    try {
+        $text = Get-Content -LiteralPath $Path -Raw -Encoding UTF8
+        return $text | ConvertFrom-Json
+    } catch {
+        return $null
+    }
+}
+
+function Save-JsonFileSafe {
+    param([string]$Path, [object]$Payload)
+    $parent = Split-Path -Parent $Path
+    if ($parent) { New-Item -ItemType Directory -Path $parent -Force | Out-Null }
+    $utf8NoBom = New-Object System.Text.UTF8Encoding $false
+    $json = $Payload | ConvertTo-Json -Depth 15
+    [System.IO.File]::WriteAllText($Path, $json, $utf8NoBom)
+}
+
+function Write-WorkspaceReport {
+    param([string]$FileName, [string]$Content)
+    $targetDir = if ($script:EngineState.RuntimePaths.ProjectReportsRoot) { $script:EngineState.RuntimePaths.ProjectReportsRoot } else { Join-Path $PSScriptRoot 'reports/project_reports' }
+    New-Item -ItemType Directory -Path $targetDir -Force | Out-Null
+    $targetPath = Join-Path $targetDir $FileName
+    $utf8NoBom = New-Object System.Text.UTF8Encoding $false
+    [System.IO.File]::WriteAllText($targetPath, $Content, $utf8NoBom)
+    return $targetPath
+}
+
+function Write-MemorySnapshot {
+    $proc = [System.Diagnostics.Process]::GetCurrentProcess()
+    $snapshot = [ordered]@{
+        timestampUtc = (Get-Date).ToUniversalTime().ToString('o')
+        processId = $proc.Id
+        managedHeapMb = [math]::Round([System.GC]::GetTotalMemory($false) / 1MB, 2)
+        workingSetMb = [math]::Round($proc.WorkingSet64 / 1MB, 2)
+        privateMemoryMb = [math]::Round($proc.PrivateMemorySize64 / 1MB, 2)
+    }
+    $memoryPath = Join-Path $script:EngineState.RuntimePaths.MemoryRoot ("memory_snapshot_{0}.json" -f (Get-Date -Format 'yyyyMMdd_HHmmss'))
+    Save-JsonFileSafe -Path $memoryPath -Payload $snapshot | Out-Null
+    return $snapshot
+}
+
+function Write-CacheManifest {
+    $manifestPath = Join-Path $script:EngineState.RuntimePaths.CacheRoot 'manifest.json'
+    $manifest = [ordered]@{
+        generatedAtUtc = (Get-Date).ToUniversalTime().ToString('o')
+        rootPath = $script:EngineState.RuntimePaths.RootPath
+        cacheFiles = @(
+            'conversation_index.json',
+            'synonyms_index.json'
+        )
+        memorySnapshots = @(Get-ChildItem -LiteralPath $script:EngineState.RuntimePaths.MemoryRoot -File -Filter 'memory_snapshot_*.json' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name)
+        projectReports = @(Get-ChildItem -LiteralPath $script:EngineState.RuntimePaths.ProjectReportsRoot -File -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name)
+    }
+    Save-JsonFileSafe -Path $manifestPath -Payload $manifest | Out-Null
+    return $manifestPath
+}
+
+function Convert-ConversationToCompactIndex {
+    param([object]$ConversationData)
+    if (-not $ConversationData -or -not $ConversationData.intents) { return [pscustomobject]@{ intents = [ordered]@{}; meta = [ordered]@{ loaded_via = 'compact' } } }
+
+    $intentEntries = [ordered]@{}
+    foreach ($intentName in $ConversationData.intents.PSObject.Properties.Name) {
+        $intent = $ConversationData.intents.$intentName
+        $intentEntries[$intentName] = [pscustomobject]@{
+            name = $intentName
+            patterns = @($intent.patterns)
+            responses = @($intent.responses)
+        }
+    }
+
+    return [pscustomobject]@{
+        intents = [pscustomobject]$intentEntries
+        meta = [ordered]@{
+            version = '1.1'
+            loaded_via = 'compact-index'
+            total_intents = $intentEntries.Count
+        }
+    }
+}
+
+function Convert-ConversationTextToCompactIndex {
+    param([string]$RawText, [string]$FilePath)
+
+    $trimmed = if ($null -ne $RawText) { $RawText.Trim() } else { '' }
+    if ([string]::IsNullOrWhiteSpace($trimmed) -and [string]::IsNullOrWhiteSpace($FilePath)) {
+        return [pscustomobject]@{ intents = [ordered]@{}; meta = [ordered]@{ loaded_via = 'text-fallback' } }
+    }
+
+    $reader = $null
+    try {
+        if (-not [string]::IsNullOrWhiteSpace($FilePath) -and (Test-Path -LiteralPath $FilePath)) {
+            $reader = [System.IO.File]::OpenText($FilePath)
+        } elseif (-not [string]::IsNullOrWhiteSpace($trimmed)) {
+            $reader = New-Object System.IO.StringReader($trimmed)
+        } else {
+            return [pscustomobject]@{ intents = [ordered]@{}; meta = [ordered]@{ loaded_via = 'text-fallback' } }
+        }
+
+        $intents = [ordered]@{}
+        $inIntentsBlock = $false
+        $braceBalance = 0
+        $intentPattern = '^\s*"([^"]+)"\s*:\s*\{'
+
+        while ($null -ne ($line = $reader.ReadLine())) {
+            if (-not $inIntentsBlock) {
+                if ($line -match '"intents"\s*:\s*\{') {
+                    $inIntentsBlock = $true
+                    $braceBalance = 1
+                }
+                continue
+            }
+
+            $openBraces = ([regex]::Matches($line, '\{')).Count
+            $closeBraces = ([regex]::Matches($line, '\}')).Count
+
+            if ($line -match $intentPattern) {
+                $intentName = $matches[1]
+                if ($intentName -ne 'meta' -and $intentName -ne 'intents') {
+                    $tokens = @($intentName -split '[^a-zA-Z0-9]+' | Where-Object { $_ })
+                    $patterns = if ($tokens.Count -gt 0) { @($tokens) } else { @($intentName) }
+                    $intents[$intentName] = [pscustomobject]@{
+                        name = $intentName
+                        patterns = $patterns
+                        responses = @("I can help with that topic.")
+                    }
+                }
+            }
+
+            $braceBalance += ($openBraces - $closeBraces)
+            if ($braceBalance -le 0) { break }
+        }
+
+        if ($intents.Count -gt 0) {
+            return [pscustomobject]@{
+                intents = [pscustomobject]$intents
+                meta = [ordered]@{
+                    version = '1.2'
+                    loaded_via = 'streaming-fallback'
+                    total_intents = $intents.Count
+                }
+            }
+        }
+    } catch {
+        Write-Host "  [CHATBOT] Falling back to a lightweight parser after a scan error: $_" -ForegroundColor DarkYellow
+    } finally {
+        if ($reader) { $reader.Close() }
+    }
+
+    try {
+        $parsed = $trimmed | ConvertFrom-Json
+        return Convert-ConversationToCompactIndex -ConversationData $parsed
+    } catch {
+        return [pscustomobject]@{ intents = [ordered]@{}; meta = [ordered]@{ loaded_via = 'text-fallback' } }
+    }
+}
+
+function Convert-SynonymsToCompactIndex {
+    param([object]$SynonymData)
+    if (-not $SynonymData) { return [pscustomobject]@{ synonym_map = [ordered]@{}; meta = [ordered]@{ loaded_via = 'compact' } } }
+
+    $synonymMap = [ordered]@{}
+    foreach ($prop in $SynonymData.synonym_map.PSObject.Properties) {
+        $synonymMap[$prop.Name] = @($prop.Value)
+    }
+
+    return [pscustomobject]@{
+        synonym_map = [pscustomobject]$synonymMap
+        meta = [ordered]@{
+            version = '1.1'
+            loaded_via = 'compact-index'
+            total_groups = $synonymMap.Count
+        }
+    }
+}
+
+function Load-ConversationIndexFromCache {
+    param([string]$ConvFile)
+    if (-not $script:EngineState.RuntimePaths.VirtualRamRoot) { return $null }
+    $fingerprint = Get-FileFingerprint -InputPath $ConvFile
+    $cachePath = Join-Path $script:EngineState.RuntimePaths.VirtualRamRoot 'conversation_index.json'
+    if (-not (Test-Path -LiteralPath $cachePath)) { return $null }
+
+    $cached = Read-JsonFileSafe -Path $cachePath
+    if (-not $cached) { return $null }
+    if ($cached.meta.file_hash -eq $fingerprint.Hash) {
+        return $cached
+    }
+    return $null
+}
+
+function Save-ConversationIndexToCache {
+    param([string]$ConvFile, [object]$Payload)
+    if (-not $script:EngineState.RuntimePaths.VirtualRamRoot) { return }
+    $fingerprint = Get-FileFingerprint -InputPath $ConvFile
+    $cachePayload = [pscustomobject]@{
+        payload = $Payload
+        meta = [ordered]@{
+            file_hash = $fingerprint.Hash
+            path = $ConvFile
+            saved_at = (Get-Date).ToString('o')
+        }
+    }
+    Save-JsonFileSafe -Path (Join-Path $script:EngineState.RuntimePaths.VirtualRamRoot 'conversation_index.json') -Payload $cachePayload | Out-Null
+}
+
+function Load-SynonymIndexFromCache {
+    param([string]$SynFile)
+    if (-not $script:EngineState.RuntimePaths.VirtualRamRoot) { return $null }
+    $fingerprint = Get-FileFingerprint -InputPath $SynFile
+    $cachePath = Join-Path $script:EngineState.RuntimePaths.VirtualRamRoot 'synonyms_index.json'
+    if (-not (Test-Path -LiteralPath $cachePath)) { return $null }
+
+    $cached = Read-JsonFileSafe -Path $cachePath
+    if ($cached -and $cached.meta.file_hash -eq $fingerprint.Hash) {
+        return $cached.payload
+    }
+    return $null
+}
+
+function Save-SynonymIndexToCache {
+    param([string]$SynFile, [object]$Payload)
+    if (-not $script:EngineState.RuntimePaths.VirtualRamRoot) { return }
+    $fingerprint = Get-FileFingerprint -InputPath $SynFile
+    $cachePayload = [pscustomobject]@{
+        payload = $Payload
+        meta = [ordered]@{
+            file_hash = $fingerprint.Hash
+            path = $SynFile
+            saved_at = (Get-Date).ToString('o')
+        }
+    }
+    Save-JsonFileSafe -Path (Join-Path $script:EngineState.RuntimePaths.VirtualRamRoot 'synonyms_index.json') -Payload $cachePayload | Out-Null
 }
 
 # =============================================================================
@@ -299,40 +583,28 @@ function Import-NarratorData {
 function Import-ConversationDataSync {
     param([string]$ConvFile)
     if (-not (Test-Path -LiteralPath $ConvFile)) { return $null }
-    
+
     $fileSize = (Get-Item $ConvFile).Length / 1MB
     Write-Host "  [CHATBOT] File size: $([math]::Round($fileSize,2)) MB" -ForegroundColor Gray
-    
-    $useVRAM = $fileSize -gt 10
-    if ($useVRAM) {
-        Write-Host "  [CHATBOT] Large file. Using VRAM streaming..." -ForegroundColor Cyan
-        try {
-            $vram = Open-VRAM -FilePath $ConvFile
-            if ($null -eq $vram) {
-                Write-Host "  [CHATBOT] VRAM failed. Falling back to standard loading." -ForegroundColor Yellow
-            } else {
-                $result = @{
-                    ConversationData = $null
-                    VRAMConvFile = $vram
-                    VRAMConvIsArray = ($vram.GetCount() -gt 1)
-                    VRAMConvMonolithicCache = $null
-                }
-                Write-Host "  [CHATBOT] VRAM ready for on‑demand intent matching." -ForegroundColor Green
-                return $result
-            }
-        } catch {
-            Write-Host "  [CHATBOT] VRAM error: $_" -ForegroundColor Yellow
+
+    $cached = Load-ConversationIndexFromCache -ConvFile $ConvFile
+    if ($cached) {
+        Write-Host "  [CHATBOT] Loaded compact conversation index from cache." -ForegroundColor Green
+        return @{
+            ConversationData = $cached.payload
+            VRAMConvFile = $null
+            VRAMConvIsArray = $false
+            VRAMConvMonolithicCache = $null
         }
     }
-    
+
     try {
-        Write-Host "  Loading conversation database (standard mode)..." -ForegroundColor DarkGray
-        $rawJson = Get-Content -LiteralPath $ConvFile -Raw -Encoding UTF8
-        $convData = $rawJson | ConvertFrom-Json
-        $intentCount = $convData.intents.PSObject.Properties.Name.Count
-        Write-Host "  [CHATBOT] Loaded $intentCount intents into memory." -ForegroundColor Green
+        Write-Host "  [CHATBOT] Building compact index from conversation database..." -ForegroundColor DarkGray
+        $compactIndex = Convert-ConversationTextToCompactIndex -FilePath $ConvFile
+        Save-ConversationIndexToCache -ConvFile $ConvFile -Payload $compactIndex
+        Write-Host "  [CHATBOT] Loaded $($compactIndex.meta.total_intents) intents into a lightweight index." -ForegroundColor Green
         return @{
-            ConversationData = $convData
+            ConversationData = $compactIndex
             VRAMConvFile = $null
             VRAMConvIsArray = $false
             VRAMConvMonolithicCache = $null
@@ -349,40 +621,20 @@ function Import-SynonymDataSync {
     try {
         $fileSize = (Get-Item $SynFile).Length / 1MB
         Write-Host "  [SYNONYM] Loading $([math]::Round($fileSize,2)) MB file..." -ForegroundColor DarkGray
-        
-        if ($fileSize -gt 10) {
-            $vram = Open-VRAM -FilePath $SynFile
-            if ($vram) {
-                if ($vram.GetCount() -eq 1) {
-                    $rootJson = $vram.GetObject("obj_1")
-                    if ($rootJson) {
-                        $synData = $rootJson | ConvertFrom-Json
-                        Write-Host "  [SYNONYM] Loaded monolithic object via VRAM." -ForegroundColor Green
-                        $vram.Close()
-                        return $synData
-                    }
-                } else {
-                    $allData = @{ synonym_map = @{} }
-                    foreach ($key in $vram.GetKeys()) {
-                        $obj = $vram.GetObject($key) | ConvertFrom-Json
-                        if ($obj.PSObject.Properties) {
-                            foreach ($prop in $obj.PSObject.Properties) {
-                                $allData.synonym_map[$prop.Name] = $prop.Value
-                            }
-                        }
-                    }
-                    Write-Host "  [SYNONYM] Loaded combined objects via VRAM." -ForegroundColor Green
-                    $vram.Close()
-                    return $allData
-                }
-            }
+
+        $cached = Load-SynonymIndexFromCache -SynFile $SynFile
+        if ($cached) {
+            Write-Host "  [SYNONYM] Loaded compact synonym index from cache." -ForegroundColor Green
+            return $cached
         }
-        
+
         $rawJson = Get-Content -LiteralPath $SynFile -Raw -Encoding UTF8
         $synData = $rawJson | ConvertFrom-Json
-        $synCount = $synData.synonym_map.PSObject.Properties.Name.Count
-        Write-Host "  [SYNONYM] Loaded $synCount synonym groups." -ForegroundColor Green
-        return $synData
+        $compactIndex = Convert-SynonymsToCompactIndex -SynonymData $synData
+        Save-SynonymIndexToCache -SynFile $SynFile -Payload $compactIndex
+        $synCount = $compactIndex.synonym_map.PSObject.Properties.Name.Count
+        Write-Host "  [SYNONYM] Loaded $synCount synonym groups into a lightweight index." -ForegroundColor Green
+        return $compactIndex
     } catch {
         Write-Host "  [SYNONYM ERROR] Failed to parse synonyms.json: $_" -ForegroundColor Red
         return $null
@@ -397,7 +649,7 @@ function Start-BackgroundLoad {
     $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
     $convFile = Join-Path $scriptDir "conversation_commands.json"
     $synFile = Join-Path $scriptDir "synonyms.json"
-    
+
     $jobScript = {
         param($ConvPath, $SynPath)
         function New-VRAMFileJob {
@@ -556,6 +808,23 @@ function Start-BackgroundLoad {
     
     $script:EngineState.LoadJob = Start-Job -ScriptBlock $jobScript -ArgumentList $convFile, $synFile
     Write-Host "  [BACKGROUND] Started loading conversation and synonyms in background." -ForegroundColor Cyan
+}
+
+function Warm-StartupCache {
+    param([string]$ScriptDir)
+    $convFile = Join-Path $ScriptDir 'conversation_commands.json'
+    $synFile = Join-Path $ScriptDir 'synonyms.json'
+
+    if (Test-Path -LiteralPath $convFile) {
+        try {
+            $null = Import-ConversationDataSync -ConvFile $convFile
+        } catch {}
+    }
+    if (Test-Path -LiteralPath $synFile) {
+        try {
+            $null = Import-SynonymDataSync -SynFile $synFile
+        } catch {}
+    }
 }
 
 function Wait-ForBackgroundLoad {
@@ -1179,7 +1448,68 @@ function New-FallbackResponse {
     return $list | Get-Random
 }
 
+# =============================================================================
+# FILE ANALYSIS HELPERS – added for detailed per‑file report
+# =============================================================================
+
+# Static lookup table for file descriptions (fallback)
+$script:FileDescriptionMap = @{
+    'test.ps1'                 = 'Main engine script that boots the Echo chatbot.'
+    'EchoEngine.ps1'           = 'Legacy engine wrapper for backward compatibility.'
+    'VirtualRAMFileSystem.ps1' = 'Virtual RAM indexing layer for huge JSON files.'
+    # Add additional entries as needed …
+}
+
+function Get-FileState {
+    param([string]$Path)
+    if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) { return $null }
+    $size = (Get-Item -LiteralPath $Path).Length
+    return if ($size -eq 0) { 'empty' } else { 'filled' }
+}
+
+function Extract-FileSummary {
+    param([string]$Path)
+    if (-not (Test-Path -LiteralPath $Path)) { return 'No description available' }
+    $lines = Get-Content -LiteralPath $Path -TotalCount 10 -ErrorAction SilentlyContinue
+    foreach ($ln in $lines) {
+        if ($ln -match '^\.SYNOPSIS\s+(.*)') { return $Matches[1].Trim() }
+    }
+    $leaf = Split-Path -Leaf $Path
+    if ($script:FileDescriptionMap -and $script:FileDescriptionMap.ContainsKey($leaf)) {
+        return $script:FileDescriptionMap[$leaf]
+    }
+    return 'No description available'
+}
+
+function Invoke-FileAnalysisReport {
+    param(
+        [Parameter(Mandatory=$true)][string]$TargetDirectory
+    )
+    $resolved = (Resolve-Path -LiteralPath $TargetDirectory).Path.TrimEnd('\\','/')
+    $allFiles = Get-ChildItem -LiteralPath $resolved -File -Recurse -Force -ErrorAction SilentlyContinue
+    $report = @()
+    foreach ($f in $allFiles) {
+        $state   = Get-FileState -Path $f.FullName
+        $summary = Extract-FileSummary -Path $f.FullName
+        $relative = $f.FullName.Substring($resolved.Length).TrimStart('\\','/')
+        $report += [pscustomobject]@{
+            Path      = $relative
+            State     = $state
+            SizeHuman = Get-FormattedByteSize $f.Length
+            Summary   = $summary
+        }
+    }
+    Write-Host "\n=== Full File Analysis Report ===" -ForegroundColor Cyan
+    $report | Sort-Object Path | Format-Table -AutoSize Path, State, SizeHuman, Summary
+    return $report
+}
+
+# Continue with the existing Invoke-Chatbot definition
+
 function Invoke-Chatbot {
+    param(
+        [string]$TargetDirectory
+    )
     if (-not $script:EngineState.ConversationData -and -not $script:EngineState.VRAMConvFile -and -not $script:EngineState.LoadComplete) {
         Write-Host "  [CHATBOT] Conversation data not yet loaded. Waiting for background load..." -ForegroundColor Yellow
         Wait-ForBackgroundLoad
@@ -1253,6 +1583,12 @@ function Invoke-Chatbot {
             continue
         }
 
+        if ($userInput -eq "report") {
+            # Generate and display file analysis report for the current target directory
+            $report = Invoke-FileAnalysisReport -TargetDirectory $TargetDirectory
+            # Continue to next loop iteration after showing report
+            continue
+        }
         if ($userInput -eq "help") {
             Write-Host ""
             Write-Host "  ─── [CHATBOT HELP] ─────────────────────────────────────────────────────" -ForegroundColor Cyan
@@ -1445,160 +1781,205 @@ function Show-FolderTree {
 # =============================================================================
 
 try {
-    Import-NarratorData
-    Start-BackgroundLoad
-
     $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
-    $audioFile = if ($Music) { $Music } else { Join-Path $scriptDir "bgmusic.mp3" }
-    Start-AudioSession -FilePath $audioFile
+    Initialize-EngineWorkspace -RootPath $scriptDir | Out-Null
+    Write-MemorySnapshot | Out-Null
+    Write-CacheManifest | Out-Null
 
-    $running = $true
-    while ($running) {
-        Clear-Host
-        Write-Host ""
-        Write-Host "  ╔══════════════════════════════════════════════════════════════════════════╗" -ForegroundColor DarkBlue
-        Write-Host "  ║          INTERSTELLAR QUANTUM ANALYTICS COMMAND CENTER v10.0 VRAM         ║" -ForegroundColor Cyan
-        Write-Host "  ║          Echo Engine — Virtual RAM File System for 1GB+ Files           ║" -ForegroundColor Gray
-        Write-Host "  ╚══════════════════════════════════════════════════════════════════════════╝" -ForegroundColor DarkBlue
-        Write-Host ""
+    Import-NarratorData
+    Warm-StartupCache -ScriptDir $scriptDir
 
-        Show-FloatingBar
-        Show-DevDashboard
+    if ($NoInteractive) {
+        $scanStats = Invoke-SystemScanEngine -TargetDirectory $scriptDir
+        $reportName = "project_summary_{0}.txt" -f (Get-Date -Format 'yyyyMMdd_HHmmss')
+        $reportContent = @(
+            "Project Report",
+            "Generated: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')",
+            "Target Path: $scriptDir",
+            "Total Folders: $($scanStats.TotalFolders)",
+            "Total Files: $($scanStats.TotalFiles)",
+            "Total Lines: $($scanStats.TotalLines)",
+            "Largest File: $($scanStats.LargestFile.Name)",
+            "Largest File Size: $(Get-FormattedByteSize $($scanStats.LargestFile.Length))"
+        ) -join [Environment]::NewLine
+        $savedPath = Write-WorkspaceReport -FileName $reportName -Content $reportContent
+        Write-Host "  [BOOT] Quick-start cache and project report completed." -ForegroundColor Green
+        Write-Host "  [BOOT] Report saved to $savedPath" -ForegroundColor Green
+        Write-Host "  [BOOT] Startup complete. Exiting in non-interactive mode." -ForegroundColor Cyan
+        $running = $false
+    } else {
+        Start-BackgroundLoad
 
-        if (-not $script:EngineState.LoadComplete) {
-            Write-Host "  [⏳] Background loading in progress..." -ForegroundColor Yellow
-        } else {
-            Write-Host "  [✅] Data loaded" -ForegroundColor Green
-        }
+        $audioFile = if ($Music) { $Music } else { Join-Path $scriptDir "bgmusic.mp3" }
+        Start-AudioSession -FilePath $audioFile
 
-        Write-Host "   [1] Engage System Analytics Engine" -ForegroundColor Cyan
-        Write-Host "   [2] Toggle Diagnostics HUD" -ForegroundColor White
-        Write-Host "   [3] Toggle Status Telemetry Bar" -ForegroundColor White
-        Write-Host "   [4] Inspect & Narrate Random File (with Synonyms)" -ForegroundColor Magenta
-        Write-Host "   [5] Change Target Directory Path" -ForegroundColor White
-        Write-Host "   [6] 🤖 AI Chatbot Interface (VRAM Enhanced)" -ForegroundColor Green
-        Write-Host "   [7] 📋 File Code Allotment (Assign Unique Codes)" -ForegroundColor Yellow
-        Write-Host "   [8] 🔍 Search File Catalog by Code/Name" -ForegroundColor Yellow
-        Write-Host "   [9] 📊 Generate File Catalog Report" -ForegroundColor Yellow
-        Write-Host "   [10] Exit Engine" -ForegroundColor DarkRed
-        Write-Host "   [11] 🌳 Show Folder Tree (and copy to clipboard)" -ForegroundColor DarkCyan   # NEW
-        Write-Host ""
-        Write-Host "   Active Target Path: " -NoNewline -ForegroundColor Gray
-        Write-Host $Path -ForegroundColor Cyan
-        Write-Host ""
-        Write-Host "   VRAM Status: " -NoNewline
-        if ($script:EngineState.VRAMConvFile) {
-            Write-Host "✅ Active (conversation_commands.json)" -ForegroundColor Green
-        } else {
-            Write-Host "❌ Inactive" -ForegroundColor Red
-        }
-        Write-Host ""
+        $running = $true
+        while ($running) {
+            Clear-Host
+            Write-Host ""
+            Write-Host "  ╔══════════════════════════════════════════════════════════════════════════╗" -ForegroundColor DarkBlue
+            Write-Host "  ║          INTERSTELLAR QUANTUM ANALYTICS COMMAND CENTER v10.0 VRAM         ║" -ForegroundColor Cyan
+            Write-Host "  ║          Echo Engine — Virtual RAM File System for 1GB+ Files           ║" -ForegroundColor Gray
+            Write-Host "  ╚══════════════════════════════════════════════════════════════════════════╝" -ForegroundColor DarkBlue
+            Write-Host ""
 
-        $choice = Read-Host "   Command Input [1-11]"
+            Show-FloatingBar
+            Show-DevDashboard
 
-        switch ($choice) {
-            '1' {
-                Invoke-SystemSound -Type Beep
-                Clear-Host
-                Show-FloatingBar
-                Write-Host "  [+] Executing directory tree analysis..." -ForegroundColor Cyan
-                $scanStats = Invoke-SystemScanEngine -TargetDirectory $Path
-                Clear-Host
-                Show-FloatingBar
-                Write-Host "  ╔══════════════════════════════════════════════════════════════════════════╗" -ForegroundColor DarkBlue
-                Write-Host "  ║                      ANALYTICS TELEMETRY METRICS                         ║" -ForegroundColor Cyan
-                Write-Host "  ╚══════════════════════════════════════════════════════════════════════════╝" -ForegroundColor DarkBlue
-                Write-Host ""
-                Write-Host ("   • Total Folders Scanned : {0:N0}" -f $scanStats.TotalFolders) -ForegroundColor White
-                Write-Host ("   • Empty Directories     : {0:N0}" -f $scanStats.EmptyFolders) -ForegroundColor DarkGray
-                Write-Host ("   • Total Files Scanned   : {0:N0}" -f $scanStats.TotalFiles) -ForegroundColor White
-                Write-Host ("   • Active Files (Non-0)  : {0:N0}" -f $scanStats.ActiveFiles) -ForegroundColor DarkCyan
-                Write-Host ("   • Total Lines Analyzed  : {0:N0}" -f $scanStats.TotalLines) -ForegroundColor Magenta
-                Write-Host ("   • Analytics Duration    : {0:N2}s" -f $scanStats.ScanDuration) -ForegroundColor Green
-                if ($null -ne $scanStats.LargestFile) {
-                    Write-Host ("   • Largest Node Detected : {0} ({1})" -f $scanStats.LargestFile.Name, (Get-FormattedByteSize $scanStats.LargestFile.Length)) -ForegroundColor Yellow
-                }
-                Write-Host ""
-                Write-Host "   ── [ FILE TYPE DISTRIBUTION ] ───────────────────────────────" -ForegroundColor DarkBlue
-                $topExts = $scanStats.TopExtensions.GetEnumerator() | Sort-Object Value -Descending | Select-Object -First 5
-                foreach ($ext in $topExts) {
-                    Write-Host ("     ├─ {0,-15} : {1,5} file(s)" -f $ext.Key, $ext.Value) -ForegroundColor Gray
-                }
-                Invoke-SystemSound -Type Success
-                Write-Host ""
-                Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
-                [void](Read-Host)
+            if (-not $script:EngineState.LoadComplete) {
+                Write-Host "  [⏳] Background loading in progress..." -ForegroundColor Yellow
+            } else {
+                Write-Host "  [✅] Data loaded" -ForegroundColor Green
             }
-            '2' { $script:EngineState.DevMode = -not $script:EngineState.DevMode; Invoke-SystemSound -Type Toggle }
-            '3' { $script:EngineState.FloatingBar = -not $script:EngineState.FloatingBar; Invoke-SystemSound -Type Toggle }
-            '4' {
-                Invoke-RandomFileSpeech -TargetDirectory $Path
-                Write-Host ""
-                Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
-                [void](Read-Host)
+
+            Write-Host "   [1] Engage System Analytics Engine" -ForegroundColor Cyan
+            Write-Host "   [2] Toggle Diagnostics HUD" -ForegroundColor White
+            Write-Host "   [3] Toggle Status Telemetry Bar" -ForegroundColor White
+            Write-Host "   [4] Inspect & Narrate Random File (with Synonyms)" -ForegroundColor Magenta
+            Write-Host "   [5] Change Target Directory Path" -ForegroundColor White
+            Write-Host "   [6] 🤖 AI Chatbot Interface (VRAM Enhanced)" -ForegroundColor Green
+            Write-Host "   [7] 📋 File Code Allotment (Assign Unique Codes)" -ForegroundColor Yellow
+            Write-Host "   [8] 🔍 Search File Catalog by Code/Name" -ForegroundColor Yellow
+            Write-Host "   [9] 📊 Generate File Catalog Report" -ForegroundColor Yellow
+            Write-Host "   [10] Exit Engine" -ForegroundColor DarkRed
+            Write-Host "   [11] 🌳 Show Folder Tree (and copy to clipboard)" -ForegroundColor DarkCyan
+            Write-Host "   [12] 📁 Save Project Reports" -ForegroundColor DarkYellow
+            Write-Host ""
+            Write-Host "   Active Target Path: " -NoNewline -ForegroundColor Gray
+            Write-Host $Path -ForegroundColor Cyan
+            Write-Host ""
+            Write-Host "   VRAM Status: " -NoNewline
+            if ($script:EngineState.VRAMConvFile) {
+                Write-Host "✅ Active (conversation_commands.json)" -ForegroundColor Green
+            } else {
+                Write-Host "❌ Inactive" -ForegroundColor Red
             }
-            '5' {
-                Write-Host ""
-                $newPath = Read-Host "   Enter new path"
-                if (Test-Path -LiteralPath $newPath -PathType Container) {
-                    $Path = $newPath
+            Write-Host ""
+
+            $choice = Read-Host "   Command Input [1-12]"
+
+            switch ($choice) {
+                '1' {
+                    Invoke-SystemSound -Type Beep
+                    Clear-Host
+                    Show-FloatingBar
+                    Write-Host "  [+] Executing directory tree analysis..." -ForegroundColor Cyan
+                    $scanStats = Invoke-SystemScanEngine -TargetDirectory $Path
+                    Clear-Host
+                    Show-FloatingBar
+                    Write-Host "  ╔══════════════════════════════════════════════════════════════════════════╗" -ForegroundColor DarkBlue
+                    Write-Host "  ║                      ANALYTICS TELEMETRY METRICS                         ║" -ForegroundColor Cyan
+                    Write-Host "  ╚══════════════════════════════════════════════════════════════════════════╝" -ForegroundColor DarkBlue
+                    Write-Host ""
+                    Write-Host ("   • Total Folders Scanned : {0:N0}" -f $scanStats.TotalFolders) -ForegroundColor White
+                    Write-Host ("   • Empty Directories     : {0:N0}" -f $scanStats.EmptyFolders) -ForegroundColor DarkGray
+                    Write-Host ("   • Total Files Scanned   : {0:N0}" -f $scanStats.TotalFiles) -ForegroundColor White
+                    Write-Host ("   • Active Files (Non-0)  : {0:N0}" -f $scanStats.ActiveFiles) -ForegroundColor DarkCyan
+                    Write-Host ("   • Total Lines Analyzed  : {0:N0}" -f $scanStats.TotalLines) -ForegroundColor Magenta
+                    Write-Host ("   • Analytics Duration    : {0:N2}s" -f $scanStats.ScanDuration) -ForegroundColor Green
+                    if ($null -ne $scanStats.LargestFile) {
+                        Write-Host ("   • Largest Node Detected : {0} ({1})" -f $scanStats.LargestFile.Name, (Get-FormattedByteSize $scanStats.LargestFile.Length)) -ForegroundColor Yellow
+                    }
+                    Write-Host ""
+                    Write-Host "   ── [ FILE TYPE DISTRIBUTION ] ───────────────────────────────" -ForegroundColor DarkBlue
+                    $topExts = $scanStats.TopExtensions.GetEnumerator() | Sort-Object Value -Descending | Select-Object -First 5
+                    foreach ($ext in $topExts) {
+                        Write-Host ("     ├─ {0,-15} : {1,5} file(s)" -f $ext.Key, $ext.Value) -ForegroundColor Gray
+                    }
                     Invoke-SystemSound -Type Success
-                } else {
-                    Write-Host "   [ERROR] Path does not exist." -ForegroundColor Red
-                    Invoke-SystemSound -Type Error
-                    Start-Sleep -Seconds 2
+                    Write-Host ""
+                    Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
+                    [void](Read-Host)
                 }
-            }
-            '6' {
-                Clear-Host
-                Show-FloatingBar
-                Invoke-Chatbot
-                Clear-Host
-            }
-            '7' {
-                Clear-Host
-                Show-FloatingBar
-                $catalog = Invoke-FileCodeAllotment -TargetDirectory $Path -CatalogPath "file_catalog.json"
-                Write-Host ""
-                Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
-                [void](Read-Host)
-            }
-            '8' {
-                Write-Host ""
-                $searchTerm = Read-Host "   Enter code or filename to search"
-                Invoke-CodeSearch -CatalogPath "file_catalog.json" -SearchTerm $searchTerm
-                Write-Host ""
-                Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
-                [void](Read-Host)
-            }
-            '9' {
-                Clear-Host
-                Show-FloatingBar
-                Invoke-CatalogReport -CatalogPath "file_catalog.json"
-                Write-Host ""
-                Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
-                [void](Read-Host)
-            }
-            '10' { $running = $false }
-            '11' {   # NEW: Folder Tree
-                Clear-Host
-                Show-FloatingBar
-                Write-Host ""
-                Write-Host "  🌳 Folder Tree Viewer" -ForegroundColor Cyan
-                Write-Host "  Using target path: $Path" -ForegroundColor Gray
-                $depth = Read-Host "  Max depth (default 3, 0 for unlimited)"
-                if ($depth -eq '') { $depth = 3 } else { $depth = [int]$depth }
-                if ($depth -lt 0) { $depth = 0 }
-                $include = Read-Host "  Include files? (y/n, default n)"
-                $includeFiles = ($include -eq 'y' -or $include -eq 'Y')
-                Show-FolderTree -TargetDirectory $Path -MaxDepth $depth -IncludeFiles:$includeFiles
-                Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
-                [void](Read-Host)
-            }
-            Default { 
-                Invoke-SystemSound -Type Warning
-                Write-Host "  [WARNING] Invalid option. Please choose 1-11." -ForegroundColor Yellow
-                Start-Sleep -Seconds 1
+                '2' { $script:EngineState.DevMode = -not $script:EngineState.DevMode; Invoke-SystemSound -Type Toggle }
+                '3' { $script:EngineState.FloatingBar = -not $script:EngineState.FloatingBar; Invoke-SystemSound -Type Toggle }
+                '4' {
+                    Invoke-RandomFileSpeech -TargetDirectory $Path
+                    Write-Host ""
+                    Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
+                    [void](Read-Host)
+                }
+                '5' {
+                    Write-Host ""
+                    $newPath = Read-Host "   Enter new path"
+                    if (Test-Path -LiteralPath $newPath -PathType Container) {
+                        $Path = $newPath
+                        Invoke-SystemSound -Type Success
+                    } else {
+                        Write-Host "   [ERROR] Path does not exist." -ForegroundColor Red
+                        Invoke-SystemSound -Type Error
+                        Start-Sleep -Seconds 2
+                    }
+                }
+                '6' {
+                    Clear-Host
+                    Show-FloatingBar
+                    Invoke-Chatbot -TargetDirectory $Path
+                    Clear-Host
+                }
+                '7' {
+                    Clear-Host
+                    Show-FloatingBar
+                    $catalog = Invoke-FileCodeAllotment -TargetDirectory $Path -CatalogPath "file_catalog.json"
+                    Write-Host ""
+                    Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
+                    [void](Read-Host)
+                }
+                '8' {
+                    Write-Host ""
+                    $searchTerm = Read-Host "   Enter code or filename to search"
+                    Invoke-CodeSearch -CatalogPath "file_catalog.json" -SearchTerm $searchTerm
+                    Write-Host ""
+                    Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
+                    [void](Read-Host)
+                }
+                '9' {
+                    Clear-Host
+                    Show-FloatingBar
+                    Invoke-CatalogReport -CatalogPath "file_catalog.json"
+                    Write-Host ""
+                    Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
+                    [void](Read-Host)
+                }
+                '10' { $running = $false }
+                '11' {
+                    Clear-Host
+                    Show-FloatingBar
+                    Write-Host ""
+                    Write-Host "  🌳 Folder Tree Viewer" -ForegroundColor Cyan
+                    Write-Host "  Using target path: $Path" -ForegroundColor Gray
+                    $depth = Read-Host "  Max depth (default 3, 0 for unlimited)"
+                    if ($depth -eq '') { $depth = 3 } else { $depth = [int]$depth }
+                    if ($depth -lt 0) { $depth = 0 }
+                    $include = Read-Host "  Include files? (y/n, default n)"
+                    $includeFiles = ($include -eq 'y' -or $include -eq 'Y')
+                    Show-FolderTree -TargetDirectory $Path -MaxDepth $depth -IncludeFiles:$includeFiles
+                    Write-Host "   Press ENTER to return to dashboard..." -ForegroundColor Cyan
+                    [void](Read-Host)
+                }
+                '12' {
+                    $reportName = "project_summary_{0}.txt" -f (Get-Date -Format 'yyyyMMdd_HHmmss')
+                    $scanStats = Invoke-SystemScanEngine -TargetDirectory $Path
+                    $reportContent = @(
+                        "Project Report",
+                        "Generated: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')",
+                        "Target Path: $Path",
+                        "Total Folders: $($scanStats.TotalFolders)",
+                        "Total Files: $($scanStats.TotalFiles)",
+                        "Total Lines: $($scanStats.TotalLines)",
+                        "Largest File: $($scanStats.LargestFile.Name)",
+                        "Largest File Size: $(Get-FormattedByteSize $($scanStats.LargestFile.Length))"
+                    ) -join [Environment]::NewLine
+                    $savedPath = Write-WorkspaceReport -FileName $reportName -Content $reportContent
+                    Write-Host "  [REPORT] Saved project report to $savedPath" -ForegroundColor Green
+                    Invoke-SystemSound -Type Success
+                    if (-not $NoInteractive) { [void](Read-Host '   Press ENTER to continue') }
+                }
+                Default {
+                    Invoke-SystemSound -Type Warning
+                    Write-Host "  [WARNING] Invalid option. Please choose 1-12." -ForegroundColor Yellow
+                    Start-Sleep -Seconds 1
+                }
             }
         }
     }

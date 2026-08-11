@@ -1,0 +1,8 @@
+Project Report
+Generated: 2026-08-06 22:30:08
+Target Path: C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow
+Total Folders: 330
+Total Files: 734
+Total Lines: 19616742
+Largest File: conversation_commands.json
+Largest File Size: 409.69 MB

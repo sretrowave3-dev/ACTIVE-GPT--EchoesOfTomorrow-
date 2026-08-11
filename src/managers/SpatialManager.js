@@ -1,4 +1,4 @@
-import { CellID } from '../CellID.js';
+import { CellID } from '../world/CellID.js';
 import { GridPartition } from '../spatial/GridPartition.js';
 
 export class SpatialManager {

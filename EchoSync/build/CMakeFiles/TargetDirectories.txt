@@ -1,0 +1,3 @@
+C:/Users/HELLO KUMAR SINGH/ACTIVE(GPT)-EchoesOfTomorrow/EchoSync/build/CMakeFiles/EchoSync.dir
+C:/Users/HELLO KUMAR SINGH/ACTIVE(GPT)-EchoesOfTomorrow/EchoSync/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/HELLO KUMAR SINGH/ACTIVE(GPT)-EchoesOfTomorrow/EchoSync/build/CMakeFiles/ZERO_CHECK.dir

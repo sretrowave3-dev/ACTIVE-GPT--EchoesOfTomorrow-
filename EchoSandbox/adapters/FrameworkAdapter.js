@@ -12,8 +12,8 @@ export class FrameworkAdapter extends EngineAdapter {
         super(framework);
         this._serviceNames = [
             'world', 'ecs', 'scene', 'assets',
-            'render', 'input', 'audio', 'ui',
-            'player'
+            'time', 'render', 'input', 'audio',
+            'ui', 'player'
         ];
     }
 

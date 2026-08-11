@@ -1,6 +1,6 @@
-import { EntityID } from '../EntityID.js';
-import { Entity } from '../Entity.js';
-import { EntityHandle } from '../EntityHandle.js';
+import { EntityID } from '../world/EntityID.js';
+import { Entity } from '../world/Entity.js';
+import { EntityHandle } from '../world/EntityHandle.js';
 
 /**
  * Manages entity lifecycle: creation, destruction, state changes.

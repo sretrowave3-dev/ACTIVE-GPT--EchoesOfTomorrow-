@@ -1,4 +1,4 @@
-import { CellID } from '../CellID.js';
+import { CellID } from '../world/CellID.js';
 
 export class Cell {
   /**

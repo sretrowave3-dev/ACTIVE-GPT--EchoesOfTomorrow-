@@ -1,0 +1,10 @@
+^C:\USERS\HELLO KUMAR SINGH\ACTIVE(GPT)-ECHOESOFTOMORROW\ECHOSYNC\BUILD\CMAKEFILES\4B153C2DBB61FB50098F9A12C5D892D8\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/HELLO KUMAR SINGH/ACTIVE(GPT)-EchoesOfTomorrow/EchoSync" "-BC:/Users/HELLO KUMAR SINGH/ACTIVE(GPT)-EchoesOfTomorrow/EchoSync/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/HELLO KUMAR SINGH/ACTIVE(GPT)-EchoesOfTomorrow/EchoSync/build/EchoSync.slnx"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

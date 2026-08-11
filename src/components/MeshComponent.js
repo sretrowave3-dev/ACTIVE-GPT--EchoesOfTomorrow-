@@ -1,4 +1,4 @@
-import { Component } from '../Component.js';
+import { Component } from '../ecs/Component.js';
 
 export class MeshComponent extends Component {
   constructor() {

@@ -1,0 +1,27 @@
+{
+    "payload":  {
+                    "intents":  {
+                                    "identity_query_1":  {
+                                                             "name":  "identity_query_1",
+                                                             "patterns":  [
+                                                                              "identity",
+                                                                              "query",
+                                                                              "1"
+                                                                          ],
+                                                             "responses":  [
+                                                                               "I can help with that topic."
+                                                                           ]
+                                                         }
+                                },
+                    "meta":  {
+                                 "version":  "1.1",
+                                 "loaded_via":  "text-fallback",
+                                 "total_intents":  1
+                             }
+                },
+    "meta":  {
+                 "file_hash":  "4DE5F075E83A5F3F06AC0F8028879693D35A150B0CBD4C25FFCCA9A1D4C33233",
+                 "path":  "C:\\Users\\HELLO KUMAR SINGH\\Documents\\Codex\\(GPT)-EchoesOfTomorrow\\conversation_commands.json",
+                 "saved_at":  "2026-08-03T20:28:35.5949718+05:30"
+             }
+}

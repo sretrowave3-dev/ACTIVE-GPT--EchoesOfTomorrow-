@@ -1,0 +1,29 @@
+{
+    "generatedAtUtc":  "2026-08-08T18:00:47.4018344Z",
+    "rootPath":  "C:\\Users\\HELLO KUMAR SINGH\\ACTIVE(GPT)-EchoesOfTomorrow",
+    "cacheFiles":  [
+                       "conversation_index.json",
+                       "synonyms_index.json"
+                   ],
+    "memorySnapshots":  [
+                            "memory_snapshot_20260803_200954.json",
+                            "memory_snapshot_20260803_201923.json",
+                            "memory_snapshot_20260803_202238.json",
+                            "memory_snapshot_20260803_202903.json",
+                            "memory_snapshot_20260803_203059.json",
+                            "memory_snapshot_20260803_203420.json",
+                            "memory_snapshot_20260803_203641.json",
+                            "memory_snapshot_20260806_222140.json",
+                            "memory_snapshot_20260806_223439.json",
+                            "memory_snapshot_20260808_233044.json"
+                        ],
+    "projectReports":  [
+                           "project_summary_20260803_202003.txt",
+                           "project_summary_20260803_202930.txt",
+                           "project_summary_20260803_203116.txt",
+                           "project_summary_20260803_203526.txt",
+                           "project_summary_20260803_203658.txt",
+                           "project_summary_20260806_222948.txt",
+                           "project_summary_20260806_223108.txt"
+                       ]
+}

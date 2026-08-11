@@ -1,4 +1,4 @@
-import { RegionID } from '../RegionID.js';
+import { RegionID } from '../world/RegionID.js';
 
 export class Region {
   /**

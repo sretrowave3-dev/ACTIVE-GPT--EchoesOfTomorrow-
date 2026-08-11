@@ -1,5 +1,5 @@
-import { System } from '../System.js';
-import { EntitySignature } from '../EntitySignature.js';
+import { System } from '../ecs/System.js';
+import { EntitySignature } from '../ecs/EntitySignature.js';
 
 export class MovementSystem extends System {
   constructor() {

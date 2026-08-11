@@ -2,15 +2,15 @@ import { Service } from '../framework/services/Service.js';
 import { ECSManager } from './ECSManager.js';
 import { SystemScheduler } from './SystemScheduler.js';
 
-import { TransformComponent } from './components/TransformComponent.js';
-import { VelocityComponent } from './components/VelocityComponent.js';
-import { HealthComponent } from './components/HealthComponent.js';
-import { MeshComponent } from './components/MeshComponent.js';
-import { AudioComponent } from './components/AudioComponent.js';
+import { TransformComponent } from '../components/TransformComponent.js';
+import { VelocityComponent } from '../components/VelocityComponent.js';
+import { HealthComponent } from '../components/HealthComponent.js';
+import { MeshComponent } from '../components/MeshComponent.js';
+import { AudioComponent } from '../components/AudioComponent.js';
 
-import { MovementSystem } from './systems/MovementSystem.js';
-import { HealthSystem } from './systems/HealthSystem.js';
-import { AnimationSystem } from './systems/AnimationSystem.js';
+import { MovementSystem } from '../systems/MovementSystem.js';
+import { HealthSystem } from '../systems/HealthSystem.js';
+import { AnimationSystem } from '../systems/AnimationSystem.js';
 
 export class ECSService extends Service {
   constructor(framework) {

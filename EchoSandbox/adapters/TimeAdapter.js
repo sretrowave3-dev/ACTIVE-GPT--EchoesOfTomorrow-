@@ -30,13 +30,25 @@ export class TimeAdapter extends EngineAdapter {
         if (!this._clock) {
             this._initClock();
         }
+        const timeService = this.getService('time');
+        const diagnosticsCollector = timeService?.timeManager?.getDiagnostics?.();
         return {
-            ready: !!this._clock,
+            ready: !!this._clock && !!timeService,
+            serviceReady: !!timeService,
             delta: this._clock?.deltaTime || 0,
             elapsed: this._clock?.elapsedTime || 0,
             frame: this._clock?.frameCount || 0,
-            paused: this._clock?.isPaused ? this._clock.isPaused() : false
+            paused: this._clock?.isPaused ? this._clock.isPaused() : false,
+            diagnostics: diagnosticsCollector?.getSnapshot?.() || null
         };
+    }
+
+    /**
+     * Get the underlying TimeService instance.
+     * @returns {Service|null} TimeService instance or null
+     */
+    getTimeService() {
+        return this.getService('time');
     }
 
     /**

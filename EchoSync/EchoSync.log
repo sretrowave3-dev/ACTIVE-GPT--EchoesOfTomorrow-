@@ -1,0 +1,219 @@
+[2026-08-04 17:48:57.552] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-04 17:48:57.579] [INFO ] [Config] Successfully loaded 1 sync pair(s).
+[2026-08-04 17:48:57.579] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-04 17:48:57.580] [INFO ] [IOCPWatcher] Successfully watching active path: C:\\\\EchoSync_Test_Active [Pair: TestPair_01]
+[2026-08-04 17:48:57.580] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-04 17:48:57.580] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-04 17:48:57.581] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-04 17:49:00.024] [INFO ] [SyncEngine] Synchronized file [Mirror]: hello.txt (21 bytes)
+[2026-08-04 17:49:00.861] [INFO ] [SyncEngine] Synchronized file [Mirror]: hello.txt (38 bytes)
+[2026-08-04 17:49:01.798] [INFO ] [SyncEngine] Renamed on passive target: hello.txt -> hello_renamed.txt
+[2026-08-04 17:49:03.386] [INFO ] [SyncEngine] Deleted from passive target: hello_renamed.txt
+[2026-08-04 17:53:36.515] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-04 17:53:36.516] [INFO ] [Config] Successfully loaded 1 sync pair(s).
+[2026-08-04 17:53:36.516] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-04 17:53:36.516] [INFO ] [IOCPWatcher] Successfully watching active path: C:\\\\EchoSync_Test_Active [Pair: TestPair_01]
+[2026-08-04 17:53:36.517] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-04 17:53:36.517] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-04 17:53:36.517] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-04 17:53:38.589] [INFO ] [SyncEngine] Synchronized file [Mirror]: hello.txt (21 bytes)
+[2026-08-04 17:53:39.424] [INFO ] [SyncEngine] Synchronized file [Mirror]: hello.txt (38 bytes)
+[2026-08-04 17:53:40.290] [INFO ] [SyncEngine] Renamed on passive target: hello.txt -> hello_renamed.txt
+[2026-08-04 17:53:41.830] [INFO ] [SyncEngine] Deleted from passive target: hello_renamed.txt
+[2026-08-04 20:16:32.344] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-04 20:16:32.359] [INFO ] [Config] Successfully loaded 1 sync pair(s).
+[2026-08-04 20:16:32.360] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-04 20:16:32.375] [INFO ] [IOCPWatcher] Successfully watching active path: C:\\\\EchoSync_Test_Active [Pair: TestPair_01]
+[2026-08-04 20:16:32.375] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-04 20:16:32.375] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-04 20:16:32.375] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-04 20:23:06.153] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-04 20:54:06.499] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-04 20:54:06.501] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-04 20:54:06.501] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-04 20:54:06.573] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-04 20:54:17.207] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-04 20:54:17.207] [INFO ] [Config] Successfully loaded 3 sync pair(s).
+[2026-08-04 20:54:17.208] [INFO ] [PersistentCache] Loaded 0 metadata entry(ies) from EchoSync.cache
+[2026-08-04 20:54:17.208] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-04 20:54:17.208] [INFO ] [IOCPWatcher] Successfully watching active path: C:\\\\\\\\EchoSync_Test_Active [Pair: TestPair_01]
+[2026-08-04 20:54:17.208] [INFO ] [IOCPWatcher] Successfully watching active path: C:\\Users\\HELLO KUMAR SINGH\\ACTIVE(GPT)-EchoesOfTomorrow [Pair: ProjectBackup]
+[2026-08-04 20:54:17.209] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\EXECUTABLES\\(GPT)-EchoesOfTomorrow-(backup-new) [Pair: new]
+[2026-08-04 20:54:17.209] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-04 20:54:17.209] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-04 20:54:17.209] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-04 20:55:14.257] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-04 20:55:14.508] [INFO ] [SyncEngine] Synchronized file [Mirror]: EchoSync\EchoSync.json (1799 bytes)
+[2026-08-04 21:01:18.509] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-04 21:01:18.612] [INFO ] [SyncEngine] Synchronized file [Mirror]: EchoSync\EchoSync.json (1410 bytes)
+[2026-08-04 21:01:30.269] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-04 21:01:40.589] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-04 21:01:44.940] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-04 21:17:48.032] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-04 23:51:34.899] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-04 23:51:34.900] [INFO ] [Config] Successfully loaded 0 sync pair(s).
+[2026-08-04 23:51:34.900] [INFO ] [PersistentCache] Loaded 1 metadata entry(ies) from EchoSync.cache
+[2026-08-04 23:51:34.900] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-04 23:51:34.901] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-04 23:51:34.901] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-04 23:51:34.901] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-04 23:51:40.644] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-04 23:51:40.646] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-04 23:51:40.737] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-04 23:51:40.738] [INFO ] [PersistentCache] Saved 1 metadata entry(ies) to EchoSync.cache
+[2026-08-05 17:58:29.186] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-05 17:58:29.198] [INFO ] [Config] Successfully loaded 0 sync pair(s).
+[2026-08-05 17:58:29.212] [INFO ] [PersistentCache] Loaded 1 metadata entry(ies) from EchoSync.cache
+[2026-08-05 17:58:29.212] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-05 17:58:29.212] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-05 17:58:29.212] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-05 17:58:29.212] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-05 17:59:15.280] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-05 18:01:02.703] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-05 18:03:00.014] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-05 18:03:41.949] [INFO ] [SyncEngine] Starting Manual Scan for Pair [test] (ForceFullSync=false)
+[2026-08-05 18:03:42.025] [INFO ] [SyncEngine] Manual Scan finished. Scanned: 1 items. Synced: 1 item(s).
+[2026-08-05 18:05:12.348] [INFO ] [SyncEngine] Starting Manual Scan for Pair [test] (ForceFullSync=false)
+[2026-08-05 18:05:12.396] [INFO ] [SyncEngine] Manual Scan finished. Scanned: 2 items. Synced: 0 item(s).
+[2026-08-05 18:11:57.449] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-05 18:12:00.200] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-05 18:12:00.201] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-05 18:12:00.283] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-05 18:12:00.284] [INFO ] [PersistentCache] Saved 1 metadata entry(ies) to EchoSync.cache
+[2026-08-05 19:12:30.035] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-05 19:12:30.045] [INFO ] [Config] Successfully loaded 0 sync pair(s).
+[2026-08-05 19:12:30.053] [INFO ] [PersistentCache] Loaded 1 metadata entry(ies) from EchoSync.cache
+[2026-08-05 19:12:30.053] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-05 19:12:30.053] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-05 19:12:30.053] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-05 19:12:30.053] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-05 19:16:23.889] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-05 19:16:40.928] [INFO ] [SyncEngine] Starting Manual Scan for Pair [test1] (ForceFullSync=false)
+[2026-08-05 19:16:40.955] [INFO ] [SyncEngine] Manual Scan finished. Scanned: 3 items. Synced: 0 item(s).
+[2026-08-05 19:18:42.847] [INFO ] [SyncEngine] Synchronization resumed.
+[2026-08-05 19:20:49.662] [INFO ] [SyncEngine] Starting Manual Scan for Pair [test1] (ForceFullSync=true)
+[2026-08-05 19:20:49.692] [INFO ] [SyncEngine] Manual Scan finished. Scanned: 4 items. Synced: 1 item(s).
+[2026-08-05 19:21:22.365] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-05 19:21:22.366] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-05 19:21:22.387] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-05 19:21:22.388] [INFO ] [PersistentCache] Saved 1 metadata entry(ies) to EchoSync.cache
+[2026-08-05 21:02:19.649] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-05 21:02:19.650] [INFO ] [Config] Successfully loaded 1 sync pair(s).
+[2026-08-05 21:02:19.660] [INFO ] [PersistentCache] Loaded 1 metadata entry(ies) from EchoSync.cache
+[2026-08-05 21:02:19.660] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-05 21:02:19.660] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\INSIDE\\test path act [Pair: test1]
+[2026-08-05 21:02:19.660] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-05 21:02:19.660] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-05 21:02:19.661] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-05 21:02:34.795] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-05 21:02:34.795] [INFO ] [Config] Successfully loaded 1 sync pair(s).
+[2026-08-05 21:02:34.795] [INFO ] [PersistentCache] Loaded 1 metadata entry(ies) from EchoSync.cache
+[2026-08-05 21:02:34.796] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-05 21:02:34.796] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\INSIDE\\test path act [Pair: test1]
+[2026-08-05 21:02:34.796] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-05 21:02:34.796] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-05 21:02:34.796] [WARN ] [HotkeyListener] RegisterHotKey (Shift + `) failed. Error: 1409
+[2026-08-05 21:03:07.430] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-05 21:03:26.458] [INFO ] [SyncEngine] Synchronized file [Mirror]: test.txt (0 bytes)
+[2026-08-05 21:03:26.489] [INFO ] [SyncEngine] Synchronized file [Mirror]: test.txt (0 bytes)
+[2026-08-05 21:03:26.799] [ERROR] [CopyEngine] MoveFileExW atomic swap failed for target: D:\\INSIDE\\test path pas\test.txt. Error: 5
+[2026-08-05 21:03:26.800] [INFO ] [SyncEngine] Synchronized file [Mirror]: test.txt (16 bytes)
+[2026-08-05 21:13:46.903] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-05 21:13:46.903] [INFO ] [Config] Successfully loaded 2 sync pair(s).
+[2026-08-05 21:13:46.904] [INFO ] [PersistentCache] Loaded 1 metadata entry(ies) from EchoSync.cache
+[2026-08-05 21:13:46.904] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-05 21:13:46.904] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\INSIDE\\\\test path act [Pair: test1]
+[2026-08-05 21:13:46.904] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-05 21:13:46.904] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-05 21:13:46.904] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-05 21:14:14.169] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-05 21:14:46.401] [INFO ] [SyncEngine] Renamed on passive target: New folder (3) -> olol
+[2026-08-05 21:15:05.425] [INFO ] [SyncEngine] Renamed on passive target: New folder (3) -> kol
+[2026-08-05 21:21:44.100] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-05 21:28:23.583] [INFO ] [SyncEngine] Starting Manual Scan for Pair [pair1] (ForceFullSync=false)
+[2026-08-05 21:28:26.623] [INFO ] [SyncEngine] Manual Scan finished. Scanned: 2191 items. Synced: 17 item(s).
+[2026-08-05 21:36:21.364] [INFO ] [SyncEngine] Renamed on passive target: New folder (3) -> test4
+[2026-08-05 21:38:34.640] [INFO ] [SyncEngine] Synchronized file [Mirror]: Game2.sav (2048 bytes)
+[2026-08-05 21:48:55.075] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-05 21:48:55.076] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-05 21:48:55.091] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-05 21:48:55.092] [INFO ] [PersistentCache] Saved 2 metadata entry(ies) to EchoSync.cache
+[2026-08-05 21:50:57.734] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-05 21:50:57.734] [INFO ] [Config] Successfully loaded 2 sync pair(s).
+[2026-08-05 21:50:57.735] [INFO ] [PersistentCache] Loaded 2 metadata entry(ies) from EchoSync.cache
+[2026-08-05 21:50:57.736] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-05 21:50:57.736] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\\\\\INSIDE\\\\\\\\test path act [Pair: test1]
+[2026-08-05 21:50:57.737] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\EXECUTABLES\\Eidos-ProjectIGI-ImGoingIn [Pair: pair1]
+[2026-08-05 21:50:57.737] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-05 21:50:57.737] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-05 21:50:57.738] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-05 21:51:24.819] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-05 21:51:24.821] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-05 21:51:24.821] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-05 21:51:24.836] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-05 21:51:27.684] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-05 21:51:27.685] [INFO ] [Config] Successfully loaded 3 sync pair(s).
+[2026-08-05 21:51:27.686] [INFO ] [PersistentCache] Loaded 0 metadata entry(ies) from EchoSync.cache
+[2026-08-05 21:51:27.686] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-05 21:51:27.687] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\\\\\\\\\\\\\INSIDE\\\\\\\\\\\\\\\\test path act [Pair: test1]
+[2026-08-05 21:51:27.687] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\EXECUTABLES\\\\Eidos-ProjectIGI-ImGoingIn [Pair: pair1]
+[2026-08-05 21:51:27.687] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-05 21:51:27.687] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-05 21:51:27.687] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-05 21:53:55.777] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-05 22:04:23.577] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-05 22:04:23.578] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-05 22:04:23.593] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-05 22:04:23.593] [INFO ] [PersistentCache] Saved 0 metadata entry(ies) to EchoSync.cache
+[2026-08-05 22:21:02.211] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-05 22:21:02.212] [INFO ] [Config] Successfully loaded 4 sync pair(s).
+[2026-08-05 22:21:02.213] [INFO ] [PersistentCache] Loaded 0 metadata entry(ies) from EchoSync.cache
+[2026-08-05 22:21:02.214] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-05 22:21:02.215] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\INSIDE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\test path act [Pair: test1]
+[2026-08-05 22:21:02.215] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\\\\\EXECUTABLES\\\\\\\\Eidos-ProjectIGI-ImGoingIn [Pair: pair1]
+[2026-08-05 22:21:02.215] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\MUSIC\\Hot Grooves Pure Percussion Sample Pack [Pair: par]
+[2026-08-05 22:21:02.215] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-05 22:21:02.216] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-05 22:21:02.216] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-05 22:24:11.042] [INFO ] [SyncEngine] Synchronized file [Mirror]: New Text Document (2).txt (0 bytes)
+[2026-08-05 22:24:23.324] [INFO ] [SyncEngine] Renamed on passive target: New Text Document (2).txt -> bolpbo.feather
+[2026-08-05 22:29:01.434] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-05 22:29:01.435] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-05 22:29:01.478] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-05 22:29:01.478] [INFO ] [PersistentCache] Saved 0 metadata entry(ies) to EchoSync.cache
+[2026-08-05 22:30:04.787] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-05 22:30:04.787] [INFO ] [Config] Successfully loaded 4 sync pair(s).
+[2026-08-05 22:30:04.788] [INFO ] [PersistentCache] Loaded 0 metadata entry(ies) from EchoSync.cache
+[2026-08-05 22:30:04.788] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-05 22:30:04.789] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\INSIDE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\test path act [Pair: test1]
+[2026-08-05 22:30:04.789] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\\\\\\\\\\\\\EXECUTABLES\\\\\\\\\\\\\\\\Eidos-ProjectIGI-ImGoingIn [Pair: pair1]
+[2026-08-05 22:30:04.789] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\MUSIC\\\\Hot Grooves Pure Percussion Sample Pack [Pair: par]
+[2026-08-05 22:30:04.789] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-05 22:30:04.789] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-05 22:30:04.789] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-05 22:30:25.017] [INFO ] [SyncEngine] Starting Manual Scan for Pair [par] (ForceFullSync=false)
+[2026-08-05 22:32:40.017] [INFO ] [SyncEngine] Manual Scan finished. Scanned: 1026 items. Synced: 1014 item(s).
+[2026-08-05 22:39:58.644] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-05 22:39:58.644] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-05 22:39:58.721] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-05 22:39:58.723] [INFO ] [PersistentCache] Saved 0 metadata entry(ies) to EchoSync.cache
+[2026-08-07 23:18:03.497] [INFO ] [AppController] Bootstrapping EchoSync v1.0 engine...
+[2026-08-07 23:18:03.509] [INFO ] [Config] Successfully loaded 4 sync pair(s).
+[2026-08-07 23:18:03.526] [INFO ] [PersistentCache] Loaded 0 metadata entry(ies) from EchoSync.cache
+[2026-08-07 23:18:03.526] [INFO ] [IOCPWatcher] Initialized Windows IOCP Watcher engine successfully.
+[2026-08-07 23:18:03.526] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\EXECUTABLES\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Eidos-ProjectIGI-ImGoingIn [Pair: pair1]
+[2026-08-07 23:18:03.608] [INFO ] [IOCPWatcher] Successfully watching active path: D:\\\\\\\\MUSIC\\\\\\\\Hot Grooves Pure Percussion Sample Pack [Pair: par]
+[2026-08-07 23:18:03.609] [INFO ] [SyncEngine] Started Incremental Sync Engine thread.
+[2026-08-07 23:18:03.609] [INFO ] [AppController] EchoSync boot sequence complete (< 200 ms target verified). Entering Kernel Wait state.
+[2026-08-07 23:18:03.609] [INFO ] [HotkeyListener] Registered Global Hotkey: Shift + `
+[2026-08-07 23:19:01.236] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-07 23:19:06.964] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-07 23:19:13.780] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-07 23:19:50.900] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-07 23:21:06.627] [INFO ] [Config] Configuration saved to EchoSync.json
+[2026-08-07 23:21:25.602] [INFO ] [SyncEngine] Starting Manual Scan for Pair [active] (ForceFullSync=false)
+[2026-08-07 23:22:04.784] [INFO ] [SyncEngine] Manual Scan finished. Scanned: 407 items. Synced: 79 item(s).
+[2026-08-07 23:22:51.109] [INFO ] [AppController] Shutdown requested. Tearing down subsystems...
+[2026-08-07 23:22:51.111] [INFO ] [IOCPWatcher] Win32 IOCP Watcher engine shut down.
+[2026-08-07 23:22:51.191] [INFO ] [SyncEngine] Stopped Incremental Sync Engine.
+[2026-08-07 23:22:51.192] [INFO ] [PersistentCache] Saved 0 metadata entry(ies) to EchoSync.cache

@@ -18,6 +18,7 @@ import { StatisticsPanel } from './ui/StatisticsPanel.js';
 import { ConsolePanel } from './ui/ConsolePanel.js';
 import { Dashboard } from './ui/Dashboard.js';
 import { StatusBar } from './ui/StatusBar.js';
+import { DebugOverlay } from './DebugOverlay.js';
 
 import { RuntimeMonitor } from './monitors/RuntimeMonitor.js';
 import { PerformanceMonitor } from './monitors/PerformanceMonitor.js';
@@ -48,6 +49,7 @@ export class SandboxApplication {
         this._isRunning = false;
         this._isPaused = false;
         this._animationId = null;
+        this.debugOverlay = null;
     }
 
     /**
@@ -108,6 +110,8 @@ export class SandboxApplication {
         this.toolbar = new Toolbar('toolbar', this.state);
         this.sidebar = new Sidebar('sidebar', this.state);
         this.viewport = new Viewport('viewportCanvas', this.state);
+        const overlayCanvas = document.getElementById('debugOverlayCanvas');
+        this.debugOverlay = overlayCanvas ? new DebugOverlay(overlayCanvas) : null;
         this.inspector = new InspectorPanel('inspectorContent', this.state);
         this.statistics = new StatisticsPanel('statGrid', this.state);
         this.console = new ConsolePanel('consoleOutput', 'consoleInput', this.state);
@@ -156,6 +160,7 @@ export class SandboxApplication {
      */
     _startMainLoop() {
         this._isRunning = true;
+        this._lastFrameTime = performance.now();
         this._loop();
     }
 
@@ -177,6 +182,24 @@ export class SandboxApplication {
             this.runtimeMonitor.update(delta);
             this.performanceMonitor.update(delta);
             this.memoryMonitor.update(delta);
+
+            if (this.debugOverlay) {
+                const timeStatus = this.runtimeMonitor.timeAdapter?.getStatus?.() || {};
+                const worldStatus = this.runtimeMonitor.worldAdapter?.getStatus?.() || {};
+                const ecsStatus = this.runtimeMonitor.ecsAdapter?.getStatus?.() || {};
+                this.debugOverlay.update({
+                    fps: this.performanceMonitor._currentFps || 0,
+                    delta,
+                    entityCount: worldStatus.entityCount || 0,
+                    frameCount: timeStatus.frame || 0,
+                    serviceStatus: timeStatus.serviceReady ? 'RUNNING' : 'MISSING',
+                    worldStatus: worldStatus.ready ? 'RUNNING' : 'MISSING',
+                    ecsStatus: ecsStatus.ready ? 'RUNNING' : 'MISSING',
+                    queueSize: timeStatus.diagnostics?.queueSize || 0,
+                    dependencyCount: timeStatus.diagnostics?.dependencyCount || 0,
+                    simulationTime: timeStatus.diagnostics?.simulationTime || 0
+                });
+            }
         }
 
         this._animationId = requestAnimationFrame(() => this._loop());

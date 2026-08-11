@@ -1,0 +1,10 @@
+﻿:root {
+    --background: #080b16;
+    --panel: rgba(10, 10, 18, 0.94);
+    --text: #e2e2ff;
+    --accent: #7fd8ff;
+}
+body {
+    background: var(--background);
+    color: var(--text);
+}

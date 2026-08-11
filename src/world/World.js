@@ -1,12 +1,12 @@
-import { RegionRegistry } from './registries/RegionRegistry.js';
-import { SectorRegistry } from './registries/SectorRegistry.js';
-import { CellRegistry } from './registries/CellRegistry.js';
-import { EntityRegistry } from './registries/EntityRegistry.js';
-import { WorldGraph } from './managers/WorldGraph.js';
-import { EntityManager } from './managers/EntityManager.js';
-import { SpatialManager } from './managers/SpatialManager.js';
-import { QueryManager } from './managers/QueryManager.js';
-import { StreamingManager } from './managers/StreamingManager.js';
+import { RegionRegistry } from '../registries/RegionRegistry.js';
+import { SectorRegistry } from '../registries/SectorRegistry.js';
+import { CellRegistry } from '../registries/CellRegistry.js';
+import { EntityRegistry } from '../registries/EntityRegistry.js';
+import { WorldGraph } from '../managers/WorldGraph.js';
+import { EntityManager } from '../managers/EntityManager.js';
+import { SpatialManager } from '../managers/SpatialManager.js';
+import { QueryManager } from '../managers/QueryManager.js';
+import { StreamingManager } from '../managers/StreamingManager.js';
 import { CellID } from './CellID.js';
 
 export class World {

@@ -1,0 +1,204 @@
+﻿body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'JetBrains Mono', monospace;
+    background: #070814;
+    color: #d7d7ff;
+}
+
+#sandboxApp {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#viewport {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    background: #0a0a16;
+}
+
+#viewportCanvas,
+#debugOverlayCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#debugOverlayCanvas {
+    z-index: 10;
+}
+
+#sidebar,
+#inspector,
+#toolbar,
+#bottomPanel {
+    font-size: 13px;
+}
+
+.viewport-overlay {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+#startupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(4, 8, 24, 0.92);
+    z-index: 1000;
+}
+
+.startup-container {
+    width: min(760px, 90vw);
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    background: rgba(8, 12, 24, 0.96);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+}
+
+.startup-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #d7d7ff;
+    margin-bottom: 22px;
+}
+
+.logo-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: rgba(126, 204, 255, 0.1);
+    color: #7fd8ff;
+    font-size: 1.4rem;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    letter-spacing: 0.4em;
+}
+
+.logo-sub {
+    color: #8aa9ff;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.95rem;
+}
+
+.startup-progress {
+    margin-bottom: 16px;
+}
+
+.startup-bar {
+    width: 100%;
+    height: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.04);
+}
+
+.startup-fill {
+    width: 4%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #7fd8ff, #4a8cff);
+    transition: width 0.3s ease;
+}
+
+.startup-message {
+    color: #eef2ff;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.startup-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.step {
+    padding: 10px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.05);
+    color: #8aa9ff;
+    text-align: center;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.step[data-step='runtime'] {
+    background: rgba(127, 216, 255, 0.12);
+    color: #d7f5ff;
+}
+
+.startup-version {
+    margin-top: 20px;
+    color: #606c88;
+    font-size: 0.8rem;
+}
+
+#sandboxApp {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(8, 12, 24, 0.94);
+}
+
+#sandboxLayout {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+#sidebar,
+#inspector {
+    width: 260px;
+    min-width: 260px;
+    background: rgba(8, 12, 24, 0.95);
+    border-right: 1px solid rgba(255,255,255,0.06);
+    overflow: auto;
+}
+
+#viewport {
+    flex: 1;
+    position: relative;
+}
+
+#bottomPanel {
+    min-height: 220px;
+    background: rgba(8, 12, 24, 0.96);
+    border-top: 1px solid rgba(255,255,255,0.08);
+}

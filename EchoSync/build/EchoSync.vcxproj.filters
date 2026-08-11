@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\AppController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\ConfigManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\ConsoleInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\CopyEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\DiagnosticsManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\EventCoalescer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\HashCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\HotkeyListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\MetadataCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\PathFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\PersistentCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\SyncEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\Win32IOCPWatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\HELLO KUMAR SINGH\ACTIVE(GPT)-EchoesOfTomorrow\EchoSync\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5DFE6EF8-8D18-30F8-B0AD-5277852072E0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,28 @@
+/* Premium minimal design */
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --color-bg: hsl(0, 0%, 98%);
+  --color-primary: hsl(210, 50%, 45%);
+  --color-text: hsl(210, 10%, 15%);
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-primary); background: var(--color-bg); color: var(--color-text); line-height: 1.6; }
+header { background: var(--color-primary); color: white; padding: 1rem; text-align: center; }
+.container { display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem; }
+.panel { flex: 1 1 45%; background: white; border-radius: var(--radius); box-shadow: 0 2px 6px rgba(0,0,0,.1); padding: 1rem; }
+h2 { margin-bottom: .5rem; color: var(--color-primary); }
+select { padding: 0.5rem; margin-bottom: 1rem; border-radius: var(--radius); border: 1px solid #ccc; width: 100%; font-family: inherit; }
+.content { max-height: 60vh; overflow-y: auto; border: 1px solid #e0e0e0; border-radius: var(--radius); padding: 1rem; background: #fafafa; }
+#log-list { list-style: none; margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+#log-list li { cursor: pointer; padding: 0.5rem 1rem; border-radius: var(--radius); background: #e0e0e0; transition: background 0.2s; font-size: 0.9rem; }
+#log-list li:hover, #log-list li.active { background: var(--color-primary); color: white; }
+@media (max-width: 800px) { .panel { flex-basis: 100%; } }
+
+/* Markdown styling inside article */
+article h1, article h2, article h3 { margin-top: 1rem; margin-bottom: 0.5rem; color: var(--color-primary); }
+article p { margin-bottom: 0.75rem; }
+article ul, article ol { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+article pre { background: #eee; padding: 0.5rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.75rem; }
+article code { background: #eee; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; }

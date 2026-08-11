@@ -20,7 +20,10 @@ export class DebugOverlay {
             frameCount: 0,
             serviceStatus: 'INIT',
             worldStatus: 'INIT',
-            ecsStatus: 'INIT'
+            ecsStatus: 'INIT',
+            queueSize: 0,
+            dependencyCount: 0,
+            simulationTime: 0
         };
     }
 
@@ -117,6 +120,14 @@ export class DebugOverlay {
         const r = this.data.rotation;
         drawLine('│ Rotation (Euler):', `(${r.x.toFixed(2)}, ${r.y.toFixed(2)}, ${r.z.toFixed(2)})`, '#ff0');
 
+        drawLine('└───────────────────────', '', '#666');
+
+        // --- Time Diagnostics ---
+        drawLine('├───────────────────────', '', '#666');
+        drawLine('│ TIME DIAGNOSTICS', '', '#0ff');
+        drawLine('│ Queue Size:', this.data.queueSize || 0, '#0ff');
+        drawLine('│ Dependencies:', this.data.dependencyCount || 0, '#0ff');
+        drawLine('│ Sim Time:', `${(this.data.simulationTime || 0).toFixed(2)}s`, '#0ff');
         drawLine('└───────────────────────', '', '#666');
 
         // --- Controls help ---

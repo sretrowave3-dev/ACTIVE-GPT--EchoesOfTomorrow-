@@ -5,8 +5,8 @@
  * Each step is executed in order with progress reporting.
  */
 
-import { Framework } from '../src/framework/core/Framework.js';
-import { ServiceManifest } from '../src/framework/core/ServiceManifest.js';
+import { Framework } from '../../src/framework/core/Framework.js';
+import { ServiceManifest } from '../../src/framework/core/ServiceManifest.js';
 import { SandboxState } from './SandboxState.js';
 import { SandboxEvents } from './SandboxEvents.js';
 

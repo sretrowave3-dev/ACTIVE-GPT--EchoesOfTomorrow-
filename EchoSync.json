@@ -1,0 +1,14 @@
+﻿{
+  "pairs": [
+    {
+      "id": "TestPair_01",
+      "activePath": "C:\\\\EchoSync_Test_Active",
+      "passivePath": "C:\\\\EchoSync_Test_Passive",
+      "policy": "Mirror",
+      "enabled": true,
+      "recursive": true,
+      "excludeDirectories": [".git", "node_modules", "build"],
+      "excludeExtensions": [".tmp", ".bak"]
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+# Echo Engine Development Policy
+## Architecture Freeze & Delivery-First Development Strategy
+
+**Project:** Echo Engine / Echoes of Tomorrow  
+**Current Phase:** Engine Completion  
+**Priority:** Deliver a Complete, Stable Engine Before Deadline
+
+---
+
+# Objective
+
+The current objective is **not** to redesign or perfect the engine.
+
+The objective is to finish building every major subsystem so the engine becomes fully usable, feature complete, and capable of running the game.
+
+Any optimization, architectural refinement, cleanup, or redesign will be postponed until after the entire engine has been implemented.
+
+From this point onward, development follows a **Delivery-First** philosophy.
+
+---
+
+# Core Philosophy
+
+The architecture has already been established.
+
+The remaining work is implementation.
+
+Every new file must integrate into the existing architecture without introducing unnecessary redesigns.
+
+The goal is to steadily increase the amount of working code inside the engine until every planned subsystem exists and communicates correctly.
+
+---
+
+# Development Principles
+
+## 1. Architecture is Frozen
+
+Unless explicitly requested, the existing architecture should be considered fixed.
+
+Do **not**
+
+- redesign subsystems
+- move classes into new hierarchies
+- rename major modules
+- introduce alternative patterns
+- replace existing systems with "better" solutions
+
+Every implementation must respect the current project structure.
+
+---
+
+## 2. Shipping Comes First
+
+The current milestone is reaching a working engine.
+
+Priority is given to
+
+- complete functionality
+- subsystem integration
+- compilation success
+- runtime stability
+
+Rather than
+
+- perfect abstractions
+- elegant architecture
+- advanced optimization
+- unnecessary extensibility
+
+---
+
+## 3. Minimal Safe Implementation
+
+Each generated file should
+
+- solve the required problem
+- integrate cleanly
+- expose only necessary APIs
+- remain expandable later
+
+Avoid adding features that are not currently required.
+
+---
+
+## 4. Preserve Public Interfaces
+
+Existing APIs should remain stable whenever possible.
+
+Avoid changing
+
+- function signatures
+- class ownership
+- object lifetimes
+- subsystem responsibilities
+
+unless a genuine bug or blocker requires it.
+
+---
+
+# Architecture Compatibility Rules
+
+Every implementation must fit naturally into the existing architecture.
+
+Before producing any code, verify the following:
+
+- Does the file belong to the current subsystem?
+- Does it match the established naming conventions?
+- Does it introduce circular dependencies?
+- Does it remain compatible with existing modules?
+- Can it compile independently?
+- Does it avoid unnecessary coupling?
+- Can future improvements be added without rewriting it?
+
+If any answer is **No**, adjust the implementation instead of changing the architecture.
+
+---
+
+# Development Priorities
+
+Every implementation should optimize for the following order:
+
+## Priority 1 — Compilation
+
+The engine should always remain buildable.
+
+No incomplete APIs.
+
+No missing dependencies.
+
+No broken includes.
+
+---
+
+## Priority 2 — Correct Behaviour
+
+Subsystems should behave correctly.
+
+Initialization.
+
+Shutdown.
+
+Update.
+
+State transitions.
+
+Error handling.
+
+---
+
+## Priority 3 — Integration
+
+Every subsystem should connect properly with existing systems.
+
+No isolated modules.
+
+No duplicate responsibilities.
+
+No disconnected managers.
+
+---
+
+## Priority 4 — Feature Completion
+
+Implement all planned engine systems.
+
+Examples include
+
+- Runtime
+- Framework
+- Scene
+- World
+- Asset System
+- ECS
+- Physics
+- Audio
+- Rendering
+- Animation
+- Streaming
+- Save System
+- AI
+- Gameplay
+
+The focus is breadth first until the engine is complete.
+
+---
+
+## Priority 5 — Stability
+
+Ensure runtime remains predictable.
+
+Prevent crashes.
+
+Handle invalid states.
+
+Gracefully recover where possible.
+
+---
+
+## Priority 6 — Performance
+
+Performance improvements should only be made when they do not interfere with implementation progress.
+
+Examples include
+
+- reducing allocations
+- improving cache locality
+- optimizing update loops
+
+Only when straightforward.
+
+---
+
+## Priority 7 — Refactoring
+
+Large refactors are intentionally postponed.
+
+Once the engine is feature complete, improvements may include
+
+- removing duplication
+- improving readability
+- simplifying ownership
+- reorganizing folders
+
+---
+
+## Priority 8 — Polish
+
+Only after the engine is complete should time be spent on
+
+- code aesthetics
+- comments
+- formatting
+- optimization passes
+- documentation improvements
+
+---
+
+# Code Generation Rules
+
+Every generated file should
+
+- compile independently
+- follow the project's naming conventions
+- use existing ownership patterns
+- avoid introducing new frameworks
+- avoid speculative features
+- remain consistent with surrounding code
+- expose only required functionality
+
+---
+
+# Integration Rules
+
+New files must never assume future systems already exist.
+
+Instead,
+
+- provide clean interfaces
+- allow future expansion
+- avoid hardcoding future dependencies
+
+The goal is progressive integration.
+
+---
+
+# What Should NOT Be Added
+
+Unless specifically requested, avoid adding
+
+- dependency injection frameworks
+- plugin architectures
+- reflection systems
+- scripting systems
+- serialization redesigns
+- ECS redesigns
+- runtime rewrites
+- service locator replacements
+- alternative rendering pipelines
+
+These belong to future refinement phases.
+
+---
+
+# Quality Standard
+
+Each implementation should be
+
+- clean
+- readable
+- deterministic
+- maintainable
+- compatible
+- practical
+
+Not necessarily perfect.
+
+---
+
+# Long-Term Plan
+
+The project timeline is divided into two major phases.
+
+## Phase 1 — Engine Completion (Current)
+
+Focus on
+
+- implementing every subsystem
+- connecting systems together
+- producing a fully functional engine
+- ensuring stable runtime
+
+No architectural experimentation.
+
+---
+
+## Phase 2 — Engine Refinement (Post-Completion)
+
+After the engine is fully functional,
+
+perform
+
+- optimization
+- refactoring
+- cleanup
+- documentation
+- profiling
+- architectural improvements
+- rendering optimization
+- memory optimization
+- API polishing
+
+Only after the engine has reached feature completeness.
+
+---
+
+# AI Assistant Commitment
+
+For all future requests regarding Echo Engine,
+
+the assistant will
+
+- respect the existing architecture
+- avoid unnecessary redesigns
+- generate implementation-compatible code
+- preserve public APIs whenever possible
+- prioritize working software over theoretical perfection
+- maintain consistency across all generated files
+- ensure new code integrates with the current engine structure
+- help achieve a complete, stable, feature-rich engine before the project deadline
+
+---
+
+# Development Motto
+
+> **Complete First. Refine Later.**
+>
+> A finished engine can always be improved.
+> An unfinished perfect architecture ships nothing.

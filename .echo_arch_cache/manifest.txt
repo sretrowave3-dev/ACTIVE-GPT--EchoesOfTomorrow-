@@ -1,0 +1,326 @@
+VirtualRAMFileSystem.ps1		11760	13794678813709551616	core	0	0	1	0	0	.ps1	
+style.css		3629	13794339863709551616	core	0	0	1	0	0	.css	
+src\world\World.js		2646	13794342665709551616	world	0	0	1	0	0	.js	
+src\world\Transform.js		2396	13794339863709551616	world	0	0	1	0	0	.js	
+src\world\RegionID.js		645	13794339863709551616	world	0	0	1	0	0	.js	
+src\world\EntityID.js		647	13794342727709551616	world	0	0	1	0	0	.js	
+src\world\EntityHandle.js		1054	13794342723709551616	world	0	0	1	0	0	.js	
+src\world\Entity.js		710	13794342725709551616	world	0	0	1	0	0	.js	
+src\world\CellID.js		633	13794339863709551616	world	0	0	1	0	0	.js	
+src\time\WorldClock.js		3277	13794339863709551616	world	0	0	1	0	0	.js	
+src\time\TimeManager.js		5455	13794339863709551616	core	0	0	1	0	0	.js	
+src\time\TimeEvents.js		2447	13794339863709551616	core	0	0	1	0	0	.js	
+src\time\SectorSchedulerState.js		1432	13794339863709551616	core	0	0	1	0	0	.js	
+src\time\ReadyQueue.js		5776	13794339863709551616	core	0	0	1	0	0	.js	
+src\time\EventScheduler.js		4255	13794339863709551616	core	0	0	1	0	0	.js	
+src\time\DiagnosticsCollector.js		5348	13794339863709551616	core	0	0	1	0	0	.js	
+src\time\DependencyGraph.js		8959	13794339863709551616	core	0	0	1	0	0	.js	
+src\systems\MovementSystem.js		1279	13794342715709551616	core	0	0	1	0	0	.js	
+src\systems\AnimationSystem.js		702	13794342720709551616	animation	0	0	1	0	0	.js	
+src\streaming\SectorUnloader.js		2840	13794339863709551616	core	0	0	1	0	0	.js	
+src\spatial\GridPartition.js		4465	13794339863709551616	core	0	0	1	0	0	.js	
+src\scene\TransitionState.js		0	13794335605709551616	scene	0	0	1	0	0	.js	
+src\scene\SceneTransition.js		0	13794335603709551616	scene	0	0	1	0	0	.js	
+src\scene\SceneState.js		0	13794335603709551616	scene	0	0	1	0	0	.js	
+src\scene\SceneManager.js		4589	13794335858709551616	scene	0	0	1	0	0	.js	
+src\scene\Scene.js		3248	13794335868709551616	scene	0	0	1	0	0	.js	
+src\scene\Environment.js		0	13794335603709551616	scene	0	0	1	0	0	.js	
+src\scene\CameraManager.js		0	13794335603709551616	scene	0	0	1	0	0	.js	
+src\rendering\EnvironmentSetup.js		7870	13794339863709551616	rendering	0	0	1	0	0	.js	
+src\registries\SectorRegistry.js		1797	13794339863709551616	core	0	0	1	0	0	.js	
+src\registries\RegionRegistry.js		2069	13794339863709551616	core	0	0	1	0	0	.js	
+src\registries\CellRegistry.js		1721	13794339863709551616	core	0	0	1	0	0	.js	
+src\queries\NearestQuery.js		693	13794342648709551616	core	0	0	1	0	0	.js	
+src\queries\CellQuery.js		607	13794342651709551616	core	0	0	1	0	0	.js	
+src\player\PlayerController.js		4747	13794342624709551616	core	0	0	1	0	0	.js	
+src\managers\WorldGraph.js		2414	13794342616709551616	world	0	0	1	0	0	.js	
+src\managers\StreamingManager.js		1195	13794342610709551616	core	0	0	1	0	0	.js	
+src\managers\EntityManager.js		2215	13794342601709551616	core	0	0	1	0	0	.js	
+src\main.js		2328	13794342677709551616	ai	0	0	1	0	0	.js	
+src\hierarchy\Sector.js		332	13794342631709551616	core	0	0	1	0	0	.js	
+src\framework\services\Service.js		0	13794336699709551616	framework	0	0	1	0	0	.js	
+src\framework\services\SceneService.js		1202	13794337333709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\statistics\RuntimeStatistics.js		0	13794598026709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\state\RuntimeTransition.js		0	13794598053709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\state\RuntimeState.js		0	13794598053709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\session\RuntimeSessionRegistry.js		0	13794598036709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\session\RuntimeSessionLifecycle.js		0	13794598036709551616	framework	0	0	1	0	0	.js	
+EchoSync\src\PathFilter.cpp	5b7edd71d3484c73	11741	13794946889709551616	core	233	9	0	0	1	.cpp	../include/PathFilter.hpp;algorithm
+reports\project_reports\project_summary_20260803_202003.txt		259	13794848676709551616	core	0	0	1	0	0	.txt	
+EchoSync\src\main.cpp	59457de55806420a	1228	13794919560709551616	ai	38	3	0	0	1	.cpp	../include/AppController.hpp;windows.h;iostream;csignal
+cutscenes\freeze.webm		1972524	13794060744709551616	scene	0	0	1	0	0	.webm	
+src\framework\math\Transform.js		13643	13794425478709551616	framework	0	0	1	0	0	.js	
+EchoSync\src\HashCache.cpp	458d27b82fb07608	2321	13794919508709551616	core	65	1	0	0	1	.cpp	../include/HashCache.hpp;../include/Logger.hpp;windows.h;vector
+test.ps1		89030	13794849327709551616	core	0	0	1	0	0	.ps1	
+EchoSync\include\SyncEngine.hpp	a3c380d0f664ceb2	2251	13795028376709551616	core	56	3	0	1	0	.hpp	Types.hpp;ConfigManager.hpp;EventCoalescer.hpp;MetadataCache.hpp;HashCache.hpp;CopyEngine.hpp;PathFilter.hpp;memory;thread;atomic;mutex;deque;chrono;unordered_set
+EchoSync\src\DiagnosticsManager.cpp	45d8a5d3084b252a	1689	13795016865709551616	core	37	0	0	0	1	.cpp	DiagnosticsManager.hpp;Logger.hpp
+src\animation\vat\VATTexture.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+EchoSync\src\ConsoleInterface.cpp	68cbfa29bc0252e1	13527	13795011253709551616	core	284	0	0	0	1	.cpp	../include/ConsoleInterface.hpp;../include/AppController.hpp;../include/Logger.hpp;iostream;iomanip;limits;thread;conio.h
+EchoSync\src\ConfigManager.cpp	cea47ce62a0d3056	12467	13795011253709551616	core	257	13	0	0	1	.cpp	../include/ConfigManager.hpp;../include/Logger.hpp;fstream;sstream;iostream;algorithm
+EchoSync\src\AppController.cpp	1ec4ba40cc00f014	2890	13794919558709551616	core	64	12	0	0	1	.cpp	../include/AppController.hpp;../include/PersistentCache.hpp;../include/Logger.hpp;../include/ConsoleInterface.hpp;iostream;filesystem
+EchoSandbox\ui\components\LogEntry.js		0	13794496037709551616	ui	0	0	1	0	0	.js	
+src\animation\baking\FramePacker.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\time\TimeSerializer.js		1915	13794339863709551616	core	0	0	1	0	0	.js	
+src\time\ScheduledEvent.js		8398	13794339863709551616	core	0	0	1	0	0	.js	
+src\ecs\Component.js		284	13794342903709551616	ecs	0	0	1	0	0	.js	
+EchoSync\obj\Win32IOCPWatcher.o		66336	13795028727709551616	core	0	0	1	0	0	.o	
+src\framework\runtime\RuntimeConfiguration.js		17498	13794847082709551616	framework	0	0	1	0	0	.js	
+EchoSync\obj\SyncEngine.o		116492	13795028721709551616	core	0	0	1	0	0	.o	
+.engine_cache\manifest.json	e42350d52cbc8faa	1150	13794849674709551616	core	23	0	0	0	0	.json	
+EchoSync\obj\main.o		3147	13795028702709551616	ai	0	0	1	0	0	.o	
+EchoSandbox\core\EngineLoader.js		0	13794492571709551616	core	0	0	1	0	0	.js	
+EchoSync\obj\HotkeyListener.o		19780	13795028695709551616	core	0	0	1	0	0	.o	
+EchoSync\obj\HashCache.o		6614	13795028692709551616	core	0	0	1	0	0	.o	
+ProjectSummary.update.log		132160	13794843873709551616	core	0	0	1	0	0	.log	
+reports\project_reports\project_summary_20260803_202930.txt		259	13794849243709551616	core	0	0	1	0	0	.txt	
+EchoSync\obj\DiagnosticsManager.o		20164	13795028683709551616	core	0	0	1	0	0	.o	
+EchoSync\obj\ConsoleInterface.o		51253	13795028675709551616	core	0	0	1	0	0	.o	
+src\framework\runtime\errors\RuntimeConfigurationError.js		530	13794774544709551616	framework	0	0	1	0	0	.js	
+EchoSync\obj\ConfigManager.o		90381	13795028670709551616	core	0	0	1	0	0	.o	
+src\framework\runtime\session\RuntimeSessionFactory.js		0	13794598036709551616	framework	0	0	1	0	0	.js	
+EchoSync\src\HotkeyListener.cpp	2b94ec979a970fce	1399	13794919545709551616	core	45	1	0	0	1	.cpp	../include/HotkeyListener.hpp;../include/Logger.hpp
+EchoSync\include\PersistentCache.hpp	3234910dbe29e842	327	13794919511709551616	core	11	0	0	1	0	.hpp	Types.hpp;MetadataCache.hpp;string
+EchoSync\include\Win32IOCPWatcher.hpp	eac0103c07294791	2722	13795023925709551616	core	73	6	0	1	0	.hpp	Types.hpp;EventCoalescer.hpp;windows.h;cstring;vector;unordered_map;thread;atomic;mutex;chrono
+echo-engine-d003-asset-system-architecture.pdf		41526	13794770675709551616	core	0	0	1	0	0	.pdf	
+src\framework\math\Quaternion.js		42738	13794425478709551616	framework	0	0	1	0	0	.js	
+EchoSync\include\PathFilter.hpp	3e8df7640f308e70	536	13794919442709551616	core	16	1	0	1	0	.hpp	Types.hpp;string;vector
+src\framework\core\ServiceManifest.js		556	13794342672709551616	framework	0	0	1	0	0	.js	
+EchoSync\include\DiagnosticsManager.hpp	33827e8c9bb45217	630	13795016850709551616	core	20	0	0	1	0	.hpp	atomic;mutex;Types.hpp
+src\ecs\EntityView.js		393	13794332567709551616	ecs	0	0	1	0	0	.js	
+src\hierarchy\Cell.js		626	13794342636709551616	core	0	0	1	0	0	.js	
+.engine_cache\memory\memory_snapshot_20260803_203420.json	3d3b7441d47fb215	172	13794849533709551616	core	7	0	0	0	0	.json	
+src\framework\runtime\errors\MissingDependencyError.js		739	13794637244709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\errors\RuntimeKernelError.js		683	13794631292709551616	framework	0	0	1	0	0	.js	
+EchoSync\EchoSync.json	714c11f7acb99678	2924	13795029871709551616	core	64	0	0	0	0	.json	
+src\animation\events\EventTrack.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\assets\AssetState.js		0	13794338449709551616	assets	0	0	1	0	0	.js	
+EchoSandbox\core\ModuleScanner.js		0	13794492571709551616	core	0	0	1	0	0	.js	
+src\framework\diagnostics\PerformanceCounters.js		2197	13794339863709551616	framework	0	0	1	0	0	.js	
+EchoSync\obj\Logger.o		30978	13795028698709551616	core	0	0	1	0	0	.o	
+EchoSync\EchoSync.exe		504132	13795028727709551616	core	0	0	1	0	0	.exe	
+EchoSync\include\CopyEngine.hpp	f5b8c5d4efb40a9f	1061	13794919529709551616	core	19	5	0	1	0	.hpp	Types.hpp;string;windows.h;vector
+EchoSync\EchoSync.log		20180	13795029871709551616	core	0	0	1	0	0	.log	
+src\time\SchedulerState.js		6161	13794339863709551616	core	0	0	1	0	0	.js	
+EchoSync\EchoSync.cache		16	13795029871709551616	core	0	0	1	0	0	.cache	
+EchoSync\Build.ps1		845	13795011959709551616	ui	0	0	1	0	0	.ps1	
+src\framework\math\TransformInterpolator.js		12752	13794425478709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\RuntimeScheduler.js		0	13794598026709551616	framework	0	0	1	0	0	.js	
+EchoSandbox\utils\StatusFormatter.js		0	13794492572709551616	core	0	0	1	0	0	.js	
+src\framework\math\TransformAlgorithms.js		10352	13794425478709551616	framework	0	0	1	0	0	.js	
+EchoSync\include\ConsoleInterface.hpp	c79ffb7934165c82	877	13794919547709551616	core	32	0	0	1	0	.hpp	Types.hpp;ConfigManager.hpp;SyncEngine.hpp;MetadataCache.hpp;atomic;thread;string
+EchoSandbox\adapters\EngineAdapter.js		2279	13794496415709551616	core	0	0	1	0	0	.js	
+EchoSandbox\utils\ModuleRegistry.js		0	13794492571709551616	core	0	0	1	0	0	.js	
+EchoSandbox\utils\FileTree.js		0	13794492571709551616	core	0	0	1	0	0	.js	
+.engine_cache\memory\memory_snapshot_20260803_202238.json	b3a292fb53d994cf	173	13794848831709551616	core	7	0	0	0	0	.json	
+src\assets\AssetHandle.js		1094	13794343127709551616	assets	0	0	1	0	0	.js	
+EchoSandbox\ui\Sidebar.js		0	13794492571709551616	ui	0	0	1	0	0	.js	
+docs\addative features.txt		29457	13794406570709551616	core	0	0	1	0	0	.txt	
+src\assets\loaders\TextureLoader.js		0	13794338449709551616	assets	0	0	1	0	0	.js	
+EchoSync\obj\MetadataCache.o		13591	13795028706709551616	core	0	0	1	0	0	.o	
+EchoSandbox\monitors\PerformanceMonitor.js		4146	13794496646709551616	core	0	0	1	0	0	.js	
+src\framework\runtime\session\RuntimeSession.js		0	13794598036709551616	framework	0	0	1	0	0	.js	
+EchoSandbox\ui\Panels.js		0	13794492571709551616	ui	0	0	1	0	0	.js	
+EchoSandbox\ui\InspectorPanel.js		0	13794496037709551616	ui	0	0	1	0	0	.js	
+EchoSync\obj\PathFilter.o		23843	13795028710709551616	core	0	0	1	0	0	.o	
+EchoSandbox\ui\ConsolePanel.js		0	13794496037709551616	ui	0	0	1	0	0	.js	
+EchoSandbox\styles\sandbox.css		0	13794496037709551616	core	0	0	1	0	0	.css	
+src\framework\runtime\session\RuntimeSessionManager.js		0	13794598036709551616	framework	0	0	1	0	0	.js	
+echo-engine-d007-runtime-framework-architecture.pdf		46903	13794771501709551616	framework	0	0	1	0	0	.pdf	
+narrator_data_heavy.json	ba5ff309c22bdaf4	87147227	13794667368709551616	core	69180	0	0	0	0	.json	
+src\animation\vat\VATMetadata.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+EchoSandbox\SandboxApplication.js		7958	13794496292709551616	core	0	0	1	0	0	.js	
+src\ecs\System.js		1250	13794342362709551616	ecs	0	0	1	0	0	.js	
+cutscenes\prologue.webm		4314753	13794060590709551616	scene	0	0	1	0	0	.webm	
+EchoSync\src\PersistentCache.cpp	d4853b6fcf7b362c	4204	13794919514709551616	core	97	0	0	0	1	.cpp	../include/PersistentCache.hpp;../include/Logger.hpp;fstream;vector
+ProjectSummary.debug.log		107820	13795110882709551616	core	0	0	1	0	0	.log	
+.engine_cache\memory\memory_snapshot_20260803_200954.json	24d4ea2457e8cc11	173	13794848067709551616	core	7	0	0	0	0	.json	
+bgmusic.mp3		86408600	13794659379709551616	core	0	0	1	0	0	.mp3	
+src\animation\assets\AnimationCompression.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\rendering\PBRTextureGenerator.js		20119	13794339863709551616	rendering	0	0	1	0	0	.js	
+EchoSync\obj\CopyEngine.o		42724	13795028679709551616	core	0	0	1	0	0	.o	
+EchoSync\include\ConfigManager.hpp	dc8b27590845be80	1079	13794919424709551616	core	28	0	0	1	0	.hpp	Types.hpp;string;vector;mutex;optional
+.engine_cache\memory\memory_snapshot_20260803_202903.json	c8c3cc515d015d29	173	13794849216709551616	core	7	0	0	0	0	.json	
+EchoSync\src\EventCoalescer.cpp	cfbd8a5d4a5a1082	4332	13794919782709551616	core	93	11	0	0	1	.cpp	../include/EventCoalescer.hpp;../include/Logger.hpp
+EchoSync\obj\AppController.o		44932	13795028664709551616	core	0	0	1	0	0	.o	
+docs\1pdf.pdf		10998093	13794679937709551616	core	0	0	1	0	0	.pdf	
+repomix-output.xml		222983	13794402722709551616	core	0	0	1	0	0	.xml	
+src\hierarchy\Region.js		248	13794342629709551616	core	0	0	1	0	0	.js	
+EchoSync\EchoSyncTest.ps1		4759	13794919669709551616	core	0	0	1	0	0	.ps1	
+src\assets\AssetCache.js		2066	13794343144709551616	assets	0	0	1	0	0	.js	
+.engine_cache\memory\memory_snapshot_20260803_201923.json	b807872f9fabe74f	173	13794848636709551616	core	7	0	0	0	0	.json	
+src\ecs\Entity.js		447	13794342687709551616	ecs	0	0	1	0	0	.js	
+src\systems\HealthSystem.js		708	13794342717709551616	core	0	0	1	0	0	.js	
+EchoSync\obj\EventCoalescer.o		27362	13795028688709551616	core	0	0	1	0	0	.o	
+EchoSandbox\ui\StartupScreen.js		0	13794492571709551616	ui	0	0	1	0	0	.js	
+EchoSync\include\MetadataCache.hpp	7150a62f85fddee9	814	13794919495709551616	core	26	0	0	1	0	.hpp	Types.hpp;string;unordered_map;vector;mutex;optional
+src\framework\runtime\events\RuntimeEventBus.js		4324	13794637731709551616	framework	0	0	1	0	0	.js	
+.engine_cache\virtualram\synonyms_index.json	f8550cbe9e8aa4fd	9297001	13794848130709551616	core	130016	0	0	0	0	.json	
+EchoSync\obj\PersistentCache.o		31659	13795028715709551616	core	0	0	1	0	0	.o	
+src\framework\runtime\errors\RuntimeStateError.js		716	13794631316709551616	framework	0	0	1	0	0	.js	
+EchoSync\src\MetadataCache.cpp	cba84756d7a0e36	2089	13794919500709551616	core	62	0	0	0	1	.cpp	../include/MetadataCache.hpp;algorithm
+Generate-ConversationCommands-500MB.ps1		15876	13794671298709551616	core	0	0	1	0	0	.ps1	
+EchoSandbox\DebugOverlay.js		6787	13794490033709551616	core	0	0	1	0	0	.js	
+cutscenes\bridge.webm		1529438	13794060758709551616	scene	0	0	1	0	0	.webm	
+DirectoryInspector#.bat		13257	13794646798709551616	core	0	0	1	0	0	.bat	
+conversation_commands.json	9f40406784da9fe7	429595751	13794671742709551616	core	6000606	0	0	0	0	.json	
+EchoSandbox\adapters\AnimationAdapter.js		2910	13794496558709551616	animation	0	0	1	0	0	.js	
+EchoSandbox\adapters\ECSAdapter.js		3363	13794496541709551616	ecs	0	0	1	0	0	.js	
+src\world\SectorID.js		645	13794339863709551616	world	0	0	1	0	0	.js	
+EchoSandbox\ui\Toolbar.js		0	13794496037709551616	ui	0	0	1	0	0	.js	
+EchoSandbox\ui\StatusBar.js		0	13794492571709551616	ui	0	0	1	0	0	.js	
+EchoSandbox\main.js		1066	13794495485709551616	ai	0	0	1	0	0	.js	
+EchoSync\src\SyncEngine.cpp	986ede5cd23d453e	15558	13795028591709551616	core	328	11	0	0	1	.cpp	../include/SyncEngine.hpp;../include/Logger.hpp;filesystem;iostream;ctime
+src\framework\events\EventBus.js		1538	13794333653709551616	framework	0	0	1	0	0	.js	
+conversation_commands_array.json	5ca8df30e66f7aa	79	13794679386709551616	core	5	0	0	0	0	.json	
+EchoSandbox\core\EngineState.js		0	13794492571709551616	core	0	0	1	0	0	.js	
+narrator_data.json	22c26b3755f514de	35607	13794665414709551616	core	395	0	0	0	0	.json	
+EchoSandbox\debug\ConsolePanel.js		0	13794492571709551616	core	0	0	1	0	0	.js	
+EchoSync\CMakeLists.txt		1687	13795016817709551616	core	0	0	1	0	0	.txt	
+EchoSandbox\adapters\WorldAdapter.js		3558	13794496518709551616	world	0	0	1	0	0	.js	
+cinematic-baker.js		3548	13794339863709551616	core	0	0	1	0	0	.js	
+reports\project_reports\project_summary_20260803_203658.txt		259	13794849691709551616	core	0	0	1	0	0	.txt	
+src\ecs\SystemScheduler.js		1504	13794342365709551616	ecs	0	0	1	0	0	.js	
+src\framework\core\FrameworkBuilder.js		0	13794632853709551616	framework	0	0	1	0	0	.js	
+docs\[DeepSeek].txt		5595	13794339437709551616	core	0	0	1	0	0	.txt	
+EchoSandbox\runtime\RuntimeMonitor.js		0	13794492571709551616	runtime	0	0	1	0	0	.js	
+src\framework\runtime\session\SessionDescriptor.js		0	13794598037709551616	framework	0	0	1	0	0	.js	
+.engine_cache\virtualram\conversation_index.json	aa8f343c6958af17	1573	13794849188709551616	core	27	0	0	0	0	.json	
+.engine_cache\memory\memory_snapshot_20260803_203641.json	2ae1fa9f9af66cb2	172	13794849674709551616	core	7	0	0	0	0	.json	
+EchoSync\src\CopyEngine.cpp	696dace364905cb	6857	13795026655709551616	core	150	7	0	0	1	.cpp	../include/CopyEngine.hpp;../include/Logger.hpp;filesystem;vector;thread
+EchoSandbox\debug\LogViewer.js		0	13794492571709551616	core	0	0	1	0	0	.js	
+Screenshot_20260801_134018.png		39834	13794651891709551616	core	0	0	1	0	0	.png	
+EchoSandbox\ui\StatisticsPanel.js		0	13794496037709551616	ui	0	0	1	0	0	.js	
+src\data\SectorData.js		262	13794342656709551616	core	0	0	1	0	0	.js	
+EchoSandbox\ui\components\StatCard.js		0	13794496037709551616	ui	0	0	1	0	0	.js	
+.engine_cache\memory\memory_snapshot_20260803_203059.json	d94d29387c32bf5d	173	13794849332709551616	core	7	0	0	0	0	.json	
+src\components\HealthComponent.js		175	13794342326709551616	core	0	0	1	0	0	.js	
+EchoSync\include\Logger.hpp	a324103fea8bf5e2	2014	13794919409709551616	core	60	0	0	1	0	.hpp	string;vector;mutex;thread;atomic;condition_variable;fstream;iostream;chrono
+src\scene\Camera.js		0	13794335603709551616	scene	0	0	1	0	0	.js	
+EchoSandbox\adapters\FrameworkAdapter.js		2423	13794496490709551616	framework	0	0	1	0	0	.js	
+src\world\WorldManager.js		462	13794342916709551616	world	0	0	1	0	0	.js	
+EchoSandbox\styles\theme.css		0	13794496037709551616	core	0	0	1	0	0	.css	
+EchoSandbox\monitors\RuntimeMonitor.js		5839	13794496623709551616	runtime	0	0	1	0	0	.js	
+src\animation\assets\AnimationAsset.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+EchoSandbox\runtime\PerformanceMonitor.js		0	13794492571709551616	runtime	0	0	1	0	0	.js	
+src\animation\events\AnimationEvent.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+EchoSandbox\adapters\RenderingAdapter.js		3079	13794496581709551616	rendering	0	0	1	0	0	.js	
+EchoSandbox\adapters\TimeAdapter.js		1852	13794496604709551616	core	0	0	1	0	0	.js	
+EchoSync\src\Logger.cpp	5d7a8bb4937cbb38	4129	13794919419709551616	core	115	2	0	0	1	.cpp	../include/Logger.hpp;iomanip;sstream;ctime
+src\ecs\ECSService.js		1793	13794342669709551616	ecs	0	0	1	0	0	.js	
+src\framework\runtime\RuntimeKernel.js		9247	13794630373709551616	framework	0	0	1	0	0	.js	
+EchoSandbox\core\ProgressAnalyzer.js		0	13794492571709551616	core	0	0	1	0	0	.js	
+EchoSandbox\core\SandboxBootstrap.js		9333	13794506556709551616	core	0	0	1	0	0	.js	
+repomix-output.md	57cfd13e16de3237	497139	13794425478709551616	core	10971	4022	0	0	0	.md	
+src\animation\runtime\AnimationPlayer.js		0	13794409997709551616	runtime	0	0	1	0	0	.js	
+src\animation\events\AnimationEventBus.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\registries\EntityRegistry.js		3586	13794339863709551616	core	0	0	1	0	0	.js	
+EchoSync\include\HashCache.hpp	a84606e8b2a1bb47	788	13794919505709551616	core	24	1	0	1	0	.hpp	Types.hpp;string;unordered_map;mutex
+EchoSandbox\debug\StatisticsPanel.js		0	13794492571709551616	core	0	0	1	0	0	.js	
+src\assets\loaders\FontLoader.js		0	13794338449709551616	assets	0	0	1	0	0	.js	
+echo-engine-d002-core-framework-architecture.pdf		47572	13794769734709551616	framework	0	0	1	0	0	.pdf	
+docs\# Echo Engine Design Document (EDD).txt		280043	13794397672709551616	core	0	0	1	0	0	.txt	
+EchoSync\include\EventCoalescer.hpp	6136396d91a40df	1171	13794919516709551616	core	31	2	0	1	0	.hpp	Types.hpp;vector;queue;unordered_map;mutex;condition_variable;chrono
+EchoSandbox\monitors\MemoryMonitor.js		4674	13794496659709551616	core	0	0	1	0	0	.js	
+src\assets\loaders\VideoLoader.js		0	13794338450709551616	assets	0	0	1	0	0	.js	
+EchoSandbox\runtime\MemoryMonitor.js		0	13794492571709551616	runtime	0	0	1	0	0	.js	
+src\framework\runtime\session\SessionSelectionPolicy.js		0	13794598036709551616	framework	0	0	1	0	0	.js	
+EchoSync\src\Win32IOCPWatcher.cpp	d1de158fd188ce29	14907	13795022890709551616	core	353	18	0	0	1	.cpp	../include/Win32IOCPWatcher.hpp;../include/Logger.hpp;../include/DiagnosticsManager.hpp;../include/EventCoalescer.hpp;filesystem
+src\assets\loaders\MaterialLoader.js		458	13794343224709551616	assets	0	0	1	0	0	.js	
+src\managers\SpatialManager.js		1328	13794342620709551616	core	0	0	1	0	0	.js	
+EchoSandbox\ui\Viewport.js		0	13794492571709551616	ui	0	0	1	0	0	.js	
+EchoSync.json	b47cade5dd91d312	347	13794938877709551616	core	14	0	0	0	0	.json	
+EchoSync\include\Types.hpp	ab88f6955e188aae	8979	13794946878709551616	core	239	1	0	1	0	.hpp	string;vector;cstdint;chrono;filesystem;optional;windows.h
+EchoSync.log		1113	13794938883709551616	core	0	0	1	0	0	.log	
+Echo_Engine_Implementation_Roadmap.md	4fdde0bda4573d4a	16857	13794637022709551616	core	149	0	0	0	0	.md	
+src\framework\runtime\state\RuntimeStateMachine.js		0	13794598053709551616	framework	0	0	1	0	0	.js	
+Generate-HeavyNarrator.ps1		4140	13794667237709551616	core	0	0	1	0	0	.ps1	
+Generate-Synonyms.ps1		3617	13794671651709551616	core	0	0	1	0	0	.ps1	
+git config --global user.email.txt		103	13794339560709551616	ai	0	0	1	0	0	.txt	
+src\framework\runtime\RuntimeContext.js		0	13794598026709551616	framework	0	0	1	0	0	.js	
+how --stat e46a6dc		978	13794425221709551616	core	0	0	1	0	0		
+index.html		6490	13794339863709551616	core	0	0	1	0	0	.html	
+src\components\VelocityComponent.js		181	13794342587709551616	core	0	0	1	0	0	.js	
+package.json	b0f1a1185b6aedd7	327	13794338037709551616	core	17	0	0	0	0	.json	
+EchoesOfTomorrow_ChatLog (1).txt		65087	13794349419709551616	core	0	0	1	0	0	.txt	
+README.md	1384f86ae901ce8c	167	13794841946709551616	core	3	0	0	0	0	.md	
+reports\project_reports\project_summary_20260803_203116.txt		259	13794849349709551616	core	0	0	1	0	0	.txt	
+src\animation\assets\AnimationClip.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\animation\vat\VATDecoder.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\animation\skeleton\SkeletonPose.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\assets\loaders\ShaderLoader.js		0	13794338449709551616	assets	0	0	1	0	0	.js	
+src\animation\baking\AnimationBaker.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+EchoSandbox\core\SandboxState.js		8328	13794496114709551616	core	0	0	1	0	0	.js	
+reports\project_reports\project_summary_20260803_203526.txt		259	13794849611709551616	core	0	0	1	0	0	.txt	
+src\animation\graph\AnimationGraph.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\animation\baking\TextureChecker.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\framework\math\TransformSpatial.js		17454	13794425702709551616	framework	0	0	1	0	0	.js	
+src\animation\baking\VertexSampler.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\animation\graph\AnimationTransition.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\data\RegionData.js		184	13794342654709551616	core	0	0	1	0	0	.js	
+src\animation\graph\BlendTree.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\queries\RadiusQuery.js		2929	13794339863709551616	core	0	0	1	0	0	.js	
+src\framework\runtime\errors\RuntimeSessionError.js		722	13794631306709551616	framework	0	0	1	0	0	.js	
+src\ecs\SparseSet.js		2227	13794342696709551616	ecs	0	0	1	0	0	.js	
+synonyms.json	a9b6d57fe577f983	251468743	13794674475709551616	core	10400004	0	0	0	0	.json	
+src\animation\runtime\AnimationController.js		0	13794409997709551616	runtime	0	0	1	0	0	.js	
+echo-engine-d001-architecture-foundation.pdf		24766	13794768669709551616	core	0	0	1	0	0	.pdf	
+src\animation\runtime\AnimationRuntime.js		0	13794409997709551616	runtime	0	0	1	0	0	.js	
+EchoSandbox\adapters\AssetAdapter.js		3352	13794496568709551616	core	0	0	1	0	0	.js	
+EchoSandbox\ui\components\ModuleItem.js		0	13794496037709551616	ui	0	0	1	0	0	.js	
+src\framework\runtime\pipeline\FrameStage.js		0	13794598044709551616	framework	0	0	1	0	0	.js	
+src\animation\skeleton\Bone.js		10593	13794412196709551616	animation	0	0	1	0	0	.js	
+src\animation\skeleton\Pose.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\animation\skeleton\Skeleton.js		11426	13794425478709551616	animation	0	0	1	0	0	.js	
+src\animation\skeleton\SkeletonBuilder.js		4718	13794425478709551616	animation	0	0	1	0	0	.js	
+src\animation\skeleton\SkeletonUtils.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\animation\vat\VATPlayer.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+EchoSandbox\core\SandboxEvents.js		1302	13794496101709551616	core	0	0	1	0	0	.js	
+src\framework\core\Framework.js		1480	13794345381709551616	framework	0	0	1	0	0	.js	
+EchoSync\include\HotkeyListener.hpp	cf46b1279e451eb1	552	13794919543709551616	core	22	0	0	1	0	.hpp	windows.h;functional;thread;atomic
+src\assets\AssetLoader.js		0	13794338449709551616	assets	0	0	1	0	0	.js	
+src\assets\AssetManager.js		6049	13794343168709551616	assets	0	0	1	0	0	.js	
+src\streaming\SectorLoader.js		2541	13794339863709551616	core	0	0	1	0	0	.js	
+.echo_arch_cache\manifest.txt		29886	13795110914709551616	core	0	0	1	0	0	.txt	
+src\assets\AssetService.js		722	13794343210709551616	assets	0	0	1	0	0	.js	
+EchoArchitect.exe		693759	13794844335709551616	core	0	0	1	0	0	.exe	
+src\assets\AssetType.js		0	13794338449709551616	assets	0	0	1	0	0	.js	
+EchoSandbox\index.html		7255	13794495474709551616	core	0	0	1	0	0	.html	
+src\assets\loaders\AudioLoader.js		0	13794338449709551616	audio	0	0	1	0	0	.js	
+src\assets\loaders\ModelLoader.js		0	13794338449709551616	assets	0	0	1	0	0	.js	
+src\assets\AssetRegistry.js		625	13794343137709551616	assets	0	0	1	0	0	.js	
+src\framework\runtime\errors\RuntimeInitializationError.js		723	13794637332709551616	framework	0	0	1	0	0	.js	
+src\components\AudioComponent.js		230	13794342219709551616	audio	0	0	1	0	0	.js	
+EchoSync\include\AppController.hpp	2d81ba27c9852b34	1181	13794919549709551616	core	36	0	0	1	0	.hpp	Types.hpp;ConfigManager.hpp;MetadataCache.hpp;HashCache.hpp;EventCoalescer.hpp;Win32IOCPWatcher.hpp;SyncEngine.hpp;HotkeyListener.hpp
+src\framework\runtime\errors\RuntimeError.js		535	13794633301709551616	framework	0	0	1	0	0	.js	
+src\components\MeshComponent.js		222	13794342323709551616	core	0	0	1	0	0	.js	
+DirectoryInspector.ps1		25934	13794652556709551616	core	0	0	1	0	0	.ps1	
+EchoSandbox\ui\Dashboard.js		0	13794492571709551616	ui	0	0	1	0	0	.js	
+src\components\TransformComponent.js		257	13794342329709551616	core	0	0	1	0	0	.js	
+src\data\CellData.js		171	13794342659709551616	core	0	0	1	0	0	.js	
+src\ecs\ComponentStore.js		1648	13794342702709551616	ecs	0	0	1	0	0	.js	
+src\ecs\ECSManager.js		5112	13794342352709551616	ecs	0	0	1	0	0	.js	
+src\animation\baking\MetadataGenerator.js		0	13794410008709551616	animation	0	0	1	0	0	.js	
+src\ecs\EntitySignature.js		1474	13794342707709551616	ecs	0	0	1	0	0	.js	
+src\framework\core\RuntimeBuilder.js		0	13794598147709551616	framework	0	0	1	0	0	.js	
+src\managers\QueryManager.js		1519	13794342605709551616	core	0	0	1	0	0	.js	
+src\framework\core\Bootstrap.js		1515	13794342372709551616	framework	0	0	1	0	0	.js	
+src\framework\core\CompositionRoot.js		0	13794598146709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\pipeline\PipelineResult.js		2184	13794637691709551616	framework	0	0	1	0	0	.js	
+src\animation\graph\AnimationState.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\framework\core\FrameScheduler.js		1537	13794632981709551616	framework	0	0	1	0	0	.js	
+src\animation\assets\AnimationPackage.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\framework\events\Event.js		262	13794333642709551616	framework	0	0	1	0	0	.js	
+src\animation\graph\GraphNode.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\framework\math\Matrix4.js		42769	13794425478709551616	framework	0	0	1	0	0	.js	
+src\assets\AssetDescriptor.js		1445	13794343114709551616	assets	0	0	1	0	0	.js	
+src\framework\math\Vector3.js		36690	13794425478709551616	framework	0	0	1	0	0	.js	
+EchoSandbox\core\DependencyChecker.js		0	13794495752709551616	core	0	0	1	0	0	.js	
+src\framework\runtime\errors\RuntimeHostError.js		0	13794632870709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\events\RuntimeEvent.js		4264	13794637488709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\events\RuntimeEventDispatcher.js		5427	13794637746709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\events\RuntimeEvents.js		2331	13794637596709551616	framework	0	0	1	0	0	.js	
+src\framework\runtime\pipeline\FramePipeline.js		0	13794598044709551616	framework	0	0	1	0	0	.js	
+src\animation\assets\AnimationMetadata.js		0	13794409997709551616	animation	0	0	1	0	0	.js	
+src\framework\runtime\RuntimeClock.js		8525	13794765749709551616	framework	0	0	1	0	0	.js	
+EchoArchitect.cpp	27cff814eb8ee50c	55681	13794844320709551616	core	1192	46	0	0	1	.cpp	iostream;fstream;sstream;string;vector;map;unordered_map;unordered_set;memory;algorithm;chrono;thread;mutex;atomic;regex;cmath;iomanip;functional;windows.h;psapi.h;sys/resource.h;unistd.h
+src\framework\runtime\RuntimeHost.js		0	13794598026709551616	framework	0	0	1	0	0	.js	
