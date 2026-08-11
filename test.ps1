@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Enterprise System & Directory Analytics Engine (VRAM EDITION) – with Folder Tree
 .DESCRIPTION
@@ -1776,6 +1776,56 @@ function Show-FolderTree {
     Write-Host ""
 }
 
+function Show-AnalyticsFolderTree {
+    param(
+        [string]$TargetDirectory
+    )
+
+    $TargetDirectory = (Resolve-Path -LiteralPath $TargetDirectory).Path.TrimEnd('\', '/')
+    Write-Host ""
+    Write-Host "  🌳 Generating detailed analytics tree for: $TargetDirectory" -ForegroundColor Cyan
+    Write-Host ""
+
+    $sb = [System.Text.StringBuilder]::new()
+    [void]$sb.AppendLine("$TargetDirectory")
+
+    function Add-TreeLevel {
+        param(
+            [string]$Path,
+            [string]$Prefix
+        )
+
+        $items = Get-ChildItem -LiteralPath $Path -Force -ErrorAction SilentlyContinue
+        if (-not $items) { return }
+
+        $directories = $items | Where-Object { $_.PSIsContainer } | Sort-Object Name
+        $files = $items | Where-Object { -not $_.PSIsContainer } | Sort-Object Name
+
+        $allItems = @($directories) + @($files)
+        $count = $allItems.Count
+        for ($i = 0; $i -lt $count; $i++) {
+            $item = $allItems[$i]
+            $isLast = ($i -eq $count - 1)
+            $linePrefix = if ($isLast) { "$Prefix└── " } else { "$Prefix├── " }
+            $nextPrefix = if ($isLast) { "$Prefix    " } else { "$Prefix│   " }
+
+            if ($item.PSIsContainer) {
+                [void]$sb.AppendLine("$linePrefix$($item.Name)")
+                Add-TreeLevel -Path $item.FullName -Prefix $nextPrefix
+            } else {
+                $statusEmoji = if ($item.Length -gt 0) { "✅" } else { "❌" }
+                [void]$sb.AppendLine("$linePrefix$($item.Name) $statusEmoji")
+            }
+        }
+    }
+
+    Add-TreeLevel -Path $TargetDirectory -Prefix ""
+
+    $treeString = $sb.ToString().TrimEnd()
+    Write-Host $treeString -ForegroundColor White
+    Write-Host ""
+}
+
 # =============================================================================
 # MAIN CONTROL LOOP – with new option 11
 # =============================================================================
@@ -1867,6 +1917,7 @@ try {
                     $scanStats = Invoke-SystemScanEngine -TargetDirectory $Path
                     Clear-Host
                     Show-FloatingBar
+                    Show-AnalyticsFolderTree -TargetDirectory $Path
                     Write-Host "  ╔══════════════════════════════════════════════════════════════════════════╗" -ForegroundColor DarkBlue
                     Write-Host "  ║                      ANALYTICS TELEMETRY METRICS                         ║" -ForegroundColor Cyan
                     Write-Host "  ╚══════════════════════════════════════════════════════════════════════════╝" -ForegroundColor DarkBlue
