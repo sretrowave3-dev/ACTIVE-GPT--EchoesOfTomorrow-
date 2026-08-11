@@ -1,4 +1,0 @@
-conversation_commands.json filter=lfs diff=lfs merge=lfs -text
-synonyms.json filter=lfs diff=lfs merge=lfs -text
-narrator_data_heavy.json filter=lfs diff=lfs merge=lfs -text
-bgmusic.mp3 filter=lfs diff=lfs merge=lfs -text
