@@ -16,6 +16,15 @@ export class PlayerService extends Service {
     this.controller = null;
     /** @type {number|null} @private */
     this._playerEntityId = null;
+
+    // ── Vitals & Resource attributes ──────────────────────
+    this.health = 100;
+    this.maxHealth = 100;
+    this.stamina = 100;
+    this.maxStamina = 100;
+    this.staminaDrainRate = 25;   // stamina units drained per second sprinting
+    this.staminaRegenRate = 18;   // stamina units restored per second
+    this._prevStamina = 100;
   }
 
   /** @override */
@@ -72,6 +81,30 @@ export class PlayerService extends Service {
     if (this.controller) {
       this.controller.update(delta);
 
+      // Manage stamina consumption when sprinting and moving
+      const isMoving = Math.hypot(this.controller.velocity.x, this.controller.velocity.z) > 0.5;
+      if (this.controller.isSprinting && isMoving) {
+        this.stamina = Math.max(0, this.stamina - this.staminaDrainRate * delta);
+        if (this.stamina <= 0) {
+          this.controller.canSprint = false;
+        }
+      } else {
+        this.stamina = Math.min(this.maxStamina, this.stamina + this.staminaRegenRate * delta);
+        if (this.stamina >= 15) {
+          this.controller.canSprint = true;
+        }
+      }
+
+      if (Math.abs(this.stamina - this._prevStamina) > 0.5) {
+        this._prevStamina = this.stamina;
+        if (this.framework.eventBus) {
+          this.framework.eventBus.publish('player:stamina_changed', this, {
+            stamina: this.stamina,
+            maxStamina: this.maxStamina
+          });
+        }
+      }
+
       // Synchronize controller position & velocity to the ECS Player entity
       const ecsService = this.framework.serviceRegistry.get('ecs');
       if (ecsService && ecsService.ecsManager && this._playerEntityId !== null) {
@@ -88,6 +121,77 @@ export class PlayerService extends Service {
           velocity.z = this.controller.velocity.z;
         }
       }
+    }
+  }
+
+  /**
+   * Apply damage to the player.
+   * @param {number} amount
+   */
+  takeDamage(amount) {
+    if (amount <= 0) return;
+    this.health = Math.max(0, this.health - amount);
+    if (this.framework.eventBus) {
+      this.framework.eventBus.publish('player:health_changed', this, {
+        health: this.health,
+        maxHealth: this.maxHealth,
+        delta: -amount
+      });
+    }
+    const audioService = this.framework.serviceRegistry.get('audio');
+    if (audioService) {
+      audioService.playSound('impact', 0.8);
+    }
+  }
+
+  /**
+   * Restore health to the player.
+   * @param {number} amount
+   */
+  heal(amount) {
+    if (amount <= 0) return;
+    this.health = Math.min(this.maxHealth, this.health + amount);
+    if (this.framework.eventBus) {
+      this.framework.eventBus.publish('player:health_changed', this, {
+        health: this.health,
+        maxHealth: this.maxHealth,
+        delta: amount
+      });
+    }
+  }
+
+  /**
+   * Retrieve current player health & stamina vitals.
+   * @returns {{ health: number, maxHealth: number, stamina: number, maxStamina: number }}
+   */
+  getVitals() {
+    return {
+      health: this.health,
+      maxHealth: this.maxHealth,
+      stamina: this.stamina,
+      maxStamina: this.maxStamina
+    };
+  }
+
+  /**
+   * Directly assign player vitals (used by save/load system).
+   * @param {number} health
+   * @param {number} stamina
+   */
+  setVitals(health, stamina) {
+    this.health = Math.max(0, Math.min(this.maxHealth, health));
+    this.stamina = Math.max(0, Math.min(this.maxStamina, stamina));
+    this._prevStamina = this.stamina;
+    if (this.framework.eventBus) {
+      this.framework.eventBus.publish('player:health_changed', this, {
+        health: this.health,
+        maxHealth: this.maxHealth,
+        delta: 0
+      });
+      this.framework.eventBus.publish('player:stamina_changed', this, {
+        stamina: this.stamina,
+        maxStamina: this.maxStamina
+      });
     }
   }
 

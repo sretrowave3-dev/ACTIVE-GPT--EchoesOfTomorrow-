@@ -44,6 +44,8 @@ export class PlayerController {
     this.acceleration = 50;     // acceleration (units/s²)
     this.friction = 8;          // damping coefficient
     this.keys = {};
+    this.canSprint = true;
+    this.isSprinting = false;
 
     // ── Bind event handlers ───────────────────────────────
     this._onMouseMove = this._onMouseMove.bind(this);
@@ -142,9 +144,12 @@ export class PlayerController {
       const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(this.yawObject.quaternion);
       const right = new THREE.Vector3(1, 0, 0).applyQuaternion(this.yawObject.quaternion);
 
-      // Support sprinting if action is active
-      const currentSpeed = (this.inputService?.isActionActive('sprint')) ? this.moveSpeed * 1.6 : this.moveSpeed;
-      const currentAccel = (this.inputService?.isActionActive('sprint')) ? this.acceleration * 1.5 : this.acceleration;
+      // Support sprinting if action is active and stamina permits
+      const wantsSprint = Boolean(this.inputService?.isActionActive('sprint')) || Boolean(this.keys['ShiftLeft'] || this.keys['ShiftRight']);
+      this.isSprinting = wantsSprint && this.canSprint;
+
+      const currentSpeed = this.isSprinting ? this.moveSpeed * 1.6 : this.moveSpeed;
+      const currentAccel = this.isSprinting ? this.acceleration * 1.5 : this.acceleration;
 
       const accelForce = currentAccel * dt;
       this.velocity.addScaledVector(forward, -input.z * accelForce);
@@ -186,6 +191,39 @@ export class PlayerController {
   /** Convenience getter for the player's world position. */
   get position() {
     return this.yawObject.position;
+  }
+
+  /**
+   * Get player orientation (yaw & pitch in radians).
+   * @returns {{ yaw: number, pitch: number }}
+   */
+  getOrientation() {
+    return {
+      yaw: this.yawObject.rotation.y,
+      pitch: this.pitchObject.rotation.x
+    };
+  }
+
+  /**
+   * Set player orientation.
+   * @param {number} yaw
+   * @param {number} pitch
+   */
+  setOrientation(yaw, pitch) {
+    this.yawObject.rotation.y = yaw;
+    const limit = (Math.PI / 2) - 0.01;
+    this.pitchObject.rotation.x = Math.max(-limit, Math.min(limit, pitch));
+  }
+
+  /**
+   * Set the player's world position and zero out velocity.
+   * @param {number} x
+   * @param {number} y
+   * @param {number} z
+   */
+  setPosition(x, y, z) {
+    this.yawObject.position.set(x, y, z);
+    this.velocity.set(0, 0, 0);
   }
 
   /** Dispose controller and remove any attached event listeners. */
