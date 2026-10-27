@@ -1,0 +1,24 @@
+{
+  "name": "echoesoftomorrow",
+  "version": "1.0.0",
+  "description": "Echoes of Tomorrow - Powered by Echo Engine",
+  "main": "src/main.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "sandbox": "npx http-server . -p 8080",
+    "test": "node --test test/**/*.test.js"
+  },
+  "keywords": [
+    "game-engine",
+    "ecs",
+    "threejs",
+    "simulation",
+    "echo-engine"
+  ],
+  "author": "",
+  "license": "ISC"
+}
