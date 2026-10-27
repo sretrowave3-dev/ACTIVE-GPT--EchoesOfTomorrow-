@@ -23,15 +23,17 @@ export class PlayerService extends Service {
     const renderService = this.framework.serviceRegistry.get('render');
     const inputService = this.framework.serviceRegistry.get('input');
     const ecsService = this.framework.serviceRegistry.get('ecs');
+    const physicsService = this.framework.serviceRegistry.get('physics');
 
-    // Attach PlayerController to RenderService's camera and scene
+    // Attach PlayerController to RenderService's camera, scene, and collision world
     if (renderService && renderService.camera && renderService.scene) {
       const domTarget = renderService.renderer?.domElement || (typeof document !== 'undefined' ? document.body : null);
       this.controller = new PlayerController(
         renderService.camera,
         domTarget,
         renderService.scene,
-        inputService
+        inputService,
+        physicsService?.collisionWorld || null
       );
       this.controller.yawObject.position.set(0, 0, 5);
     }
@@ -41,6 +43,13 @@ export class PlayerService extends Service {
       this._playerEntityId = 1000;
       ecsService.ecsManager.addComponent(this._playerEntityId, 'Transform');
       ecsService.ecsManager.addComponent(this._playerEntityId, 'Velocity');
+      if (ecsService.ecsManager.getTypeId('Collider')) {
+        ecsService.ecsManager.addComponent(this._playerEntityId, 'Collider');
+        const col = ecsService.ecsManager.getComponent(this._playerEntityId, 'Collider');
+        if (col) {
+          col.size = { x: 0.6, y: 1.8, z: 0.6 };
+        }
+      }
       const transform = ecsService.ecsManager.getComponent(this._playerEntityId, 'Transform');
       if (transform) {
         transform.position.x = 0;
@@ -52,7 +61,7 @@ export class PlayerService extends Service {
 
   /** @override */
   async start() {
-    console.log('[PlayerService] Started with active PlayerController.');
+    console.log('[PlayerService] Started with active physical PlayerController.');
   }
 
   /**

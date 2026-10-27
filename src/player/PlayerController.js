@@ -1,5 +1,6 @@
 // src/player/PlayerController.js
 import * as THREE from 'three';
+import { AABB } from '../physics/AABB.js';
 
 export class PlayerController {
   /**
@@ -7,8 +8,9 @@ export class PlayerController {
    * @param {HTMLElement} domElement - Element used for pointer lock (e.g., document.body).
    * @param {THREE.Scene} scene
    * @param {import('../framework/services/InputService.js').InputService|null} [inputService=null]
+   * @param {import('../physics/CollisionWorld.js').CollisionWorld|null} [collisionWorld=null]
    */
-  constructor(camera, domElement, scene, inputService = null) {
+  constructor(camera, domElement, scene, inputService = null, collisionWorld = null) {
     // ── Yaw / Pitch hierarchy (no gimbal lock) ──────────
     this.yawObject = new THREE.Object3D();
     this.pitchObject = new THREE.Object3D();
@@ -25,6 +27,12 @@ export class PlayerController {
     this.domElement = domElement;
     this.scene = scene;
     this.inputService = inputService;
+    this.collisionWorld = collisionWorld;
+
+    // Player bounding box for physical collision (0.6m x 1.8m x 0.6m)
+    this._playerAABB = new AABB();
+    this._playerSize = { x: 0.6, y: 1.8, z: 0.6 };
+    this._scratchDisp = { x: 0, y: 0, z: 0 };
 
     // ── Mouse look settings ───────────────────────────────
     this.mouseSensitivity = 0.002;
@@ -154,6 +162,25 @@ export class PlayerController {
 
     // --- Apply movement to the yaw object ---
     this.yawObject.position.addScaledVector(this.velocity, dt);
+
+    // --- Collision Detection & Resolution against CollisionWorld ---
+    if (this.collisionWorld) {
+      const center = {
+        x: this.yawObject.position.x,
+        y: this.yawObject.position.y + (this._playerSize.y * 0.5),
+        z: this.yawObject.position.z
+      };
+      this._playerAABB.fromCenterAndSize(center, this._playerSize);
+
+      if (this.collisionWorld.resolveStaticCollision(this._playerAABB, this._scratchDisp, 'player')) {
+        this.yawObject.position.x += this._scratchDisp.x;
+        this.yawObject.position.y += this._scratchDisp.y;
+        this.yawObject.position.z += this._scratchDisp.z;
+
+        if (Math.abs(this._scratchDisp.x) > 1e-4) this.velocity.x = 0;
+        if (Math.abs(this._scratchDisp.z) > 1e-4) this.velocity.z = 0;
+      }
+    }
   }
 
   /** Convenience getter for the player's world position. */
