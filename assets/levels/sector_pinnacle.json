@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "id": "sector_pinnacle",
+  "name": "Sector Pinnacle — The Overgrown Spire",
+  "playerSpawn": {
+    "position": { "x": 0, "y": 1.7, "z": 12 },
+    "rotation": { "yaw": 0, "pitch": 0 }
+  },
+  "environment": {
+    "fogColor": "#0a0515",
+    "fogNear": 10,
+    "fogFar": 60,
+    "ambientLightColor": "#331144",
+    "ambientIntensity": 0.7
+  },
+  "mission": {
+    "title": "Chapter 3: Echoes of Tomorrow",
+    "objectives": [
+      {
+        "id": "reach_spire_peak",
+        "title": "Ascend to the Spire Peak",
+        "description": "Overlook the neon storm clouds of Neo-Bengaluru."
+      },
+      {
+        "id": "purge_static_loop",
+        "title": "Purge the Mainframe Static Loop",
+        "description": "Reclaim Captain Arjun Rao's final consciousness core."
+      }
+    ]
+  },
+  "entities": [
+    {
+      "id": 601,
+      "components": {
+        "Transform": {
+          "position": { "x": 0, "y": 1.2, "z": -14 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 1.5, "y": 2.5, "z": 1.5 }
+        },
+        "Mesh": {
+          "meshId": "mainframe_core_terminal",
+          "size": { "x": 1.5, "y": 2.5, "z": 1.5 },
+          "color": 11141375
+        },
+        "Collider": {
+          "shape": "box",
+          "size": { "x": 1.5, "y": 2.5, "z": 1.5 },
+          "isTrigger": false
+        },
+        "Interactable": {
+          "prompt": "Press [E] to Purge the Mainframe Static Loop",
+          "actionId": "purge_static_loop",
+          "radius": 3.5,
+          "isOneShot": true
+        }
+      }
+    },
+    {
+      "id": 602,
+      "components": {
+        "Transform": {
+          "position": { "x": 6, "y": 3.0, "z": -4 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 1.2, "y": 1.0, "z": 1.2 }
+        },
+        "Mesh": {
+          "meshId": "alpha_sentinel_drone",
+          "size": { "x": 1.2, "y": 1.0, "z": 1.2 },
+          "color": 16711935
+        },
+        "Collider": {
+          "shape": "box",
+          "size": { "x": 1.2, "y": 1.0, "z": 1.2 },
+          "isTrigger": true
+        },
+        "AI": {
+          "role": "sentinel_guard",
+          "state": "patrol",
+          "patrolRadius": 18
+        }
+      }
+    },
+    {
+      "id": 603,
+      "components": {
+        "Transform": {
+          "position": { "x": -5, "y": 0.8, "z": 2 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 0.8, "y": 0.8, "z": 0.8 }
+        },
+        "Mesh": {
+          "meshId": "lore_datalog_cube",
+          "size": { "x": 0.8, "y": 0.8, "z": 0.8 },
+          "color": 65535
+        },
+        "Collider": {
+          "shape": "box",
+          "size": { "x": 0.8, "y": 0.8, "z": 0.8 },
+          "isTrigger": true
+        },
+        "Interactable": {
+          "prompt": "Press [E] to Decrypt Datalog 99-Final: Memory Convergence",
+          "actionId": "reach_spire_peak",
+          "radius": 2.5,
+          "isOneShot": true
+        }
+      }
+    }
+  ]
+}

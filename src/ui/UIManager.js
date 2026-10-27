@@ -474,9 +474,21 @@ export class UIManager {
       this.refreshMissionList();
     });
 
+    // Narrative & Story events
+    const unsubNarrative = bus.subscribe('narrative:log_unlocked', (sender, data) => {
+      this.showNotification(`DATALOG DECRYPTED: ${data.title}`, 4500);
+      this._playUIChime();
+    });
+
+    const unsubChapter = bus.subscribe('mission:chapter_loaded', (sender, data) => {
+      this.showNotification(`NEW CHAPTER: ${data.title}`, 4000);
+      this._playUIChime();
+      this.refreshMissionList();
+    });
+
     this._unsubscribers.push(
       unsubHealth, unsubStamina, unsubPrompt, unsubClear,
-      unsubMission, unsubSaved, unsubLoaded
+      unsubMission, unsubSaved, unsubLoaded, unsubNarrative, unsubChapter
     );
   }
 

@@ -1,12 +1,13 @@
 // src/framework/services/GameplayService.js
 import { Service } from './Service.js';
 import { MissionManager } from '../../gameplay/MissionManager.js';
+import { NarrativeManager } from '../../gameplay/NarrativeManager.js';
 import { InteractionSystem } from '../../systems/InteractionSystem.js';
 import { InteractableComponent } from '../../components/InteractableComponent.js';
 
 /**
  * GameplayService bridges core engine subsystems with narrative gameplay,
- * objectives, and interactive triggers for Echoes of Tomorrow.
+ * multi-chapter story missions, and interactive triggers for Echoes of Tomorrow.
  * Conforms to EDD Chapter 19 (Scripting System & Gameplay Framework).
  */
 export class GameplayService extends Service {
@@ -16,6 +17,7 @@ export class GameplayService extends Service {
   constructor(framework) {
     super('gameplay', framework);
     this.missionManager = new MissionManager(framework.eventBus);
+    this.narrativeManager = new NarrativeManager(framework.eventBus);
     this.interactionSystem = new InteractionSystem(framework, this.missionManager);
   }
 
@@ -80,6 +82,23 @@ export class GameplayService extends Service {
    */
   getCurrentObjective() {
     return this.missionManager.getCurrentObjective();
+  }
+
+  /**
+   * Unlocks a narrative audio datalog.
+   * @param {string} logId
+   * @returns {Object|null}
+   */
+  unlockDatalog(logId) {
+    return this.narrativeManager.unlockLog(logId);
+  }
+
+  /**
+   * Get the narrative manager instance.
+   * @returns {NarrativeManager}
+   */
+  getNarrativeManager() {
+    return this.narrativeManager;
   }
 
   /** @override */
