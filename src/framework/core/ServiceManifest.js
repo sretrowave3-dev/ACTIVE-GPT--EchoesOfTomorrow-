@@ -11,6 +11,7 @@ import { AudioService } from '../services/AudioService.js';
 import { UIService } from '../services/UIService.js';
 import { SaveService } from '../services/SaveService.js';
 import { HAOSService } from '../services/HAOSService.js';
+import { EditorService } from '../services/EditorService.js';
 
 export const ServiceManifest = [
   WorldManager,
@@ -25,5 +26,6 @@ export const ServiceManifest = [
   AudioService,
   UIService,
   SaveService,
-  HAOSService
+  HAOSService,
+  EditorService
 ];
