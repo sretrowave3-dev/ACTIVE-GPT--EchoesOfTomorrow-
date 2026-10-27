@@ -108,6 +108,7 @@ Echoes of Tomorrow (The Game)
 | **Editor & Toolchain** | `src/editor/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 17)** | `LevelSerializer`, `CommandInterpreter`, `EditorDevOverlay`, `EditorService`. Data-driven JSON level pipeline (`sector_omega.json`), in-engine CLI terminal (`~`), live ECS hierarchy & component inspector. |
 | **Content & Narrative** | `assets/levels/`, `src/gameplay/` | 3 | ✅ **Complete (Phase 18)** | `NarrativeManager`, multi-chapter campaign (Chapters 1–3), `sector_pinnacle.json`, Captain Arjun Rao audio datalogs and lore fragments. |
 | **Packaging & Deployment** | `src/packaging/`, `scripts/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 20)** | `VirtualFileSystem` (VFS), `IntegrityVerifier` (SHA-256), `PackageManifest`, `PackagingService`, `build_distribution.py`. Automated production release packaging, cryptographic integrity checking, and standalone distribution. |
+| **Forge Platform SDK** | `src/forge/` | 4 | ✅ **Complete (Phase 21)** | `ForgeEngine` unified public facade, `ForgeApplication` lifecycle base class, `ForgePlugin` modular architecture, and public SDK exports. |
 
 ---
 
@@ -143,14 +144,22 @@ Phase 19: Networking & Multiplayer (Optional ─ Skipped per single-player chart
 Phase 20: Security, Packaging & Deployment ────── [Completed]
    ▲
    └── [MILESTONE D: "Shippable" — ACHIEVED]
-Phase 21: Forge Engine Extraction (Post-Shipping Phase)
+Phase 21: Forge Engine Public SDK & Platform ──── [Completed]
+Phase 22: AAA Post-Processing & Lighting Pipeline ── [Current Target]
+Phase 23: Advanced Kinematic Character Controller
+Phase 24: Animation State Graph & 2D Blend Trees
+Phase 25: Networking, Prediction & Replication
+Phase 26: Professional Editor Suite & World Outliner
+   ▲
+   └── [TARGET: MILESTONE E — "AAA Engine Platform"]
 ```
 
-### Active Milestone: Milestone D ("Shippable") — ACHIEVED!
+### Active Milestone: Milestone E ("AAA Engine Platform")
 **Milestone D Status:** ✅ **Delivered, Packaged & Cryptographically Verified**
 - **Phase 18 (Full Content Production):** Multi-chapter narrative campaign (Chapters 1–3), `NarrativeManager` with Captain Arjun Rao lore audio datalogs, Sector Pinnacle climax level (`sector_pinnacle.json`).
 - **Phase 20 (Security, Packaging & Deployment):** Virtual File System (`VirtualFileSystem`), cryptographic SHA-256 integrity verifier (`IntegrityVerifier`), manifest generator (`PackageManifest`), distribution packaging pipeline (`scripts/build_distribution.py`), and standalone production distribution in `dist/` with 100% cryptographic file integrity verified.
-- **Automated Validation:** 219 JavaScript files, 247 import statements, 13/13 subsystem test suites passing.
+- **Phase 21 (Forge Engine Platform SDK):** `ForgeEngine` unified public facade, `ForgeApplication` base class, `ForgePlugin` extensible architecture, and barrel export SDK interface.
+- **Automated Validation:** 223 JavaScript files, 251 import statements, 14/14 subsystem test suites passing.
 **Milestone C Status:** ✅ **Delivered, Integrated & Verified**
 - **Phase 16 (HAOS):** Automatic hardware scanning (`HardwareScanner`), multi-dimensional capability rating (`CapabilityAnalyzer`), ring-buffer frame pacing monitor (`FrameMonitor`), anti-oscillation adaptive controller (`AdaptiveController`), dynamically tuning rendering, streaming, audio, and AI across 4 hardware tiers (`LOW`, `MEDIUM`, `HIGH`, `ULTRA`).
 - **Phase 17 (Editor & Developer Toolchain):** Data-driven level serialization pipeline (`LevelSerializer`), sample second level (`assets/levels/sector_omega.json`) loading into the live simulation without touching engine code, in-engine developer drawer overlay (`EditorDevOverlay`) toggled with `[~]`, CLI developer command interpreter (`CommandInterpreter`), live ECS hierarchy & component inspector, and HAOS runtime profiler.
