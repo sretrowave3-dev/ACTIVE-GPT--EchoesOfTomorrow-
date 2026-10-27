@@ -94,7 +94,7 @@ Echoes of Tomorrow (The Game)
 | **Streaming** | `src/streaming/`, `src/managers/` | 4 | ✅ **Complete (Phase 12)** | `StreamingManager`, `WorldPartition`, `SectorLoader`, `SectorUnloader`, `StreamingJob`. Player proximity-driven grid partition streaming and cell residency management. |
 | **Scene Runtime** | `src/scene/` | 8 | 🚧 **In Progress** | `SceneManager`, `Scene`, `CameraManager`, `Camera`, `Environment`, `SceneTransition`, `SceneState`. |
 | **Asset System** | `src/assets/` | 16 | 🚧 **In Progress** | `AssetService`, `AssetManager`, `AssetRegistry`, `AssetCache`, `AssetLoader`, `AssetDescriptor`, `AssetHandle`, format loaders. |
-| **Rendering** | `src/rendering/` | 2 | ✅ **Complete (Milestone A)** | `EnvironmentSetup` (PBR, lighting, fog, ACES tone mapping), `PBRTextureGenerator`. `RenderService` connects Three.js renderer as a pure downstream consumer of World and ECS entities. |
+| **Rendering & VFX** | `src/rendering/`, `src/framework/services/` | 5 | ✅ **Complete (Phase 22)** | `PBRMaterialFactory`, `EnvironmentSetup`, `LightingRig` (CSM sun, presets), `PostProcessStack` (ACES, bloom, vignette), `ParticleEmitter` (GPU instanced particles), `RenderService`. |
 | **Physics & Collision**| `src/physics/`, `src/systems/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 8)** | `PhysicsService`, `CollisionWorld`, `AABB`, `PhysicsSystem`, `ColliderComponent`, `RigidBodyComponent`. Static & dynamic collision resolution, gravity, player collision response. |
 | **Animation System**| `src/animation/`, `src/components/`, `src/systems/` | 36 | ✅ **Complete (Phase 9)** | `AnimationComponent`, `AnimationClip`, `SkeletonPose`, `AnimationPlayer`, `AnimationController`, `VATPlayer`, `AnimationSystem`. Skeletal keyframe sampling, cross-fading, and VAT playback. |
 | **Player & Input** | `src/player/`, `src/framework/services/` | 2 | ✅ **Complete (Milestone A)** | `PlayerController` (first-person WASD + pointer-lock mouse look + physical collision). `PlayerService` and `InputService` fully wired into frame pipeline. |
@@ -145,8 +145,8 @@ Phase 20: Security, Packaging & Deployment ────── [Completed]
    ▲
    └── [MILESTONE D: "Shippable" — ACHIEVED]
 Phase 21: Forge Engine Public SDK & Platform ──── [Completed]
-Phase 22: AAA Post-Processing & Lighting Pipeline ── [Current Target]
-Phase 23: Advanced Kinematic Character Controller
+Phase 22: AAA Post-Processing & Lighting Pipeline ── [Completed]
+Phase 23: Advanced Kinematic Character Controller ── [Current Target]
 Phase 24: Animation State Graph & 2D Blend Trees
 Phase 25: Networking, Prediction & Replication
 Phase 26: Professional Editor Suite & World Outliner
