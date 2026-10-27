@@ -1,6 +1,7 @@
 import { WorldManager } from '../../world/WorldManager.js';
 import { ECSService } from '../../ecs/ECSService.js';
 import { PhysicsService } from '../services/PhysicsService.js';
+import { AIService } from '../services/AIService.js';
 import { RenderService } from '../services/RenderService.js';
 import { InputService } from '../services/InputService.js';
 import { PlayerService } from '../services/PlayerService.js';
@@ -12,6 +13,7 @@ export const ServiceManifest = [
   WorldManager,
   ECSService,
   PhysicsService,
+  AIService,
   RenderService,
   InputService,
   PlayerService,

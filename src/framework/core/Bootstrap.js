@@ -36,6 +36,7 @@ export class Bootstrap {
     scheduler.addServiceToPhase('world', framework.serviceRegistry.get('world'));
     scheduler.addServiceToPhase('time', framework.serviceRegistry.get('time'));
     scheduler.addServiceToPhase('ecs', framework.serviceRegistry.get('ecs'));
+    scheduler.addServiceToPhase('ai', framework.serviceRegistry.get('ai'));
     scheduler.addServiceToPhase('gameplay', framework.serviceRegistry.get('player'));
     scheduler.addServiceToPhase('audio', framework.serviceRegistry.get('audio'));
     scheduler.addServiceToPhase('rendering', framework.serviceRegistry.get('render'));
