@@ -106,6 +106,7 @@ Echoes of Tomorrow (The Game)
 | **Persistence & Save System** | `src/persistence/`, `src/framework/services/` | 2 | ✅ **Complete (Phase 15)** | `SaveManager`, `SaveService`. Schema-versioned JSON state serialization, player & mission restoration, quick-save (F5), quick-load (F9), storage fallback. |
 | **HAOS (Adaptive Runtime)** | `src/haos/`, `src/framework/services/` | 6 | ✅ **Complete (Phase 16)** | `HardwareScanner`, `CapabilityAnalyzer`, `PerformanceProfile`, `FrameMonitor`, `AdaptiveController`, `HAOSService`. Autonomous hardware scanning, frame pacing analysis, and cross-subsystem quality scaling. |
 | **Editor & Toolchain** | `src/editor/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 17)** | `LevelSerializer`, `CommandInterpreter`, `EditorDevOverlay`, `EditorService`. Data-driven JSON level pipeline (`sector_omega.json`), in-engine CLI terminal (`~`), live ECS hierarchy & component inspector. |
+| **Content & Narrative** | `assets/levels/`, `src/gameplay/` | 3 | ✅ **Complete (Phase 18)** | `NarrativeManager`, multi-chapter campaign (Chapters 1–3), `sector_pinnacle.json`, Captain Arjun Rao audio datalogs and lore fragments. |
 
 ---
 
@@ -136,9 +137,9 @@ Phase 16: HAOS (Hardware-Adaptive Optimization) ─ [Completed]
 Phase 17: Editor & Developer Toolchain ────────── [Completed]
    ▲
    └── [MILESTONE C: "Content-Ready Pipeline" — ACHIEVED]
-Phase 18: Full Content Production (Echoes of Tomorrow) ─ [Current Target]
+Phase 18: Full Content Production (Echoes of Tomorrow) ─ [Completed]
 Phase 19: Networking & Multiplayer (Optional)
-Phase 20: Security, Packaging & Deployment
+Phase 20: Security, Packaging & Deployment ────── [Current Target]
    ▲
    └── [TARGET: MILESTONE D — "Shippable"]
 Phase 21: Forge Engine Extraction
