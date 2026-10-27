@@ -13,6 +13,7 @@ def run_all():
         os.path.join(test_dir, "physics", "test_physics.py"),
         os.path.join(test_dir, "physics", "test_character_movement.py"),
         os.path.join(test_dir, "animation", "test_animation.py"),
+        os.path.join(test_dir, "animation", "test_anim_graph.py"),
         os.path.join(test_dir, "audio", "test_audio.py"),
         os.path.join(test_dir, "ai", "test_ai.py"),
         os.path.join(test_dir, "streaming", "test_streaming.py"),
