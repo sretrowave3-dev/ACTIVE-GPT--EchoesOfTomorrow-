@@ -21,7 +21,8 @@ def run_all():
         os.path.join(test_dir, "haos", "test_haos.py"),
         os.path.join(test_dir, "editor", "test_editor.py"),
         os.path.join(test_dir, "content", "test_content.py"),
-        os.path.join(test_dir, "packaging", "test_packaging.py")
+        os.path.join(test_dir, "packaging", "test_packaging.py"),
+        os.path.join(test_dir, "forge", "test_forge.py")
     ]
     
     total = len(test_files)
