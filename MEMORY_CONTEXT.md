@@ -102,7 +102,7 @@ Echoes of Tomorrow (The Game)
 | **Audio** | `src/audio/`, `src/systems/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 10)** | `AudioService`, `AudioManager`, `SoundSynthesizer`, `AudioSystem`. Procedural sound synthesis (footsteps, impacts, cyber drone, chime), 3D spatial panner attenuation, listener tracking. |
 | **AI & Navigation** | `src/ai/`, `src/components/`, `src/systems/`, `src/framework/services/` | 6 | ✅ **Complete (Phase 11)** | `AIService`, `AISystem`, `BehaviorTree`, `Blackboard`, `AIComponent`, `NavigationComponent`. Vision perception, chase/patrol states, waypoint traversal. |
 | **Gameplay Framework** | `src/gameplay/`, `src/components/`, `src/systems/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 13)** | `GameplayService`, `MissionManager`, `InteractionSystem`, `InteractableComponent`. Story missions, objective tracking, proximity interaction triggers, Memory Fragment retrieval. |
-| **UI Framework** | `src/framework/services/` | 1 | 📋 **Stubbed** | `UIService` (HUD, in-game menus, diagnostics overlay). |
+| **UI Framework** | `src/ui/`, `src/framework/services/` | 2 | ✅ **Complete (Phase 14)** | `UIManager`, `UIService`. In-game HUD (integrity/stamina bars), dynamic interaction prompts, mission checklist, notification banners, pause menu overlay. |
 
 ---
 
@@ -125,8 +125,8 @@ Phase 10: Audio System ───────────────────
 Phase 11: AI & Navigation ────────────────── [Completed]
 Phase 12: Streaming & World Partition ────── [Completed]
 Phase 13: Gameplay Scripting Framework ───── [Completed]
-Phase 14: UI / UX Framework ──────────────── [Current Target]
-Phase 15: Persistence & Save System
+Phase 14: UI / UX Framework ──────────────── [Completed]
+Phase 15: Persistence & Save System ──────── [Current Target]
    ▲
    └── [CURRENT TARGET: MILESTONE B — "Vertical Slice"]
 Phase 16: HAOS (Hardware-Adaptive Optimization)
