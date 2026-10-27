@@ -2,13 +2,21 @@ import { Framework } from './Framework.js';
 import { ServiceManifest } from './ServiceManifest.js';
 
 export class Bootstrap {
+  /**
+   * Initializes and boots the complete Echo Engine runtime.
+   * @returns {Promise<Framework>}
+   */
   static async start() {
     const framework = new Framework();
+    if (typeof window !== 'undefined') {
+      window.__framework = framework;
+    }
+
     framework.registerServices(ServiceManifest);
 
     const scheduler = framework.frameScheduler;
 
-    // Phase order
+    // Phase order per Chapter 5
     scheduler.addPhase('events');
     scheduler.addPhase('input');
     scheduler.addPhase('streaming');
@@ -38,5 +46,7 @@ export class Bootstrap {
 
     framework.stateMachine.changeState('Playing');
     framework.startMainLoop();
+
+    return framework;
   }
 }

@@ -94,9 +94,9 @@ Echoes of Tomorrow (The Game)
 | **Streaming** | `src/streaming/` | 3 | 🚧 **In Progress** | `SectorLoader`, `SectorUnloader`, `StreamingJob`. |
 | **Scene Runtime** | `src/scene/` | 8 | 🚧 **In Progress** | `SceneManager`, `Scene`, `CameraManager`, `Camera`, `Environment`, `SceneTransition`, `SceneState`. |
 | **Asset System** | `src/assets/` | 16 | 🚧 **In Progress** | `AssetService`, `AssetManager`, `AssetRegistry`, `AssetCache`, `AssetLoader`, `AssetDescriptor`, `AssetHandle`, format loaders. |
-| **Rendering** | `src/rendering/` | 2 | 🚧 **In Progress** | `EnvironmentSetup` (PBR, lighting, fog, ACES tone mapping), `PBRTextureGenerator`. `RenderService` connects Three.js renderer. |
+| **Rendering** | `src/rendering/` | 2 | ✅ **Complete (Milestone A)** | `EnvironmentSetup` (PBR, lighting, fog, ACES tone mapping), `PBRTextureGenerator`. `RenderService` connects Three.js renderer as a pure downstream consumer of World and ECS entities. |
 | **Animation System**| `src/animation/` | 31 | 🚧 **In Progress** | Animation clips, compression, baking, events, graph, blend trees, skeleton, and VAT (Vertex Animation Texture). |
-| **Player & Input** | `src/player/`, `src/framework/services/` | 2 | 🚧 **In Progress** | `PlayerController` (first-person WASD + pointer-lock mouse look). `PlayerService` and `InputService` stubbed. |
+| **Player & Input** | `src/player/`, `src/framework/services/` | 2 | ✅ **Complete (Milestone A)** | `PlayerController` (first-person WASD + pointer-lock mouse look). `PlayerService` and `InputService` fully wired into frame pipeline. |
 | **Diagnostics** | `src/framework/diagnostics/` | 2 | ✅ **Complete** | `DiagnosticsService`, `PerformanceCounters` (FPS, frame times, memory metrics). |
 | **Audio** | `src/framework/services/` | 1 | 📋 **Stubbed** | `AudioService` (stubbed, ready for WebAudio / spatial audio implementation). |
 | **UI Framework** | `src/framework/services/` | 1 | 📋 **Stubbed** | `UIService` (HUD, in-game menus, diagnostics overlay). |
@@ -108,14 +108,14 @@ Echoes of Tomorrow (The Game)
 ```text
 Phase 0: Tooling & Engineering Standards ─── [Completed]
 Phase 1: Framework Core & Diagnostics ────── [Completed]
-Phase 2: ECS Core ────────────────────────── [In Progress / Functional]
-Phase 3: World System & Spatial Pipeline ─── [In Progress / Functional]
-Phase 4: Scene Runtime (D013) ────────────── [In Progress / Functional]
-Phase 5: Asset System & Loaders ──────────── [In Progress / Functional]
-Phase 6: Minimal Rendering (Consumer) ────── [In Progress]
-Phase 7: Input & Player Service ──────────── [In Progress]
+Phase 2: ECS Core ────────────────────────── [Completed for Milestone A]
+Phase 3: World System & Spatial Pipeline ─── [Completed for Milestone A]
+Phase 4: Scene Runtime (D013) ────────────── [Completed for Milestone A]
+Phase 5: Asset System & Loaders ──────────── [Completed for Milestone A]
+Phase 6: Minimal Rendering (Consumer) ────── [Completed for Milestone A]
+Phase 7: Input & Player Service ──────────── [Completed for Milestone A]
    ▲
-   └── [CURRENT TARGET: MILESTONE A — "Grey-box Playable"]
+   └── [MILESTONE A: "Grey-box Playable" — ACHIEVED]
 Phase 8: Physics & Collision
 Phase 9: Animation & VAT Runtime
 Phase 10: Audio System
@@ -125,7 +125,7 @@ Phase 13: Gameplay Scripting Framework
 Phase 14: UI / UX Framework
 Phase 15: Persistence & Save System
    ▲
-   └── [TARGET: MILESTONE B — "Vertical Slice"]
+   └── [CURRENT TARGET: MILESTONE B — "Vertical Slice"]
 Phase 16: HAOS (Hardware-Adaptive Optimization)
 Phase 17: Editor & Developer Toolchain
    ▲
@@ -138,12 +138,18 @@ Phase 20: Security, Packaging & Deployment
 Phase 21: Forge Engine Extraction
 ```
 
-### Immediate Active Milestone: Milestone A ("Grey-Box Playable")
-**Definition of Done for Milestone A:**
-1. `InputService` initialized and capturing keyboard/mouse events via clean abstraction.
-2. `PlayerService` wired to `PlayerController` and responding to ticks from `FrameScheduler`.
-3. `RenderService` consuming entities from `WorldManager` and `ECSService` (`TransformComponent` + `MeshComponent`), rendering synchronized Three.js meshes.
-4. Player can spawn into a grey-box sector, look around in first-person with pointer lock, and navigate smoothly with WASD at stable 60 FPS.
+### Active Milestone: Milestone B ("Vertical Slice")
+**Milestone A Status:** ✅ **Delivered & Verified**
+- `InputService` capturing keyboard, mouse look, and pointer-lock with action bindings.
+- `PlayerService` coordinating `PlayerController`, camera orientation, and ECS entity synchronization.
+- `RenderService` acting as downstream consumer rendering ECS entities and grey-box PBR arena.
+- `index.html` configured with ES module import maps and real-time HUD telemetry.
+- Automated dependency validation script (`test/validate_codebase.py`) passing with 0 broken imports and 0 conflict markers.
+
+**Immediate Next Goals for Milestone B:**
+1. **Phase 8 (Physics & Collision):** Basic bounding boxes / collision detection for player against arena walls and props.
+2. **Phase 9 (Animation System):** Connecting skeletal playback and VAT runtime to ECS entities.
+3. **Phase 10 (Audio System):** WebAudio spatial audio service for footstep and ambient sound effects.
 
 ---
 

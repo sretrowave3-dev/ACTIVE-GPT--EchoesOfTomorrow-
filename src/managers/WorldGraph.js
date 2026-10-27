@@ -1,6 +1,6 @@
-import { RegionID } from '../RegionID.js';
-import { SectorID } from '../SectorID.js';
-import { CellID } from '../CellID.js';
+import { RegionID } from '../world/RegionID.js';
+import { SectorID } from '../world/SectorID.js';
+import { CellID } from '../world/CellID.js';
 import { Region } from '../hierarchy/Region.js';
 import { Sector } from '../hierarchy/Sector.js';
 import { Cell } from '../hierarchy/Cell.js';

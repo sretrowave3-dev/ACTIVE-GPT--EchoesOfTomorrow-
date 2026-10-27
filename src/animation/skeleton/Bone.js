@@ -39,7 +39,7 @@
 // Imports: Central Math Library
 // ============================================================
 
-import { Matrix4 } from '../../../framework/math/Matrix4.js';
+import { Matrix4 } from '../../framework/math/Matrix4.js';
 
 // ============================================================
 // Bone Class
