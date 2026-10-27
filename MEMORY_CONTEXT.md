@@ -103,6 +103,7 @@ Echoes of Tomorrow (The Game)
 | **AI & Navigation** | `src/ai/`, `src/components/`, `src/systems/`, `src/framework/services/` | 6 | ✅ **Complete (Phase 11)** | `AIService`, `AISystem`, `BehaviorTree`, `Blackboard`, `AIComponent`, `NavigationComponent`. Vision perception, chase/patrol states, waypoint traversal. |
 | **Gameplay Framework** | `src/gameplay/`, `src/components/`, `src/systems/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 13)** | `GameplayService`, `MissionManager`, `InteractionSystem`, `InteractableComponent`. Story missions, objective tracking, proximity interaction triggers, Memory Fragment retrieval. |
 | **UI Framework** | `src/ui/`, `src/framework/services/` | 2 | ✅ **Complete (Phase 14)** | `UIManager`, `UIService`. In-game HUD (integrity/stamina bars), dynamic interaction prompts, mission checklist, notification banners, pause menu overlay. |
+| **Persistence & Save System** | `src/persistence/`, `src/framework/services/` | 2 | ✅ **Complete (Phase 15)** | `SaveManager`, `SaveService`. Schema-versioned JSON state serialization, player & mission restoration, quick-save (F5), quick-load (F9), storage fallback. |
 
 ---
 
@@ -126,10 +127,10 @@ Phase 11: AI & Navigation ──────────────────
 Phase 12: Streaming & World Partition ────── [Completed]
 Phase 13: Gameplay Scripting Framework ───── [Completed]
 Phase 14: UI / UX Framework ──────────────── [Completed]
-Phase 15: Persistence & Save System ──────── [Current Target]
+Phase 15: Persistence & Save System ──────── [Completed]
    ▲
-   └── [CURRENT TARGET: MILESTONE B — "Vertical Slice"]
-Phase 16: HAOS (Hardware-Adaptive Optimization)
+   └── [MILESTONE B: "Vertical Slice" — ACHIEVED]
+Phase 16: HAOS (Hardware-Adaptive Optimization) ─ [Current Target]
 Phase 17: Editor & Developer Toolchain
    ▲
    └── [TARGET: MILESTONE C — "Content-Ready Pipeline"]
@@ -141,18 +142,17 @@ Phase 20: Security, Packaging & Deployment
 Phase 21: Forge Engine Extraction
 ```
 
-### Active Milestone: Milestone B ("Vertical Slice")
-**Milestone A Status:** ✅ **Delivered & Verified**
-- `InputService` capturing keyboard, mouse look, and pointer-lock with action bindings.
-- `PlayerService` coordinating `PlayerController`, camera orientation, and ECS entity synchronization.
-- `RenderService` acting as downstream consumer rendering ECS entities and grey-box PBR arena.
-- `index.html` configured with ES module import maps and real-time HUD telemetry.
-- Automated dependency validation script (`test/validate_codebase.py`) passing with 0 broken imports and 0 conflict markers.
-
-**Immediate Next Goals for Milestone B:**
-1. **Phase 8 (Physics & Collision):** Basic bounding boxes / collision detection for player against arena walls and props.
-2. **Phase 9 (Animation System):** Connecting skeletal playback and VAT runtime to ECS entities.
-3. **Phase 10 (Audio System):** WebAudio spatial audio service for footstep and ambient sound effects.
+### Active Milestone: Milestone C ("Content-Ready Pipeline")
+**Milestone B Status:** ✅ **Delivered, Integrated & Verified**
+- **Phase 8 (Physics & Collision):** AABB bounding boxes, static arena collision against boundaries & pillars, dynamic collision response, gravity.
+- **Phase 9 (Animation System):** Skeletal pose evaluation, LERP keyframe interpolation, cross-fading, VAT frame playback.
+- **Phase 10 (Audio System):** Procedural Web Audio API sound synthesis (footsteps, impacts, drone, chime, click) with 3D HRTF spatial panner attenuation.
+- **Phase 11 (AI & Navigation):** Blackboard, Behavior Trees (Sequence/Selector), vision perception radius, autonomous reconnaissance drone patrolling & chasing player.
+- **Phase 12 (Streaming & World Partition):** Proximity-based cell residency streaming, dynamic sector loading/unloading.
+- **Phase 13 (Gameplay Scripting Framework):** Mission manager, story objectives ("Survey Sector Perimeter", "Recover Memory Fragment #01"), interactable terminal triggers.
+- **Phase 14 (UI / UX Framework):** Cybernetic HUD overlay with health and stamina bars, mission checklist tracker, dynamic `[E]` interaction prompt, pause menu dialog.
+- **Phase 15 (Persistence & Save System):** Schema-versioned JSON state serialization, quick-save (`F5`), quick-load (`F9`), player vitals/position restoration, mission objective restoration.
+- **Automated Validation:** 204 JavaScript files, 227 import statements, 9/9 subsystem test suites passing.
 
 ---
 
