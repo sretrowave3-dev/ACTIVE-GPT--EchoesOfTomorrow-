@@ -91,7 +91,7 @@ Echoes of Tomorrow (The Game)
 | **World Managers** | `src/managers/` | 5 | 🚧 **In Progress** | `WorldGraph`, `EntityManager`, `SpatialManager`, `StreamingManager`, `QueryManager`. |
 | **World Registries**| `src/registries/` | 4 | 🚧 **In Progress** | `RegionRegistry`, `SectorRegistry`, `CellRegistry`, `EntityRegistry` (O(1) Map stores). |
 | **Spatial Queries** | `src/queries/` | 3 | 🚧 **In Progress** | `RadiusQuery`, `CellQuery`, `NearestQuery`. |
-| **Streaming** | `src/streaming/` | 3 | 🚧 **In Progress** | `SectorLoader`, `SectorUnloader`, `StreamingJob`. |
+| **Streaming** | `src/streaming/`, `src/managers/` | 4 | ✅ **Complete (Phase 12)** | `StreamingManager`, `WorldPartition`, `SectorLoader`, `SectorUnloader`, `StreamingJob`. Player proximity-driven grid partition streaming and cell residency management. |
 | **Scene Runtime** | `src/scene/` | 8 | 🚧 **In Progress** | `SceneManager`, `Scene`, `CameraManager`, `Camera`, `Environment`, `SceneTransition`, `SceneState`. |
 | **Asset System** | `src/assets/` | 16 | 🚧 **In Progress** | `AssetService`, `AssetManager`, `AssetRegistry`, `AssetCache`, `AssetLoader`, `AssetDescriptor`, `AssetHandle`, format loaders. |
 | **Rendering** | `src/rendering/` | 2 | ✅ **Complete (Milestone A)** | `EnvironmentSetup` (PBR, lighting, fog, ACES tone mapping), `PBRTextureGenerator`. `RenderService` connects Three.js renderer as a pure downstream consumer of World and ECS entities. |
@@ -122,8 +122,8 @@ Phase 8: Physics & Collision ─────────────── [Comp
 Phase 9: Animation & VAT Runtime ─────────── [Completed]
 Phase 10: Audio System ───────────────────── [Completed]
 Phase 11: AI & Navigation ────────────────── [Completed]
-Phase 12: Streaming & World Partition ────── [Current Target]
-Phase 13: Gameplay Scripting Framework
+Phase 12: Streaming & World Partition ────── [Completed]
+Phase 13: Gameplay Scripting Framework ───── [Current Target]
 Phase 14: UI / UX Framework
 Phase 15: Persistence & Save System
    ▲

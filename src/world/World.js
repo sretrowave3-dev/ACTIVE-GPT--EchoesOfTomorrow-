@@ -1,3 +1,4 @@
+// src/world/World.js
 import { RegionRegistry } from '../registries/RegionRegistry.js';
 import { SectorRegistry } from '../registries/SectorRegistry.js';
 import { CellRegistry } from '../registries/CellRegistry.js';
@@ -79,7 +80,12 @@ export class World {
     return this.queryManager.queryCell(cellId, out);
   }
 
-  update(delta) {
-    this.streamingManager.update(delta);
+  /**
+   * Update world systems and spatial partition streaming.
+   * @param {number} delta
+   * @param {{ x: number, y: number, z: number }|null} [playerPos]
+   */
+  update(delta, playerPos = null) {
+    this.streamingManager.update(delta, playerPos);
   }
 }

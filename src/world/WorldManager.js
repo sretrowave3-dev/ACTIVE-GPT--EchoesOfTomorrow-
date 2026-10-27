@@ -1,9 +1,14 @@
+// src/world/WorldManager.js
 import { Service } from '../framework/services/Service.js';
 import { World } from './World.js';
 
 export class WorldManager extends Service {
+  /**
+   * @param {import('../framework/core/Framework.js').Framework} framework
+   */
   constructor(framework) {
     super('world', framework);
+    /** @type {World|null} */
     this.world = null;
   }
 
@@ -13,7 +18,9 @@ export class WorldManager extends Service {
 
   update(delta) {
     if (this.world) {
-      this.world.update(delta);
+      const playerService = this.framework.serviceRegistry.get('player');
+      const playerPos = playerService ? playerService.getPlayerPosition() : null;
+      this.world.update(delta, playerPos);
     }
   }
 

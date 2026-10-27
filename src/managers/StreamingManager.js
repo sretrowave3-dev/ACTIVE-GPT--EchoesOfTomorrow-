@@ -1,18 +1,21 @@
 import { StreamingJob } from '../streaming/StreamingJob.js';
 import { SectorLoader } from '../streaming/SectorLoader.js';
 import { SectorUnloader } from '../streaming/SectorUnloader.js';
+import { WorldPartition } from '../streaming/WorldPartition.js';
 
 /**
- * Coordinates sector streaming using job objects.
+ * Coordinates sector and cell streaming using job objects and spatial partitioning.
+ * Conforms to EDD Chapter 14 (Streaming System & World Partition).
  */
 export class StreamingManager {
   /**
-   * @param {import('../World.js').World} world
+   * @param {import('../world/World.js').World} world
    */
   constructor(world) {
     this.world = world;
     /** @type {StreamingJob[]} */
     this.pendingJobs = [];
+    this.partition = new WorldPartition(50, 1);
   }
 
   /**
@@ -26,7 +29,7 @@ export class StreamingManager {
 
   /**
    * Schedule an unload job for a sector.
-   * @param {import('../SectorID.js').SectorID} sectorId
+   * @param {import('../world/SectorID.js').SectorID} sectorId
    */
   unloadSector(sectorId) {
     const job = new SectorUnloader(sectorId);
@@ -34,14 +37,21 @@ export class StreamingManager {
   }
 
   /**
-   * Process all pending jobs synchronously each frame.
-   * In future, this will become async/incremental.
+   * Process all pending jobs and partition updates each frame.
    * @param {number} delta
+   * @param {{ x: number, y: number, z: number }} [playerPos]
    */
-  update(delta) {
+  update(delta, playerPos = null) {
     while (this.pendingJobs.length > 0) {
       const job = this.pendingJobs.shift();
       job.execute(this.world);
+    }
+
+    if (playerPos) {
+      const result = this.partition.update(playerPos, this.world);
+      if (result.loaded.length > 0 && this.world.eventBus) {
+        this.world.eventBus.publish('streaming:cells_loaded', this, { cells: result.loaded });
+      }
     }
   }
 }
