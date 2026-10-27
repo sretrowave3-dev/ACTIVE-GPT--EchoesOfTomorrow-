@@ -104,6 +104,7 @@ Echoes of Tomorrow (The Game)
 | **Gameplay Framework** | `src/gameplay/`, `src/components/`, `src/systems/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 13)** | `GameplayService`, `MissionManager`, `InteractionSystem`, `InteractableComponent`. Story missions, objective tracking, proximity interaction triggers, Memory Fragment retrieval. |
 | **UI Framework** | `src/ui/`, `src/framework/services/` | 2 | ✅ **Complete (Phase 14)** | `UIManager`, `UIService`. In-game HUD (integrity/stamina bars), dynamic interaction prompts, mission checklist, notification banners, pause menu overlay. |
 | **Persistence & Save System** | `src/persistence/`, `src/framework/services/` | 2 | ✅ **Complete (Phase 15)** | `SaveManager`, `SaveService`. Schema-versioned JSON state serialization, player & mission restoration, quick-save (F5), quick-load (F9), storage fallback. |
+| **HAOS (Adaptive Runtime)** | `src/haos/`, `src/framework/services/` | 6 | ✅ **Complete (Phase 16)** | `HardwareScanner`, `CapabilityAnalyzer`, `PerformanceProfile`, `FrameMonitor`, `AdaptiveController`, `HAOSService`. Autonomous hardware scanning, frame pacing analysis, and cross-subsystem quality scaling. |
 
 ---
 
@@ -130,8 +131,8 @@ Phase 14: UI / UX Framework ──────────────── [Co
 Phase 15: Persistence & Save System ──────── [Completed]
    ▲
    └── [MILESTONE B: "Vertical Slice" — ACHIEVED]
-Phase 16: HAOS (Hardware-Adaptive Optimization) ─ [Current Target]
-Phase 17: Editor & Developer Toolchain
+Phase 16: HAOS (Hardware-Adaptive Optimization) ─ [Completed]
+Phase 17: Editor & Developer Toolchain ────────── [Current Target]
    ▲
    └── [TARGET: MILESTONE C — "Content-Ready Pipeline"]
 Phase 18: Full Content Production (Echoes of Tomorrow)
