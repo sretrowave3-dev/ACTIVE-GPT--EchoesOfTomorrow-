@@ -96,7 +96,7 @@ Echoes of Tomorrow (The Game)
 | **Asset System** | `src/assets/` | 16 | 🚧 **In Progress** | `AssetService`, `AssetManager`, `AssetRegistry`, `AssetCache`, `AssetLoader`, `AssetDescriptor`, `AssetHandle`, format loaders. |
 | **Rendering & VFX** | `src/rendering/`, `src/framework/services/` | 5 | ✅ **Complete (Phase 22)** | `PBRMaterialFactory`, `EnvironmentSetup`, `LightingRig` (CSM sun, presets), `PostProcessStack` (ACES, bloom, vignette), `ParticleEmitter` (GPU instanced particles), `RenderService`. |
 | **Physics & Controller**| `src/physics/`, `src/player/`, `src/framework/services/` | 6 | ✅ **Complete (Phase 23)** | `Raycast` 3D intersection, `CollisionWorld`, `AABB`, `PhysicsSystem`, kinematic `PlayerController` (jump buffering, coyote time, air control, sprint-to-slide). |
-| **Animation System**| `src/animation/`, `src/components/`, `src/systems/` | 36 | ✅ **Complete (Phase 9)** | `AnimationComponent`, `AnimationClip`, `SkeletonPose`, `AnimationPlayer`, `AnimationController`, `VATPlayer`, `AnimationSystem`. Skeletal keyframe sampling, cross-fading, and VAT playback. |
+| **Animation System**| `src/animation/`, `src/components/`, `src/systems/` | 41 | ✅ **Complete (Phase 24)** | `AnimationComponent`, `AnimationClip`, `SkeletonPose`, `AnimationPlayer`, `AnimationController`, `VATPlayer`, `AnimationSystem`, `AnimationGraph`, `AnimationState`, `AnimationTransition`, `BlendTree`, `GraphNode`. Skeletal keyframe sampling, cross-fading, VAT playback, state machine graph evaluation, 1D/2D blend spaces. |
 | **Player & Input** | `src/player/`, `src/framework/services/` | 2 | ✅ **Complete (Milestone A)** | `PlayerController` (first-person WASD + pointer-lock mouse look + physical collision). `PlayerService` and `InputService` fully wired into frame pipeline. |
 | **Diagnostics** | `src/framework/diagnostics/` | 2 | ✅ **Complete** | `DiagnosticsService`, `PerformanceCounters` (FPS, frame times, memory metrics). |
 | **Audio** | `src/audio/`, `src/systems/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 10)** | `AudioService`, `AudioManager`, `SoundSynthesizer`, `AudioSystem`. Procedural sound synthesis (footsteps, impacts, cyber drone, chime), 3D spatial panner attenuation, listener tracking. |
@@ -147,14 +147,20 @@ Phase 20: Security, Packaging & Deployment ────── [Completed]
 Phase 21: Forge Engine Public SDK & Platform ──── [Completed]
 Phase 22: AAA Post-Processing & Lighting Pipeline ── [Completed]
 Phase 23: Advanced Kinematic Character Controller ── [Completed]
-Phase 24: Animation State Graph & 2D Blend Trees ── [Current Target]
-Phase 25: Networking, Prediction & Replication
+Phase 24: Animation State Graph & 2D Blend Trees ── [Completed]
+Phase 25: Networking, Prediction & Replication ────── [Current Target]
 Phase 26: Professional Editor Suite & World Outliner
    ▲
    └── [TARGET: MILESTONE E — "AAA Engine Platform"]
 ```
 
 ### Active Milestone: Milestone E ("AAA Engine Platform")
+**Milestone E Progress:** 🚧 **In Active Implementation**
+- **Phase 21 (Forge Platform SDK):** `ForgeEngine` unified public facade, `ForgeApplication` lifecycle base class, `ForgePlugin` modular architecture, and public SDK barrel exports.
+- **Phase 22 (AAA Rendering Pipeline):** ACES tone-mapping, bloom, vignette, chromatic aberration `PostProcessStack`, multi-preset `LightingRig` with volumetric fog emulation, and 1,000+ GPU instanced particle simulation (`ParticleEmitter`).
+- **Phase 23 (Advanced Kinematic Character Controller & Surface Physics):** 3D Raycasting against collision world surfaces, jump input buffering ($0.12\text{s}$), coyote time buffer ($0.15\text{s}$), mid-air directional momentum control, and sprint-to-crouch kinetic slide mechanics.
+- **Phase 24 (Animation State Graph & 2D Blend Trees):** Full hierarchical state machine (`AnimationState`, `AnimationTransition`), dynamic condition evaluation, 1D and 2D blend spaces (`BlendTree`) with barycentric/Euclidean locomotion sampling, and cross-state blending.
+- **Next Target (Phase 25):** Unreal Engine NetDriver-grade networking: `NetworkDriver` (virtual transport with simulated latency/jitter), `SnapshotInterpolator` (remote entity smoothing buffer), `ClientPrediction` (client prediction and server reconciliation), and `NetworkReplicator` (authoritative delta compression & RPC dispatching).
 **Milestone D Status:** ✅ **Delivered, Packaged & Cryptographically Verified**
 - **Phase 18 (Full Content Production):** Multi-chapter narrative campaign (Chapters 1–3), `NarrativeManager` with Captain Arjun Rao lore audio datalogs, Sector Pinnacle climax level (`sector_pinnacle.json`).
 - **Phase 20 (Security, Packaging & Deployment):** Virtual File System (`VirtualFileSystem`), cryptographic SHA-256 integrity verifier (`IntegrityVerifier`), manifest generator (`PackageManifest`), distribution packaging pipeline (`scripts/build_distribution.py`), and standalone production distribution in `dist/` with 100% cryptographic file integrity verified.
