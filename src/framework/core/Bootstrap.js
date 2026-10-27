@@ -42,6 +42,7 @@ export class Bootstrap {
     scheduler.addServiceToPhase('audio', framework.serviceRegistry.get('audio'));
     scheduler.addServiceToPhase('rendering', framework.serviceRegistry.get('render'));
     scheduler.addServiceToPhase('ui', framework.serviceRegistry.get('ui'));
+    scheduler.addServiceToPhase('diagnostics', framework.serviceRegistry.get('haos'));
 
     await framework.serviceRegistry.initializeAll();
     await framework.serviceRegistry.startAll();

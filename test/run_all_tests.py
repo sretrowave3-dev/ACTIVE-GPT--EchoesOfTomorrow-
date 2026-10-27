@@ -17,7 +17,8 @@ def run_all():
         os.path.join(test_dir, "streaming", "test_streaming.py"),
         os.path.join(test_dir, "gameplay", "test_gameplay.py"),
         os.path.join(test_dir, "ui", "test_ui.py"),
-        os.path.join(test_dir, "persistence", "test_save.py")
+        os.path.join(test_dir, "persistence", "test_save.py"),
+        os.path.join(test_dir, "haos", "test_haos.py")
     ]
     
     total = len(test_files)
