@@ -7,6 +7,9 @@ import {
   applyAtmosphere,
   PBRMaterialFactory
 } from '../../rendering/EnvironmentSetup.js';
+import { PostProcessStack } from '../../rendering/postprocessing/PostProcessStack.js';
+import { LightingRig } from '../../rendering/lighting/LightingRig.js';
+import { ParticleEmitter } from '../../rendering/vfx/ParticleEmitter.js';
 
 /**
  * RenderService is a downstream visualization consumer of the World System and ECS.
@@ -32,6 +35,13 @@ export class RenderService extends Service {
     this._entityMeshes = new Map();
     /** @type {Function|null} @private */
     this._resizeHandler = null;
+
+    /** @type {PostProcessStack|null} */
+    this.postProcess = null;
+    /** @type {LightingRig|null} */
+    this.lightingRig = null;
+    /** @type {ParticleEmitter|null} */
+    this.particles = null;
   }
 
   /** @override */
@@ -47,8 +57,10 @@ export class RenderService extends Service {
     this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 500);
     this.camera.position.set(0, 1.7, 5);
 
-    applyAtmosphere(this.scene);
-    createLighting(this.scene);
+    // ── AAA Lighting Rig & Post-Processing Stack ───
+    this.lightingRig = new LightingRig(this.scene);
+    this.postProcess = new PostProcessStack(this.renderer, this.scene, this.camera);
+    this.particles = new ParticleEmitter(this.scene, 800);
 
     this._materialFactory = new PBRMaterialFactory();
 
@@ -187,7 +199,36 @@ export class RenderService extends Service {
   update(delta) {
     if (this.renderer && this.scene && this.camera) {
       this._syncEcsEntities();
-      this.renderer.render(this.scene, this.camera);
+      if (this.particles) {
+        this.particles.update(delta);
+      }
+      if (this.postProcess) {
+        this.postProcess.render(delta);
+      } else {
+        this.renderer.render(this.scene, this.camera);
+      }
+    }
+  }
+
+  /**
+   * Spawns an instant burst of GPU instanced particles.
+   * @param {number} count
+   * @param {{ x: number, y: number, z: number }} origin
+   * @param {number} [speed=6.0]
+   */
+  spawnParticleBurst(count, origin, speed = 6.0) {
+    if (this.particles) {
+      this.particles.burst(count, origin, speed);
+    }
+  }
+
+  /**
+   * Switches the active atmospheric lighting preset.
+   * @param {'cyberpunk_neon'|'monsoon_dusk'|'overcast_industrial'|'tactical_night'} name
+   */
+  setAtmospherePreset(name) {
+    if (this.lightingRig) {
+      this.lightingRig.applyPreset(name);
     }
   }
 
@@ -196,6 +237,16 @@ export class RenderService extends Service {
     if (this._resizeHandler && typeof window !== 'undefined') {
       window.removeEventListener('resize', this._resizeHandler);
     }
+    if (this.particles) {
+      this.particles.dispose();
+      this.particles = null;
+    }
+    if (this.lightingRig) {
+      this.lightingRig.dispose();
+      this.lightingRig = null;
+    }
+    this.postProcess = null;
+
     for (const [, mesh] of this._entityMeshes.entries()) {
       if (this.scene) this.scene.remove(mesh);
       if (mesh.geometry) mesh.geometry.dispose();

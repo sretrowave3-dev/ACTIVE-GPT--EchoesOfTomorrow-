@@ -1,24 +1,36 @@
 // src/editor/EditorDevOverlay.js
 import { CommandInterpreter } from './CommandInterpreter.js';
 import { LevelSerializer } from './LevelSerializer.js';
+import { GizmoMode } from './TransformGizmo.js';
 
 /**
  * EditorDevOverlay creates an in-engine developer drawer containing
- * the Entity Hierarchy, Component Inspector, CLI Command Console,
- * and HAOS Runtime Profiler.
+ * the World Outliner, Details Inspector, PIE (Play In Editor) controls,
+ * CLI Command Console, and HAOS Runtime Profiler.
  * Conforms to EDD Chapter 20 (Editor Architecture & Developer Toolchain).
  */
 export class EditorDevOverlay {
   /**
    * @param {import('../framework/core/Framework.js').Framework} framework
+   * @param {Object} [tools]
+   * @param {import('./WorldOutliner.js').WorldOutliner} [tools.outliner]
+   * @param {import('./DetailsInspector.js').DetailsInspector} [tools.inspector]
+   * @param {import('./TransformGizmo.js').TransformGizmo} [tools.gizmo]
+   * @param {import('./PlayInEditor.js').PlayInEditor} [tools.pie]
    */
-  constructor(framework) {
+  constructor(framework, tools = {}) {
     this.framework = framework;
+    this.outliner = tools.outliner || null;
+    this.inspector = tools.inspector || null;
+    this.gizmo = tools.gizmo || null;
+    this.pie = tools.pie || null;
+
     this.interpreter = new CommandInterpreter(framework);
     this.isVisible = false;
     this._mounted = false;
     this._elements = {};
     this.currentTab = 'console';
+    this.selectedEntityId = null;
   }
 
   /**
@@ -46,8 +58,8 @@ export class EditorDevOverlay {
       #echo-editor-drawer {
         position: fixed;
         bottom: 0; left: 0;
-        width: 100vw; height: 380px;
-        background: rgba(8, 12, 20, 0.95);
+        width: 100vw; height: 420px;
+        background: rgba(8, 12, 20, 0.96);
         border-top: 2px solid #00ffcc;
         color: #ccd;
         font-family: 'Courier New', Courier, monospace;
@@ -59,34 +71,53 @@ export class EditorDevOverlay {
         box-shadow: 0 -5px 25px rgba(0, 255, 204, 0.3);
       }
 
+      .echo-editor-toolbar {
+        display: flex;
+        align-items: center;
+        background: rgba(4, 8, 14, 0.95);
+        border-bottom: 1px solid rgba(0, 255, 204, 0.3);
+        padding: 4px 12px;
+        gap: 8px;
+      }
+
       .echo-editor-tabs {
         display: flex;
         background: rgba(0, 20, 30, 0.8);
         border-bottom: 1px solid rgba(0, 255, 204, 0.2);
       }
 
-      .echo-editor-tab-btn {
-        padding: 8px 20px;
+      .echo-editor-tab-btn, .echo-pie-btn, .echo-gizmo-btn {
+        padding: 6px 14px;
         background: transparent;
-        border: none;
-        border-right: 1px solid rgba(0, 255, 204, 0.2);
+        border: 1px solid rgba(0, 255, 204, 0.2);
         color: #88a;
         cursor: pointer;
         text-transform: uppercase;
         font-size: 11px;
-        letter-spacing: 1.5px;
-        transition: all 0.2s ease;
+        letter-spacing: 1px;
+        transition: all 0.15s ease;
+        border-radius: 2px;
       }
 
-      .echo-editor-tab-btn:hover {
+      .echo-editor-tab-btn:hover, .echo-pie-btn:hover, .echo-gizmo-btn:hover {
         background: rgba(0, 255, 204, 0.15);
         color: #fff;
       }
 
-      .echo-editor-tab-btn.active {
+      .echo-editor-tab-btn.active, .echo-gizmo-btn.active {
         background: #00ffcc;
         color: #050a10;
         font-weight: bold;
+      }
+
+      .echo-pie-status {
+        padding: 4px 8px;
+        background: rgba(0, 255, 204, 0.1);
+        border: 1px solid #00ffcc;
+        color: #00ffcc;
+        font-weight: bold;
+        font-size: 11px;
+        border-radius: 2px;
       }
 
       .echo-editor-body {
@@ -126,8 +157,7 @@ export class EditorDevOverlay {
         gap: 8px;
       }
 
-      #echo-console-input {
-        flex: 1;
+      #echo-console-input, #echo-outliner-search {
         background: rgba(0, 0, 0, 0.6);
         border: 1px solid rgba(0, 255, 204, 0.4);
         color: #fff;
@@ -136,7 +166,7 @@ export class EditorDevOverlay {
         font-size: 12px;
       }
 
-      #echo-console-input:focus {
+      #echo-console-input:focus, #echo-outliner-search:focus {
         outline: none;
         border-color: #00ffcc;
         box-shadow: 0 0 8px rgba(0, 255, 204, 0.4);
@@ -144,10 +174,12 @@ export class EditorDevOverlay {
 
       /* Hierarchy View */
       .echo-hierarchy-pane {
-        width: 250px;
+        width: 300px;
         border-right: 1px solid rgba(0, 255, 204, 0.2);
         overflow-y: auto;
         padding-right: 12px;
+        display: flex;
+        flex-direction: column;
       }
 
       .echo-inspector-pane {
@@ -157,13 +189,41 @@ export class EditorDevOverlay {
       }
 
       .echo-entity-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 4px 8px;
         cursor: pointer;
         border-radius: 2px;
         margin-bottom: 2px;
+        font-size: 11px;
       }
       .echo-entity-row:hover { background: rgba(0, 255, 204, 0.1); }
       .echo-entity-row.selected { background: #00ffcc; color: #000; font-weight: bold; }
+
+      .echo-row-actions {
+        display: flex;
+        gap: 4px;
+      }
+
+      .echo-icon-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 11px;
+        opacity: 0.7;
+      }
+      .echo-icon-btn:hover { opacity: 1.0; }
+
+      .echo-prop-input {
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(0, 255, 204, 0.3);
+        color: #00ffcc;
+        padding: 2px 6px;
+        font-family: inherit;
+        font-size: 11px;
+        width: 60px;
+      }
 
       /* Profiler View */
       .echo-profiler-grid {
@@ -199,14 +259,38 @@ export class EditorDevOverlay {
     const drawer = document.createElement('div');
     drawer.id = 'echo-editor-drawer';
     drawer.innerHTML = `
+      <!-- Top Control Toolbar (Unreal PIE & Gizmo bar) -->
+      <div class="echo-editor-toolbar">
+        <span style="font-weight:bold; color:#00ffcc; margin-right:8px;">ECHO PRO EDITOR</span>
+        
+        <!-- PIE Controls -->
+        <button id="btn-pie-play" class="echo-pie-btn" style="color:#00ff88;" title="Play Simulation">▶ Play</button>
+        <button id="btn-pie-pause" class="echo-pie-btn" style="color:#ffcc00;" title="Pause Simulation">⏸ Pause</button>
+        <button id="btn-pie-step" class="echo-pie-btn" style="color:#00ccff;" title="Step Single Frame">⏭ Step</button>
+        <button id="btn-pie-eject" class="echo-pie-btn" style="color:#ff8800;" title="Eject / Possess Player (F8)">⏏ Eject</button>
+        <button id="btn-pie-stop" class="echo-pie-btn" style="color:#ff3366;" title="Stop & Restore Simulation">⏹ Stop</button>
+        <div id="pie-status-pill" class="echo-pie-status">EDIT</div>
+
+        <div style="width:1px; height:18px; background:rgba(0,255,204,0.3); margin:0 8px;"></div>
+
+        <!-- Transform Gizmo Controls -->
+        <button id="btn-gizmo-trans" class="echo-gizmo-btn active" title="Translate Gizmo (W)">W: Pos</button>
+        <button id="btn-gizmo-rot" class="echo-gizmo-btn" title="Rotate Gizmo (E)">E: Rot</button>
+        <button id="btn-gizmo-scale" class="echo-gizmo-btn" title="Scale Gizmo (R)">R: Scl</button>
+        <button id="btn-gizmo-snap" class="echo-gizmo-btn" title="Toggle Grid Snapping">Snap: OFF</button>
+
+        <div style="flex:1;"></div>
+        <button id="echo-editor-close" class="echo-editor-tab-btn" style="color:#ff3366;">Close [~]</button>
+      </div>
+
+      <!-- Navigation Tabs -->
       <div class="echo-editor-tabs">
         <button id="tab-btn-console" class="echo-editor-tab-btn active">Terminal [~]</button>
-        <button id="tab-btn-hierarchy" class="echo-editor-tab-btn">ECS Hierarchy</button>
+        <button id="tab-btn-hierarchy" class="echo-editor-tab-btn">World Outliner & Details</button>
         <button id="tab-btn-profiler" class="echo-editor-tab-btn">HAOS Profiler</button>
         <button id="tab-btn-level" class="echo-editor-tab-btn">Level Pipeline</button>
-        <div style="flex:1;"></div>
-        <button id="echo-editor-close" class="echo-editor-tab-btn" style="color:#ff3366;">Close [Esc]</button>
       </div>
+
       <div class="echo-editor-body">
         <!-- Tab 1: Terminal Console -->
         <div id="echo-tab-console" class="echo-editor-content active">
@@ -217,13 +301,16 @@ export class EditorDevOverlay {
           </div>
         </div>
 
-        <!-- Tab 2: ECS Hierarchy & Inspector -->
+        <!-- Tab 2: World Outliner & Details Inspector -->
         <div id="echo-tab-hierarchy" class="echo-editor-content" style="flex-direction:row;">
-          <div class="echo-hierarchy-pane" id="echo-hierarchy-list">
-            <div>Loading entities...</div>
+          <div class="echo-hierarchy-pane">
+            <input type="text" id="echo-outliner-search" placeholder="Search actors..." style="margin-bottom:8px;" />
+            <div id="echo-hierarchy-list" style="flex:1; overflow-y:auto;">
+              <div>Loading entities...</div>
+            </div>
           </div>
           <div class="echo-inspector-pane" id="echo-inspector-content">
-            <div style="color:#667;">Select an entity on the left to inspect components.</div>
+            <div style="color:#667;">Select an actor on the left to inspect and edit components.</div>
           </div>
         </div>
 
@@ -267,6 +354,7 @@ export class EditorDevOverlay {
       drawer,
       output: document.getElementById('echo-console-output'),
       input: document.getElementById('echo-console-input'),
+      outlinerSearch: document.getElementById('echo-outliner-search'),
       btnClose: document.getElementById('echo-editor-close'),
       tabBtnConsole: document.getElementById('tab-btn-console'),
       tabBtnHierarchy: document.getElementById('tab-btn-hierarchy'),
@@ -284,7 +372,17 @@ export class EditorDevOverlay {
       profAutoScale: document.getElementById('prof-autoscale'),
       btnExportLevel: document.getElementById('btn-export-level'),
       btnLoadOmega: document.getElementById('btn-load-omega'),
-      levelJsonPreview: document.getElementById('level-json-preview')
+      levelJsonPreview: document.getElementById('level-json-preview'),
+      btnPiePlay: document.getElementById('btn-pie-play'),
+      btnPiePause: document.getElementById('btn-pie-pause'),
+      btnPieStep: document.getElementById('btn-pie-step'),
+      btnPieEject: document.getElementById('btn-pie-eject'),
+      btnPieStop: document.getElementById('btn-pie-stop'),
+      pieStatusPill: document.getElementById('pie-status-pill'),
+      btnGizmoTrans: document.getElementById('btn-gizmo-trans'),
+      btnGizmoRot: document.getElementById('btn-gizmo-rot'),
+      btnGizmoScale: document.getElementById('btn-gizmo-scale'),
+      btnGizmoSnap: document.getElementById('btn-gizmo-snap')
     };
   }
 
@@ -300,6 +398,11 @@ export class EditorDevOverlay {
         this.toggle();
       } else if (e.code === 'Escape' && this.isVisible) {
         this.toggle(false);
+      } else if (e.code === 'F8') {
+        // Unreal F8 Eject toggle
+        e.preventDefault();
+        this.pie?.eject();
+        this._updatePIEStatus();
       }
     });
 
@@ -311,6 +414,47 @@ export class EditorDevOverlay {
         const val = this._elements.input.value;
         this._elements.input.value = '';
         this.executeCommand(val);
+      }
+    });
+
+    // Outliner search filter
+    this._elements.outlinerSearch?.addEventListener('input', (e) => {
+      if (this.outliner) {
+        this.outliner.setFilter(e.target.value);
+        this.refreshHierarchy();
+      }
+    });
+
+    // PIE Toolbar Button Listeners
+    this._elements.btnPiePlay?.addEventListener('click', () => {
+      this.pie?.play();
+      this._updatePIEStatus();
+    });
+    this._elements.btnPiePause?.addEventListener('click', () => {
+      this.pie?.pause();
+      this._updatePIEStatus();
+    });
+    this._elements.btnPieStep?.addEventListener('click', () => {
+      this.pie?.stepFrame();
+      this._updatePIEStatus();
+    });
+    this._elements.btnPieEject?.addEventListener('click', () => {
+      this.pie?.eject();
+      this._updatePIEStatus();
+    });
+    this._elements.btnPieStop?.addEventListener('click', () => {
+      this.pie?.stop();
+      this._updatePIEStatus();
+    });
+
+    // Gizmo Toolbar Button Listeners
+    this._elements.btnGizmoTrans?.addEventListener('click', () => this._setGizmoMode(GizmoMode.TRANSLATE));
+    this._elements.btnGizmoRot?.addEventListener('click', () => this._setGizmoMode(GizmoMode.ROTATE));
+    this._elements.btnGizmoScale?.addEventListener('click', () => this._setGizmoMode(GizmoMode.SCALE));
+    this._elements.btnGizmoSnap?.addEventListener('click', () => {
+      if (this.gizmo) {
+        this.gizmo.configureSnapping(!this.gizmo.snappingEnabled);
+        this._elements.btnGizmoSnap.textContent = `Snap: ${this.gizmo.snappingEnabled ? 'ON' : 'OFF'}`;
       }
     });
 
@@ -351,6 +495,27 @@ export class EditorDevOverlay {
         this.log(`Error loading level: ${err.message}`);
       }
     });
+  }
+
+  /**
+   * Update Gizmo mode and button active styling.
+   * @private
+   */
+  _setGizmoMode(mode) {
+    if (this.gizmo) this.gizmo.setMode(mode);
+    this._elements.btnGizmoTrans?.classList.toggle('active', mode === GizmoMode.TRANSLATE);
+    this._elements.btnGizmoRot?.classList.toggle('active', mode === GizmoMode.ROTATE);
+    this._elements.btnGizmoScale?.classList.toggle('active', mode === GizmoMode.SCALE);
+  }
+
+  /**
+   * Update PIE status label.
+   * @private
+   */
+  _updatePIEStatus() {
+    if (this._elements.pieStatusPill && this.pie) {
+      this._elements.pieStatusPill.textContent = this.pie.getState();
+    }
   }
 
   /**
@@ -420,64 +585,136 @@ export class EditorDevOverlay {
   }
 
   /**
-   * Populates the ECS Hierarchy pane.
+   * Populates the World Outliner list.
    */
   refreshHierarchy() {
-    const ecs = this.framework.serviceRegistry.get('ecs')?.ecsManager;
-    if (!ecs || !this._elements.hierarchyList) return;
+    if (!this._elements.hierarchyList) return;
 
-    const entities = Array.from(ecs.entities || []);
-    let html = `<div style="font-weight:bold; margin-bottom:8px; color:#00ffcc;">ENTITIES (${entities.length})</div>`;
+    let entries = [];
+    if (this.outliner) {
+      this.outliner.refresh();
+      entries = this.outliner.getFilteredEntities();
+    } else {
+      const ecs = this.framework.serviceRegistry?.get('ecs')?.ecsManager;
+      const entities = Array.from(ecs?.entities || []);
+      entries = entities.map(id => ({ id, name: `Actor_${id}`, type: 'Entity', visible: true, locked: false }));
+    }
 
-    for (const id of entities) {
-      html += `<div class="echo-entity-row" data-eid="${id}">#${id} ${id === 1000 ? '[Player]' : ''}</div>`;
+    let html = `<div style="font-weight:bold; margin-bottom:8px; color:#00ffcc;">OUTLINER (${entries.length})</div>`;
+
+    for (const ent of entries) {
+      const isSel = this.selectedEntityId === ent.id;
+      html += `
+        <div class="echo-entity-row ${isSel ? 'selected' : ''}" data-eid="${ent.id}">
+          <span>#${ent.id} ${ent.name}</span>
+          <div class="echo-row-actions">
+            <button class="echo-icon-btn btn-vis" data-eid="${ent.id}">${ent.visible !== false ? '👁' : '🚫'}</button>
+            <button class="echo-icon-btn btn-lock" data-eid="${ent.id}">${ent.locked ? '🔒' : '🔓'}</button>
+          </div>
+        </div>
+      `;
     }
 
     this._elements.hierarchyList.innerHTML = html;
 
-    // Attach click listeners to inspect entity
+    // Attach row click listeners
     const rows = this._elements.hierarchyList.querySelectorAll('.echo-entity-row');
     rows.forEach(row => {
-      row.addEventListener('click', () => {
+      row.addEventListener('click', (e) => {
+        if (e.target.classList.contains('btn-vis') || e.target.classList.contains('btn-lock')) return;
         rows.forEach(r => r.classList.remove('selected'));
         row.classList.add('selected');
         const eid = parseInt(row.getAttribute('data-eid'), 10);
+        this.selectedEntityId = eid;
         this.inspectEntity(eid);
+      });
+    });
+
+    // Attach visibility toggles
+    this._elements.hierarchyList.querySelectorAll('.btn-vis').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const eid = parseInt(btn.getAttribute('data-eid'), 10);
+        const vis = this.outliner ? this.outliner.toggleVisibility(eid) : true;
+        btn.textContent = vis ? '👁' : '🚫';
+      });
+    });
+
+    // Attach lock toggles
+    this._elements.hierarchyList.querySelectorAll('.btn-lock').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const eid = parseInt(btn.getAttribute('data-eid'), 10);
+        const locked = this.outliner ? this.outliner.toggleLock(eid) : false;
+        btn.textContent = locked ? '🔒' : '🔓';
       });
     });
   }
 
   /**
-   * Inspects and displays component data for an entity.
+   * Inspects and displays editable component data for an entity in the Details panel.
    * @param {number} eid
    */
   inspectEntity(eid) {
-    const ecs = this.framework.serviceRegistry.get('ecs')?.ecsManager;
-    if (!ecs || !this._elements.inspectorContent) return;
+    if (!this._elements.inspectorContent) return;
 
-    let html = `<div style="font-weight:bold; color:#00ffcc; margin-bottom:12px;">ENTITY #${eid} COMPONENTS:</div>`;
-
-    for (const [name, store] of ecs.stores.entries()) {
-      if (store.has(eid)) {
-        html += `<div style="background:rgba(0,0,0,0.3); border:1px solid rgba(0,255,204,0.2); padding:8px; margin-bottom:8px;">`;
-        html += `<div style="font-weight:bold; color:#fff; margin-bottom:4px;">${name}</div>`;
-        const data = store.get(eid);
-        for (const [k, v] of Object.entries(data)) {
-          const valStr = typeof v === 'object' && v !== null ? JSON.stringify(v) : String(v);
-          html += `<div style="font-size:11px; color:#aab; margin-left:8px;"><strong>${k}:</strong> ${valStr}</div>`;
+    let compData = {};
+    if (this.inspector) {
+      compData = this.inspector.inspectEntity(eid);
+    } else {
+      const ecs = this.framework.serviceRegistry?.get('ecs')?.ecsManager;
+      if (ecs) {
+        for (const [name, store] of ecs.stores.entries()) {
+          if (store.has(eid)) compData[name] = store.get(eid);
         }
-        html += `</div>`;
       }
     }
 
+    let html = `<div style="font-weight:bold; color:#00ffcc; margin-bottom:12px;">DETAILS: ACTOR #${eid}</div>`;
+
+    for (const [name, props] of Object.entries(compData)) {
+      html += `<div style="background:rgba(0,0,0,0.3); border:1px solid rgba(0,255,204,0.2); padding:8px; margin-bottom:8px;">`;
+      html += `<div style="font-weight:bold; color:#fff; margin-bottom:6px; border-bottom:1px solid rgba(0,255,204,0.1); padding-bottom:4px;">${name}</div>`;
+
+      for (const [k, v] of Object.entries(props)) {
+        if (v && typeof v === 'object' && ('x' in v || 'y' in v || 'z' in v)) {
+          // 3D vector input (e.g. position, rotation, scale)
+          html += `
+            <div style="font-size:11px; color:#aab; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+              <strong style="width:70px;">${k}:</strong>
+              X: <input type="number" step="0.5" class="echo-prop-input" data-comp="${name}" data-prop="${k}.x" value="${v.x ?? 0}" />
+              Y: <input type="number" step="0.5" class="echo-prop-input" data-comp="${name}" data-prop="${k}.y" value="${v.y ?? 0}" />
+              Z: <input type="number" step="0.5" class="echo-prop-input" data-comp="${name}" data-prop="${k}.z" value="${v.z ?? 0}" />
+            </div>
+          `;
+        } else {
+          const valStr = typeof v === 'object' && v !== null ? JSON.stringify(v) : String(v);
+          html += `<div style="font-size:11px; color:#aab; margin-left:4px; margin-bottom:2px;"><strong>${k}:</strong> ${valStr}</div>`;
+        }
+      }
+      html += `</div>`;
+    }
+
     this._elements.inspectorContent.innerHTML = html;
+
+    // Attach change listeners to editable inputs
+    this._elements.inspectorContent.querySelectorAll('.echo-prop-input').forEach(input => {
+      input.addEventListener('change', (e) => {
+        const comp = input.getAttribute('data-comp');
+        const prop = input.getAttribute('data-prop');
+        const val = parseFloat(input.value);
+        if (this.inspector) {
+          this.inspector.setProperty(eid, comp, prop, val);
+        }
+      });
+    });
   }
 
   /**
    * Refreshes the HAOS Profiler metrics.
    */
   refreshProfiler() {
-    const haos = this.framework.serviceRegistry.get('haos');
+    const haos = this.framework.serviceRegistry?.get('haos');
     if (!haos) return;
 
     const t = haos.getTelemetry();

@@ -96,28 +96,28 @@
       "type": "script"
     },
     "src/animation/graph/AnimationGraph.js": {
-      "size": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 4178,
+      "sha256": "c3c612500f39b0af593cb46a4d6add65594478e41b79ce89521d78cfe1902f18",
       "type": "script"
     },
     "src/animation/graph/AnimationState.js": {
-      "size": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 1806,
+      "sha256": "438ef18b7fae6952e32fac460ee0c102c4878a5ae9e3e53ba9a5d0bd95f0cf4c",
       "type": "script"
     },
     "src/animation/graph/AnimationTransition.js": {
-      "size": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 1699,
+      "sha256": "9617936a29961d5f8952094cfaa28fad087dbfb796804cde0b426384c23f70d9",
       "type": "script"
     },
     "src/animation/graph/BlendTree.js": {
-      "size": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 3186,
+      "sha256": "664a04543055beb7942d9151b64393c5088e1b6004bb21ad952f15beca91b5ce",
       "type": "script"
     },
     "src/animation/graph/GraphNode.js": {
-      "size": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 578,
+      "sha256": "019428d2ad501dd322a70a33e34f3724be2a2c268d89da0efb824b4523afb670",
       "type": "script"
     },
     "src/animation/runtime/AnimationController.js": {
@@ -400,14 +400,59 @@
       "sha256": "a22b06ea24317910c475b5ad4e2fa3eec3bb711b1e2745daad6f83250726356c",
       "type": "script"
     },
+    "src/editor/DetailsInspector.js": {
+      "size": 5127,
+      "sha256": "013a85e60222e65d184aed75f6618b0c73a6a8debeb38c6f18af36cf5244229f",
+      "type": "script"
+    },
     "src/editor/EditorDevOverlay.js": {
-      "size": 17255,
-      "sha256": "f2640956c75b222cc7deb9661128a8f590748621da20ecb4ca16cd5175181923",
+      "size": 27114,
+      "sha256": "7b87ee430ae1af1218a6c17206d94e070c2c72a9f6457b30b3e1db5a40099018",
+      "type": "script"
+    },
+    "src/editor/index.js": {
+      "size": 452,
+      "sha256": "29d98401666b1223052494cbe711de54f4951f25f8d257a9e496b59b6216086c",
       "type": "script"
     },
     "src/editor/LevelSerializer.js": {
       "size": 9487,
       "sha256": "7429dccd7585ab43fb66c3bab2c43fda6cf429651044c1142edb4bc439cd8f16",
+      "type": "script"
+    },
+    "src/editor/PlayInEditor.js": {
+      "size": 4781,
+      "sha256": "38736b5fae75522db1724b58a637f992246d6ed4840ca7fde9253723be878e97",
+      "type": "script"
+    },
+    "src/editor/TransformGizmo.js": {
+      "size": 3345,
+      "sha256": "519441e38882b85e15cbb54fe844af1a3ebf52f92ac46e808c0c2e2a93a124fb",
+      "type": "script"
+    },
+    "src/editor/WorldOutliner.js": {
+      "size": 5238,
+      "sha256": "40e56e55d0e2a0cecd32dfad7aadf1c5f8b091b01c87726b4d9a326302001985",
+      "type": "script"
+    },
+    "src/forge/ForgeApplication.js": {
+      "size": 1544,
+      "sha256": "698b2d88803c10dd1744586590688066d89516654624093c898735a39d3e37d1",
+      "type": "script"
+    },
+    "src/forge/ForgeEngine.js": {
+      "size": 4010,
+      "sha256": "70776754dd3da480ab26aad756fe6b500e1aa90a11dba6585c6f0b61f6ac5ad8",
+      "type": "script"
+    },
+    "src/forge/ForgePlugin.js": {
+      "size": 875,
+      "sha256": "ad2bb2f54d0a561200b3270ff5763342f277b9fb4d39597bb22ad503db9c0823",
+      "type": "script"
+    },
+    "src/forge/index.js": {
+      "size": 176,
+      "sha256": "11b2b195f5c332a768dfaaa66d9c55be28a88bcc9e39473a980f3d2afbf001b9",
       "type": "script"
     },
     "src/framework/core/Bootstrap.js": {
@@ -446,8 +491,8 @@
       "type": "script"
     },
     "src/framework/core/ServiceManifest.js": {
-      "size": 1177,
-      "sha256": "931cedc8c06750b83d5a32a1f790a0abee8f38d4fecc36646d8a6342f7ded985",
+      "size": 1259,
+      "sha256": "c3a3ed52bb1fb3c3fd29db24da944969634f43eaf1dc8fd2ae8e6755d09d110f",
       "type": "script"
     },
     "src/framework/core/ServiceRegistry.js": {
@@ -681,8 +726,8 @@
       "type": "script"
     },
     "src/framework/services/EditorService.js": {
-      "size": 2138,
-      "sha256": "8c65c0d13e0f00255529a783008292d07ef5d55dc26cff475640d845f7c60d7d",
+      "size": 4466,
+      "sha256": "86f53ccb7e35a8aa295673e91b39608d4c13d2affbd85d8556a832b2eac3ad38",
       "type": "script"
     },
     "src/framework/services/GameplayService.js": {
@@ -696,8 +741,13 @@
       "type": "script"
     },
     "src/framework/services/InputService.js": {
-      "size": 5661,
-      "sha256": "5a62cd044f67fa3f6099ea385c10e7b777eb3da53c6807a152eaa3012b69dcd3",
+      "size": 5704,
+      "sha256": "51510470cc27f4a5718408c0543547901c66d91038096419b6f81d933b5d8bf2",
+      "type": "script"
+    },
+    "src/framework/services/NetworkService.js": {
+      "size": 4864,
+      "sha256": "668e9f1d3052761505be55d69edd265a1e2b1e6390e20199b8a5eaab327579ad",
       "type": "script"
     },
     "src/framework/services/PackagingService.js": {
@@ -716,8 +766,8 @@
       "type": "script"
     },
     "src/framework/services/RenderService.js": {
-      "size": 7180,
-      "sha256": "d4022952ba0b45359c0d2adf34493510da436d06aceb8363a12ac9ce7d8a8c53",
+      "size": 8793,
+      "sha256": "e30d8e6264aa19927fb3b7cf6d756ceec04aa67fea940ed63bdce043d7617025",
       "type": "script"
     },
     "src/framework/services/SaveService.js": {
@@ -825,6 +875,31 @@
       "sha256": "f227a89511d3da7f6fe7fd130eea3096d0b1cf1a6e82db08c1c90a7a7626d52f",
       "type": "script"
     },
+    "src/network/ClientPrediction.js": {
+      "size": 6657,
+      "sha256": "6cac97439a24e267242f23a2bf83959a184a67fe5895761593ac1ec5d4ebcf4f",
+      "type": "script"
+    },
+    "src/network/index.js": {
+      "size": 283,
+      "sha256": "ed331193b79d6157503f278cb0450efc726a84e6e893646ffbdb6e44b022aafe",
+      "type": "script"
+    },
+    "src/network/NetworkDriver.js": {
+      "size": 7349,
+      "sha256": "2e8e474d717687e69adb877233078c36e43dd82d052946261dbc449b39214510",
+      "type": "script"
+    },
+    "src/network/NetworkReplicator.js": {
+      "size": 6836,
+      "sha256": "e2784602610d7b0c27d174d5a175f9ae347e86d72a4f747cafea039111484b53",
+      "type": "script"
+    },
+    "src/network/SnapshotInterpolator.js": {
+      "size": 7062,
+      "sha256": "f0460f30d86505bf74ff6bbee53b2cb0bf3bd964fa28abf507646b5d19c48fe1",
+      "type": "script"
+    },
     "src/packaging/IntegrityVerifier.js": {
       "size": 2670,
       "sha256": "63ff8209acea59b8bea5b3a0190d4b1ccdb788d57c505604f2a80a3fac7587b8",
@@ -855,9 +930,14 @@
       "sha256": "c2ea62d0dd69ac2b8b2f3028d777bf5e50b095d965552d828ff37914ce898997",
       "type": "script"
     },
+    "src/physics/Raycast.js": {
+      "size": 3725,
+      "sha256": "6bc567dd4ba32c736dc26e61a49d8f4146b938aa8fdc2329dcf4eef397ea731a",
+      "type": "script"
+    },
     "src/player/PlayerController.js": {
-      "size": 8922,
-      "sha256": "050bf204a886a58d33cced2a885c92c15068a0272e7d46d66ec7ff4c76e9a3d2",
+      "size": 12270,
+      "sha256": "5108292beb4ff9e70419b6a728fc232e49f5faee350a5ce39b1e2cd43d95d050",
       "type": "script"
     },
     "src/queries/CellQuery.js": {
@@ -903,6 +983,21 @@
     "src/rendering/PBRTextureGenerator.js": {
       "size": 10190,
       "sha256": "4dbd9f91d102537a8a83590f2f87789ac7f3619ac4c65f869b4b0510af3e691d",
+      "type": "script"
+    },
+    "src/rendering/lighting/LightingRig.js": {
+      "size": 5322,
+      "sha256": "93ebd3b591db51919c15b74030a6318f9dcebe96f3e341af76d14d9c91e9ab67",
+      "type": "script"
+    },
+    "src/rendering/postprocessing/PostProcessStack.js": {
+      "size": 4242,
+      "sha256": "0d02c817b0bfe5464ac9cec3e8af8d8678e379fb289be085aa8b689524ea3896",
+      "type": "script"
+    },
+    "src/rendering/vfx/ParticleEmitter.js": {
+      "size": 5276,
+      "sha256": "18443c2c98b7bf758b996f5d742ba9de25dc2ec9e2d0a597d199bc38b4e6f2af",
       "type": "script"
     },
     "src/scene/Camera.js": {
