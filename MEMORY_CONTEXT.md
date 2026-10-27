@@ -107,6 +107,7 @@ Echoes of Tomorrow (The Game)
 | **HAOS (Adaptive Runtime)** | `src/haos/`, `src/framework/services/` | 6 | ✅ **Complete (Phase 16)** | `HardwareScanner`, `CapabilityAnalyzer`, `PerformanceProfile`, `FrameMonitor`, `AdaptiveController`, `HAOSService`. Autonomous hardware scanning, frame pacing analysis, and cross-subsystem quality scaling. |
 | **Editor & Toolchain** | `src/editor/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 17)** | `LevelSerializer`, `CommandInterpreter`, `EditorDevOverlay`, `EditorService`. Data-driven JSON level pipeline (`sector_omega.json`), in-engine CLI terminal (`~`), live ECS hierarchy & component inspector. |
 | **Content & Narrative** | `assets/levels/`, `src/gameplay/` | 3 | ✅ **Complete (Phase 18)** | `NarrativeManager`, multi-chapter campaign (Chapters 1–3), `sector_pinnacle.json`, Captain Arjun Rao audio datalogs and lore fragments. |
+| **Packaging & Deployment** | `src/packaging/`, `scripts/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 20)** | `VirtualFileSystem` (VFS), `IntegrityVerifier` (SHA-256), `PackageManifest`, `PackagingService`, `build_distribution.py`. Automated production release packaging, cryptographic integrity checking, and standalone distribution. |
 
 ---
 
@@ -138,14 +139,18 @@ Phase 17: Editor & Developer Toolchain ────────── [Completed
    ▲
    └── [MILESTONE C: "Content-Ready Pipeline" — ACHIEVED]
 Phase 18: Full Content Production (Echoes of Tomorrow) ─ [Completed]
-Phase 19: Networking & Multiplayer (Optional)
-Phase 20: Security, Packaging & Deployment ────── [Current Target]
+Phase 19: Networking & Multiplayer (Optional ─ Skipped per single-player charter)
+Phase 20: Security, Packaging & Deployment ────── [Completed]
    ▲
-   └── [TARGET: MILESTONE D — "Shippable"]
-Phase 21: Forge Engine Extraction
+   └── [MILESTONE D: "Shippable" — ACHIEVED]
+Phase 21: Forge Engine Extraction (Post-Shipping Phase)
 ```
 
-### Active Milestone: Milestone D ("Shippable")
+### Active Milestone: Milestone D ("Shippable") — ACHIEVED!
+**Milestone D Status:** ✅ **Delivered, Packaged & Cryptographically Verified**
+- **Phase 18 (Full Content Production):** Multi-chapter narrative campaign (Chapters 1–3), `NarrativeManager` with Captain Arjun Rao lore audio datalogs, Sector Pinnacle climax level (`sector_pinnacle.json`).
+- **Phase 20 (Security, Packaging & Deployment):** Virtual File System (`VirtualFileSystem`), cryptographic SHA-256 integrity verifier (`IntegrityVerifier`), manifest generator (`PackageManifest`), distribution packaging pipeline (`scripts/build_distribution.py`), and standalone production distribution in `dist/` with 100% cryptographic file integrity verified.
+- **Automated Validation:** 219 JavaScript files, 247 import statements, 13/13 subsystem test suites passing.
 **Milestone C Status:** ✅ **Delivered, Integrated & Verified**
 - **Phase 16 (HAOS):** Automatic hardware scanning (`HardwareScanner`), multi-dimensional capability rating (`CapabilityAnalyzer`), ring-buffer frame pacing monitor (`FrameMonitor`), anti-oscillation adaptive controller (`AdaptiveController`), dynamically tuning rendering, streaming, audio, and AI across 4 hardware tiers (`LOW`, `MEDIUM`, `HIGH`, `ULTRA`).
 - **Phase 17 (Editor & Developer Toolchain):** Data-driven level serialization pipeline (`LevelSerializer`), sample second level (`assets/levels/sector_omega.json`) loading into the live simulation without touching engine code, in-engine developer drawer overlay (`EditorDevOverlay`) toggled with `[~]`, CLI developer command interpreter (`CommandInterpreter`), live ECS hierarchy & component inspector, and HAOS runtime profiler.
