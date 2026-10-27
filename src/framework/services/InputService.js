@@ -22,6 +22,7 @@ export class InputService extends Service {
       ['moveLeft', ['KeyA', 'ArrowLeft']],
       ['moveRight', ['KeyD', 'ArrowRight']],
       ['jump', ['Space']],
+      ['crouch', ['KeyC', 'ControlLeft']],
       ['sprint', ['ShiftLeft', 'ShiftRight']],
       ['interact', ['KeyE']]
     ]);

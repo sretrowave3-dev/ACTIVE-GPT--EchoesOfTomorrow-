@@ -11,6 +11,7 @@ def run_all():
     test_files = [
         os.path.join(test_dir, "validate_codebase.py"),
         os.path.join(test_dir, "physics", "test_physics.py"),
+        os.path.join(test_dir, "physics", "test_character_movement.py"),
         os.path.join(test_dir, "animation", "test_animation.py"),
         os.path.join(test_dir, "audio", "test_audio.py"),
         os.path.join(test_dir, "ai", "test_ai.py"),
