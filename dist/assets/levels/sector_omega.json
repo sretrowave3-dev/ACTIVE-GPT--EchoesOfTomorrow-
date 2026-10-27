@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "id": "sector_omega",
+  "name": "Sector Omega — Industrial Foundry",
+  "playerSpawn": {
+    "position": { "x": 0, "y": 1.7, "z": 8 },
+    "rotation": { "yaw": 0, "pitch": 0 }
+  },
+  "environment": {
+    "fogColor": "#150a05",
+    "fogNear": 15,
+    "fogFar": 70,
+    "ambientLightColor": "#442211",
+    "ambientIntensity": 0.8
+  },
+  "mission": {
+    "title": "Chapter 2: The Core Override",
+    "objectives": [
+      {
+        "id": "reach_overlook",
+        "title": "Navigate to the Foundry Overlook",
+        "description": "Cross the elevated catwalk to inspect the energy core."
+      },
+      {
+        "id": "override_terminal",
+        "title": "Trigger Emergency Core Override",
+        "description": "Engage terminal Omega-01 to purge reactor coolant."
+      }
+    ]
+  },
+  "entities": [
+    {
+      "id": 501,
+      "components": {
+        "Transform": {
+          "position": { "x": 0, "y": 1.0, "z": -12 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 1, "y": 1, "z": 1 }
+        },
+        "Mesh": {
+          "meshId": "foundry_core_terminal",
+          "size": { "x": 1.2, "y": 2.2, "z": 1.2 },
+          "color": 16744448
+        },
+        "Collider": {
+          "shape": "box",
+          "size": { "x": 1.2, "y": 2.2, "z": 1.2 },
+          "isTrigger": false
+        },
+        "Interactable": {
+          "prompt": "Press [E] to Initiate Coolant Purge",
+          "actionId": "override_terminal",
+          "radius": 3.2,
+          "isOneShot": true
+        }
+      }
+    },
+    {
+      "id": 502,
+      "components": {
+        "Transform": {
+          "position": { "x": -8, "y": 2.5, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 1, "y": 1, "z": 1 }
+        },
+        "Mesh": {
+          "meshId": "heavy_sentry_drone",
+          "size": { "x": 1.0, "y": 0.8, "z": 1.0 },
+          "color": 16724530
+        },
+        "Collider": {
+          "shape": "box",
+          "size": { "x": 1.0, "y": 0.8, "z": 1.0 },
+          "isTrigger": true
+        },
+        "AI": {
+          "role": "heavy_patrol",
+          "state": "patrol",
+          "patrolRadius": 15
+        }
+      }
+    }
+  ]
+}

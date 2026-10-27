@@ -1,0 +1,1129 @@
+{
+  "game": {
+    "title": "Echoes of Tomorrow",
+    "version": "1.0.0-shippable",
+    "author": "Echo Engine Team",
+    "buildTimestamp": ""
+  },
+  "engine": {
+    "name": "Echo Engine",
+    "version": "1.0.0",
+    "targetPlatform": "web-standalone"
+  },
+  "levels": [
+    "sector_omega.json",
+    "sector_pinnacle.json"
+  ],
+  "files": {
+    "src/main.js": {
+      "size": 193,
+      "sha256": "2aa22acecde179c629b12e2a80da150b38eaf529008d5d300ac248bdd70b07bb",
+      "type": "script"
+    },
+    "src/ai/BehaviorTree.js": {
+      "size": 2701,
+      "sha256": "b90388103d27abf72df249b180cab02dced57e56d2b80fef03c120aaa32fc6b6",
+      "type": "script"
+    },
+    "src/ai/Blackboard.js": {
+      "size": 601,
+      "sha256": "2beb96c298bed1523338061a549bf096f413a20cb739537f2e09570917a94791",
+      "type": "script"
+    },
+    "src/animation/assets/AnimationAsset.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/assets/AnimationClip.js": {
+      "size": 4781,
+      "sha256": "09118d4f7e0eb1f9da70231887eba8d63f0900ffddfc1d52134dd101930dd3c5",
+      "type": "script"
+    },
+    "src/animation/assets/AnimationCompression.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/assets/AnimationMetadata.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/assets/AnimationPackage.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/baking/AnimationBaker.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/baking/FramePacker.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/baking/MetadataGenerator.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/baking/TextureChecker.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/baking/VertexSampler.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/events/AnimationEvent.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/events/AnimationEventBus.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/events/EventTrack.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/graph/AnimationGraph.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/graph/AnimationState.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/graph/AnimationTransition.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/graph/BlendTree.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/graph/GraphNode.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/runtime/AnimationController.js": {
+      "size": 2030,
+      "sha256": "8b9db2d43b1d175f898f1902b69972afa8a7cd4b042f9884379e9846bd79a8ed",
+      "type": "script"
+    },
+    "src/animation/runtime/AnimationPlayer.js": {
+      "size": 2138,
+      "sha256": "a0cc09005fa936491d849c97928f74b07d5dc005244a1179db35a785cdb0d81d",
+      "type": "script"
+    },
+    "src/animation/runtime/AnimationRuntime.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/skeleton/Bone.js": {
+      "size": 10590,
+      "sha256": "e68fb97971e6f4e586355f8d18314c3d10708f1239c83b05001882e3ccb0139d",
+      "type": "script"
+    },
+    "src/animation/skeleton/Pose.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/skeleton/Skeleton.js": {
+      "size": 11426,
+      "sha256": "b5271bb0cab1144ad1865e6db656bee23c6c9d9e3e0c9ace0c335aec3ced1c77",
+      "type": "script"
+    },
+    "src/animation/skeleton/SkeletonBuilder.js": {
+      "size": 4718,
+      "sha256": "0093ec4a54e64be388ccf0bf8945d635249220a4483b2c8494912fda6792f5d9",
+      "type": "script"
+    },
+    "src/animation/skeleton/SkeletonPose.js": {
+      "size": 2168,
+      "sha256": "d4ec82266cf772e369b51c7b2736dbbf6a1b95a6f41047bd4c30229e116e993d",
+      "type": "script"
+    },
+    "src/animation/skeleton/SkeletonUtils.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/vat/VATDecoder.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/vat/VATMetadata.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/animation/vat/VATPlayer.js": {
+      "size": 1377,
+      "sha256": "0c54386a4f7d597f0b287f8d05bcd0c778d53b559c2a7214bd10b2e4de12090b",
+      "type": "script"
+    },
+    "src/animation/vat/VATTexture.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/assets/AssetCache.js": {
+      "size": 2066,
+      "sha256": "5b35dc203bc1675a5d58cc8bb0a264ff293e665fd359266f25d6d5f474b48b35",
+      "type": "script"
+    },
+    "src/assets/AssetDescriptor.js": {
+      "size": 1445,
+      "sha256": "0a48b365e73330d7a6bb73c8b5bdc05f434e8e6c534db6ea90f888515f14ac13",
+      "type": "script"
+    },
+    "src/assets/AssetHandle.js": {
+      "size": 1094,
+      "sha256": "e4e52ce4b677ab286bdfcc68d9b612f03d7d15cb381a87e28f60bffe593a1632",
+      "type": "script"
+    },
+    "src/assets/AssetLoader.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/assets/AssetManager.js": {
+      "size": 6049,
+      "sha256": "013f805278b1a1cb6ee97a8b87a9ca1c95ba4a69bd4b170679ab6957c58582dc",
+      "type": "script"
+    },
+    "src/assets/AssetRegistry.js": {
+      "size": 625,
+      "sha256": "706777d88f7681c50ab6e85416191c09cd959405d92569798d6366c938f15f28",
+      "type": "script"
+    },
+    "src/assets/AssetService.js": {
+      "size": 722,
+      "sha256": "af7c1ccc8aaaf897cadfa06e48c25f58126dc7afaf4893ad90d5dcf942ba6035",
+      "type": "script"
+    },
+    "src/assets/AssetState.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/assets/AssetType.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/assets/loaders/AudioLoader.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/assets/loaders/FontLoader.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/assets/loaders/MaterialLoader.js": {
+      "size": 458,
+      "sha256": "9519a5914ef7c80247c2c19b4aa03f10a46743c87bfeeaed106eb0c6c87b44ed",
+      "type": "script"
+    },
+    "src/assets/loaders/ModelLoader.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/assets/loaders/ShaderLoader.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/assets/loaders/TextureLoader.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/assets/loaders/VideoLoader.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/audio/AudioManager.js": {
+      "size": 5971,
+      "sha256": "2b52c1c6c9dd84d01c3ca6bee03cb5f09a098919836154e45a59f93b96469522",
+      "type": "script"
+    },
+    "src/audio/SoundSynthesizer.js": {
+      "size": 3538,
+      "sha256": "ebca1cc793704bf644c11ea81e709d91ef44a6f42059c780271cb71807483d4b",
+      "type": "script"
+    },
+    "src/components/AIComponent.js": {
+      "size": 1080,
+      "sha256": "9fb695f312571f4d9a77616f05c540e7225699865b7bc3d36269546c9a97563b",
+      "type": "script"
+    },
+    "src/components/AnimationComponent.js": {
+      "size": 1426,
+      "sha256": "5604075c42d8089d51e2168468f2494950826c0ef9bcdadb7bc3d6cde0a8df01",
+      "type": "script"
+    },
+    "src/components/AudioComponent.js": {
+      "size": 244,
+      "sha256": "35b8a138bd03e5f1cdaf2e5961effd07923a8cbcdef1ae6a3ca88974793df0ce",
+      "type": "script"
+    },
+    "src/components/ColliderComponent.js": {
+      "size": 1003,
+      "sha256": "4f881f66c5293c88e2b224e841565ae4159e7c3395bafa9476ecf4451721480e",
+      "type": "script"
+    },
+    "src/components/HealthComponent.js": {
+      "size": 187,
+      "sha256": "1cb650481e115090f5539aaf2881907d8638f9c963c4b68cb056863e69f6a1b7",
+      "type": "script"
+    },
+    "src/components/InteractableComponent.js": {
+      "size": 935,
+      "sha256": "d99b45fdb204b99c7921463d43e7f17678d6a723fabaa7539b17e40ac1bb5c5f",
+      "type": "script"
+    },
+    "src/components/MeshComponent.js": {
+      "size": 234,
+      "sha256": "3a5e14a4ee2ff0ba22bcd4982f4b4083e4457f17ea3b1f9ddbd6df7f7e8369de",
+      "type": "script"
+    },
+    "src/components/NavigationComponent.js": {
+      "size": 800,
+      "sha256": "7f9e5b55ab7b0dbe134d09af42fd162f601342f0f48dc210f749af9a870c7663",
+      "type": "script"
+    },
+    "src/components/RigidBodyComponent.js": {
+      "size": 1060,
+      "sha256": "688af3ae1bb11dd6361f54b350f1a204208aa756bc1120d0df3ef0a435357972",
+      "type": "script"
+    },
+    "src/components/TransformComponent.js": {
+      "size": 270,
+      "sha256": "193f1dd4a394fcda6dd7fff3303b5b3420cbbef2b1153129687f2f9b9d851f2c",
+      "type": "script"
+    },
+    "src/components/VelocityComponent.js": {
+      "size": 194,
+      "sha256": "d397f72194fe61a7de1dd5a00bd878362b84bcc160305b74b1dcc0e8f76cdbeb",
+      "type": "script"
+    },
+    "src/data/CellData.js": {
+      "size": 180,
+      "sha256": "104303602baf7f697f8488aea272445441fb1ac2249171679d141a45075d64fb",
+      "type": "script"
+    },
+    "src/data/RegionData.js": {
+      "size": 193,
+      "sha256": "571b0a76dea7279dc3b13b10c99210515dc52603ce1c7be18dbaad9253ef530c",
+      "type": "script"
+    },
+    "src/data/SectorData.js": {
+      "size": 272,
+      "sha256": "e0a783f1d9d2000a7791a65b440f46842d03d9049ba12fdcf176f53d9ffcfd11",
+      "type": "script"
+    },
+    "src/ecs/Component.js": {
+      "size": 295,
+      "sha256": "e29bf4bf690226015209a0c076903c633fd1bfdaa1f1aa83cfdf069ff84b03a9",
+      "type": "script"
+    },
+    "src/ecs/ComponentStore.js": {
+      "size": 1724,
+      "sha256": "adb358ed1b51268567d7d6fb0f1b1f001e80de5f1b8b32b7a8bcc245a0ce1898",
+      "type": "script"
+    },
+    "src/ecs/ECSManager.js": {
+      "size": 5112,
+      "sha256": "89fbe65085bf3ece413c4db3419c8aeeea79cc6b7f369c408d0c2102bdd51e44",
+      "type": "script"
+    },
+    "src/ecs/ECSService.js": {
+      "size": 3687,
+      "sha256": "80ec029720afa5670cf071995219ad89e2c8c33cf3f0dbacce50facb8e8d7b25",
+      "type": "script"
+    },
+    "src/ecs/Entity.js": {
+      "size": 463,
+      "sha256": "229a645cc31017e4b0d36e9cb9240a07b752f8949a720d4ab1fd154afc44d2a4",
+      "type": "script"
+    },
+    "src/ecs/EntitySignature.js": {
+      "size": 1540,
+      "sha256": "ac772fd2c8eb641ffce633808fbc401aeb421503cf08dc3eda7cedf227706ded",
+      "type": "script"
+    },
+    "src/ecs/EntityView.js": {
+      "size": 393,
+      "sha256": "ed6a954ca502c37dab7eeef0424530e8bccfec92fae99f71cd5a43b3e258bd43",
+      "type": "script"
+    },
+    "src/ecs/SparseSet.js": {
+      "size": 2316,
+      "sha256": "757fbfdc490364443961b68fab1312b04b492a939219676fdeea910cd0d8ff11",
+      "type": "script"
+    },
+    "src/ecs/System.js": {
+      "size": 1303,
+      "sha256": "2b569f6df9711ef2adf5ad25e6e866e260cdc8f453e0f88ccae514a0693bfc1e",
+      "type": "script"
+    },
+    "src/ecs/SystemScheduler.js": {
+      "size": 1504,
+      "sha256": "996849a0456630ba5aec721cee6f351112bff2851f5a0a147d1dbd92e68020d9",
+      "type": "script"
+    },
+    "src/editor/CommandInterpreter.js": {
+      "size": 7775,
+      "sha256": "a22b06ea24317910c475b5ad4e2fa3eec3bb711b1e2745daad6f83250726356c",
+      "type": "script"
+    },
+    "src/editor/EditorDevOverlay.js": {
+      "size": 17255,
+      "sha256": "f2640956c75b222cc7deb9661128a8f590748621da20ecb4ca16cd5175181923",
+      "type": "script"
+    },
+    "src/editor/LevelSerializer.js": {
+      "size": 9487,
+      "sha256": "7429dccd7585ab43fb66c3bab2c43fda6cf429651044c1142edb4bc439cd8f16",
+      "type": "script"
+    },
+    "src/framework/core/Bootstrap.js": {
+      "size": 2110,
+      "sha256": "36d327603922c797c255f771ae546d926bf72341488f07aed7c1aeebaf14cff4",
+      "type": "script"
+    },
+    "src/framework/core/CompositionRoot.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/core/FrameScheduler.js": {
+      "size": 1537,
+      "sha256": "1806e7e6b3bc10223e3fbb7cee9a489518d44d7155e0b7f1b57ca15c67452566",
+      "type": "script"
+    },
+    "src/framework/core/Framework.js": {
+      "size": 1523,
+      "sha256": "bfce8e0d50e83cd2cd757ef3bcbe9d8abdb4f73951a17ded174e682bdeef7586",
+      "type": "script"
+    },
+    "src/framework/core/FrameworkBuilder.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/core/GameClock.js": {
+      "size": 935,
+      "sha256": "729d49346042e7da693e1fdd1beba1b5b69280771d17a1d323050c0a8cb98c5f",
+      "type": "script"
+    },
+    "src/framework/core/RuntimeBuilder.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/core/ServiceManifest.js": {
+      "size": 1177,
+      "sha256": "931cedc8c06750b83d5a32a1f790a0abee8f38d4fecc36646d8a6342f7ded985",
+      "type": "script"
+    },
+    "src/framework/core/ServiceRegistry.js": {
+      "size": 926,
+      "sha256": "e5359ef9138c36d932e4e391ff40cd0e50e696561e736599cec0e526054ab95f",
+      "type": "script"
+    },
+    "src/framework/diagnostics/DiagnosticsService.js": {
+      "size": 1039,
+      "sha256": "de61205dba7b6ed832151c3bb866232c3f4c6d98f621aae8bf108ac064465a8b",
+      "type": "script"
+    },
+    "src/framework/diagnostics/PerformanceCounters.js": {
+      "size": 1047,
+      "sha256": "5dc83a447825acbc8faf904ae746f8814c2bc12a8355ea8e9781d0a31ad5c88a",
+      "type": "script"
+    },
+    "src/framework/events/Event.js": {
+      "size": 262,
+      "sha256": "371f9bc5d68639a0c90ae09559ed501a5dcf0725e370b046341fe2e41e8fdcd9",
+      "type": "script"
+    },
+    "src/framework/events/EventBus.js": {
+      "size": 1538,
+      "sha256": "fbc5535fd49515a576e28a7fc3a09b7f47e5d0a2ebfadefb656eb5954e0c9c1c",
+      "type": "script"
+    },
+    "src/framework/math/Matrix4.js": {
+      "size": 42769,
+      "sha256": "22b8a160f3c3411588e326c8a8d69bbd1d981f0f1dc500107917583b7bc90498",
+      "type": "script"
+    },
+    "src/framework/math/Quaternion.js": {
+      "size": 42738,
+      "sha256": "717a7b4b77252a3fe922529f88d3765a8b242760d62c241ee54958fdd6582019",
+      "type": "script"
+    },
+    "src/framework/math/Transform.js": {
+      "size": 13643,
+      "sha256": "378c5c6b8f2a3e92f96e21d91a2873e3595d66676028b00bd676bb92ba25f5cc",
+      "type": "script"
+    },
+    "src/framework/math/TransformAlgorithms.js": {
+      "size": 10352,
+      "sha256": "148d5a0202b3936e3ff3a328718aea9d4e91baf0f01acf36867632bab218c22f",
+      "type": "script"
+    },
+    "src/framework/math/TransformInterpolator.js": {
+      "size": 12752,
+      "sha256": "e7053d82a3be40d60c4d49ed316176d7dd0ec2d7da82cd9127412e14dc191958",
+      "type": "script"
+    },
+    "src/framework/math/TransformSpatial.js": {
+      "size": 17454,
+      "sha256": "b626dd69eba466daca01806cb5d136d637e04a80de96e88f6105369e14004599",
+      "type": "script"
+    },
+    "src/framework/math/Vector3.js": {
+      "size": 36690,
+      "sha256": "a6862a50757e162b22b11be688083efac48b7eb337de20ef3554ce33f3d7caa0",
+      "type": "script"
+    },
+    "src/framework/runtime/RuntimeClock.js": {
+      "size": 8797,
+      "sha256": "b5d05d6fbf4cd79e8a64bf97f921a0882e0674f49e9b8255b8f6be54466ec0f7",
+      "type": "script"
+    },
+    "src/framework/runtime/RuntimeConfiguration.js": {
+      "size": 17498,
+      "sha256": "c1b1309a0512b5499e76472f63f0d183c27e06386e755f39078b593394c8e46e",
+      "type": "script"
+    },
+    "src/framework/runtime/RuntimeContext.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/RuntimeHost.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/RuntimeKernel.js": {
+      "size": 9247,
+      "sha256": "b95e0e68bcc999a5acdd3ecf6744218619ce209ddec33b895196b068d1cce0ca",
+      "type": "script"
+    },
+    "src/framework/runtime/RuntimeScheduler.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/errors/MissingDependencyError.js": {
+      "size": 739,
+      "sha256": "26e54942cb0dc50f29fd0f174e1d8416dc2f69cde82954c140935acefe715d5a",
+      "type": "script"
+    },
+    "src/framework/runtime/errors/RuntimeConfigurationError.js": {
+      "size": 530,
+      "sha256": "01b74274a2f2e96f5f5cfa5a1b770550f90b98913c6566aa5b9936f4942543c6",
+      "type": "script"
+    },
+    "src/framework/runtime/errors/RuntimeError.js": {
+      "size": 535,
+      "sha256": "0142ab659fe6642fb954da06b28effb620fca149fe7d710f5a6b33c57cadf27d",
+      "type": "script"
+    },
+    "src/framework/runtime/errors/RuntimeHostError.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/errors/RuntimeInitializationError.js": {
+      "size": 723,
+      "sha256": "3d5460f02954252ff940e4f7cf00aac95fb45bb4c4abb6992280772159be6f69",
+      "type": "script"
+    },
+    "src/framework/runtime/errors/RuntimeKernelError.js": {
+      "size": 683,
+      "sha256": "deeb4630eff3b83089ac319ca07d42faa7e776dbc69be81f33432969873e373b",
+      "type": "script"
+    },
+    "src/framework/runtime/errors/RuntimeSessionError.js": {
+      "size": 722,
+      "sha256": "ae7d8a4642545ad99f5782d9922d05b897084679cf4b965f79b49d03b3a873bf",
+      "type": "script"
+    },
+    "src/framework/runtime/errors/RuntimeStateError.js": {
+      "size": 716,
+      "sha256": "016a9dab051e57cffb26e8edb377c9ec8692d8a0bafa992d5e262c1d6932d036",
+      "type": "script"
+    },
+    "src/framework/runtime/events/RuntimeEvent.js": {
+      "size": 4264,
+      "sha256": "63d5026367604b7b132570688870d28368a5b29cc9840e125df152b06b1c5263",
+      "type": "script"
+    },
+    "src/framework/runtime/events/RuntimeEventBus.js": {
+      "size": 4324,
+      "sha256": "3ddac362dc9b494f548932a07071cb72f81866e3c2412883c2d343e98a8b9ac2",
+      "type": "script"
+    },
+    "src/framework/runtime/events/RuntimeEventDispatcher.js": {
+      "size": 5427,
+      "sha256": "ff68779d9a44c1f4d6c37578b8d0790b8dd7eaff3a93890209fd00281dd4ce01",
+      "type": "script"
+    },
+    "src/framework/runtime/events/RuntimeEvents.js": {
+      "size": 2331,
+      "sha256": "fc43c5bc45c0bc69dc802348330d98e0992f82a0c249bf34e0ba0ad25ae9f52a",
+      "type": "script"
+    },
+    "src/framework/runtime/pipeline/FramePipeline.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/pipeline/FrameStage.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/pipeline/PipelineResult.js": {
+      "size": 2184,
+      "sha256": "0f120d0488c40778c50d35331aaebde16d47c9254b89438d149645189b6877cb",
+      "type": "script"
+    },
+    "src/framework/runtime/session/RuntimeSession.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/session/RuntimeSessionFactory.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/session/RuntimeSessionLifecycle.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/session/RuntimeSessionManager.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/session/RuntimeSessionRegistry.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/session/SessionDescriptor.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/session/SessionSelectionPolicy.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/state/RuntimeState.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/state/RuntimeStateMachine.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/state/RuntimeTransition.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/runtime/statistics/RuntimeStatistics.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/framework/services/AIService.js": {
+      "size": 3215,
+      "sha256": "e4b590a6e688d52fef8e8d56abab6a592000e7b8733c1534b16bff4c7edfa892",
+      "type": "script"
+    },
+    "src/framework/services/AudioService.js": {
+      "size": 3919,
+      "sha256": "cf4c34d7332daa572b78d181a7b646b43ccd18ecc1b166b1ad4f83393f369c57",
+      "type": "script"
+    },
+    "src/framework/services/EditorService.js": {
+      "size": 2138,
+      "sha256": "8c65c0d13e0f00255529a783008292d07ef5d55dc26cff475640d845f7c60d7d",
+      "type": "script"
+    },
+    "src/framework/services/GameplayService.js": {
+      "size": 3528,
+      "sha256": "f5eed9af69659788e01e68dcbfada305a3c3f3cb4ede253cad75f1ea4e91972a",
+      "type": "script"
+    },
+    "src/framework/services/HAOSService.js": {
+      "size": 3701,
+      "sha256": "928ad11ce56a4ef9b52e4846375260f81d5f33d38bc0d58a48fde668ec8a2a0d",
+      "type": "script"
+    },
+    "src/framework/services/InputService.js": {
+      "size": 5661,
+      "sha256": "5a62cd044f67fa3f6099ea385c10e7b777eb3da53c6807a152eaa3012b69dcd3",
+      "type": "script"
+    },
+    "src/framework/services/PackagingService.js": {
+      "size": 2475,
+      "sha256": "c24853beff93b0f4fb0346694341477306c69d9973f435da7572193a50f6f2df",
+      "type": "script"
+    },
+    "src/framework/services/PhysicsService.js": {
+      "size": 3684,
+      "sha256": "652b912dc8c495c950828308176ebb2d8d3380c9eb7fae09e62060adb196af38",
+      "type": "script"
+    },
+    "src/framework/services/PlayerService.js": {
+      "size": 7103,
+      "sha256": "12df80c57ea63b9011f051411476aca5157dcc08e1a201ec50ca88eee43f818c",
+      "type": "script"
+    },
+    "src/framework/services/RenderService.js": {
+      "size": 7180,
+      "sha256": "d4022952ba0b45359c0d2adf34493510da436d06aceb8363a12ac9ce7d8a8c53",
+      "type": "script"
+    },
+    "src/framework/services/SaveService.js": {
+      "size": 2567,
+      "sha256": "28c6f044a241e6cb44727e08637a46202529d24dd9b37a1c29bde1258b7b1e56",
+      "type": "script"
+    },
+    "src/framework/services/SceneService.js": {
+      "size": 1202,
+      "sha256": "72227c94bfc4d9d3a8669f4a66a61dd3239e50e8a0caf45b2411b48691c7fb81",
+      "type": "script"
+    },
+    "src/framework/services/Service.js": {
+      "size": 212,
+      "sha256": "b617a43f682b89050e6a3d9a09953ccfbc8b2464f6c847cc5f762f0138996645",
+      "type": "script"
+    },
+    "src/framework/services/TimeService.js": {
+      "size": 2454,
+      "sha256": "df019ee0d4b136566d1b7516323ccbfbcde9bc9b2123ba8ed8af2c6f18316717",
+      "type": "script"
+    },
+    "src/framework/services/UIService.js": {
+      "size": 2008,
+      "sha256": "04ff6af43b2c0aa3886f86f6f04089bd47757a73dbab4039b07db883f48efd3f",
+      "type": "script"
+    },
+    "src/framework/state/GameStateMachine.js": {
+      "size": 393,
+      "sha256": "5bdf5c6efd90783742c4cf38fcd7729385d162fa8037dd832b2882c3b3093dcf",
+      "type": "script"
+    },
+    "src/gameplay/MissionManager.js": {
+      "size": 4863,
+      "sha256": "d2812631883c626bdf7a84e7b96934ce4e54f8c747aa67a99013f193b17c6bde",
+      "type": "script"
+    },
+    "src/gameplay/NarrativeManager.js": {
+      "size": 3333,
+      "sha256": "ae21e14f65771b59af39fb3510deed8a34d5aa78a067f370cf20c0484ea30649",
+      "type": "script"
+    },
+    "src/haos/AdaptiveController.js": {
+      "size": 5042,
+      "sha256": "6933ae62de4337dc718aeb13d8935712b1e7834f0798ed99477acffef538c13c",
+      "type": "script"
+    },
+    "src/haos/CapabilityAnalyzer.js": {
+      "size": 3467,
+      "sha256": "936cffd33336add23db472c860fdb71012d8126d04a5bdf08da50e114b53ad5d",
+      "type": "script"
+    },
+    "src/haos/FrameMonitor.js": {
+      "size": 3897,
+      "sha256": "594014c0de974804ddbd8dad6f0fb656a901cb8b5272873acac122c0cfa72a51",
+      "type": "script"
+    },
+    "src/haos/HardwareScanner.js": {
+      "size": 2957,
+      "sha256": "a18c1f9fb5ec6b6fff2b23c3e48017e9e5590709998e26e220d414fa92d961df",
+      "type": "script"
+    },
+    "src/haos/PerformanceProfile.js": {
+      "size": 5219,
+      "sha256": "2fa87ee1fd41ea2ba50742524e51b411c7c551d666740e8c26e8c7639981d2bc",
+      "type": "script"
+    },
+    "src/hierarchy/Cell.js": {
+      "size": 663,
+      "sha256": "3f5f0de3195f0f6f432d5117a0fce085af3bc36c272f27e17bb360d77cfb7923",
+      "type": "script"
+    },
+    "src/hierarchy/Region.js": {
+      "size": 266,
+      "sha256": "be5fdac4b7449b65e1cc64b9991dabff1cfcc57a21136f66730002055ab5ee62",
+      "type": "script"
+    },
+    "src/hierarchy/Sector.js": {
+      "size": 1612,
+      "sha256": "54a2428b778015d850686e1e75cd584d25677f070cbf6ed54bcda665144cfca4",
+      "type": "script"
+    },
+    "src/managers/EntityManager.js": {
+      "size": 2309,
+      "sha256": "51a21f57f54bf345265fb4497528b443f0a891361c426205e5665319a7b0b116",
+      "type": "script"
+    },
+    "src/managers/QueryManager.js": {
+      "size": 1587,
+      "sha256": "ce80fc0697ae864db81ce784470f36dd40e3faf4d2bea8429c52c91ae8eea752",
+      "type": "script"
+    },
+    "src/managers/SpatialManager.js": {
+      "size": 1385,
+      "sha256": "6ede4219d28b0496781cf6eea9d1bbfac1929b7509a64545828c6f12d78cf0fb",
+      "type": "script"
+    },
+    "src/managers/StreamingManager.js": {
+      "size": 1718,
+      "sha256": "c0b1731e4cd5f5fa0dd3d263e2b2864fd0d084faa945a992992541310e2eb3d9",
+      "type": "script"
+    },
+    "src/managers/WorldGraph.js": {
+      "size": 2516,
+      "sha256": "f227a89511d3da7f6fe7fd130eea3096d0b1cf1a6e82db08c1c90a7a7626d52f",
+      "type": "script"
+    },
+    "src/packaging/IntegrityVerifier.js": {
+      "size": 2670,
+      "sha256": "63ff8209acea59b8bea5b3a0190d4b1ccdb788d57c505604f2a80a3fac7587b8",
+      "type": "script"
+    },
+    "src/packaging/PackageManifest.js": {
+      "size": 2073,
+      "sha256": "e19fb84c9df7065b1cfaf3bcf314a14287f85361ce0f3d687c5971d8edbfbd36",
+      "type": "script"
+    },
+    "src/packaging/VirtualFileSystem.js": {
+      "size": 2587,
+      "sha256": "65f3014a6ee866a19aa466218cd71ca35fd2ab5261b7cf03ca68317475165636",
+      "type": "script"
+    },
+    "src/persistence/SaveManager.js": {
+      "size": 6908,
+      "sha256": "f3e3a27802085b16da34d6248d2ca5f5912f44d77d9c4cb17b717a007c8308e5",
+      "type": "script"
+    },
+    "src/physics/AABB.js": {
+      "size": 2716,
+      "sha256": "962e86e3893823572614aac6dde27375e07d7fa05ba27a5651356c9659ea9531",
+      "type": "script"
+    },
+    "src/physics/CollisionWorld.js": {
+      "size": 4254,
+      "sha256": "c2ea62d0dd69ac2b8b2f3028d777bf5e50b095d965552d828ff37914ce898997",
+      "type": "script"
+    },
+    "src/player/PlayerController.js": {
+      "size": 8922,
+      "sha256": "050bf204a886a58d33cced2a885c92c15068a0272e7d46d66ec7ff4c76e9a3d2",
+      "type": "script"
+    },
+    "src/queries/CellQuery.js": {
+      "size": 626,
+      "sha256": "3a994692835fe741f85899759e909792ebf8580109a6cc33cd88e0d93a15eb67",
+      "type": "script"
+    },
+    "src/queries/NearestQuery.js": {
+      "size": 714,
+      "sha256": "06594c7daa9732e3360514e72a560668ea250270ea3fe3c2d272fe7418dd591f",
+      "type": "script"
+    },
+    "src/queries/RadiusQuery.js": {
+      "size": 1457,
+      "sha256": "35cb4ed863b2d2afc0f09c05dfd42ac25819d05a5583041840da872e6284a152",
+      "type": "script"
+    },
+    "src/registries/CellRegistry.js": {
+      "size": 853,
+      "sha256": "bf95567d2bc86150b8bfd6387d6949cb95eda03f1a4c843318872399db370405",
+      "type": "script"
+    },
+    "src/registries/EntityRegistry.js": {
+      "size": 1798,
+      "sha256": "812edc259226551b38484f5bbadeb43b53f206c819f8bac6f53689da99a38d7b",
+      "type": "script"
+    },
+    "src/registries/RegionRegistry.js": {
+      "size": 1029,
+      "sha256": "230ead3a67b96179fcfd9239d40444578687dbc6a42e1f59c6828837851bd2f2",
+      "type": "script"
+    },
+    "src/registries/SectorRegistry.js": {
+      "size": 891,
+      "sha256": "3026b864b815353e24a0c1c308292c9772e7cb58bc311591c20e7729f8d13278",
+      "type": "script"
+    },
+    "src/rendering/EnvironmentSetup.js": {
+      "size": 3845,
+      "sha256": "ffe7eb64b4be65cd1648474f7108e6b46b38cfd1baed0954a63a8d70761647b0",
+      "type": "script"
+    },
+    "src/rendering/PBRTextureGenerator.js": {
+      "size": 10190,
+      "sha256": "4dbd9f91d102537a8a83590f2f87789ac7f3619ac4c65f869b4b0510af3e691d",
+      "type": "script"
+    },
+    "src/scene/Camera.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/scene/CameraManager.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/scene/Environment.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/scene/Scene.js": {
+      "size": 3248,
+      "sha256": "c907761a7948872637393239529d911f5a7451111caafdcb31722dfd5c5e0efd",
+      "type": "script"
+    },
+    "src/scene/SceneManager.js": {
+      "size": 4589,
+      "sha256": "6be0950cb3fd118179b034f45a833b1bb7a96d76a4068778920ea40921a08dc7",
+      "type": "script"
+    },
+    "src/scene/SceneState.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/scene/SceneTransition.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/scene/TransitionState.js": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "script"
+    },
+    "src/spatial/GridPartition.js": {
+      "size": 2236,
+      "sha256": "bdcce86d8a39bd233a7282a80ccdb248b0c7d3a8e68d6f3bfcedd3c0e20bdef0",
+      "type": "script"
+    },
+    "src/streaming/SectorLoader.js": {
+      "size": 1267,
+      "sha256": "bfb870d8d995008696b36ffe2668c15fa09e9b7fb5b77334630df2544c644787",
+      "type": "script"
+    },
+    "src/streaming/SectorUnloader.js": {
+      "size": 1423,
+      "sha256": "706d9423190d41a20769bcf2df03ed19c224b1a55b68284b1f20fed69ad78348",
+      "type": "script"
+    },
+    "src/streaming/StreamingJob.js": {
+      "size": 465,
+      "sha256": "a2e3a96f483ab98c10b2190c53070ab62e1a03e91796d5ad2e4a2f7336def90b",
+      "type": "script"
+    },
+    "src/streaming/WorldPartition.js": {
+      "size": 2720,
+      "sha256": "1b986cc673235b4a9a957245c24d1f557843c40e1d641fec97c7cd5da9593dfa",
+      "type": "script"
+    },
+    "src/systems/AISystem.js": {
+      "size": 5010,
+      "sha256": "daaac2ff522da088928e611d37b2048a8b8282d3e12e9b480c2a807415076956",
+      "type": "script"
+    },
+    "src/systems/AnimationSystem.js": {
+      "size": 1913,
+      "sha256": "ce3c86306c13ace55d10cc2ec01e1dd60c23f6df70406cdf2307f5b87afcb280",
+      "type": "script"
+    },
+    "src/systems/AudioSystem.js": {
+      "size": 2015,
+      "sha256": "96bc48a7609def594da14748cc73c97d4297ec1b02aa2eb0e05c16ecc8ea6d92",
+      "type": "script"
+    },
+    "src/systems/HealthSystem.js": {
+      "size": 745,
+      "sha256": "a3696f4bbad24ffc4c383a33b29f88bb0c91dfd464c717e98466ac9bdbd120bb",
+      "type": "script"
+    },
+    "src/systems/InteractionSystem.js": {
+      "size": 3891,
+      "sha256": "9f05878e0e12e032fb4786ce66507b953332770240fc39302916220f94315a8d",
+      "type": "script"
+    },
+    "src/systems/MovementSystem.js": {
+      "size": 1332,
+      "sha256": "8a06d6c7b8c1f8350fba815b6ae9bdb88435de7c79a595fcbca83bfe44244e31",
+      "type": "script"
+    },
+    "src/systems/PhysicsSystem.js": {
+      "size": 5984,
+      "sha256": "46c703c591a639d1ca425f84913fa0d070e6239c6a61795022571ea2b4cfa7fe",
+      "type": "script"
+    },
+    "src/time/DependencyGraph.js": {
+      "size": 4715,
+      "sha256": "7abe8db338613ec44555f3eec7aa9edc6968a29de16582838cceba47888df72b",
+      "type": "script"
+    },
+    "src/time/DiagnosticsCollector.js": {
+      "size": 2938,
+      "sha256": "c91bb7446f6d404a9ddf7f3529e7232aee7b56459e9dd2bbd5bd9cc4e9ec2694",
+      "type": "script"
+    },
+    "src/time/EventScheduler.js": {
+      "size": 2597,
+      "sha256": "ff103f0799d6a569f1a46743f66c9b7f73a06d51cfc84379412859e90a1991e9",
+      "type": "script"
+    },
+    "src/time/ReadyQueue.js": {
+      "size": 2909,
+      "sha256": "be3225a7e6af37ac9e5f21d40314da63506f1e0f81f545d4e979c9fa5bf0a39a",
+      "type": "script"
+    },
+    "src/time/ScheduledEvent.js": {
+      "size": 4224,
+      "sha256": "5657cf6a63c31cf0c7c1d05325dc8a82485a1a5d318a2409d0387b51f20bdf9a",
+      "type": "script"
+    },
+    "src/time/SchedulerState.js": {
+      "size": 3284,
+      "sha256": "49e3e9ff021e263d7ad142af676c7a4b58ca386a8f6ab6038eedc835950c3c00",
+      "type": "script"
+    },
+    "src/time/SectorSchedulerState.js": {
+      "size": 698,
+      "sha256": "43c68aff03e4d0de013c8658e724fa025cfb3772fe6dcc023749e3e0c1d4f89e",
+      "type": "script"
+    },
+    "src/time/TimeEvents.js": {
+      "size": 1581,
+      "sha256": "ad78b33ff35792d3145bc6a9f55764f683f15f2d4f0fb0c9fd68fead8d1c1d5a",
+      "type": "script"
+    },
+    "src/time/TimeManager.js": {
+      "size": 3398,
+      "sha256": "db9881d6bf93c7901dc521613c8d8af493d64bdc871f610c36bf8e8ed9c1de7c",
+      "type": "script"
+    },
+    "src/time/TimeSerializer.js": {
+      "size": 940,
+      "sha256": "1efb2a3beedcd2914ed7df5747d62de64e94b3fb8598b7dd9d6a6033fe441aaa",
+      "type": "script"
+    },
+    "src/time/WorldClock.js": {
+      "size": 1642,
+      "sha256": "7e4131956103ab4876cb241cd572fed36f597416641717dc441225450a82302f",
+      "type": "script"
+    },
+    "src/ui/UIManager.js": {
+      "size": 19213,
+      "sha256": "2aaa4c0d33db93216d3944c6dcb01783a0c37e89857391ee417852bda65910ac",
+      "type": "script"
+    },
+    "src/world/CellID.js": {
+      "size": 291,
+      "sha256": "c961d7af20e28298de987d9997b902f5dc2be4eedf65cc2034925b0e2301d1d4",
+      "type": "script"
+    },
+    "src/world/Entity.js": {
+      "size": 710,
+      "sha256": "2910efe6c299c4706cd53550e080cb0a9042a2e648631a86ef50054b77fb0905",
+      "type": "script"
+    },
+    "src/world/EntityHandle.js": {
+      "size": 1054,
+      "sha256": "8bd5ea2d8a51b3301d5aead41ebb552fafda0b74faf41d69df5b5834f4d92920",
+      "type": "script"
+    },
+    "src/world/EntityID.js": {
+      "size": 647,
+      "sha256": "ad74b682aa37914980c9976b431a18473b602c0f75dd40dc7a40d20d9032b1c2",
+      "type": "script"
+    },
+    "src/world/RegionID.js": {
+      "size": 297,
+      "sha256": "dd0cfd2db1cbb57d04aed4cd079823864ede94e2e301dca73455e12c3ff19cf7",
+      "type": "script"
+    },
+    "src/world/SectorID.js": {
+      "size": 297,
+      "sha256": "01203c44249a82801e87a0d8eb503ad6a4646f6103eb732a7dbe45170f2b2c72",
+      "type": "script"
+    },
+    "src/world/Transform.js": {
+      "size": 1187,
+      "sha256": "7ebfa922c3d00cbef43cffe7d4ed9c9c8f056e1a3ad62f397b17833e0747b229",
+      "type": "script"
+    },
+    "src/world/World.js": {
+      "size": 2872,
+      "sha256": "2e23436f869b32b9f56f631e8669ad38b0cd3cc418700b15db9781992a51ee3f",
+      "type": "script"
+    },
+    "src/world/WorldManager.js": {
+      "size": 776,
+      "sha256": "92b8001a2f668b0c3e5b11bb6a16e6b4b183c235e8fb8d051d7ae68f8b732152",
+      "type": "script"
+    },
+    "assets/levels/sector_omega.json": {
+      "size": 2207,
+      "sha256": "4009af3e8bd7bc3c371a6f2e9658866aa409141bc08354fede89c147aee4b92f",
+      "type": "level"
+    },
+    "assets/levels/sector_pinnacle.json": {
+      "size": 2981,
+      "sha256": "c8536891e092e6da888dbb8d3773f07794caea9ad3cb6b0045a20fe6ee74adb1",
+      "type": "level"
+    },
+    "index.html": {
+      "size": 6390,
+      "sha256": "c0ad310104ad401aa7797cc74b0a038d9f65a1b6b95c0d603eb9949fd6d42756",
+      "type": "entrance"
+    }
+  }
+}
