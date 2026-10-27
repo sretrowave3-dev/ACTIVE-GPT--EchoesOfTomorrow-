@@ -95,7 +95,7 @@ Echoes of Tomorrow (The Game)
 | **Scene Runtime** | `src/scene/` | 8 | 🚧 **In Progress** | `SceneManager`, `Scene`, `CameraManager`, `Camera`, `Environment`, `SceneTransition`, `SceneState`. |
 | **Asset System** | `src/assets/` | 16 | 🚧 **In Progress** | `AssetService`, `AssetManager`, `AssetRegistry`, `AssetCache`, `AssetLoader`, `AssetDescriptor`, `AssetHandle`, format loaders. |
 | **Rendering & VFX** | `src/rendering/`, `src/framework/services/` | 5 | ✅ **Complete (Phase 22)** | `PBRMaterialFactory`, `EnvironmentSetup`, `LightingRig` (CSM sun, presets), `PostProcessStack` (ACES, bloom, vignette), `ParticleEmitter` (GPU instanced particles), `RenderService`. |
-| **Physics & Collision**| `src/physics/`, `src/systems/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 8)** | `PhysicsService`, `CollisionWorld`, `AABB`, `PhysicsSystem`, `ColliderComponent`, `RigidBodyComponent`. Static & dynamic collision resolution, gravity, player collision response. |
+| **Physics & Controller**| `src/physics/`, `src/player/`, `src/framework/services/` | 6 | ✅ **Complete (Phase 23)** | `Raycast` 3D intersection, `CollisionWorld`, `AABB`, `PhysicsSystem`, kinematic `PlayerController` (jump buffering, coyote time, air control, sprint-to-slide). |
 | **Animation System**| `src/animation/`, `src/components/`, `src/systems/` | 36 | ✅ **Complete (Phase 9)** | `AnimationComponent`, `AnimationClip`, `SkeletonPose`, `AnimationPlayer`, `AnimationController`, `VATPlayer`, `AnimationSystem`. Skeletal keyframe sampling, cross-fading, and VAT playback. |
 | **Player & Input** | `src/player/`, `src/framework/services/` | 2 | ✅ **Complete (Milestone A)** | `PlayerController` (first-person WASD + pointer-lock mouse look + physical collision). `PlayerService` and `InputService` fully wired into frame pipeline. |
 | **Diagnostics** | `src/framework/diagnostics/` | 2 | ✅ **Complete** | `DiagnosticsService`, `PerformanceCounters` (FPS, frame times, memory metrics). |
@@ -146,8 +146,8 @@ Phase 20: Security, Packaging & Deployment ────── [Completed]
    └── [MILESTONE D: "Shippable" — ACHIEVED]
 Phase 21: Forge Engine Public SDK & Platform ──── [Completed]
 Phase 22: AAA Post-Processing & Lighting Pipeline ── [Completed]
-Phase 23: Advanced Kinematic Character Controller ── [Current Target]
-Phase 24: Animation State Graph & 2D Blend Trees
+Phase 23: Advanced Kinematic Character Controller ── [Completed]
+Phase 24: Animation State Graph & 2D Blend Trees ── [Current Target]
 Phase 25: Networking, Prediction & Replication
 Phase 26: Professional Editor Suite & World Outliner
    ▲
