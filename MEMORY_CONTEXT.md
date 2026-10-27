@@ -105,6 +105,7 @@ Echoes of Tomorrow (The Game)
 | **UI Framework** | `src/ui/`, `src/framework/services/` | 2 | ✅ **Complete (Phase 14)** | `UIManager`, `UIService`. In-game HUD (integrity/stamina bars), dynamic interaction prompts, mission checklist, notification banners, pause menu overlay. |
 | **Persistence & Save System** | `src/persistence/`, `src/framework/services/` | 2 | ✅ **Complete (Phase 15)** | `SaveManager`, `SaveService`. Schema-versioned JSON state serialization, player & mission restoration, quick-save (F5), quick-load (F9), storage fallback. |
 | **HAOS (Adaptive Runtime)** | `src/haos/`, `src/framework/services/` | 6 | ✅ **Complete (Phase 16)** | `HardwareScanner`, `CapabilityAnalyzer`, `PerformanceProfile`, `FrameMonitor`, `AdaptiveController`, `HAOSService`. Autonomous hardware scanning, frame pacing analysis, and cross-subsystem quality scaling. |
+| **Editor & Toolchain** | `src/editor/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 17)** | `LevelSerializer`, `CommandInterpreter`, `EditorDevOverlay`, `EditorService`. Data-driven JSON level pipeline (`sector_omega.json`), in-engine CLI terminal (`~`), live ECS hierarchy & component inspector. |
 
 ---
 
@@ -132,10 +133,10 @@ Phase 15: Persistence & Save System ──────── [Completed]
    ▲
    └── [MILESTONE B: "Vertical Slice" — ACHIEVED]
 Phase 16: HAOS (Hardware-Adaptive Optimization) ─ [Completed]
-Phase 17: Editor & Developer Toolchain ────────── [Current Target]
+Phase 17: Editor & Developer Toolchain ────────── [Completed]
    ▲
-   └── [TARGET: MILESTONE C — "Content-Ready Pipeline"]
-Phase 18: Full Content Production (Echoes of Tomorrow)
+   └── [MILESTONE C: "Content-Ready Pipeline" — ACHIEVED]
+Phase 18: Full Content Production (Echoes of Tomorrow) ─ [Current Target]
 Phase 19: Networking & Multiplayer (Optional)
 Phase 20: Security, Packaging & Deployment
    ▲
@@ -143,7 +144,11 @@ Phase 20: Security, Packaging & Deployment
 Phase 21: Forge Engine Extraction
 ```
 
-### Active Milestone: Milestone C ("Content-Ready Pipeline")
+### Active Milestone: Milestone D ("Shippable")
+**Milestone C Status:** ✅ **Delivered, Integrated & Verified**
+- **Phase 16 (HAOS):** Automatic hardware scanning (`HardwareScanner`), multi-dimensional capability rating (`CapabilityAnalyzer`), ring-buffer frame pacing monitor (`FrameMonitor`), anti-oscillation adaptive controller (`AdaptiveController`), dynamically tuning rendering, streaming, audio, and AI across 4 hardware tiers (`LOW`, `MEDIUM`, `HIGH`, `ULTRA`).
+- **Phase 17 (Editor & Developer Toolchain):** Data-driven level serialization pipeline (`LevelSerializer`), sample second level (`assets/levels/sector_omega.json`) loading into the live simulation without touching engine code, in-engine developer drawer overlay (`EditorDevOverlay`) toggled with `[~]`, CLI developer command interpreter (`CommandInterpreter`), live ECS hierarchy & component inspector, and HAOS runtime profiler.
+- **Automated Validation:** 214 JavaScript files, 241 import statements, 11/11 subsystem test suites passing.
 **Milestone B Status:** ✅ **Delivered, Integrated & Verified**
 - **Phase 8 (Physics & Collision):** AABB bounding boxes, static arena collision against boundaries & pillars, dynamic collision response, gravity.
 - **Phase 9 (Animation System):** Skeletal pose evaluation, LERP keyframe interpolation, cross-fading, VAT frame playback.
