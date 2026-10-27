@@ -10,6 +10,7 @@ import { MeshComponent } from '../components/MeshComponent.js';
 import { AudioComponent } from '../components/AudioComponent.js';
 import { ColliderComponent } from '../components/ColliderComponent.js';
 import { RigidBodyComponent } from '../components/RigidBodyComponent.js';
+import { AnimationComponent } from '../components/AnimationComponent.js';
 
 import { MovementSystem } from '../systems/MovementSystem.js';
 import { HealthSystem } from '../systems/HealthSystem.js';
@@ -36,6 +37,7 @@ export class ECSService extends Service {
     this.ecsManager.registerComponent('Audio', AudioComponent);
     this.ecsManager.registerComponent('Collider', ColliderComponent);
     this.ecsManager.registerComponent('RigidBody', RigidBodyComponent);
+    this.ecsManager.registerComponent('Animation', AnimationComponent);
 
     this.scheduler = new SystemScheduler(this.ecsManager);
     this.scheduler.registerSystem(new MovementSystem());

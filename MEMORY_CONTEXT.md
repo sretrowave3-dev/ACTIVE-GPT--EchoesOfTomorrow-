@@ -96,7 +96,7 @@ Echoes of Tomorrow (The Game)
 | **Asset System** | `src/assets/` | 16 | 🚧 **In Progress** | `AssetService`, `AssetManager`, `AssetRegistry`, `AssetCache`, `AssetLoader`, `AssetDescriptor`, `AssetHandle`, format loaders. |
 | **Rendering** | `src/rendering/` | 2 | ✅ **Complete (Milestone A)** | `EnvironmentSetup` (PBR, lighting, fog, ACES tone mapping), `PBRTextureGenerator`. `RenderService` connects Three.js renderer as a pure downstream consumer of World and ECS entities. |
 | **Physics & Collision**| `src/physics/`, `src/systems/`, `src/framework/services/` | 4 | ✅ **Complete (Phase 8)** | `PhysicsService`, `CollisionWorld`, `AABB`, `PhysicsSystem`, `ColliderComponent`, `RigidBodyComponent`. Static & dynamic collision resolution, gravity, player collision response. |
-| **Animation System**| `src/animation/` | 31 | 🚧 **In Progress** | Animation clips, compression, baking, events, graph, blend trees, skeleton, and VAT (Vertex Animation Texture). |
+| **Animation System**| `src/animation/`, `src/components/`, `src/systems/` | 36 | ✅ **Complete (Phase 9)** | `AnimationComponent`, `AnimationClip`, `SkeletonPose`, `AnimationPlayer`, `AnimationController`, `VATPlayer`, `AnimationSystem`. Skeletal keyframe sampling, cross-fading, and VAT playback. |
 | **Player & Input** | `src/player/`, `src/framework/services/` | 2 | ✅ **Complete (Milestone A)** | `PlayerController` (first-person WASD + pointer-lock mouse look + physical collision). `PlayerService` and `InputService` fully wired into frame pipeline. |
 | **Diagnostics** | `src/framework/diagnostics/` | 2 | ✅ **Complete** | `DiagnosticsService`, `PerformanceCounters` (FPS, frame times, memory metrics). |
 | **Audio** | `src/framework/services/` | 1 | 📋 **Stubbed** | `AudioService` (stubbed, ready for WebAudio / spatial audio implementation). |
@@ -118,8 +118,8 @@ Phase 7: Input & Player Service ──────────── [Completed 
    ▲
    └── [MILESTONE A: "Grey-box Playable" — ACHIEVED]
 Phase 8: Physics & Collision ─────────────── [Completed]
-Phase 9: Animation & VAT Runtime ─────────── [Current Target]
-Phase 10: Audio System
+Phase 9: Animation & VAT Runtime ─────────── [Completed]
+Phase 10: Audio System ───────────────────── [Current Target]
 Phase 11: AI & Navigation
 Phase 12: Streaming & World Partition
 Phase 13: Gameplay Scripting Framework
