@@ -9,6 +9,7 @@ import { GameplayService } from '../services/GameplayService.js';
 import { TimeService } from '../services/TimeService.js';
 import { AudioService } from '../services/AudioService.js';
 import { UIService } from '../services/UIService.js';
+import { SaveService } from '../services/SaveService.js';
 
 export const ServiceManifest = [
   WorldManager,
@@ -21,5 +22,6 @@ export const ServiceManifest = [
   GameplayService,
   TimeService,
   AudioService,
-  UIService
+  UIService,
+  SaveService
 ];
